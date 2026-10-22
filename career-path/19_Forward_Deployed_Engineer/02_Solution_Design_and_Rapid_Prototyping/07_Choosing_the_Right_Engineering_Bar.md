@@ -20,7 +20,7 @@ tags:
 
 ## Why This Matters
 
-Field work runs several engineering standards at once. A throwaway probe that reads a data sample should be deleted within days; a service on the customer's critical path will be examined by their auditors for years. Applying one standard to both fails in opposite directions: uniform maximal rigor makes the FDE too slow to learn, and uniform minimal rigor eventually ships something fragile into an environment where failure is public. The skill is not picking one bar; it is calibrating per artifact, deliberately, and telling the truth about which bar applies.
+Field work runs several engineering standards at once. A throwaway probe that reads a data sample should be deleted within days; a service on the customer's critical path will be examined by their auditors for years. Applying one standard to both fails in opposite directions: uniform maximal rigor makes the FDE too slow to learn, and uniform minimal rigor eventually ships something fragile into an environment where failure is public. The skill is calibrating per artifact, deliberately, and telling the truth about which bar applies.
 
 Calibration is where field judgment concentrates, because the cost asymmetry is sharp. Gold-plating a throwaway costs days; under-engineering a production path costs the customer's trust, the deployment's credibility, and sometimes the account. The FDE must therefore be able to look at any piece of work and answer, in one breath: who is affected if this fails, what happens when it fails at an inconvenient hour, who will maintain it after me, and what data does it touch? Those answers map directly to the amount of process the artifact has earned.
 

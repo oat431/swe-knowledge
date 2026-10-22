@@ -61,7 +61,7 @@ A healthy portfolio has a shape: a few big bets, several small bets, and a stand
 | Small bets | 3-6 | Quarters, single domain | Each planning cycle |
 | Experiments | Standing | Weeks, one team | Monthly, or per experiment |
 
-The portfolio view matters because capacity is finite. A portfolio with nine big bets is not ambitious; it is unfunded. Part of the staff role is refusing to add a bet to a portfolio that cannot absorb it.
+The portfolio view matters because capacity is finite. A portfolio with nine big bets is unfunded. Part of the staff role is refusing to add a bet to a portfolio that cannot absorb it.
 
 ## When to Bet on Emerging Technology
 

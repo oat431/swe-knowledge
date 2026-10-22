@@ -26,7 +26,7 @@ Electric current is one of seven fundamental dimensions in engineering. The **am
 
 - Unit: **coulomb (C)**
 - 1 coulomb = amount of charge passing a point in 1 second when 1 ampere flows
-- Electric charge is **conserved** — it cannot be created or destroyed, only transferred
+- Electric charge is **conserved**: it cannot be created or destroyed, only transferred
 
 ### Coulomb's Law
 
@@ -78,7 +78,7 @@ Electricity is generated in power plants via:
 4. Turbine runs generator (coil of wire in magnetic field)
 5. Steam condenses and recirculates
 
-> A conductor in a changing magnetic field has current induced in it — **magnetism** is the most common method for generating electricity.
+> A conductor in a changing magnetic field has current induced in it; **magnetism** is the most common method for generating electricity.
 
 ---
 
@@ -107,7 +107,7 @@ Electricity is generated in power plants via:
 
 $$\sum I_{in} = \sum I_{out}$$
 
-This represents the physical fact that charge is conserved — it cannot accumulate or deplete at a node.
+This represents the physical fact that charge is conserved: it cannot accumulate or deplete at a node.
 
 ---
 
@@ -153,6 +153,6 @@ Typical residential systems include:
 
 ## Related
 
-- [[Engineering Foundation Overview]] — All engineering foundation topics
-- [[01 Physics and Math/06_Energy_and_Power|06_Energy_and_Power]] — Electrical energy and power
-- [[01 Physics and Math/01_Dimensions_and_Measurement|01_Dimensions_and_Measurement]] — Fundamental dimensions (current)
+- [[Engineering Foundation Overview]]: All engineering foundation topics
+- [[01 Physics and Math/06_Energy_and_Power|06_Energy_and_Power]]: Electrical energy and power
+- [[01 Physics and Math/01_Dimensions_and_Measurement|01_Dimensions_and_Measurement]]: Fundamental dimensions (current)

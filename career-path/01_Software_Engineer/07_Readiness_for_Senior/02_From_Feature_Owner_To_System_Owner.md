@@ -19,7 +19,7 @@ tags:
 
 ## What Changes from Junior to Mid
 
-A junior engineer owns a task: the change is correct, reviewed, and merged. A mid-level engineer owns a feature: it works end to end, it is verified in production, and the people who asked for it are satisfied. Ownership at this level is still bounded by the request — someone else decided *what* should exist.
+A junior engineer owns a task: the change is correct, reviewed, and merged. A mid-level engineer owns a feature: it works end to end, it is verified in production, and the people who asked for it are satisfied. Ownership at this level is still bounded by the request: someone else decided *what* should exist.
 
 The next step is owning a *system area*: a component or small set of components whose health, roadmap, and failure modes are yours to watch. Nobody hands you that scope in a ticket. You take it by volunteering, defining the boundary, and getting agreement that you are the person responsible for it.
 
@@ -32,7 +32,7 @@ The next step is owning a *system area*: a component or small set of components 
 | Handover | Merged, then moves on | Verified in production, documented, handed over |
 | Awareness | Knows the files they touched | Knows the feature's dependencies and dashboards |
 
-At senior, this expands again: the area's *direction* — what it should stop doing, what it should become, and which risks are worth paying down — becomes part of the job.
+At senior, this expands again: the area's *direction* (what it should stop doing, what it should become, and which risks are worth paying down) becomes part of the job.
 
 ## Core Frameworks
 
@@ -83,9 +83,9 @@ flowchart LR
 
 ## In Practice
 
-**Volunteer before you feel qualified.** The usual sequence is: own a task, then the feature, then notice an area nobody is watching — a flaky integration, an unowned cron job, a service with no runbook. Say so, and offer to take it. Waiting for an invitation means waiting for someone else to notice the same gap and take it first.
+**Volunteer before you feel qualified.** The usual sequence is: own a task, then the feature, then notice an area nobody is watching: a flaky integration, an unowned cron job, a service with no runbook. Say so, and offer to take it. Waiting for an invitation means waiting for someone else to notice the same gap and take it first.
 
-**Define the boundary in writing.** "I own the notifications service" is too vague to act on. Write down what is inside — the API, the queue consumer, the retry policy — and what is outside, with the neighbouring owner named. Ambiguous ownership produces either duplicated work or a gap that both sides assume the other covers.
+**Define the boundary in writing.** "I own the notifications service" is too vague to act on. Write down what is inside (the API, the queue consumer, the retry policy) and what is outside, with the neighbouring owner named. Ambiguous ownership produces either duplicated work or a gap that both sides assume the other covers.
 
 **Get explicit agreement from the people who matter.** Your manager, the current de-facto owner, and the teams that depend on the area should all know you are now the contact. A short message with the scope and the expectations is enough. Agreement is what converts self-appointed ownership into trusted ownership.
 
@@ -104,7 +104,7 @@ flowchart LR
 3. Write a one-page ownership charter using the template below and circulate it to your manager and the current de-facto owner.
 4. Read the last six months of incidents, alerts, and hotfixes for that area and list the three recurring failure modes.
 5. Choose one improvement aimed at the most frequent failure and ship it within a month.
-6. Start a weekly operating note — health, risks, next actions — and send it for four consecutive weeks.
+6. Start a weekly operating note (health, risks, next actions) and send it for four consecutive weeks.
 7. Identify one part of the area to hand to someone else, and ask them if they want it.
 
 ## Practical Applications

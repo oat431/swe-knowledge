@@ -142,7 +142,7 @@ The map is the TPM's early-warning system. When it drifts, the TPM moves before 
 - [[04_Managing_Stakeholder_Expectations]]: sentiment drift is the early signal
 - [[06_Stakeholder_Conflict_Resolution]]: when the map surfaces a conflict
 - [[career-path/12_Technical_Program_Manager/01_Program_Structure_and_Charter/00_overview|Program Structure and Charter]]: governance defines stakeholder roles
-- [[career-path/03_Staff_Engineer/04_Influence_and_Alignment/00_overview|Influence and Alignment (Staff)]]: the staff engineer's stakeholder landscape
+- [[career-path/03_Staff_Engineer/04_Influence_and_Alignment/00_overview|Influence and Alignment (Staff)]]: the staff engineer's stakeholders
 - [[career-path/11_Engineering_Manager/07_Manager_Communication/00_overview|Manager Communication (EM)]]: upward and downward stakeholder dynamics
 
 ## Summary

@@ -8,7 +8,7 @@ tags: [design-process, high-level-design, detailed-design, software-design, sweb
 
 ## Purpose
 
-Design isn't a single step; it unfolds in layers of increasing detail. High-level design defines what the system looks like from the outside; detailed design defines how each piece works on the inside.
+Design happens in layers of increasing detail. High-level design defines what the system looks like from the outside; detailed design defines how each piece works on the inside.
 
 ## High-Level Design (Outward-Facing)
 

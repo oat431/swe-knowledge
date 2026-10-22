@@ -82,7 +82,7 @@ The plan is written, shared, and signed by both sides in spirit. The engineer ag
 - Next check-in:
 ```
 
-The manager writes the note the same day, in the report's file. Documentation is not about the termination that might come; it is about the fairness that must be visible throughout.
+The manager writes the note the same day, in the report's file. Documentation keeps fairness visible throughout, whether or not a termination ever comes.
 
 ## Fairness and Consistency Across Reports
 

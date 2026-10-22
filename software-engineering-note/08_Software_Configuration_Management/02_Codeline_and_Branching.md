@@ -33,7 +33,7 @@ A common anti-pattern is the **staircase (cascade) branching model**, where each
 
 **Do the majority of development on a single *mainline*, a "home codeline" that all work eventually lands on.**
 
-- The mainline is the central codeline that serves as the basis for sub-branches and their resultant merges.
+- The mainline is the central codeline that is the basis for sub-branches and their resultant merges.
 - All ongoing development activities end up on this single codeline at some point.
 - Branch only with a clear, justified reason where the independence gained clearly outweighs the cost of a later merge.
 

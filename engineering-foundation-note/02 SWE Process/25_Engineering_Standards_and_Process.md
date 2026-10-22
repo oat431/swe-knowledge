@@ -16,9 +16,9 @@ Standards define minimum requirements for quality, safety, and interoperability.
 
 ### What Are Standards?
 
-Definitional documents establishing requirements, specifications, or guidelines for acceptable quality. Standards are critical for engineers — conformance divides organizations/products into compliant and non-compliant.
+Definitional documents establishing requirements, specifications, or guidelines for acceptable quality. Standards are critical for engineers: conformance divides organizations/products into compliant and non-compliant.
 
-> **Standards represent minimum requirements** — often legally mandated — and must be incorporated as design constraints.
+> **Standards represent minimum requirements:** often legally mandated, and must be incorporated as design constraints.
 
 ### Standards Organizations
 
@@ -54,15 +54,15 @@ Definitional documents establishing requirements, specifications, or guidelines 
 
 ### How Standards Are Made
 
-1. **Proposal** — Industry need identified
-2. **Committee formation** — Experts from relevant stakeholders
-3. **Drafting** — Consensus-based development
-4. **Review** — Public comment period
-5. **Approval** — Voting by member bodies
-6. **Publication** — Released as official standard
-7. **Revision** — Periodic updates (typically 5-year cycle)
+1. **Proposal:** Industry need identified
+2. **Committee formation:** Experts from relevant stakeholders
+3. **Drafting:** Consensus-based development
+4. **Review:** Public comment period
+5. **Approval:** Voting by member bodies
+6. **Publication:** Released as official standard
+7. **Revision:** Periodic updates (typically 5-year cycle)
 
-> **Consensus process:** Standards are not written by a single author — they represent the agreement of all participating stakeholders.
+> **Consensus process:** Standards are not written by a single author; they represent the agreement of all participating stakeholders.
 
 ### Using Standards in Practice
 
@@ -110,10 +110,10 @@ All engineering disciplines share a common iterative process:
 > **"The problem you're asked to solve ≠ the problem that needs solving."**
 
 **Activities:**
-- Stakeholder analysis — who cares about this problem?
-- Root cause analysis — what's actually causing the symptom?
-- Problem framing — how you frame the problem determines what solutions you consider
-- Requirements elicitation — what does the customer actually need?
+- Stakeholder analysis: who cares about this problem?
+- Root cause analysis: what's actually causing the symptom?
+- Problem framing: how you frame the problem determines what solutions you consider
+- Requirements elicitation: what does the customer actually need?
 
 **Tools:** 5-whys, Ishikawa diagrams, stakeholder maps, problem statements
 
@@ -173,10 +173,10 @@ Knowledge gained at any step may trigger revisiting earlier steps:
 
 RCA serves four roles:
 
-1. **Understanding the real problem** (Step 1) — What's actually wrong?
-2. **Defining criteria** (Step 2) — What does "fixed" look like?
-3. **Evaluating solutions** (Step 4) — Does this solution address the root cause?
-4. **Monitoring** (Step 5) — Did the fix actually work?
+1. **Understanding the real problem** (Step 1): What's actually wrong?
+2. **Defining criteria** (Step 2): What does "fixed" look like?
+3. **Evaluating solutions** (Step 4): Does this solution address the root cause?
+4. **Monitoring** (Step 5): Did the fix actually work?
 
 ### Engineering Process vs Software Process
 
@@ -188,22 +188,22 @@ RCA serves four roles:
 | **Deliverables** | Physical products + documentation | Software + documentation |
 | **Standards** | ISO/IEC/IEEE 15288 (systems) | ISO/IEC/IEEE 12207 (software) |
 
-> **The generic engineering process underpins all software process models.** Waterfall, spiral, agile — they all implement these five steps differently, but the steps are always present.
+> **The generic engineering process underpins all software process models.** Waterfall, spiral, agile: they all implement these five steps differently, but the steps are always present.
 
 ## Essential Concepts
 
-- **Standards are minimum requirements** — often legally mandated, not optional
-- **Consensus-based development** — standards represent stakeholder agreement
-- **The five-step engineering process is universal** — applies to bridges, software, and everything in between
-- **"Understand the real problem" is step one** — the most common engineering failure is solving the wrong problem
-- **Multiple feasible solutions must be considered** — the first idea is rarely optimal
-- **Monitor real-world performance** — estimates can be wrong; feedback is essential
-- **The process is iterative** — knowledge gained at any step may trigger revisiting earlier steps
+- **Standards are minimum requirements:** often legally mandated, not optional
+- **Consensus-based development:** standards represent stakeholder agreement
+- **The five-step engineering process is universal:** applies to bridges, software, and everything in between
+- **"Understand the real problem" is step one:** the most common engineering failure is solving the wrong problem
+- **Multiple feasible solutions must be considered:** the first idea is rarely optimal
+- **Monitor real-world performance:** estimates can be wrong; feedback is essential
+- **The process is iterative:** knowledge gained at any step may trigger revisiting earlier steps
 
 ## Related
 
-- [[Engineering Foundation Overview]] — All engineering foundation topics
-- [[02 SWE Process/20_Root_Cause_Analysis|20_Root_Cause_Analysis]] — RCA techniques for Step 1
-- [[02 SWE Process/21_Measurement_Theory|21_Measurement_Theory]] — Measurement for defining criteria (Step 2) and monitoring (Step 5)
-- [[02 SWE Process/10_SE_Fundamentals_and_Process|10_SE_Fundamentals_and_Process]] — Software-specific process models
-- [[02 SWE Process/18_Evaluation_and_Improvement|18_Evaluation_and_Improvement]] — Process evaluation and improvement
+- [[Engineering Foundation Overview]]: All engineering foundation topics
+- [[02 SWE Process/20_Root_Cause_Analysis|20_Root_Cause_Analysis]]: RCA techniques for Step 1
+- [[02 SWE Process/21_Measurement_Theory|21_Measurement_Theory]]: Measurement for defining criteria (Step 2) and monitoring (Step 5)
+- [[02 SWE Process/10_SE_Fundamentals_and_Process|10_SE_Fundamentals_and_Process]]: Software-specific process models
+- [[02 SWE Process/18_Evaluation_and_Improvement|18_Evaluation_and_Improvement]]: Process evaluation and improvement

@@ -78,7 +78,7 @@ Some assessments exceed the manager's method:
 | Large migration | External or senior-peer review of the plan |
 | Recurring incidents | Post-incident analysis with a fresh set of eyes |
 
-Bringing outside judgment is not an admission of weakness; it is the correct move when the stakes exceed the method. The cost of the review is small against the cost of the wrong decision.
+Bringing in outside judgment is the correct move when the stakes exceed the method. The cost of the review is small against the cost of the wrong decision.
 
 ## The Manager as Risk Owner
 

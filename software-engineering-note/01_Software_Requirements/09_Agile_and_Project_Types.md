@@ -239,7 +239,7 @@ tags:
 ### Data requirements
 - Map existing data dictionary to COTS entities/attributes.
 - Handle data gaps (add attributes, repurpose structures).
-- Use report tables; leverage vendor-supplied templates.
+- Use report tables; reuse vendor-supplied templates.
 
 ### Business process changes
 - COTS selected for cost efficiency; be prepared to **adapt processes to the package**.
@@ -414,7 +414,7 @@ tags:
 - May need to identify **new data sources**.
 - **Big data:** large volume, high velocity, high complexity.
   - Often semi-structured or unstructured; traditional ERDs/data dictionaries may not suffice.
-  - Leverage metadata for semi-structured data.
+  - Use metadata for semi-structured data.
 - Data-based requirements questions cover: **sources, storage, management/governance, extraction**.
   - Sources: objects/attributes needed, availability, external/internal systems, change likelihood, historical migration.
   - Storage: current volume, growth, types, retention, security.

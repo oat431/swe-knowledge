@@ -27,7 +27,7 @@ tags:
 
 # Software Engineer
 
-> **Positioning:** The starting role in this career map. A software engineer applies engineering principles to understand, build, test, operate, and improve software systems — and grows from guided tasks to independent feature ownership.
+> **Positioning:** The starting role in this career map. A software engineer applies engineering principles to understand, build, test, operate, and improve software systems, and grows from guided tasks to independent feature ownership.
 
 ## What This Path Is
 
@@ -94,14 +94,14 @@ flowchart LR
 
 Rate yourself honestly, then link the artifact that supports each rating:
 
-- [ ] I can take a feature from rough request to production with only light oversight — evidence: link to a shipped feature
-- [ ] I debug with hypotheses and can show the narrowing steps — evidence: link to a bug write-up or postmortem comment
-- [ ] My pull requests are reviewable in one pass — evidence: link to a representative PR
-- [ ] I write tests that match the risk of my changes — evidence: link to a test plan or PR with layered tests
-- [ ] I have safely used AI assistance and verified the output — evidence: link to an AI-assisted change you fully reviewed
-- [ ] I have read dashboards or logs to answer a production question — evidence: link to a runbook step or incident note
-- [ ] I have given feedback that changed someone's approach — evidence: link to a review thread
-- [ ] I can state my level's expectations and name two current growth gaps — see [[career-path/01_Software_Engineer/01_Leveling_and_Growth/06_Feedback_and_Self_Assessment|Feedback and Self Assessment]]
+- [ ] I can take a feature from rough request to production with only light oversight; evidence: link to a shipped feature
+- [ ] I debug with hypotheses and can show the narrowing steps; evidence: link to a bug write-up or postmortem comment
+- [ ] My pull requests are reviewable in one pass; evidence: link to a representative PR
+- [ ] I write tests that match the risk of my changes; evidence: link to a test plan or PR with layered tests
+- [ ] I have safely used AI assistance and verified the output; evidence: link to an AI-assisted change you fully reviewed
+- [ ] I have read dashboards or logs to answer a production question; evidence: link to a runbook step or incident note
+- [ ] I have given feedback that changed someone's approach; evidence: link to a review thread
+- [ ] I can state my level's expectations and name two current growth gaps (see [[career-path/01_Software_Engineer/01_Leveling_and_Growth/06_Feedback_and_Self_Assessment|Feedback and Self Assessment]])
 
 ## Evidence Table: Artifact to What It Demonstrates
 
@@ -118,14 +118,14 @@ Rate yourself honestly, then link the artifact that supports each rating:
 ## First 90 Days (new team or first job)
 
 1. **Days 1–30: learn and ship small.** Set up the environment, read the module map of your service, ship one small change end to end, and write down everything that confused you. Keep a running questions list and review it weekly with your buddy or manager.
-2. **Days 31–60: widen safely.** Take a medium feature, join a code review rotation, shadow an on-call shift, and ask for one specific piece of feedback per fortnight. Start your brag document now — see [[career-path/01_Software_Engineer/01_Leveling_and_Growth/07_The_Brag_Document|The Brag Document]].
+2. **Days 31–60: widen safely.** Take a medium feature, join a code review rotation, shadow an on-call shift, and ask for one specific piece of feedback per fortnight. Start your brag document now (see [[career-path/01_Software_Engineer/01_Leveling_and_Growth/07_The_Brag_Document|The Brag Document]]).
 3. **Days 61–90: own something small.** Volunteer for a small component or operational area, propose one process improvement with a rationale, and agree on your growth targets for the next quarter with your manager.
 
 ## Getting Hired
 
 - **Typical interview formats (junior/mid):** coding exercises (algorithms or practical), a take-home or pair programming session, system-design-lite ("design a URL shortener" at this level), and behavioral questions on teamwork and learning. Expectations scale with level: mid-level candidates are expected to reason about trade-offs, not just produce working code.
-- **Portfolio:** 2–3 projects you can explain end to end — the decisions, the trade-offs, what broke, what you would do differently. Quality of reasoning beats project count. Public contributions are a plus, not a requirement.
-- **Certifications:** none are required or particularly valued for generalist software engineering roles. Cloud or security certifications matter only if you target those specialist paths — see the relevant path's guidance.
+- **Portfolio:** 2–3 projects you can explain end to end: the decisions, the trade-offs, what broke, what you would do differently. Quality of reasoning beats project count. Public contributions are a plus, not a requirement.
+- **Certifications:** none are required or particularly valued for generalist software engineering roles. Cloud or security certifications matter only if you target those specialist paths (see the relevant path's guidance).
 - **Preparation map:** [[career-path/01_Software_Engineer/02_Daily_Engineering_Craft/00_overview|Daily Engineering Craft]] for practical rounds, [[career-path/01_Software_Engineer/06_Choosing_a_Path/00_overview|Choosing a Path]] for targeting, and the target path's own notes for specialization questions.
 
 ## Career Paths Beyond
@@ -156,10 +156,10 @@ Most specialist routes are entered from Senior rather than directly; check each 
 
 ## Sources
 
-- *The Missing README* (Chris Riccomini, Dmitriy Ryaboy) — the practical manual this path mirrors
-- *The Pragmatic Programmer* (David Thomas, Andrew Hunt) — daily craft philosophy
-- *Software Engineering at Google* (Titus Winters, Tom Manshreck, Hyrum Wright) — engineering practices at scale
-- *A Philosophy of Software Design* (John Ousterhout) — design judgment foundations
+- *The Missing README* (Chris Riccomini, Dmitriy Ryaboy): the practical manual this path mirrors
+- *The Pragmatic Programmer* (David Thomas, Andrew Hunt): daily craft philosophy
+- *Software Engineering at Google* (Titus Winters, Tom Manshreck, Hyrum Wright): engineering practices at scale
+- *A Philosophy of Software Design* (John Ousterhout): design judgment foundations
 - [U.S. Bureau of Labor Statistics: Software Developers, Quality Assurance Analysts, and Testers](https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm)
 - [[SWEBOK v4 - Overview]]
 

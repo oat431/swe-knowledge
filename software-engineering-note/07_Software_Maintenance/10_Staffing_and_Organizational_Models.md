@@ -280,7 +280,7 @@ The knowledge transfer period is critical for successful outsourcing:
 
 ### 4.7 XaaS and API Enablement for Maintenance
 
-Modern maintenance outsourcing leverages service-oriented and API-driven approaches:
+Modern maintenance outsourcing uses service-oriented and API-driven approaches:
 
 | Approach | Description | Maintenance Benefit |
 |----------|-------------|---------------------|

@@ -54,7 +54,7 @@ A "lean hire" that proceeds to offer without closing the evidence gap is a bet t
 
 ## The Bar and Its Trade-offs
 
-The bar is not a constant; it is a managed tension between quality and velocity.
+The bar is a managed tension between quality and velocity.
 
 | Pressure | What It Tempts | Actual Trade-off | Discipline |
 |----------|----------------|------------------|------------|

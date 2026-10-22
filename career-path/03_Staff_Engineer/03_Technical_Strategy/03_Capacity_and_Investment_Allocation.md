@@ -166,4 +166,4 @@ flowchart TD
 
 ## Summary
 
-Capacity allocation is the decision most organizations never make, and the staff engineer is the one who forces it: measure the real split, build scenarios with consequences, negotiate an explicit allocation with leadership, and review it on a cadence. The goal is not a perfect ratio; it is a visible, defensible, reviewed trade between features, debt, and platform, one that survives the pressure of every quarter.
+Capacity allocation is the decision most organizations never make, and the staff engineer is the one who forces it: measure the real split, build scenarios with consequences, negotiate an explicit allocation with leadership, and review it on a cadence. The goal is a visible, defensible, reviewed trade between features, debt, and platform, one that survives the pressure of every quarter.

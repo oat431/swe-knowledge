@@ -77,7 +77,7 @@ A phased rollout is also the risk management: the proposal can be adopted with a
 
 ## Open Questions
 
-The open questions section lists what is unknown and what would change the recommendation. It is not weakness; it is the pre-commitment that prevents the ambush ("we didn't consider X") from working in the review meeting, because X is already on the page with its consequence stated.
+The open questions section lists what is unknown and what would change the recommendation. It is the pre-commitment that prevents the ambush ("we didn't consider X") from working in the review meeting, because X is already on the page with its consequence stated.
 
 ## Length and Format Discipline
 

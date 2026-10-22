@@ -19,7 +19,7 @@ tags:
 
 ## What Changes from Junior to Mid
 
-A junior engineer reads unfamiliar code line by line and hopes understanding accumulates. A mid-level engineer orients on purpose: finds entry points, traces one real path end to end, reads tests and history for intent, and draws a small map — so every subsequent line is read with a place to put it.
+A junior engineer reads unfamiliar code line by line and hopes understanding accumulates. A mid-level engineer orients on purpose: finds entry points, traces one real path end to end, reads tests and history for intent, and draws a small map, so every subsequent line is read with a place to put it.
 
 | Aspect | Junior | Mid |
 |--------|--------|-----|
@@ -79,7 +79,7 @@ flowchart LR
 
 **Start from an entry point, not from the top of a file.** Every system has a front door: a web route table, a CLI command, a queue consumer, a scheduled job. Finding that door tells you which code runs and in what order. Reading from an arbitrary file leaves you deep in helpers with no sense of the whole.
 
-**Trace one real request end to end before exploring breadth.** Pick a concrete case — one API call, one job, one user action — and follow it through every layer until it produces output. One complete trace teaches more than skimming ten modules, and it gives you a spine to attach later reading to.
+**Trace one real request end to end before exploring breadth.** Pick a concrete case (one API call, one job, one user action) and follow it through every layer until it produces output. One complete trace teaches more than skimming ten modules, and it gives you a spine to attach later reading to.
 
 **Read tests as documentation.** Test names describe intended behavior more plainly than implementation code, and fixtures show realistic inputs. When a behavior confuses you, find its test first; if no test exists, that absence is itself a finding worth noting.
 
@@ -87,7 +87,7 @@ flowchart LR
 
 **Draw a small module map early.** Five to ten boxes with arrows is enough: entry point, request handling, domain logic, storage, external calls. Externalizing the structure frees working memory and gives you something concrete to correct when you learn more.
 
-**Validate your model with a prediction.** Before trusting your understanding, predict something checkable — where a log line appears, which function a breakpoint hits, what a test asserts — then verify it. A wrong prediction is the fastest way to find the gap in your model.
+**Validate your model with a prediction.** Before trusting your understanding, predict something checkable (where a log line appears, which function a breakpoint hits, what a test asserts), then verify it. A wrong prediction is the fastest way to find the gap in your model.
 
 **Stop reading when you can safely change.** The goal of reading is a safe, small modification, not omniscience. Once you can name the files to touch, the tests that cover them, and the plausible blast radius, switch to making a small change and let the change teach you the rest.
 
@@ -101,7 +101,7 @@ Orient in a service you have never worked on and make one safe change:
 4. Blame one surprising line you encountered and read the commit or PR message around it; write one sentence on why the code is that way.
 5. Draw a module map of 5-10 boxes on paper or in a scratch note; keep it to one screen.
 6. State one prediction from your model (for example, "changing X should alter Y") and verify it with a quick experiment or test run.
-7. Make one tiny change — a clarifying rename, a fixed typo in a log message, or a small bug fix — run the tests, and note which parts of your model were wrong.
+7. Make one tiny change (a clarifying rename, a fixed typo in a log message, or a small bug fix), run the tests, and note which parts of your model were wrong.
 
 ## Practical Applications
 

@@ -60,7 +60,7 @@ The first closure step is formal acceptance that the project has delivered what 
 | **Customer/sponsor sign-off** | Formal written acceptance from the sponsor or customer that deliverables are accepted |
 | **Outstanding items** | Any incomplete or deferred items are documented with owners, rationale, and plan |
 
-Acceptance is not "everyone is happy"; it is "the deliverables match the agreed scope and quality criteria." Items outside the scope baseline are not blockers to acceptance; they are candidates for a future phase or project.
+Acceptance is not "everyone is happy"; it is "the deliverables match the agreed scope and quality criteria." Items outside the scope baseline become candidates for a future phase or project.
 
 ## Administrative Close
 
@@ -104,7 +104,7 @@ The project's knowledge assets must survive its closure:
 | Contracts and legal | Archived per organizational retention policy |
 | Communications | Key stakeholder communications archived per policy |
 
-The archive is not a folder on the PM's laptop; it is the organizational repository where the next project manager can find the lessons from this project.
+The archive is the organizational repository where the next project manager can find the lessons from this project.
 
 ## The Project Closure Report
 

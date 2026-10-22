@@ -1,11 +1,11 @@
 ---
 tags: [evaluation, metrics, process-improvement, software-engineering]
-source: "SWE Theory & Practice — Roger Pressman & Bruce Maxim, Ch 12–13"
+source: "SWE Theory & Practice — Pfleeger & Atlee, Ch 12–13"
 ---
 
 # Evaluation and Improvement
 
-> **Source:** *Software Engineering: A Practitioner's Approach* by Roger S. Pressman & Bruce R. Maxim — Ch 12 (Evaluating Products, Processes, and Resources) and Ch 13 (Improving Predictions, Products, Processes, and Resources)
+> **Source:** *Software Engineering: Theory and Practice* by Shari Lawrence Pfleeger & Joanne M. Atlee, Ch 12 (Evaluating Products, Processes, and Resources) and Ch 13 (Improving Predictions, Products, Processes, and Resources)
 
 ---
 
@@ -22,9 +22,9 @@ source: "SWE Theory & Practice — Roger Pressman & Bruce Maxim, Ch 12–13"
 
 ### Preparing for an Evaluation
 
-1. **Set the Hypothesis** — State what you want to investigate in quantifiable terms (e.g., "Cleanroom code has fewer faults per KLOC than SSADM code")
-2. **Control Variables** — Decide which variables affect the outcome and how much control you have; experiments require direct manipulation, case studies do not
-3. **Make It Meaningful** — Ensure results apply beyond the immediate study; experiments yield more generalizable results than case studies
+1. **Set the Hypothesis:** State what you want to investigate in quantifiable terms (e.g., "Cleanroom code has fewer faults per KLOC than SSADM code")
+2. **Control Variables:** Decide which variables affect the outcome and how much control you have; experiments require direct manipulation, case studies do not
+3. **Make It Meaningful:** Ensure results apply beyond the immediate study; experiments yield more generalizable results than case studies
 
 ### Common Evaluation Pitfalls
 
@@ -48,22 +48,22 @@ source: "SWE Theory & Practice — Roger Pressman & Bruce Maxim, Ch 12–13"
 
 ### Two Kinds of Measurement Systems
 
-- **Measurement systems** — Assess an *existing* entity by numerically characterizing attributes
-- **Prediction systems** — Predict some attribute of a *future* entity using a mathematical model
+- **Measurement systems:** Assess an *existing* entity by numerically characterizing attributes
+- **Prediction systems:** Predict some attribute of a *future* entity using a mathematical model
 
 ### Validating Prediction Systems
 
 - Compare model performance with known data in the given environment
 - State acceptance ranges in advance (e.g., reliability prediction accurate within 20%)
-- Use **fit data** (to build/tune the model) and **test data** (to validate) — typically 2/3 and 1/3 split
+- Use **fit data** (to build/tune the model) and **test data** (to validate), typically 2/3 and 1/3 split
 - Beware that predictions can become self-fulfilling targets (use double-blind designs where appropriate)
 
 ### Validating Measures
 
-- **Representation condition** — Relationships among numerical values must correspond to real-world attribute relationships
-- **Internal validity** (narrow sense) — Measure accurately captures the attribute it claims to measure
-- **Wide-sense validity** — Internally valid *and* a component of an accurate prediction system
-- **Correlation ≠ causation** — Statistical correlation alone does not prove cause and effect
+- **Representation condition:** Relationships among numerical values must correspond to real-world attribute relationships
+- **Internal validity** (narrow sense): Measure accurately captures the attribute it claims to measure
+- **Wide-sense validity:** Internally valid *and* a component of an accurate prediction system
+- **Correlation ≠ causation:** Statistical correlation alone does not prove cause and effect
 
 ---
 
@@ -112,8 +112,8 @@ Five steps to construct a quality model:
 
 ### Establishing Baselines and Targets
 
-- **Baseline** — The typical/average result in an organization (e.g., 3 faults per KLOC in testing)
-- **Target** — Minimally acceptable behavior (e.g., ≥95% fault removal efficiency)
+- **Baseline:** The typical/average result in an organization (e.g., 3 faults per KLOC in testing)
+- **Target:** Minimally acceptable behavior (e.g., ≥95% fault removal efficiency)
 - U.S. DoD uses quantitative targets with "malpractice levels" (e.g., fault removal <70% = malpractice)
 
 ### Software Reuse
@@ -137,11 +137,11 @@ Components described by ordered facets (e.g., `<switching system, sort, telephon
 
 #### Reuse Success Factors
 
-- **Management commitment** — Unconditional, sustained support
-- **Measurable goals** — Know when you've succeeded
-- **Incentives** — Cash rewards, royalties, recognition (GTE: $100/component, royalties on reuse)
-- **Domain analysis** — Systematic identification of reusable areas
-- **Integrated process** — Reuse must be part of the development workflow, not an afterthought
+- **Management commitment:** Unconditional, sustained support
+- **Measurable goals:** Know when you've succeeded
+- **Incentives:** Cash rewards, royalties, recognition (GTE: $100/component, royalties on reuse)
+- **Domain analysis:** Systematic identification of reusable areas
+- **Integrated process:** Reuse must be part of the development workflow, not an afterthought
 
 > **HP Results:** 51% fault reduction, 57% productivity increase, 42% time-to-market reduction on reuse projects.
 
@@ -153,11 +153,11 @@ Components described by ordered facets (e.g., `<switching system, sort, telephon
 
 A post-implementation assessment of all project aspects to identify improvement areas. Five-part process (Collier, DeMarco, Fearey):
 
-1. **Survey** — Collect data without compromising confidentiality; guided by: don't ask for more than needed, don't ask leading questions, preserve anonymity
-2. **Objective Information** — Collect cost (person-months, LOC), schedule (predictions vs. actuals), and quality (faults found per activity) data
-3. **Debriefing Meeting** — Team members report what went well and what didn't; identify root causes
-4. **Project History Day** — Small subset reviews events, schedule-predictability charts, and identifies ~20 root causes
-5. **Publish Results** — Open letter with: project description, positive findings, three worst factors, improvement activities
+1. **Survey:** Collect data without compromising confidentiality; guided by: don't ask for more than needed, don't ask leading questions, preserve anonymity
+2. **Objective Information:** Collect cost (person-months, LOC), schedule (predictions vs. actuals), and quality (faults found per activity) data
+3. **Debriefing Meeting:** Team members report what went well and what didn't; identify root causes
+4. **Project History Day:** Small subset reviews events, schedule-predictability charts, and identifies ~20 root causes
+5. **Publish Results:** Open letter with: project description, positive findings, three worst factors, improvement activities
 
 ### Process Maturity Models
 
@@ -182,7 +182,7 @@ A post-implementation assessment of all project aspects to identify improvement 
 #### ISO 9000
 
 - International quality standards applicable to any system (not just software)
-- **ISO 9001** most applicable to software — covers design, development, production, installation, maintenance
+- **ISO 9001** most applicable to software: covers design, development, production, installation, maintenance
 - **ISO 9000-3** provides software-specific guidelines
 - Requires documented quality system, design control, corrective/preventive action
 - Less emphasis on statistical process control than CMM or SPICE
@@ -210,8 +210,8 @@ NPV = Σ (Cash flow at time t / (1 + discount rate)^t) − Initial investment
 ```
 
 - **Accept rule:** Invest if NPV > 0
-- Sensitive to timing — later returns are penalized more
-- NPV is additive — can evaluate collections of projects by summing
+- Sensitive to timing: later returns are penalized more
+- NPV is additive: can evaluate collections of projects by summing
 - Compare against alternative: "What if we just put the money in the bank?"
 
 ---
@@ -220,14 +220,14 @@ NPV = Σ (Cash flow at time t / (1 + discount rate)^t) − Initial investment
 
 ### The Problem with Reliability Models
 
-Different reliability models (Jelinski-Moranda, Goel-Okumoto, Littlewood, Duane, Littlewood-Verrall) applied to the same dataset produce dramatically different predictions — some optimistic, some noisy, none consistently best.
+Different reliability models (Jelinski-Moranda, Goel-Okumoto, Littlewood, Duane, Littlewood-Verrall) applied to the same dataset produce dramatically different predictions: some optimistic, some noisy, none consistently best.
 
 ### Techniques for Improving Predictions
 
-- **Ensemble methods** — Combine predictions from multiple models rather than relying on one
-- **Local calibration** — Tune models to organization-specific data; "a predictive model is worthwhile only if used with a local process to select metrics that are valid as predictors"
-- **Track prediction accuracy** — Compare predicted vs. actual over time to identify which models work best in your context
-- **Simple baselines** — Sometimes simple heuristics (e.g., "tomorrow's weather = today's weather") are surprisingly competitive
+- **Ensemble methods:** Combine predictions from multiple models rather than relying on one
+- **Local calibration:** Tune models to organization-specific data; "a predictive model is worthwhile only if used with a local process to select metrics that are valid as predictors"
+- **Track prediction accuracy:** Compare predicted vs. actual over time to identify which models work best in your context
+- **Simple baselines:** Sometimes simple heuristics (e.g., "tomorrow's weather = today's weather") are surprisingly competitive
 
 ---
 
@@ -258,9 +258,9 @@ Different reliability models (Jelinski-Moranda, Goel-Okumoto, Littlewood, Duane,
 
 ### Process Improvement Through Maturity
 
-- Improvement is **incremental** — organizations move up one level at a time
+- Improvement is **incremental**: organizations move up one level at a time
 - Each level provides the foundation for the next
-- **Measurement is the enabler** — you cannot improve what you cannot see
+- **Measurement is the enabler:** you cannot improve what you cannot see
 - Process improvement must be **institutionalized**, not just implemented
 
 ---
@@ -283,32 +283,32 @@ Evaluation → Baselines → Targets → Improvement
 
 ## Practical Takeaways
 
-1. **Match evaluation technique to control level** — Use experiments when you can control variables, case studies when you cannot
-2. **Validate before trusting** — Ensure measures actually capture what they claim; correlation alone is not enough
-3. **Postmortems are essential** — Learn more from failures than successes; make them blame-free and action-oriented
-4. **Process maturity is a journey** — Each CMM level builds on the previous; skip none
-5. **People matter most** — Differences between high- and low-performance teams have the largest influence on productivity
-6. **NPV for investment decisions** — Compare technology investments against capital market alternatives
-7. **Reuse requires investment** — Upfront costs are 1.1–4.8× normal, but long-term savings are substantial (10–63% of normal cost to reuse)
-8. **Combine predictions** — No single model is universally best; ensemble approaches and local calibration improve accuracy
+1. **Match evaluation technique to control level:** Use experiments when you can control variables, case studies when you cannot
+2. **Validate before trusting:** Ensure measures actually capture what they claim; correlation alone is not enough
+3. **Postmortems are essential:** Learn more from failures than successes; make them blame-free and action-oriented
+4. **Process maturity is a journey:** Each CMM level builds on the previous; skip none
+5. **People matter most:** Differences between high- and low-performance teams have the largest influence on productivity
+6. **NPV for investment decisions:** Compare technology investments against capital market alternatives
+7. **Reuse requires investment:** Upfront costs are 1.1–4.8× normal, but long-term savings are substantial (10–63% of normal cost to reuse)
+8. **Combine predictions:** No single model is universally best; ensemble approaches and local calibration improve accuracy
 
 ---
 
 ## Key References
 
-- **Fenton & Pfleeger (1997)** — Software Metrics: A Rigorous and Practical Approach
-- **Paulk et al. (1993)** — Capability Maturity Model (CMM)
-- **Curtis, Hefley & Miller (1995)** — People Capability Maturity Model
-- **Collier, DeMarco & Fearey (1996)** — Postmortem process at Wildfire Communications
-- **Lim (1994)** — Reuse at Hewlett-Packard
-- **Favaro & Pfleeger (1998)** — NPV for software investment decisions
-- **ISO 9126, ISO 9000, ISO 15504 (SPICE)** — International standards
+- **Fenton & Pfleeger (1997):** Software Metrics: A Rigorous and Practical Approach
+- **Paulk et al. (1993):** Capability Maturity Model (CMM)
+- **Curtis, Hefley & Miller (1995):** People Capability Maturity Model
+- **Collier, DeMarco & Fearey (1996):** Postmortem process at Wildfire Communications
+- **Lim (1994):** Reuse at Hewlett-Packard
+- **Favaro & Pfleeger (1998):** NPV for software investment decisions
+- **ISO 9126, ISO 9000, ISO 15504 (SPICE):** International standards
 
 
 ## Related
 
-- [[Engineering Foundation Overview]] — All engineering foundation topics
-- [[02 SWE Process/17_Delivery_and_Maintenance|17_Delivery_and_Maintenance]] — Maintenance measurement
-- [[02 SWE Process/16_Testing_Strategies|16_Testing_Strategies]] — Testing metrics and evaluation
-- [[02 SWE Process/11_Project_Planning_and_Management|11_Project_Planning_and_Management]] — Project tracking and estimation
-- [[01 Physics and Math/09_Math_Stats_and_Economics|09_Math_Stats_and_Economics]] — Statistical methods for evaluation
+- [[Engineering Foundation Overview]]: All engineering foundation topics
+- [[02 SWE Process/17_Delivery_and_Maintenance|17_Delivery_and_Maintenance]]: Maintenance measurement
+- [[02 SWE Process/16_Testing_Strategies|16_Testing_Strategies]]: Testing metrics and evaluation
+- [[02 SWE Process/11_Project_Planning_and_Management|11_Project_Planning_and_Management]]: Project tracking and estimation
+- [[01 Physics and Math/09_Math_Stats_and_Economics|09_Math_Stats_and_Economics]]: Statistical methods for evaluation

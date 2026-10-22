@@ -22,7 +22,7 @@ tags:
 
 Experienced engineers carry the team's technical depth, mentor its juniors, and absorb its hardest problems. They also need the least management, and resent the most of it. The manager who supervises a senior like a junior loses them twice: their judgment goes unused, and their loyalty goes elsewhere. The manager who partners with them multiplies the whole team's capability, because a senior who is trusted delegates down and grows the team from within.
 
-The stakes are asymmetric. Seniors and staff have options, networks, and a quiet market; when they disengage, they leave quietly and the damage is discovered late, after the knowledge walked out. Managing experienced engineers well is not a nicety; it is the retention of the team's core capability.
+The stakes are asymmetric. Seniors and staff have options, networks, and a quiet market; when they disengage, they leave quietly and the damage is discovered late, after the knowledge walked out. Managing experienced engineers well is how the team retains its core capability.
 
 ## Partnership Not Supervision
 

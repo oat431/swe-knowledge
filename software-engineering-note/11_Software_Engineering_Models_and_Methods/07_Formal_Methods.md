@@ -200,12 +200,12 @@ Model checking is an **automated** technique that exhaustively explores all reac
 **CTL (Computation Tree Logic):**
 - Path quantifiers: **A** (all paths), **E** (exists a path)
 - Temporal operators: **X** (next), **F** (eventually), **G** (globally), **U** (until)
-- Example: `AG(request → AF response)` -- "every request is eventually answered on all paths"
+- Example: `AG(request → AF response)`: "every request is eventually answered on all paths"
 
 **LTL (Linear Temporal Logic):**
 - No path quantifiers (implicitly universal over all paths)
 - Operators: **X**, **F**, **G**, **U**
-- Example: `G(request → F response)` -- same meaning as CTL example for safety properties
+- Example: `G(request → F response)`: same meaning as CTL example for safety properties
 
 **CTL*:** superset combining CTL and LTL expressiveness
 

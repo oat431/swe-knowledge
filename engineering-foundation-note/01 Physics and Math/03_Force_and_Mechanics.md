@@ -9,7 +9,7 @@ source: Engineering Fundamentals Ch 10
 
 # Force and Mechanics
 
-> **Source:** Engineering Fundamentals — Chapter 10: Force and Force-Related Parameters
+> **Source:** Engineering Fundamentals, Chapter 10: Force and Force-Related Parameters
 
 Force is fundamental to engineering mechanics. This chapter covers force definition, Newton's laws, moment/torque, work, pressure/stress, elastic modulus, and their engineering applications. Newton's laws form the foundation of mechanics and the analysis/design of structures, airframes, car frames, medical implants, machine parts, and satellite orbits.
 
@@ -17,7 +17,7 @@ Force is fundamental to engineering mechanics. This chapter covers force definit
 
 ## 1. What We Mean by Force
 
-**Force** is the simplest form of interaction between two objects — a **push** or a **pull**.
+**Force** is the simplest form of interaction between two objects: a **push** or a **pull**.
 
 - Forces can result from **direct contact** (hand on lawn mower, bumper hitch on trailer)
 - Forces can also act **at a distance** (gravitational, magnetic forces)
@@ -80,7 +80,7 @@ Once motion begins, friction drops to the **dynamic (kinetic) friction** level.
 
 ### Viscous Friction (Fluid Friction)
 
-- Quantified by **viscosity** — a measure of how easily a fluid flows
+- Quantified by **viscosity**, a measure of how easily a fluid flows
 - Higher viscosity → more resistance to flow (e.g., honey vs. water)
 - Viscosity of **gases** increases with temperature
 - Viscosity of **liquids** decreases with temperature
@@ -113,7 +113,7 @@ Where:
 
 ### Newton's Third Law (Action-Reaction)
 
-> For every action there exists an equal and opposite reaction — same magnitude, same line of action, opposite direction.
+> For every action there exists an equal and opposite reaction: same magnitude, same line of action, opposite direction.
 
 ### Newton's Law of Gravitation
 
@@ -156,7 +156,7 @@ $$M = d \times F$$
 
 Where:
 - $M$ = moment (N·m)
-- $d$ = moment arm — perpendicular distance from line of action of force to the point of rotation
+- $d$ = moment arm: perpendicular distance from line of action of force to the point of rotation
 - $F$ = force (N)
 
 **Convention:** Assign positive to clockwise (or counterclockwise) and negative to the opposite; the net sign reveals the overall rotation tendency.
@@ -276,7 +276,7 @@ In an enclosed incompressible fluid system, pressure is transmitted equally:
 
 $$\frac{F_1}{A_1} = \frac{F_2}{A_2}$$
 
-This allows **force multiplication** — a small force on a small piston can lift a large load on a large piston. Volume displaced is conserved:
+This allows **force multiplication**: a small force on a small piston can lift a large load on a large piston. Volume displaced is conserved:
 
 $$A_1 L_1 = A_2 L_2$$
 
@@ -302,7 +302,7 @@ Where:
 - $E$ = modulus of elasticity / Young's modulus (N/m² or psi)
 - $\varepsilon$ = normal strain = $\Delta L / L$ (dimensionless)
 
-**Key insight:** A higher modulus of elasticity means the material is **stiffer** — more force is required to stretch or compress it by the same amount.
+**Key insight:** A higher modulus of elasticity means the material is **stiffer**: more force is required to stretch or compress it by the same amount.
 
 | Material | Relative Stiffness |
 |----------|-------------------|
@@ -320,7 +320,7 @@ Relates shear stress to shear strain for materials under torsional (twisting) lo
 
 ### Bulk Modulus of Compressibility
 
-Describes how a fluid's volume changes under applied pressure — relevant for hydraulic systems and fluid mechanics.
+Describes how a fluid's volume changes under applied pressure, relevant for hydraulic systems and fluid mechanics.
 
 ---
 
@@ -353,15 +353,15 @@ Describes how a fluid's volume changes under applied pressure — relevant for h
 - **Work** is force × distance (in the direction of motion); **power** is work per unit time
 - **Pressure** is force per unit area; it increases with fluid depth and is uniform at a point in a static fluid
 - **Stress** is the intensity of internal forces within a material (normal stress, shear stress)
-- **Young's modulus** ($E$) quantifies material stiffness — higher $E$ means stiffer material
+- **Young's modulus** ($E$) quantifies material stiffness; higher $E$ means stiffer material
 - **Hydraulic systems** exploit pressure transmission in incompressible fluids for force multiplication
 - Mass is constant; weight varies with local gravitational acceleration
 
 
 ## Related
 
-- [[Engineering Foundation Overview]] — All engineering foundation topics
-- [[01 Physics and Math/01_Dimensions_and_Measurement|01_Dimensions_and_Measurement]] — Fundamental dimensions and units
-- [[01 Physics and Math/02_Time_Mass_and_Motion|02_Time_Mass_and_Motion]] — Mass, momentum, and motion
-- [[01 Physics and Math/06_Energy_and_Power|06_Energy_and_Power]] — Work, energy, and power relationships
-- [[01 Physics and Math/08_Engineering_Materials|08_Engineering_Materials]] — Material properties and selection
+- [[Engineering Foundation Overview]]: All engineering foundation topics
+- [[01 Physics and Math/01_Dimensions_and_Measurement|01_Dimensions_and_Measurement]]: Fundamental dimensions and units
+- [[01 Physics and Math/02_Time_Mass_and_Motion|02_Time_Mass_and_Motion]]: Mass, momentum, and motion
+- [[01 Physics and Math/06_Energy_and_Power|06_Energy_and_Power]]: Work, energy, and power relationships
+- [[01 Physics and Math/08_Engineering_Materials|08_Engineering_Materials]]: Material properties and selection

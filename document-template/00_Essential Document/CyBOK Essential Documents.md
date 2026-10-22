@@ -4,7 +4,7 @@ tags: [overview, cyber-security, cybok, essential-documents]
 
 # CyBOK — Essential Documents by Knowledge Area
 
-> **Source:** [[CyBOK v1 - Overview|CyBOK v1.1 (NCSC, 2021)]] — 21 Knowledge Areas
+> **Source:** [[CyBOK v1 - Overview|CyBOK v1.1 (NCSC, 2021)]], 21 Knowledge Areas
 > Organized by security domain: Governance → Offensive → Defensive → Software → Infrastructure → Advanced
 >
 > ⚠️ **This is a document-only extract.** For the full body of knowledge, see:
@@ -127,8 +127,8 @@ tags: [overview, cyber-security, cybok, essential-documents]
 
 ## Related
 
-- [[SWEBOK Essential Documents]] — Software engineering documents by SDLC phase
-- [[PMBOK Essential Documents]] — Project management documents by phase
-- [[BABOK Essential Documents]] — Business analysis documents by KA
-- [[DMBOK Essential Documents]] — Data management documents by KA
-- [[CyBOK v1 - Overview]] — Full CyBOK knowledge base
+- [[SWEBOK Essential Documents]]: Software engineering documents by SDLC phase
+- [[PMBOK Essential Documents]]: Project management documents by phase
+- [[BABOK Essential Documents]]: Business analysis documents by KA
+- [[DMBOK Essential Documents]]: Data management documents by KA
+- [[CyBOK v1 - Overview]]: Full CyBOK knowledge base

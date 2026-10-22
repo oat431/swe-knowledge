@@ -5,7 +5,7 @@ source: "SWE Theory & Practice Ch 3 — Planning and Managing the Project"
 
 # Project Planning and Management
 
-> *Source: Software Engineering: Theory & Practice, Chapter 3 — Planning and Managing the Project*
+> *Source: Software Engineering: Theory & Practice, Chapter 3: Planning and Managing the Project*
 
 Project management is one of the core practices of software engineering. It covers progress tracking, personnel organization, effort estimation, risk management, and project planning. Good project management ensures products are delivered on time, within budget, and at high quality.
 
@@ -49,7 +49,7 @@ graph TD
 ```
 
 - **Activity** is a measurable event with clear completion criteria
-- **Milestone** is a completion marker for activities — used by both customers and developers to track progress
+- **Milestone** is a completion marker for activities, used by both customers and developers to track progress
 - WBS does not show dependencies between work units or parallelizable tasks
 
 ### Activity Graphs
@@ -128,15 +128,15 @@ Key activities in every software project:
 ### Individual Differences
 
 People in the same role may differ in:
-- **Ability** — work capability
-- **Interest** — job engagement
-- **Application experience** — familiarity with the domain
-- **Tool/language experience** — proficiency with specific technologies
-- **Technique experience** — knowledge of methods and approaches
-- **Training** — formal education and professional development
-- **Communication ability** — expressing ideas clearly
-- **Sharing responsibility** — collaboration skills
-- **Management skills** — leadership and coordination
+- **Ability:** work capability
+- **Interest:** job engagement
+- **Application experience:** familiarity with the domain
+- **Tool/language experience:** proficiency with specific technologies
+- **Technique experience:** knowledge of methods and approaches
+- **Training:** formal education and professional development
+- **Communication ability:** expressing ideas clearly
+- **Sharing responsibility:** collaboration skills
+- **Management skills:** leadership and coordination
 
 > Sackman, Erikson, and Grant (1968) found that the productivity ratio between the best and worst programmers averaged **10:1**, and there was no simple relationship between experience and performance.
 
@@ -242,7 +242,7 @@ x  ─┤               ╲ ← Final accurate value
 
 ### Inaccurate Estimate Causes
 
-Lederer and Prasad (1992) surveyed 115 organizations — key causes:
+Lederer and Prasad (1992) surveyed 115 organizations. Key causes:
 - Frequent user requirements changes
 - Omitted tasks
 - Users don't understand their own needs
@@ -344,11 +344,11 @@ $$E = b \cdot S^c \cdot m(\vec{X})$$
 #### Stage 2 & 3: Scale Factors
 
 The size exponent $c$ ranges from 0.91 to 1.23, depending on:
-- **Precedentedness** — familiarity with the project type
-- **Flexibility** — degree of requirements flexibility
-- **Risk Resolution** — extent of risk identification and resolution
-- **Team Cohesion** — how well the team works together
-- **Process Maturity** — SEI CMM level
+- **Precedentedness:** familiarity with the project type
+- **Flexibility:** degree of requirements flexibility
+- **Risk Resolution:** extent of risk identification and resolution
+- **Team Cohesion:** how well the team works together
+- **Process Maturity:** SEI CMM level
 
 #### Cost Drivers
 
@@ -483,7 +483,7 @@ The project plan contains 15 core components:
 
 ### Case Study: Digital Alpha AXP
 
-**Enrollment Management Model** — four principles:
+**Enrollment Management Model:** four principles:
 1. Establish an appropriate large shared vision
 2. Fully delegate and obtain specific commitments from participants
 3. Actively check and provide supportive feedback
@@ -557,7 +557,7 @@ Using the Piccadilly television advertising sales system as an example:
 
 ## 8. Real-Time Example: Ariane-5 Failure
 
-Ariane-5 rocket self-destructed 39 seconds after launch — root cause analysis:
+Ariane-5 rocket self-destructed 39 seconds after launch. Root cause analysis:
 
 - **Root cause:** Reused the SRI module from Ariane-4, which performed calculations unnecessary after launch in Ariane-5
 - **Risk identification failure:** Functional decomposition might have revealed Ariane-4/5 requirement differences
@@ -591,7 +591,7 @@ Ariane-5 rocket self-destructed 39 seconds after launch — root cause analysis:
 
 ## Related
 
-- [[Engineering Foundation Overview]] — All engineering foundation topics
-- [[02 SWE Process/10_SE_Fundamentals_and_Process|10_SE_Fundamentals_and_Process]] — Process models and life cycle
-- [[02 SWE Process/12_Requirements_Engineering|12_Requirements_Engineering]] — Requirements that drive project planning
-- [[02 SWE Process/18_Evaluation_and_Improvement|18_Evaluation_and_Improvement]] — Process improvement and metrics
+- [[Engineering Foundation Overview]]: All engineering foundation topics
+- [[02 SWE Process/10_SE_Fundamentals_and_Process|10_SE_Fundamentals_and_Process]]: Process models and life cycle
+- [[02 SWE Process/12_Requirements_Engineering|12_Requirements_Engineering]]: Requirements that drive project planning
+- [[02 SWE Process/18_Evaluation_and_Improvement|18_Evaluation_and_Improvement]]: Process improvement and metrics

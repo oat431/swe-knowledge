@@ -121,7 +121,7 @@ public:
 
 #### Key Encapsulation Rules
 
-1. **Minimize accessibility of classes and members:** Favor the strictest level of privacy that's workable. The real question: *"What best preserves the integrity of the interface abstraction?"*
+1. **Minimize accessibility of classes and members:** Favor the strictest level of privacy that's workable. Ask: *"What best preserves the integrity of the interface abstraction?"*
 
 2. **Don't expose member data in public:** Getters/setters maintain encapsulation even when they expose individual fields:
    ```cpp

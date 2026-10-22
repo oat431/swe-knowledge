@@ -20,7 +20,7 @@ tags:
 
 ## Why This Matters
 
-In an enterprise, no deployment reaches production without passing a security review. The review is not an obstacle invented to slow engineers down; it is the customer's immune system deciding whether this new thing is safe to admit into a body that carries real data, real customers, and real regulatory exposure. For the FDE, the practical consequence is simple: the review sits on the critical path between finished software and real users, and it is one of the few dependencies the FDE cannot compress with better engineering alone.
+In an enterprise, no deployment reaches production without passing a security review. The review is the customer's immune system deciding whether this new thing is safe to admit into a body that carries real data, real customers, and real regulatory exposure. For the FDE, the practical consequence is simple: the review sits on the critical path between finished software and real users, and it is one of the few dependencies the FDE cannot compress with better engineering alone.
 
 The saving grace is that reviews are predictable. Across customers, the same families of questions recur: what data moves where and why, who can access it, how is it protected in transit and at rest, what happens when something goes wrong, and what is the vendor's own posture. An FDE who has run a handful of reviews accumulates a reusable evidence base and walks into the next review with answers prepared rather than questions discovered. The differences between customers are smaller than they look; the vocabulary changes, the underlying controls do not.
 

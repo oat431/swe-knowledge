@@ -118,7 +118,7 @@ git push
 # Agent reconciles → previous version is live
 ```
 
-No special tooling. No rollback commands. Git history IS your rollback mechanism.
+No special tooling. No rollback commands. Git history *is* your rollback mechanism.
 
 ArgoCD also supports one-click rollback from UI to any previous sync.
 

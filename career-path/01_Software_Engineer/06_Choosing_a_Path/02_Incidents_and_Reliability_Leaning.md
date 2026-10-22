@@ -19,7 +19,7 @@ tags:
 
 ## What Changes from Junior to Mid
 
-A junior engineer treats incidents as interruptions and hardening work as overhead. A mid-level engineer who leans toward reliability finds the interruption is the interesting part: the puzzle of why a system misbehaved, the design of the guardrail that prevents the next recurrence, the satisfaction of a service that stays quiet because of work nobody sees. This note helps you test whether the incident-and-reliability family of work — SRE and platform, security, and quality — is genuinely energizing for you before you commit to it.
+A junior engineer treats incidents as interruptions and hardening work as overhead. A mid-level engineer who leans toward reliability finds the interruption is the interesting part: the puzzle of why a system misbehaved, the design of the guardrail that prevents the next recurrence, the satisfaction of a service that stays quiet because of work nobody sees. This note helps you test whether the incident-and-reliability family of work (SRE and platform, security, and quality) is genuinely energizing for you before you commit to it.
 
 | Aspect | Junior | Mid |
 |--------|--------|-----|
@@ -84,7 +84,7 @@ flowchart LR
 
 **Weight the invisible-work problem honestly.** Reliability, security, and quality succeed quietly: the attack that did not happen, the outage that did not occur, the regression that never shipped. If your motivation depends on visible applause and feature launches, this family will starve you; if a quiet dashboard and a clean quarter are their own reward, it compounds.
 
-**Security fit is a specific taste, not a general good intention.** Security work rewards adversarial imagination — thinking about how a system fails or is abused — plus the patience to chase remediation across teams who did not ask for your opinion. Engineers who find threat modeling absorbing often find the cross-team enforcement part heavy.
+**Security fit is a specific taste, not a general good intention.** Security work rewards adversarial imagination (thinking about how a system fails or is abused) plus the patience to chase remediation across teams who did not ask for your opinion. Engineers who find threat modeling absorbing often find the cross-team enforcement part heavy.
 
 **Quality fit is patience with rigor.** Quality and test engineering is strategy plus grinding discipline: deciding what deserves automation, chasing flaky tests, holding a release gate against schedule pressure. The energizing core is conviction that confidence in behavior is a product, not paperwork.
 

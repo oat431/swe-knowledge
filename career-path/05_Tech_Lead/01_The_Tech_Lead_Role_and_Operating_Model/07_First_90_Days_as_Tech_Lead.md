@@ -55,7 +55,7 @@ The second month is about a small number of durable structures:
 - **Quick wins**: two or three small, visible improvements that prove the team can change
 - **Boundaries**: what you will and will not decide, published to the team
 
-Quick wins matter disproportionately. They should be cheap, unambiguous, and chosen with the team: fixing a painful runbook, closing a monitoring gap, unblocking a stuck decision. They are not about ego; they are evidence that your leadership produces change.
+Quick wins matter disproportionately. They should be cheap, unambiguous, and chosen with the team: fixing a painful runbook, closing a monitoring gap, unblocking a stuck decision. They are evidence that your leadership produces change.
 
 ## Days 61-90: Direct
 

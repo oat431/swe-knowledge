@@ -19,7 +19,7 @@ tags:
 
 ## What Changes from Junior to Mid
 
-A junior engineer hands off by dropping a link to the repo and answering questions as they arrive. A mid-level engineer writes the handoff as an act of respect: why the work exists, where it stands, what happens next, which traps are waiting, and who to ask about what. They also build knowledge-sharing habits before a handoff is needed — docs, pairing notes, talks — and they treat their own replaceability as a feature of the team, not a threat to their job.
+A junior engineer hands off by dropping a link to the repo and answering questions as they arrive. A mid-level engineer writes the handoff as an act of respect: why the work exists, where it stands, what happens next, which traps are waiting, and who to ask about what. They also build knowledge-sharing habits before a handoff is needed (docs, pairing notes, talks), and they treat their own replaceability as a feature of the team, not a threat to their job.
 
 | Aspect | Junior | Mid |
 |--------|--------|-----|
@@ -77,19 +77,19 @@ flowchart LR
 
 ## In Practice
 
-**Write the handoff doc as the primary artifact; use the meeting to transmit it.** A meeting transmits nuance and builds trust, but it leaves nothing behind when memories fade next month. Write purpose, state, next steps, traps, and contacts first, then walk the receiver through the document live. The meeting is where they ask "why is this like this?" — the doc is where the answer survives.
+**Write the handoff doc as the primary artifact; use the meeting to transmit it.** A meeting transmits nuance and builds trust, but it leaves nothing behind when memories fade next month. Write purpose, state, next steps, traps, and contacts first, then walk the receiver through the document live. The meeting is where they ask "why is this like this?"; the doc is where the answer survives.
 
-**Name the traps explicitly; they are the most valuable section you will write.** The flaky test that fails on Windows, the staging environment that lies about cache state, the legacy module that punishes refactoring — this is the knowledge that costs the receiver days to rediscover and takes you minutes to record. Trap lists are also the clearest proof that a real handoff happened instead of a file transfer.
+**Name the traps explicitly; they are the most valuable section you will write.** The flaky test that fails on Windows, the staging environment that lies about cache state, the legacy module that punishes refactoring: this is the knowledge that costs the receiver days to rediscover and takes you minutes to record. Trap lists are also the clearest proof that a real handoff happened instead of a file transfer.
 
 **Give the immediate next step, not just the plan.** "Start with the failing integration test in the payments suite; the fix unblocks everything else" is worth more than a roadmap. Receivers stall on ambiguity about where to begin, and a stalled start breeds the clarifying-message chain that proves the handoff was incomplete. Order the next steps and bold the first move.
 
 **Answer repeated questions once, then move the answer to the doc.** When the second person asks the same question, the knowledge is not where it needs to be. Update the doc, tell the asker where it now lives, and the tenth version of that question never happens. This is the difference between being helpful and being a bottleneck.
 
-**Know your own bus factors and work them down.** List the systems, processes, and relationships where you are the only source — the deploy only you run, the vendor contact only you know, the script only you understand. Each one is a risk to the team and a hidden constraint on your own vacation, growth, and movement. Spread them deliberately: pair on it, document it, hand it to someone, then verify they can do it without you.
+**Know your own bus factors and work them down.** List the systems, processes, and relationships where you are the only source: the deploy only you run, the vendor contact only you know, the script only you understand. Each one is a risk to the team and a hidden constraint on your own vacation, growth, and movement. Spread them deliberately: pair on it, document it, hand it to someone, then verify they can do it without you.
 
 **Treat being replaceable as a feature of your work, not a risk to your job.** Engineers who make themselves load-bearing get pinned in place: no rotation, no promotion scope, no time off without anxiety. The engineer who can be offboarded cleanly is the one trusted with bigger things. Make "the team can move without me on this" a definition of done for anything you own deeply.
 
-**Verify the handoff actually landed.** A handoff is complete when the receiver has done the thing — run the deploy, fixed the small bug, answered the question themselves — while you watch. Until then, you have only sent information. The verification step is short and it converts a hope of transfer into evidence of it.
+**Verify the handoff actually landed.** A handoff is complete when the receiver has done the thing (run the deploy, fixed the small bug, answered the question themselves) while you watch. Until then, you have only sent information. The verification step is short and it converts a hope of transfer into evidence of it.
 
 ## Practical Exercise
 
@@ -99,7 +99,7 @@ Produce a complete handoff for a piece of work you currently own:
 2. Write the state section with pointers: what is done, what is in flight, what is not started, and where each lives in the code or tooling.
 3. List the next steps in order and mark the immediate first move the receiver should make this week.
 4. Enumerate at least three traps: quirks, flaky behaviors, environment lies, or deferred edge cases that would cost a newcomer days.
-5. Write the contacts section: which question goes to which person — and note where you are currently the only contact.
+5. Write the contacts section: which question goes to which person, and note where you are currently the only contact.
 6. Hold a mock handoff meeting over the doc, then a pairing session on the first real task; record the questions asked.
 7. Convert every question from the mock meeting into a doc update, then write the verification criteria: what the receiver must be able to do unassisted before the handoff is closed.
 

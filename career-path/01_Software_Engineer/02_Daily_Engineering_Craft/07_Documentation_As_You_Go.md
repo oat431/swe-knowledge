@@ -19,7 +19,7 @@ tags:
 
 ## What Changes from Junior to Mid
 
-A junior engineer writes docs when told to, usually at the end, mostly restating the code. A mid-level engineer documents decisions, surprises, and how-tos at the moment they happen — when the context is free instead of expensive — and skips what the code already says. The standard is not word count; it is whether the next person (including future you) can act without asking anyone.
+A junior engineer writes docs when told to, usually at the end, mostly restating the code. A mid-level engineer documents decisions, surprises, and how-tos at the moment they happen (when the context is free instead of expensive), and skips what the code already says. The standard is whether the next person (including future you) can act without asking anyone.
 
 | Aspect | Junior | Mid |
 |--------|--------|-----|
@@ -76,7 +76,7 @@ flowchart LR
 
 ## In Practice
 
-**Document what surprised you.** If a behavior contradicted your expectation, the next reader will hit the same wall. Write one line where they will find it — in the README, next to the code, or in a gotchas list. The surprise rule costs minutes and saves the same debugging session from repeating across the team.
+**Document what surprised you.** If a behavior contradicted your expectation, the next reader will hit the same wall. Write one line where they will find it: in the README, next to the code, or in a gotchas list. The surprise rule costs minutes and saves the same debugging session from repeating across the team.
 
 **Write decisions, not transcripts.** The valuable record is why this approach and not the alternative, what constraint decided it, and what would make you revisit. Three sentences of decision context outperforms three pages of meeting narration. Link the decision where the code implementing it lives.
 

@@ -548,7 +548,7 @@ Requirements quality is in the eye of the **reader**, not the author. If a reade
 
 ## Key Takeaways
 
-- **Document requirements to communicate**, not to satisfy a process. The SRS is a shared agreement, not a pile of information.
+- **Document requirements to communicate**, not to satisfy a process. The SRS records what stakeholders agreed on.
 - **Form follows function:** document, spreadsheet, Wiki, database, RM tool; choose based on your needs, but the *information categories* stay the same.
 - **Label every requirement** with a unique, persistent identifier. Hierarchical textual tags (`Product.Cart.01`) balance meaning and stability.
 - **Resolve TBDs** before implementation; track them to closure.

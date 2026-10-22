@@ -20,7 +20,7 @@ tags:
 
 A manager inherits or assembles a group of people and turns it into a team. The difference is trust, clarity, and safety: people who can disagree openly, admit mistakes, depend on each other, and raise problems early. Teams without that operate on politics and concealment: expensive to run, brittle under pressure.
 
-Team health is not vibes; it is observable. Engagement, conflict quality, decision speed, attrition, and energy after failures are all readable if the manager pays attention on a cadence. The EM owns that reading and the repairs.
+Team health is observable. Engagement, conflict quality, decision speed, attrition, and energy after failures are all readable if the manager pays attention on a cadence. The EM owns that reading and the repairs.
 
 ## Topics in This Capability Area
 

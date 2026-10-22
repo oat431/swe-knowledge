@@ -66,7 +66,7 @@ The table is a default, not a law: healthy projects renegotiate it explicitly wh
 
 ## The Handoff Boundary
 
-The boundary between architect and team is not a document dump; it is a small set of artifacts a team needs to design autonomously.
+The boundary between architect and team is a small set of artifacts a team needs to design autonomously.
 
 | Handoff Artifact | What It Conveys | Failing Sign |
 |---|---|---|

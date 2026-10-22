@@ -19,7 +19,7 @@ tags:
 
 ## What Changes from Junior to Mid
 
-A ladder is a company's written statement of what it expects at each level: the scope of work you can carry, the amount of supervision you need, the ambiguity you can absorb, the outcomes you are trusted to produce, and how you communicate around all of it. Moving from junior to mid is not a change of badge; it is crossing from "tasks completed with guidance" to "problems carried to done with light supervision." Titles differ wildly between companies, but those five expectations transfer everywhere.
+A ladder is a company's written statement of what it expects at each level: the scope of work you can carry, the amount of supervision you need, the ambiguity you can absorb, the outcomes you are trusted to produce, and how you communicate around all of it. Moving from junior to mid means crossing from "tasks completed with guidance" to "problems carried to done with light supervision." Titles differ wildly between companies, but those five expectations transfer everywhere.
 
 | Aspect | Junior | Mid |
 |--------|--------|-----|

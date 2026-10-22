@@ -457,7 +457,7 @@ The principles of Flow, Feedback, and Continual Learning form the foundation for
 3. Designing and conducting experiments
 4. Evaluating the results
 
-The outcomes are not only **better performance** but also **increased resilience, higher job satisfaction, and improved organizational adaptability.**
+The outcomes are **better performance** along with **increased resilience, higher job satisfaction, and improved organizational adaptability.**
 
 ---
 

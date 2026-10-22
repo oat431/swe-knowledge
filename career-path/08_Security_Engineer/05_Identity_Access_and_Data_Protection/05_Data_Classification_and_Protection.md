@@ -108,7 +108,7 @@ Choose one sensitive field or dataset that travels through a product.
 6. Define a deletion or reclassification test and run it on a non-production copy.
 7. Present one enabling recommendation that reduces exposure without blocking the business outcome.
 
-**Completion test:** The resulting data-flow record shows not only where data is stored, but why each copy exists and how its protection is verified.
+**Completion test:** The resulting data-flow record shows where data is stored, why each copy exists, and how its protection is verified.
 
 ## Knowledge Connections
 

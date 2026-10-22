@@ -17,7 +17,7 @@ Requirements errors are the most expensive to fix. If it costs \$1 during requir
 
 ## 4.1 The Requirements Process
 
-A **requirement** is an expression of desired behavior — dealing with objects/entities, their states, and the functions that change them. Requirements focus on **what** the customer wants, **not how** it will be implemented.
+A **requirement** is an expression of desired behavior, dealing with objects/entities, their states, and the functions that change them. Requirements focus on **what** the customer wants, **not how** it will be implemented.
 
 ### Four-Phase Process
 
@@ -29,18 +29,18 @@ Elicitation → Analysis → Specification → Validation
   requirements desired behavior  of the SW   requirements
 ```
 
-- **Elicitation** — collecting requirements from stakeholders
-- **Analysis** — understanding and modeling desired behavior
-- **Specification** — deciding which behavior goes into software; writing the SRS
-- **Validation** — checking that the specification matches user expectations
+- **Elicitation:** collecting requirements from stakeholders
+- **Analysis:** understanding and modeling desired behavior
+- **Specification:** deciding which behavior goes into software; writing the SRS
+- **Validation:** checking that the specification matches user expectations
 
 The outcome is the **Software Requirements Specification (SRS)**, communicated to designers, testers, and maintainers.
 
 ### Agile Impact on Requirements
 
-- **Heavy process**: requirements modeled and analyzed upfront before coding — best for large teams and safety-critical systems
+- **Heavy process**: requirements modeled and analyzed upfront before coding; best for large teams and safety-critical systems
 - **Agile methods**: requirements gathered and implemented incrementally; early delivery of essential requirements, with emergent requirements in subsequent releases
-- **XP (Extreme Programming)**: forgoes traditional documentation; requirements encoded as test cases — trade-off is difficulty making changes as requirements evolve
+- **XP (Extreme Programming)**: forgoes traditional documentation; requirements encoded as test cases; trade-off is difficulty making changes as requirements evolve
 
 ---
 
@@ -62,13 +62,13 @@ Elicitation is rarely as simple as "asking the right questions." Customers know 
 
 ### Elicitation Techniques
 
-- **Review documentation** — procedures, specs, user manuals of existing systems
-- **Observe the current system** — gather objective info on how users perform tasks
-- **Apprentice with users** (Beyer & Holtzblatt 1995) — learn tasks in detail as users perform them
-- **Group interviews** — stakeholders inspire each other's ideas
-- **Domain-specific strategies** — Joint Application Design (JAD), PIECES for information systems
-- **Brainstorming** — with current and potential users
-- **Reuse libraries** — templates and requirements from related systems (Volere model)
+- **Review documentation:** procedures, specs, user manuals of existing systems
+- **Observe the current system:** gather objective info on how users perform tasks
+- **Apprentice with users** (Beyer & Holtzblatt 1995): learn tasks in detail as users perform them
+- **Group interviews:** stakeholders inspire each other's ideas
+- **Domain-specific strategies:** Joint Application Design (JAD), PIECES for information systems
+- **Brainstorming:** with current and potential users
+- **Reuse libraries:** templates and requirements from related systems (Volere model)
 
 ### Viewpoints Approach (Easterbrook & Nuseibeh 1996)
 
@@ -87,7 +87,7 @@ Rather than forcing early consistency, stakeholders' views are maintained as sep
 
 ### Functional Requirements
 
-Describe required behavior in terms of activities — reactions to inputs, states before and after operations. They define the **solution space** boundary.
+Describe required behavior in terms of activities: reactions to inputs, states before and after operations. They define the **solution space** boundary.
 
 *Example: A payroll system states how often paychecks are issued, what input is necessary, under what conditions pay can be changed.*
 
@@ -95,12 +95,12 @@ Describe required behavior in terms of activities — reactions to inputs, state
 
 Describe quality characteristics the software must possess:
 
-- **Performance** — execution speed, response time, throughput
-- **Usability & human factors** — training required, ease of use
-- **Security** — access control, data isolation, theft prevention
-- **Reliability & availability** — MTBF, restart time, backup
-- **Maintainability** — error correction, future changes, portability
-- **Precision & accuracy** — calculation precision
+- **Performance:** execution speed, response time, throughput
+- **Usability & human factors:** training required, ease of use
+- **Security:** access control, data isolation, theft prevention
+- **Reliability & availability:** MTBF, restart time, backup
+- **Maintainability:** error correction, future changes, portability
+- **Precision & accuracy:** calculation precision
 
 ### Design Constraints
 
@@ -124,9 +124,9 @@ Three ways to improve testability:
 
 ### Prioritizing Requirements
 
-1. **Essential** — must be met
-2. **Desirable** — highly desirable but not necessary
-3. **Optional** — possible but could be eliminated
+1. **Essential:** must be met
+2. **Desirable:** highly desirable but not necessary
+3. **Optional:** possible but could be eliminated
 
 Prioritization helps resolve conflicts between quality requirements (e.g., maintainability vs. performance; security vs. availability; portability vs. platform-specific optimization).
 
@@ -145,14 +145,14 @@ Prioritization helps resolve conflicts between quality requirements (e.g., maint
 
 A good set of requirements should be:
 
-1. **Correct** — conforms to stakeholder understanding
-2. **Consistent** — no conflicting requirements
-3. **Unambiguous** — single valid interpretation
-4. **Complete** — all states, inputs, outputs, constraints described (externally and internally)
-5. **Feasible** — a solution exists
-6. **Relevant** — no unnecessary restrictions or "feature explosion"
-7. **Testable** — suggests clear acceptance tests
-8. **Traceable** — organized, uniquely labeled, with correspondence between definition and specification
+1. **Correct:** conforms to stakeholder understanding
+2. **Consistent:** no conflicting requirements
+3. **Unambiguous:** single valid interpretation
+4. **Complete:** all states, inputs, outputs, constraints described (externally and internally)
+5. **Feasible:** a solution exists
+6. **Relevant:** no unnecessary restrictions or "feature explosion"
+7. **Testable:** suggests clear acceptance tests
+8. **Traceable:** organized, uniquely labeled, with correspondence between definition and specification
 
 > *These characteristics are the "functional and quality requirements" for a set of product requirements.*
 
@@ -169,7 +169,7 @@ Identify **entities** (objects/classes), **attributes** (properties), and **rela
 - Popular because the entity set is relatively stable when requirements change
 - Difficulty: deciding the right level of detail (entity vs. attribute)
 
-**Example: UML Class Diagrams** — sophisticated ER diagrams with:
+**Example: UML Class Diagrams:** sophisticated ER diagrams with:
 - Classes with attributes and operations
 - Associations with multiplicities, role names, labels
 - Aggregation ("has-a"), composition, generalization ("is-a")
@@ -183,7 +183,7 @@ Graphical descriptions of event sequences between entities. Each vertical line =
 - Good for understanding key scenarios
 - Inefficient for complete behavior description (trace explosion)
 
-**Example: Message Sequence Charts (MSC)** — enhanced traces with create/destroy, actions, timers, conditions, composition, and refinement facilities.
+**Example: Message Sequence Charts (MSC):** enhanced traces with create/destroy, actions, timers, conditions, composition, and refinement facilities.
 
 ### 3. State Machines
 
@@ -193,14 +193,14 @@ Graphical descriptions of all dialog between system and environment. **States** 
 - Deterministic: unique response for every state/event pair
 - Hard part: deciding how to decompose behavior into states
 
-**Example: UML Statechart Diagrams** — rich syntax including:
-- **State hierarchy** — superstates collect common transitions
-- **Concurrency** — multiple concurrent submachines separated by dashed lines
+**Example: UML Statechart Diagrams:** rich syntax including:
+- **State hierarchy:** superstates collect common transitions
+- **Concurrency:** multiple concurrent submachines separated by dashed lines
 - **Transition labels**: `event(args) [condition] /action* ^Object.event(args)*`
 - **Entry/exit actions** on states; **activities** (complex, interruptible computations)
 - FIFO message queues; objects react to one message at a time
 
-**Example: Petri Nets** — state-transition notation for concurrent activities:
+**Example: Petri Nets:** state-transition notation for concurrent activities:
 - **Places** (circles) = activities/conditions; **transitions** (bars) = events
 - **Tokens** enable transitions; firing removes/inserts tokens
 - High-level Petri nets support structured tokens and transition actions
@@ -217,7 +217,7 @@ Model functionality and data flow between functions:
 Strengths: intuitive high-level functionality model; domain experts find them easy to read.
 Weaknesses: ambiguous when processes have multiple inputs/outputs.
 
-**Example: Use Cases** — UML use-case diagrams depict user-initiated functionality:
+**Example: Use Cases:** UML use-case diagrams depict user-initiated functionality:
 - System boundary (box), actors (stick figures), use cases (ovals)
 - `<<include>>` for shared subcases; `<<extend>>` for optional extensions
 - Detailed as textual event traces with pre/post-conditions and variants
@@ -226,9 +226,9 @@ Weaknesses: ambiguous when processes have multiple inputs/outputs.
 
 Mathematical models mapping inputs to outputs. Functions are by definition consistent; total functions are by definition complete.
 
-**Example: Decision Tables** — tabular mapping of events/conditions to actions. Check completeness (all combinations covered) and consistency (no conflicting outputs).
+**Example: Decision Tables:** tabular mapping of events/conditions to actions. Check completeness (all combinations covered) and consistency (no conflicting outputs).
 
-**Example: Parnas Tables** — tabular representations of mathematical functions with row/column predicates defining cases. Advantages:
+**Example: Parnas Tables:** tabular representations of mathematical functions with row/column predicates defining cases. Advantages:
 - Localized per output variable
 - Easy to check completeness and consistency
 - Case-by-case review
@@ -240,17 +240,17 @@ Mathematical models mapping inputs to outputs. Functions are by definition consi
 **First-order logic**: typed variables, functions, predicates, logical connectives (∧, ∨, ¬, ⇒, ≡), quantifiers (∃, ∀).
 
 **Temporal logic** adds connectives for time-varying behavior:
-- **□** f — f is true now and throughout execution
-- **◇** f — f is true now or at some future point
-- **○** f — f is true at the next execution point
-- **f W g** — f is true until g is true (but g may never be true)
+- **□** f: f is true now and throughout execution
+- **◇** f: f is true now or at some future point
+- **○** f: f is true at the next execution point
+- **f W g:** f is true until g is true (but g may never be true)
 
-**Example: Object Constraint Language (OCL)** — mathematically precise yet readable:
+**Example: Object Constraint Language (OCL):** mathematically precise yet readable:
 - Expresses invariants, pre/post-conditions on object models
 - Navigation via association paths; collection operations
 - Now part of the UML standard
 
-**Example: Z** — formal specification language:
+**Example: Z:** formal specification language:
 - Structured set-theoretic definitions into abstract data type models
 - **Schemas** specify system state (typed variables + invariants), initial state, and operations
 - Pre/post-conditions with primed/unprimed variables for before/after values
@@ -264,7 +264,7 @@ Specify operations by pairwise interactions rather than individual behavior. Exe
 - Operations classified as **generators** (build canonical representations), **manipulators** (return values of the type), and **queries** (return other types)
 - Hard to construct concise, complete, consistent axiom sets
 
-**Example: SDL Data** — user-defined data types in SDL with NEWTYPE, LITERALS, OPERATORS, and AXIOMS sections.
+**Example: SDL Data:** user-defined data types in SDL with NEWTYPE, LITERALS, OPERATORS, and AXIOMS sections.
 
 ---
 
@@ -275,20 +275,20 @@ Each paradigm models problems from a different perspective. A complete specifica
 ### UML (Unified Modeling Language)
 
 Eight graphical notations + OCL:
-- **Use-case diagram** (DFD) — top-level essential functions
-- **Class diagram** (ER) — entities and relationships
-- **Sequence diagram** (event trace) — message traces between instances
-- **Collaboration diagram** (event trace) — traces overlaid on class diagram
-- **Statechart diagram** (state machine) — per-class dynamic behavior
-- **OCL properties** (logic) — constraints on any model
+- **Use-case diagram** (DFD): top-level essential functions
+- **Class diagram** (ER): entities and relationships
+- **Sequence diagram** (event trace): message traces between instances
+- **Collaboration diagram** (event trace): traces overlaid on class diagram
+- **Statechart diagram** (state machine): per-class dynamic behavior
+- **OCL properties** (logic): constraints on any model
 
 ### SDL (Specification and Description Language)
 
 Standardized by ITU for real-time, concurrent, distributed processes:
-- **System diagram** (DFD) — top-level blocks and channels
-- **Block diagram** (DFD) — lower-level blocks or processes
-- **Process diagram** (state machine) — state transitions with inputs, decisions, tasks, outputs
-- **Data type** (algebraic) — user-defined complex types
+- **System diagram** (DFD): top-level blocks and channels
+- **Block diagram** (DFD): lower-level blocks or processes
+- **Process diagram** (state machine): state transitions with inputs, decisions, tasks, outputs
+- **Data type** (algebraic): user-defined complex types
 - Accompanied by **MSC** (Message Sequence Charts)
 
 ### SCR (Software Cost Reduction)
@@ -309,7 +309,7 @@ When customers are uncertain ("I'll know it when I see it"), building a prototyp
 | **Quality** | Quick-and-dirty; poorly structured; may be a facade | Must exhibit final quality requirements |
 | **After use** | Thrown away; engineering starts fresh | Refined into the delivered system |
 
-Both are called **rapid prototyping** — partial solutions built to understand requirements or evaluate design alternatives.
+Both are called **rapid prototyping**, partial solutions built to understand requirements or evaluate design alternatives.
 
 ### When to Model vs. Prototype
 
@@ -323,24 +323,24 @@ Both are called **rapid prototyping** — partial solutions built to understand 
 
 ### Requirements Definition (Business Audience)
 
-1. **Purpose and scope** — general goals, benefits, related systems, terminology
-2. **Background and rationale** — why existing approach is unsatisfactory
-3. **Essential characteristics** — core functionality (use-case level), quality requirements, priorities
-4. **Operating environment** — hardware, software, user backgrounds, constraints
-5. **Proposed solution outline** — if customer has one; evaluate if it's a constraint or overspecification
-6. **Assumptions** — environmental conditions causing failure; changes that would alter requirements
+1. **Purpose and scope:** general goals, benefits, related systems, terminology
+2. **Background and rationale:** why existing approach is unsatisfactory
+3. **Essential characteristics:** core functionality (use-case level), quality requirements, priorities
+4. **Operating environment:** hardware, software, user backgrounds, constraints
+5. **Proposed solution outline:** if customer has one; evaluate if it's a constraint or overspecification
+6. **Assumptions:** environmental conditions causing failure; changes that would alter requirements
 
 ### Requirements Specification (Technical Audience)
 
-1. **System interface** — all inputs/outputs in detail (sources, destinations, formats, protocols, timing)
-2. **Functional restatement** — requirements rewritten in terms of interface inputs/outputs
-3. **Quality attributes** — performance, reliability, security, maintainability with measurable criteria
-4. **Constraints** — design and process constraints on the implementation
-5. **Validation criteria** — how to demonstrate the system meets its requirements
+1. **System interface:** all inputs/outputs in detail (sources, destinations, formats, protocols, timing)
+2. **Functional restatement:** requirements rewritten in terms of interface inputs/outputs
+3. **Quality attributes:** performance, reliability, security, maintainability with measurable criteria
+4. **Constraints:** design and process constraints on the implementation
+5. **Validation criteria:** how to demonstrate the system meets its requirements
 
 ### Level of Specification (Sidebar 4.6)
 
-- No universally correct level — experienced customers prefer high-level; less experienced prefer detail
+- No universally correct level: experienced customers prefer high-level; less experienced prefer detail
 - Each clause should contain **only one requirement**
 - Avoid cross-references between requirements
 - Collect similar requirements together
@@ -350,19 +350,19 @@ Both are called **rapid prototyping** — partial solutions built to understand 
 
 ## Key Takeaways
 
-- Requirements focus on **what**, not **how** — premature solution discussion constrains design flexibility
+- Requirements focus on **what**, not **how**; premature solution discussion constrains design flexibility
 - Multiple stakeholder viewpoints must be reconciled; conflicts are natural and require negotiation
 - Requirements should be **testable** with quantified fit criteria
 - Different modeling notations serve different purposes: structural (ER), behavioral (state machines), functional (DFDs), formal (logic/Z)
 - No single notation suffices; practical specifications combine multiple paradigms
 - Prototyping bridges the gap when customers "know it when they see it"
 - Two documents serve different audiences: requirements definition (business) and requirements specification (technical)
-- Correct, consistent, unambiguous, complete, feasible, relevant, testable, traceable — the quality checklist for requirements
+- Correct, consistent, unambiguous, complete, feasible, relevant, testable, traceable: the quality checklist for requirements
 
 
 ## Related
 
-- [[Engineering Foundation Overview]] — All engineering foundation topics
-- [[02 SWE Process/10_SE_Fundamentals_and_Process|10_SE_Fundamentals_and_Process]] — Software process models and life cycle
-- [[02 SWE Process/13_Software_Architecture|13_Software_Architecture]] — Architecture design from requirements
-- [[02 SWE Process/16_Testing_Strategies|16_Testing_Strategies]] — Validation and verification of requirements
+- [[Engineering Foundation Overview]]: All engineering foundation topics
+- [[02 SWE Process/10_SE_Fundamentals_and_Process|10_SE_Fundamentals_and_Process]]: Software process models and life cycle
+- [[02 SWE Process/13_Software_Architecture|13_Software_Architecture]]: Architecture design from requirements
+- [[02 SWE Process/16_Testing_Strategies|16_Testing_Strategies]]: Validation and verification of requirements

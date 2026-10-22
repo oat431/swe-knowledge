@@ -65,7 +65,7 @@ Good estimation is **evidence-based**, **transparent**, and **iteratively refine
 
 **Pros:**
 - Fast
-- Leverages experience
+- Draws on experience
 - Works with incomplete information
 
 **Cons:**

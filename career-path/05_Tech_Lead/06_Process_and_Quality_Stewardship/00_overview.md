@@ -19,7 +19,7 @@ tags:
 
 ## Why This Matters
 
-Process is not bureaucracy; it is the team's accumulated memory of how to work without re-arguing everything. Quality systems are not ceremony; they are how a team ships confidently at speed. Both decay in two directions: **rot** (nobody follows the process anymore) and **calcification** (everyone follows it, but it no longer fits).
+Process is the team's accumulated memory of how to work without re-arguing everything. Quality systems are how a team ships confidently at speed. Both decay in two directions: **rot** (nobody follows the process anymore) and **calcification** (everyone follows it, but it no longer fits).
 
 The tech lead is the steward: watching how work actually flows, keeping the definition of done honest, keeping the practice set proportionate to risk, and changing the process deliberately when the context changes (new people, new system, new stakes).
 

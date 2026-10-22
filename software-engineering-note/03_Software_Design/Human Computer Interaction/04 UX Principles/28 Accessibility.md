@@ -11,7 +11,7 @@ tags:
 
 > **Design for everyone: including people with disabilities.**
 
-Accessibility is not a feature. It's a requirement. ~15% of the world's population has some form of disability. Accessible design helps everyone, not just people with permanent disabilities, but also people with temporary impairments (broken arm, lost glasses) and situational limitations (bright sunlight, loud environment).
+Accessibility is not a feature. It's a requirement. ~15% of the world's population has some form of disability. Accessible design helps everyone: people with permanent disabilities, people with temporary impairments (broken arm, lost glasses), and anyone in a situational limitation (bright sunlight, loud environment).
 
 ---
 

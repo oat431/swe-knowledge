@@ -36,7 +36,7 @@ A design is worthless if the system cannot be verified. A comprehensively tested
 
 > Tests are the enabler. Without them, refactoring is gambling. With them, refactoring is engineering.
 
-**Key takeaway:** Write tests first and run them continuously. Tests don't just verify behaviour; they actively shape better design.
+**Key takeaway:** Write tests first and run them continuously. Tests verify behaviour and also improve the design.
 
 ---
 
@@ -163,7 +163,7 @@ public class EUVacationPolicy extends VacationPolicy {
 }
 ```
 
-> Refactoring to eliminate duplication doesn't just clean code; it **reveals abstractions** that were hiding in plain sight.
+> Removing duplication often **reveals abstractions** that were already in the code.
 
 ---
 
@@ -185,7 +185,7 @@ Code is read far more often than it is written. The majority of a software proje
 
 ### 4. Minimal Classes and Methods
 
-Even good principles (eliminating duplication, expressiveness, SRP) can be taken too far. Low priority doesn't mean unimportant; it means **don't sacrifice higher-priority rules for this one.**
+Even good principles (eliminating duplication, expressiveness, SRP) can be taken too far. A low-priority rule still matters; just **don't sacrifice higher-priority rules for it.**
 
 **Avoid dogmatism:**
 

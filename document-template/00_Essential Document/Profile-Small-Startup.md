@@ -13,14 +13,14 @@ tags:
 > **Methodology:** Agile / Lean
 > **Regulatory:** Low / None
 >
-> **Key principle:** Just enough documentation to ship — and not get burned.
+> **Key principle:** Just enough documentation to ship, and not get burned.
 
 ## When to Use This Profile
 
 - Greenfield product or MVP with a small co-located or remote team
 - No formal compliance or certification requirements
 - Rapid iteration cycles (1–2 week sprints)
-- Minimal dedicated QA or DevOps roles — developers wear multiple hats
+- Minimal dedicated QA or DevOps roles; developers wear multiple hats
 - Budget or time constraints make heavyweight process impractical
 - Startup environment where speed-to-market is the primary driver
 

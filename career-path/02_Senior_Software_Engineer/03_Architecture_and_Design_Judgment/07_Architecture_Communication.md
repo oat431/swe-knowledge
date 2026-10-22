@@ -22,7 +22,7 @@ tags:
 
 A mid-level engineer explains architecture to other engineers. A senior engineer **communicates architecture to diverse audiences**: engineers, product managers, executives, operations teams, and external stakeholders.
 
-Architecture decisions are only as good as the understanding and buy-in they generate. A technically sound decision that no one understands or supports will fail in implementation. A senior engineer ensures that decisions are not just made, but communicated effectively.
+Architecture decisions are only as good as the understanding and buy-in they generate. A technically sound decision that no one understands or supports will fail in implementation. A senior engineer ensures that decisions are communicated effectively once made.
 
 ## The Communication Challenge
 

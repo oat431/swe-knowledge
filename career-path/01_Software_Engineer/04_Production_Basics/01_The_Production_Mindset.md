@@ -19,7 +19,7 @@ tags:
 
 ## What Changes from Junior to Mid
 
-A junior engineer treats production as somewhere the code goes after it is done. A mid-level engineer treats production as the only place the code matters: the environment where real users depend on it right now. That shift changes every decision upstream — what you test, how you release, what you monitor, and how you talk about your work. "It compiles and the tests pass" becomes a precondition, not a verdict; the verdict is what telemetry shows after the change reaches users.
+A junior engineer treats production as somewhere the code goes after it is done. A mid-level engineer treats production as the only place the code matters: the environment where real users depend on it right now. That shift changes every decision upstream: what you test, how you release, what you monitor, and how you talk about your work. "It compiles and the tests pass" becomes a precondition, not a verdict; the verdict is what telemetry shows after the change reaches users.
 
 | Aspect | Junior | Mid |
 |--------|--------|-----|
@@ -83,11 +83,11 @@ flowchart LR
 
 **Design for operability even as the newest person on the team.** You do not need seniority to add the log line that names the failing tenant, the metric that would have shown the queue depth, or the runbook paragraph that would have saved the last on-call an hour. Operability work is cheapest at the moment you write the code, because you still hold the mental model that makes it make sense.
 
-**Distinguish confidence from evidence, and say which one you have.** "I tested this and the canary error rate is flat" and "I think this is fine" are different sentences and both are fine to say — as long as you never present the second as the first. Labeling your confidence honestly is what lets teammates calibrate their trust in you, and it protects you when the guess turns out wrong.
+**Distinguish confidence from evidence, and say which one you have.** "I tested this and the canary error rate is flat" and "I think this is fine" are different sentences and both are fine to say, as long as you never present the second as the first. Labeling your confidence honestly is what lets teammates calibrate their trust in you, and it protects you when the guess turns out wrong.
 
 **Treat every "works on my machine" as an unanswered question.** Local success means your machine, your data, and your assumptions behaved; production is where the question gets answered. Replace the phrase with a concrete claim: "verified in staging with sample data" or "unverified in production until the canary runs". Specific claims are checkable; vague confidence is not.
 
-**Make reversibility a property you design in, not hope for.** If undoing your change takes a schema migration and a prayer, you have not finished designing it. Prefer changes that can be undone in minutes — feature flags, config toggles, additive schemas — because a reversible change turns mistakes into brief incidents while an irreversible one turns them into outages with data loss.
+**Make reversibility a property you design in, not hope for.** If undoing your change takes a schema migration and a prayer, you have not finished designing it. Prefer changes that can be undone in minutes (feature flags, config toggles, additive schemas), because a reversible change turns mistakes into brief incidents while an irreversible one turns them into outages with data loss.
 
 ## Practical Exercise
 
@@ -98,7 +98,7 @@ Take a change you recently shipped or are about to ship and run it through a pro
 3. Classify the change's reversibility: instant, minutes with a rollback, forward-fix only, or irreversible; if it is the last two, note what extra safety it needs.
 4. Identify the evidence that will prove the change worked in production: name the exact dashboard, metric, or log query you will check and when.
 5. Add one operability improvement before shipping: a log line, a metric, a health check, or a runbook note that would help the next person debugging this area.
-6. Define the rollback trigger in advance: "if error rate on X exceeds Y within Z minutes of rollout, roll back" — write it in the release description before deploying.
+6. Define the rollback trigger in advance: "if error rate on X exceeds Y within Z minutes of rollout, roll back". Write it in the release description before deploying.
 7. After the rollout, record what production actually showed versus what you expected, and note one thing this taught you about the gap between the two.
 
 ## Practical Applications

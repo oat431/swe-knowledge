@@ -22,7 +22,7 @@ tags:
 
 Most team problems announce themselves long before they become crises, in a 1:1 that goes quiet, a retro that stops producing, a channel that dies, a pattern of silence around one topic. The manager who hears these signals early intervenes cheaply; the manager who waits for escalation intervenes expensively, or too late.
 
-Listening is not a passive talent; it is an instrument with levels, posts, and calibration. The manager who listens at the level of facts misses the feelings that explain the facts; the manager who listens only in formal settings misses what is said in the hallway. And listening without closing the loop is worse than not listening: it teaches the team that speaking up changes nothing.
+Listening is an instrument with levels, posts, and calibration. The manager who listens at the level of facts misses the feelings that explain the facts; the manager who listens only in formal settings misses what is said in the hallway. And listening without closing the loop is worse than not listening: it teaches the team that speaking up changes nothing.
 
 ## Listening Levels
 

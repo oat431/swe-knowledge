@@ -58,7 +58,7 @@ Requirements don't lie on the surface. They're buried under assumptions, politic
 - Option: Queue and process asynchronously
 - Option: Batch transactions
 
-The constraint wasn't real; it was a design assumption masquerading as a limitation.
+The constraint was a design assumption that looked like a real limitation.
 
 ---
 

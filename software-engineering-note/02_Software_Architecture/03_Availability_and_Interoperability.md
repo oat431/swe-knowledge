@@ -15,7 +15,7 @@ tags:
 
 ## What Is This?
 
-These two chapters address quality attributes that sit at the heart of distributed and service-oriented systems. **Availability** is about the system being ready for use when needed (surviving faults so that service remains compliant with specification. **Interoperability** is about systems exchanging information *usefully*) beyond syntactic compatibility, it demands semantic understanding and managed interfaces.
+These two chapters cover quality attributes that are central to distributed and service-oriented systems. **Availability** is about the system being ready for use when needed (surviving faults so that service remains compliant with specification. **Interoperability** is about systems exchanging information *usefully*) beyond syntactic compatibility, it demands semantic understanding and managed interfaces.
 
 The thread connecting both: systems don't exist in isolation. They fail, and they talk to each other. The architect's job is to design for both realities from the start, not patch them in later.
 

@@ -5,14 +5,14 @@ tags: [engineering, fundamentals, software-engineering, overview]
 # Engineering Foundation — Overview
 
 > **Sources:**
-> - *Engineering Fundamentals: An Introduction to Engineering* by Saeed Moaveni, 4th Edition (2011) — Physics & math foundations
-> - *Software Engineering: Theory and Practice* by Pfleeger & Atlee, 4th Edition — SE process & engineering foundations
+> - *Engineering Fundamentals: An Introduction to Engineering* by Saeed Moaveni, 4th Edition (2011), Physics & math foundations
+> - *Software Engineering: Theory and Practice* by Pfleeger & Atlee, 4th Edition, SE process & engineering foundations
 
 ## What Is This?
 
 This vault combines two complementary foundations:
-1. **Part 1: Engineering Fundamentals** — the physical sciences and math every engineer needs
-2. **Part 2: SWE Process** — the software engineering process, design, testing, and improvement methods that fill SWEBOK's Engineering Foundations KA
+1. **Part 1: Engineering Fundamentals:** the physical sciences and math every engineer needs
+2. **Part 2: SWE Process:** the software engineering process, design, testing, and improvement methods that fill SWEBOK's Engineering Foundations KA
 
 Together they cover both the *physics* and the *process* of engineering.
 
@@ -152,9 +152,9 @@ flowchart TD
 
 ## Related
 
-- [[../../body-of-knowledge/SWEBOK/18_Engineering_Foundations|SWEBOK Engineering Foundations]] — The KA these notes fill
-- [[../../software-engineering-note/Software Design/Software Design - Overview|Software Design]] — Design process and patterns
-- [[../../math-for-software-engineering-note/|Math for Software Engineering]] — Mathematical foundations
+- [[../../body-of-knowledge/SWEBOK/18_Engineering_Foundations|SWEBOK Engineering Foundations]]: The KA these notes fill
+- [[../../software-engineering-note/Software Design/Software Design - Overview|Software Design]]: Design process and patterns
+- [[../../math-for-software-engineering-note/|Math for Software Engineering]]: Mathematical foundations
 
 ---
 
@@ -175,4 +175,4 @@ flowchart TD
 | 9 | Root Cause Analysis | ✅ | `20_Root_Cause_Analysis.md` | 5-whys, Ishikawa, FTA, FMEA, cause maps |
 | 10 | Industry 4.0 & CSE | ✅ | `23_Industry_4_and_Continuous_SE.md` | IoT, AI/ML, Big Data, continuous practices |
 
-> **Coverage: ~90%** — All 10 SWEBOK topics have dedicated files. Minor gaps: abstraction depth in `14_Design_Principles_and_Patterns`, simulation tool specifics.
+> **Coverage: ~90%:** All 10 SWEBOK topics have dedicated files. Minor gaps: abstraction depth in `14_Design_Principles_and_Patterns`, simulation tool specifics.

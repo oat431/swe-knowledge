@@ -168,7 +168,7 @@ graph TB
 - **Architecture Baseline:** Established early in the project
 - **Architectural Decisions:** Made consciously and documented
 - **Component-Based:** System decomposed into components and interfaces
-- **Frameworks:** Leverages architectural frameworks and patterns
+- **Frameworks:** Uses architectural frameworks and patterns
 
 #### Use-Case Driven Development
 

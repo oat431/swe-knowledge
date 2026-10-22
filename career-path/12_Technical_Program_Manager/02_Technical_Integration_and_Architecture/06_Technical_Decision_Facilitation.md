@@ -93,7 +93,7 @@ The hardest part of technical decision facilitation is closure. Groups naturally
 | **More information needed** | The discussion reveals a critical gap in information; deciding now would be guessing | Pause the decision; define exactly what information is needed, who will get it, and when the decision will resume |
 | **Decision deferred** | The decision is genuinely not needed yet, and deferring has no cost | Confirm the deferral is deliberate; set a date to revisit; do not let it drift indefinitely |
 
-The TPM's closure test: "If we do not decide now, when will we decide, and what changes between now and then?" If the answer is "nothing changes," the decision should be made now. If the answer identifies specific information that will arrive by a specific date, deferral is legitimate. If the answer is vague, the TPM pushes for closure: uncertainty is not a reason to defer; it is a reason to decide with a contingency.
+The TPM's closure test: "If we do not decide now, when will we decide, and what changes between now and then?" If the answer is "nothing changes," the decision should be made now. If the answer identifies specific information that will arrive by a specific date, deferral is legitimate. If the answer is vague, the TPM pushes for closure: uncertainty is a reason to decide with a contingency.
 
 ## Recording Decisions with ADRs
 

@@ -65,7 +65,7 @@ AI enables machines to acquire and correlate knowledge for intelligent decision-
 - **Static vs. dynamic typing:** static catches errors early at compile time; dynamic offers flexibility but defers type errors to runtime.
 - **OOP's four pillars** (Abstraction, Encapsulation, Inheritance, Polymorphism) are not just syntax; they require a fundamentally different design mindset.
 - **Distributed ≠ Parallel:** distributed spans networked machines with independent memory; parallel targets multiple cores/processors sharing or distributing memory within a system.
-- **Process scheduling and IPC** are at the heart of OS resource management; deadlocks require prevention, avoidance, detection, and recovery strategies.
+- **Process scheduling and IPC** are central to OS resource management; deadlocks require prevention, avoidance, detection, and recovery strategies.
 - **Virtual memory** with paging, segmentation, and page replacement strategies (LRU, FIFO, second chance) is essential knowledge for performance engineering.
 - **ACID vs. BASE:** choose consistency (relational/ACID) or availability-at-scale (NoSQL/BASE) based on application requirements.
 - **Normalization (1NF–BCNF)** eliminates data redundancy; denormalization trades consistency for query speed.

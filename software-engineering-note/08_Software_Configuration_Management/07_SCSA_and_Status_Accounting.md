@@ -13,7 +13,7 @@ Configuration Status Accounting (CSA) is the recording and reporting of informat
 
 ## Purpose and Scope
 
-CSA serves as the **nervous system** of SCM. While [[Version Control/Version Control Overview|version control]] captures changes and [[04_Commit_and_Testing|commits]] record intent, CSA aggregates, correlates, and presents this data in forms suitable for decision-making and compliance.
+CSA is the **nervous system** of SCM. While [[Version Control/Version Control Overview|version control]] captures changes and [[04_Commit_and_Testing|commits]] record intent, CSA aggregates, correlates, and presents this data in forms suitable for decision-making and compliance.
 
 ### Core Objectives
 
@@ -171,7 +171,7 @@ CSA must produce and maintain these artifacts for audit readiness:
 
 ## Dashboards for SCM Visibility
 
-Modern CSA leverages dashboards to provide real-time visibility into configuration state.
+Modern CSA uses dashboards to provide real-time visibility into configuration state.
 
 ### Dashboard Components
 

@@ -16,7 +16,7 @@ tags:
 
 # Strategic Technology Decisions
 
-> **Core skill:** The principal engineer serves as the ultimate technical reviewer for enterprise-defining choices (build, buy, or partner; major platform selection; technology sunset), producing decision memos that survive organizational pressure and create durable commitment.
+> **Core skill:** The principal engineer is the ultimate technical reviewer for enterprise-defining choices (build, buy, or partner; major platform selection; technology sunset), producing decision memos that survive organizational pressure and create durable commitment.
 
 ## Why This Matters
 

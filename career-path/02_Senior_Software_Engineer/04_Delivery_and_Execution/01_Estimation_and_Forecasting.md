@@ -115,7 +115,7 @@ Team members independently estimate, then discuss and converge.
 
 **When to use:** Sprint planning with the team; building shared understanding
 
-**Benefits:** Leverages collective wisdom; surfaces hidden complexity; builds team buy-in
+**Benefits:** Draws on collective wisdom; surfaces hidden complexity; builds team buy-in
 
 ### Technique 5: T-Shirt Sizing
 

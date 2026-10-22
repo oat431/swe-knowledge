@@ -22,7 +22,7 @@ tags:
 
 Every strategy is written against assumptions, and assumptions decay. Markets shift, leadership changes, teams reorganize, and metrics reveal that the world is different from the one the strategy described. A strategy that is never reviewed becomes a myth, quoted as authority long after its premises have died.
 
-The staff engineer owns the review because the strategy is their artifact and their credibility is on the line. Review is not an administrative chore; it is where the strategy earns or loses its power to direct decisions. A strategy that demonstrably adapts gets followed; one that visibly fossilizes gets quietly ignored.
+The staff engineer owns the review because the strategy is their artifact and their credibility is on the line. Review is where the strategy earns or loses its power to direct decisions. A strategy that demonstrably adapts gets followed; one that visibly fossilizes gets quietly ignored.
 
 ## Strategy vs Plan
 

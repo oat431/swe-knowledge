@@ -34,7 +34,7 @@ class Navigator is
 - **Merge conflicts multiply.** Multiple developers implementing different routing features all touch the same massive class simultaneously.
 - **The class becomes unmaintainable.** At a certain size, no one fully understands it anymore.
 
-The code doesn't just grow; it becomes a **brittle monolith** where fear of change stifles development.
+As the code grows it becomes a **brittle monolith**, and fear of change slows development.
 
 ## Solution
 

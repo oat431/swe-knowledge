@@ -21,7 +21,7 @@ tags:
 
 A junior engineer builds confidence by closing tasks with guidance. A mid-level engineer builds a reputation for reliable delivery: features land, surprises are surfaced early, and the quality of their work is trusted. That reputation is what earns the next level.
 
-The promotion itself is an expectation reset, not a finishing line. The work that earned the title — dependable execution on well-defined scope — is now the baseline, and the new job is the ambiguity, judgment, and team lift that surrounded it. The first year is where the gap between "was operating at senior scope sometimes" and "is consistently trusted with senior scope" gets closed.
+The promotion itself is an expectation reset, not a finishing line. The work that earned the title (dependable execution on well-defined scope) is now the baseline, and the new job is the ambiguity, judgment, and team lift that surrounded it. The first year is where the gap between "was operating at senior scope sometimes" and "is consistently trusted with senior scope" gets closed.
 
 | Aspect | Junior | Mid |
 |--------|--------|-----|
@@ -85,7 +85,7 @@ flowchart LR
 
 **Expect the reset, and do not read it as regression.** The first months at a new level often feel like being a beginner again: the questions are bigger, the feedback is about judgment rather than correctness, and the scoreboard is less legible. That discomfort is the normal signal that the scope changed, not evidence that the promotion was a mistake.
 
-**Resist the urge to prove yourself with volume.** New seniors often take on too many areas, too many reviews, and too many meetings to demonstrate value. Overcommitment produces shallow attention and missed incidents, which damages trust faster than a smaller scope delivered well. Choose depth in one area before breadth, and keep the habits that earned the title — verifying your own changes, asking for review, flagging risk early — because they scale with your scope rather than becoming optional.
+**Resist the urge to prove yourself with volume.** New seniors often take on too many areas, too many reviews, and too many meetings to demonstrate value. Overcommitment produces shallow attention and missed incidents, which damages trust faster than a smaller scope delivered well. Choose depth in one area before breadth, and keep the habits that earned the title (verifying your own changes, asking for review, flagging risk early), because they scale with your scope rather than becoming optional.
 
 **Learn the area before you improve it.** Read the incidents, the design docs, the open risks, and the tickets that were closed as "won't fix". The history tells you which constraints are real and which are habits. Improvements proposed without that context tend to solve a problem the team already solved, or revive one they deliberately buried.
 
@@ -95,14 +95,14 @@ flowchart LR
 
 **Choose one visible improvement, not a transformation.** Pick a problem the team already agrees is painful, fix it end to end, and document the before and after. One finished improvement establishes your judgment; a half-finished overhaul establishes the opposite. Save the larger changes for when your credibility is established.
 
-**Look ahead without jumping.** Understand the staff-level delta — direction across teams, not just depth in one area — but do not start performing it in your first year. The senior level has its own depth to build: knowing an area well enough to be trusted with its riskiest corners. Use the staff material as orientation, not as the next checklist.
+**Look ahead without jumping.** Understand the staff-level delta (direction across teams, not just depth in one area), but do not start performing it in your first year. The senior level has its own depth to build: knowing an area well enough to be trusted with its riskiest corners. Use the staff material as orientation, not as the next checklist.
 
 ## Practical Exercise
 
 1. In your first month, write a one-page map of your area: components, owners, dependencies, failure modes, and open risks.
 2. Ask your manager for their six-month definition of success, and record it verbatim.
 3. Write your own list of what you think the role requires, then compare the two lists and discuss the differences.
-4. Set a weekly operating rhythm — backlog review, risk note, decisions log — and run it for four weeks before changing it.
+4. Set a weekly operating rhythm (backlog review, risk note, decisions log) and run it for four weeks before changing it.
 5. Identify the one improvement the team already agrees is painful, and scope it to something shippable within a month.
 6. Ship it, document the before and after, and add the artifact to your evidence file.
 7. At the ninety-day mark, review the expectations with your manager and name one thing you will stop doing.

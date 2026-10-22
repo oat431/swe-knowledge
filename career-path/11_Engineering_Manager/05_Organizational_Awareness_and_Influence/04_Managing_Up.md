@@ -81,7 +81,7 @@ Escalation with options and a recommendation is a request for a decision; escala
 
 ## Using Your 1:1s
 
-Your 1:1 with your manager is not their meeting; it is half yours:
+Half of your 1:1 with your manager is yours:
 
 | Slot | Content |
 |------|---------|

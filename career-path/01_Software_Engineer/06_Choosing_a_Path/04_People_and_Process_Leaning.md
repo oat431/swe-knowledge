@@ -19,7 +19,7 @@ tags:
 
 ## What Changes from Junior to Mid
 
-A junior engineer measures a good week in code written. A mid-level engineer who leans toward people and process starts noticing that the team's output matters more than their own: the review that unblocked a teammate, the plan that kept a project honest, the conversation that turned a conflict into a decision. This note helps you test whether leading, managing, or coordinating — Tech Lead, Engineering Manager, Technical Program Manager, Project and Program Manager — is the work that gives you energy.
+A junior engineer measures a good week in code written. A mid-level engineer who leans toward people and process starts noticing that the team's output matters more than their own: the review that unblocked a teammate, the plan that kept a project honest, the conversation that turned a conflict into a decision. This note helps you test whether leading, managing, or coordinating (Tech Lead, Engineering Manager, Technical Program Manager, Project and Program Manager) is the work that gives you energy.
 
 | Aspect | Junior | Mid |
 |--------|--------|-----|
@@ -83,7 +83,7 @@ flowchart LR
 
 **The IC-to-manager switch changes your unit of work.** As an IC you finish tasks; as a manager your output is the team's results and your leverage is context, feedback, and staffing. The switch costs you daily building and hands you responsibility without direct control. Test it while the exit is cheap: take an interim lead role, mentorship duties, or a project lead seat before resigning from the craft.
 
-**Meetings are the raw material of this family.** People and process roles spend their days in conversation: planning, feedback, alignment, conflict, and status. The question is not how to avoid meetings but whether the outcomes — a decision made, a person unblocked, a plan made honest — compensate you for the interruption. Track a week of your conversations and judge the exchange rate honestly.
+**Meetings are the raw material of this family.** People and process roles spend their days in conversation: planning, feedback, alignment, conflict, and status. The question is not how to avoid meetings but whether the outcomes (a decision made, a person unblocked, a plan made honest) compensate you for the interruption. Track a week of your conversations and judge the exchange rate honestly.
 
 **Feedback skill is the admission ticket.** Every role in this family runs on telling people specific things about their work and behavior, and hearing the same back, without drama. If you have never given behavior-level feedback, that is your first fit test: timely, specific, kind, and about something changeable. How that conversation feels is one of the strongest signals you can collect.
 
@@ -96,10 +96,10 @@ Test the people and process direction over one quarter:
 1. Write three sentences on the most rewarding time you helped another person or a plan succeed, and name what the reward actually was.
 2. Mentor one engineer through a real piece of work: frame the goal, coach rather than take over, and ask for feedback on your mentoring at the end.
 3. Own one project's plan for a full cycle: scope, dependencies, risks, weekly status, and one honest bad-news message.
-4. Own one process for a month — a review ritual, a release checklist, a retro — and change one thing about it based on evidence.
+4. Own one process for a month (a review ritual, a release checklist, a retro), and change one thing about it based on evidence.
 5. Give one piece of specific behavior-level feedback and request feedback on yourself in the same conversation.
 6. Facilitate one disagreement to a written decision and note how the tension felt afterwards.
-7. Review the quarter's log of energizing and draining moments and pick which fork — lead, manage, or coordinate — the evidence supports.
+7. Review the quarter's log of energizing and draining moments and pick which fork (lead, manage, or coordinate) the evidence supports.
 
 ## Practical Applications
 

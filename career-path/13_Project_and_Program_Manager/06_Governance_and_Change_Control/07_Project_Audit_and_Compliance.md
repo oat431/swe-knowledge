@@ -21,7 +21,7 @@ tags:
 
 Projects operate within a web of compliance obligations: organizational policies, regulatory requirements, contractual commitments, industry standards, and funding conditions. An audit is the organization's mechanism for verifying that these obligations are being met, and a project that fails an audit faces consequences that range from embarrassing to existential: findings that must be remediated, funding that is suspended, contracts that are breached, or certifications that are revoked.
 
-The project manager does not need to be a compliance expert, but the project manager must ensure that the project is audit-ready at all times: records are complete and accessible, processes are followed and documented, and compliance obligations are met and evidenced. Audit readiness is not a pre-audit scramble; it is the natural state of a well-managed project whose configuration management, change control, and decision recording disciplines are functioning.
+The project manager does not need to be a compliance expert, but the project manager must ensure that the project is audit-ready at all times: records are complete and accessible, processes are followed and documented, and compliance obligations are met and evidenced. Audit readiness is the natural state of a well-managed project whose configuration management, change control, and decision recording disciplines are functioning.
 
 ## Types of Project Audits
 
@@ -37,7 +37,7 @@ The project manager does not need to be a compliance expert, but the project man
 
 ## Audit Readiness
 
-Audit readiness is not a pre-audit activity; it is the project's steady state:
+Audit readiness is the project's steady state:
 
 | Readiness Dimension | What It Means | Supporting Discipline |
 |---------------------|---------------|----------------------|
@@ -168,4 +168,4 @@ Program compliance adds breadth:
 
 ## Summary
 
-Project audit and compliance is the discipline of audit readiness: maintaining complete, accessible records through functioning configuration management, change control, and decision recording; tracking compliance obligations in a register with current status and evidence; and managing audits as a professional interaction, cooperative, honest about gaps, and committed to remediation that fixes the process, not just the finding. Audit readiness is not a pre-audit scramble; it is the natural state of a well-managed project. A project that is always audit-ready spends almost no time on audits; a project that scrambles for every audit spends the same time with far more stress and far worse outcomes. The project manager who treats audit readiness as a continuous discipline gives the project an integrity that survives scrutiny, and the scrutiny will come, scheduled or not.
+Project audit and compliance is the discipline of audit readiness: maintaining complete, accessible records through functioning configuration management, change control, and decision recording; tracking compliance obligations in a register with current status and evidence; and managing audits as a professional interaction, cooperative, honest about gaps, and committed to remediation that fixes the process, not just the finding. Audit readiness is the natural state of a well-managed project. A project that is always audit-ready spends almost no time on audits; a project that scrambles for every audit spends the same time with far more stress and far worse outcomes. The project manager who treats audit readiness as a continuous discipline gives the project an integrity that survives scrutiny, and the scrutiny will come, scheduled or not.

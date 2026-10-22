@@ -22,7 +22,7 @@ tags:
 
 Every architecture decision shapes the system's future, but the quality of those decisions depends on the quality of the process that produced them. Decisions made by gut feel produce systems nobody can explain; decisions made by committee produce compromises that satisfy no requirement; decisions deferred produce drift that accumulates silently until reversal is too expensive. The architect's discipline is a structured process that makes each choice deliberate, evaluated against criteria, and recorded so someone who was not in the room can understand why the system looks the way it does.
 
-Structured decision making is not bureaucracy. It is the minimum viable process that prevents the four failure modes: deciding without evidence, deciding without examining alternatives, deciding without recording why, and delaying decisions until the default answer hardens into the architecture. An ADR is not paperwork; it is the residue of a defensible decision.
+Structured decision making is not bureaucracy. It is the minimum viable process that prevents the four failure modes: deciding without evidence, deciding without examining alternatives, deciding without recording why, and delaying decisions until the default answer hardens into the architecture. An ADR is the residue of a defensible decision.
 
 The architect also judges when not to decide: some choices belong to teams, some are reversible enough to delegate, and some can wait for more information. The skill is knowing which decisions get which treatment.
 

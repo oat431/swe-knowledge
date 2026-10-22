@@ -50,7 +50,7 @@ State the default explicitly so the team knows where they stand: "Design decisio
 | Cost | The infrastructure commitment with a large bill | Decider |
 | Irreversible | The platform choice that will not be changed | Co-decider at minimum |
 
-The trigger is not "interesting" or "I have opinions"; it is consequence. If the decision is cheap to reverse, the team decides.
+The trigger is consequence. If the decision is cheap to reverse, the team decides.
 
 ## The Question Toolkit for Design Reviews
 

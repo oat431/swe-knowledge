@@ -81,7 +81,7 @@ flowchart LR
 
 **Speak in user goals, flows, and states, not just components.** When your shared language is only buttons and breakpoints, every conversation stalls at the surface. Restating "the goal is that the user trusts the save happened" moves the discussion to something both of you can solve: maybe a persistent indicator instead of the animation. Flows are state machines and screens have more states than any mockup; making that explicit is one of engineering's gifts to the design conversation.
 
-**Answer "can we make it do X" with exploration, not reflex.** The question is a designer thinking out loud, not a change order. Your answer has three parts: what is possible, what it costs, and what a cheaper variant achieves. Even when the answer is no in its literal form, returning with a variant keeps you on the same side of the table — both of you are now solving the cost problem together.
+**Answer "can we make it do X" with exploration, not reflex.** The question is a designer thinking out loud, not a change order. Your answer has three parts: what is possible, what it costs, and what a cheaper variant achieves. Even when the answer is no in its literal form, returning with a variant keeps you on the same side of the table: both of you are now solving the cost problem together.
 
 **Treat empty, error, and loading states as shared design content.** These states are where users suffer and where mockups are thinnest, and no amount of clean code fixes an unthought-out failure screen. Raise them in design review by name: "what does the user see when the list is empty, when the request fails, and when the data is stale?" If design has not drawn them, offer to pair on the wording while you build the logic; the states belong to both of you.
 
@@ -95,7 +95,7 @@ flowchart LR
 
 Run a design collaboration cycle on a small feature:
 
-1. Take a single-screen feature idea — for example, "let users reorder items in a list" — and write the user goal in one sentence and the flow as an ordered list of transitions.
+1. Take a single-screen feature idea (for example, "let users reorder items in a list"), and write the user goal in one sentence and the flow as an ordered list of transitions.
 2. Enumerate every screen state the flow touches: default, loading, empty, error, stale data, permission-limited; note which ones a typical mockup would omit.
 3. Classify each proposed interaction as a cheap, expensive, constrained, or unknown feasibility signal, and write the one-line cost message you would say out loud for each.
 4. Pick the most expensive interaction and design two cheaper variants that preserve the user goal; write one sentence each on what the user loses and gains.
@@ -109,7 +109,7 @@ Run a design collaboration cycle on a small feature:
 - [ ] My feasibility feedback always names cheap and expensive parts, never just "no"
 - [ ] Every expensive-signal message carries at least one variant
 - [ ] I enumerate loading, empty, and error states during design review, not after build
-- [ ] I use shared vocabulary — goal, flow, state, edge case — in design conversations
+- [ ] I use shared vocabulary (goal, flow, state, edge case) in design conversations
 - [ ] Handoff artifacts include behavior under latency and failure, not just happy-path screens
 - [ ] Accessibility and keyboard paths are discussed as design constraints before implementation
 

@@ -806,7 +806,7 @@ AI/ML testing and emerging topics represent the frontier of software testing pra
 | **Chaos engineering** | Proactive resilience testing through controlled failure injection |
 | **Contract testing** | Essential for microservice architectures; verifies service communication contracts |
 
-The testing discipline continues to evolve with technology, requiring testers to develop new skills in data science, statistics, and domain expertise.
+Testers increasingly need skills in data science, statistics, and domain expertise.
 
 ---
 

@@ -68,13 +68,13 @@ $$\text{Value}_{\text{new}} = \text{Value}_{\text{old}} \times \prod \text{conve
 
 $$65 \, \frac{\text{mi}}{\text{h}} \times \frac{5280 \, \text{ft}}{1 \, \text{mi}} \times \frac{0.3048 \, \text{m}}{1 \, \text{ft}} \times \frac{1 \, \text{h}}{3600 \, \text{s}} = 29.06 \, \text{m/s}$$
 
-> **Rule:** Always show units with your calculations. Units must cancel properly — if they don't, your setup is wrong.
+> **Rule:** Always show units with your calculations. Units must cancel properly; if they don't, your setup is wrong.
 
 ---
 
 ## Dimensional Homogeneity
 
-> **Every valid engineering equation must be dimensionally homogeneous** — all additive terms must have the same dimensions.
+> **Every valid engineering equation must be dimensionally homogeneous:** all additive terms must have the same dimensions.
 
 **Example:** The bar deflection formula δ = PL / (AE)
 
@@ -93,7 +93,7 @@ $$65 \, \frac{\text{mi}}{\text{h}} \times \frac{5280 \, \text{ft}}{1 \, \text{mi
 | **Numerical** | Substitute data values immediately | Direct computation |
 | **Symbolic** | Keep variables, simplify first, substitute last | See variable relationships; easy to re-run with different inputs |
 
-Symbolic solutions are generally preferred — they reveal how each variable affects the result.
+Symbolic solutions are generally preferred: they reveal how each variable affects the result.
 
 ---
 
@@ -115,7 +115,7 @@ Symbolic solutions are generally preferred — they reveal how each variable aff
 | Addition / Subtraction | Result precision = least precise input (last common column) |
 | Multiplication / Division | Result = fewest significant digits among inputs |
 
-**Example:** 152.47 + 3.9 = 156.**3** (not 156.37 — 3.9 only has 1 decimal place)
+**Example:** 152.47 + 3.9 = 156.**3** (not 156.37; 3.9 only has 1 decimal place)
 
 ---
 
@@ -139,10 +139,10 @@ Symbolic solutions are generally preferred — they reveal how each variable aff
 
 ### Measurement Tools
 
-- **Ruler / tape measure** — general use
-- **Micrometer / Vernier caliper** — precision to 0.001 in
-- **Electronic Distance Measuring (EDMI)** — surveying
-- **GPS** — satellite-based location
+- **Ruler / tape measure:** general use
+- **Micrometer / Vernier caliper:** precision to 0.001 in
+- **Electronic Distance Measuring (EDMI):** surveying
+- **GPS:** satellite-based location
 
 ### Radians and Strain (Dimensionless Length Ratios)
 
@@ -159,7 +159,7 @@ Symbolic solutions are generally preferred — they reveal how each variable aff
 - Heat transfer rate ∝ exposed surface area
 - Drag force ∝ frontal area
 - Pressure = Force / Area
-- Buoyancy, mass transfer, insulation — all area-dependent
+- Buoyancy, mass transfer, insulation: all area-dependent
 
 > **Volume-to-area insight:** Dividing a 1m cube into 64 smaller cubes preserves volume (1 m³) but quadruples surface area (6 → 24 m²). This explains why crushed ice cools faster than ice cubes.
 
@@ -231,7 +231,7 @@ $$F_B = \rho V g$$
 
 where ρ = fluid density (kg/m³), V = displaced volume (m³), g = 9.81 m/s².
 
-> Buoyancy force equals the weight of the fluid displaced — used in ship design, submarine ballast, astronaut training (underwater neutral buoyancy simulation).
+> Buoyancy force equals the weight of the fluid displaced. Used in ship design, submarine ballast, astronaut training (underwater neutral buoyancy simulation).
 
 ---
 
@@ -260,17 +260,17 @@ Manufacturers use **nominal sizes** (round numbers) for easy reference, but **ac
 ## Key Takeaways
 
 1. **Seven fundamental dimensions** describe all physical quantities
-2. **SI is the global standard** — learn it thoroughly; convert to/from USCS as needed
+2. **SI is the global standard:** learn it thoroughly; convert to/from USCS as needed
 3. **Dimensional homogeneity** is a powerful error-detection tool
 4. **Significant digits** communicate measurement precision
 5. **Area** governs heat transfer, drag, pressure, and mass transfer
 6. **Volume** governs density, buoyancy, capacity, and fluid systems
-7. **Always show units** in calculations — they catch errors
+7. **Always show units** in calculations: they catch errors
 
 
 ## Related
 
-- [[Engineering Foundation Overview]] — All engineering foundation topics
-- [[01 Physics and Math/02_Time_Mass_and_Motion|02_Time_Mass_and_Motion]] — Next: time, mass, and motion fundamentals
-- [[01 Physics and Math/03_Force_and_Mechanics|03_Force_and_Mechanics]] — Force, stress, and mechanical properties
-- [[01 Physics and Math/09_Math_Stats_and_Economics|09_Math_Stats_and_Economics]] — Mathematical tools for engineering calculations
+- [[Engineering Foundation Overview]]: All engineering foundation topics
+- [[01 Physics and Math/02_Time_Mass_and_Motion|02_Time_Mass_and_Motion]]: Next: time, mass, and motion fundamentals
+- [[01 Physics and Math/03_Force_and_Mechanics|03_Force_and_Mechanics]]: Force, stress, and mechanical properties
+- [[01 Physics and Math/09_Math_Stats_and_Economics|09_Math_Stats_and_Economics]]: Mathematical tools for engineering calculations

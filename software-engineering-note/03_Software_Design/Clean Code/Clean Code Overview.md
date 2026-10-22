@@ -65,7 +65,7 @@ The book has three parts:
 - **The Boy Scout Rule:** Leave the campground cleaner than you found it. Every check-in, improve something.
 - **Code is read 10x more than written:** optimize for reading, even if it makes writing slightly harder.
 - **The only way to go fast is to keep it clean.** Cutting corners slows you down instantly.
-- **Small things matter.** Consistent naming, indentation, and formatting aren't trivial; they're the fabric of professionalism.
+- **Small things matter.** Consistent naming, indentation, and formatting are part of professional work.
 - **Bad code is your fault.** Not the schedule's, not the manager's. Professionals defend code with the same passion managers defend deadlines.
 - **Craftsmanship = knowledge + practice.** Reading isn't enough. You must sweat through the case studies.
 - **Tests are non-negotiable.** Code without tests is not clean, no matter how elegant.

@@ -5,7 +5,7 @@ source: "SWE Theory & Practice — Ch 10 (Delivering the System) & Ch 11 (Mainta
 
 # Delivery and Maintenance
 
-System delivery is not a formality — it is the critical transfer from developer to user that determines whether a well-built system is actually used effectively. Maintenance is the longest and most expensive phase of a system's life.
+System delivery is the critical transfer from developer to user that determines whether a well-built system is actually used effectively. Maintenance is the longest and most expensive phase of a system's life.
 
 ---
 
@@ -25,19 +25,19 @@ System delivery is not a formality — it is the critical transfer from develope
 ### Training
 
 #### User Training
-- Focuses on **what** the system does — major functions, navigation, data access
+- Focuses on **what** the system does: major functions, navigation, data access
 - Must address **task interference**: subtle differences between old and new systems can impede learning
 - Users need not understand internal implementation (sorting algorithms, storage locations)
 
 #### Operator Training
-- Focuses on **how** the system works — configuration, access control, performance monitoring, recovery
+- Focuses on **how** the system works: configuration, access control, performance monitoring, recovery
 - Two levels: (1) bringing up / running the system, (2) supporting users
 
 #### Special Training Needs
-- **Replacement users** — need training on demand, not just at delivery
-- **Infrequent users** — only basic functions; knowledge fades without regular use
-- **Refresher training** — review modules for functions not exercised regularly
-- **Specialized courses** — limited-function training for users who only need a subset
+- **Replacement users:** need training on demand, not just at delivery
+- **Infrequent users:** only basic functions; knowledge fades without regular use
+- **Refresher training:** review modules for functions not exercised regularly
+- **Specialized courses:** limited-function training for users who only need a subset
 
 #### Training Aids
 
@@ -49,10 +49,10 @@ System delivery is not a formality — it is the critical transfer from develope
 | **Expert Users** | Peers trained in advance; act as classroom helpers and post-training consultants; bridge user–analyst communication |
 
 #### Guidelines for Training
-- **Individualize** — accommodate varying backgrounds, experience, keyboard skills
-- **Divide into small units** — short sessions beat marathon trainings
-- **Location matters** — Web-based / CBT for distributed installations
-- **Feedback** — encouragement and correction during training improve retention
+- **Individualize:** accommodate varying backgrounds, experience, keyboard skills
+- **Divide into small units:** short sessions beat marathon trainings
+- **Location matters:** Web-based / CBT for distributed installations
+- **Feedback:** encouragement and correction during training improve retention
 
 ---
 
@@ -77,10 +77,10 @@ System delivery is not a formality — it is the critical transfer from develope
 | **Quick Reference Guide** | 1–2 page summary of primary functions; kept at workstation; function keys, common commands |
 
 #### Key Documentation Principles
-- **Plan from the start** — documentation is a system feature, developed alongside the product
+- **Plan from the start:** documentation is a system feature, developed alongside the product
 - **Write user manuals from requirements** at the same time testers write test scripts
-- **Keep documentation current** — distribute updates (known faults, workarounds, new features) via central location or web
-- **Ariane-5 lesson**: undocumented assumptions in reused code led to disaster — design decisions must be captured explicitly
+- **Keep documentation current:** distribute updates (known faults, workarounds, new features) via central location or web
+- **Ariane-5 lesson**: undocumented assumptions in reused code led to disaster; design decisions must be captured explicitly
 
 ---
 
@@ -113,27 +113,27 @@ System delivery is not a formality — it is the critical transfer from develope
 
 ### Lehman's Five Laws of Software Evolution
 
-1. **Continuing Change** — a program that is used undergoes continual change or becomes progressively less useful
-2. **Increasing Complexity** — as a system evolves, its structure deteriorates and complexity increases unless actively reduced
-3. **Fundamental Law** — program evolution is self-regulating with statistically determinable trends and invariances
-4. **Conservation of Organizational Stability** — the global activity rate in a project is statistically invariant
-5. **Conservation of Familiarity** — the release content (changes, additions, deletions) of successive releases is statistically invariant
+1. **Continuing Change:** a program that is used undergoes continual change or becomes progressively less useful
+2. **Increasing Complexity:** as a system evolves, its structure deteriorates and complexity increases unless actively reduced
+3. **Fundamental Law:** program evolution is self-regulating with statistically determinable trends and invariances
+4. **Conservation of Organizational Stability:** the global activity rate in a project is statistically invariant
+5. **Conservation of Familiarity:** the release content (changes, additions, deletions) of successive releases is statistically invariant
 
 ---
 
 ### Maintenance Problems
 
 #### Staff Problems
-- **Limited understanding** — 47% of maintenance effort is spent understanding the software; a one-line change can require hundreds of tests across interfaces
-- **User misunderstanding** — users provide incomplete/misleading data when reporting problems
-- **Management priorities** — business urgency overrides engineering elegance
-- **Low morale** — maintenance seen as second-class; programmers pulled across multiple projects
+- **Limited understanding:** 47% of maintenance effort is spent understanding the software; a one-line change can require hundreds of tests across interfaces
+- **User misunderstanding:** users provide incomplete/misleading data when reporting problems
+- **Management priorities:** business urgency overrides engineering elegance
+- **Low morale:** maintenance seen as second-class; programmers pulled across multiple projects
 
 #### Technical Problems
-- **Inflexible designs** — tape-only I/O, fixed field sizes, Y2K-style shortcuts
-- **OO maintenance challenges** — deep inheritance, dynamic binding, delocalized program plans
-- **Testing difficulties** — 24/7 systems can't go offline; test data may not exist for new scenarios
-- **Concurrent changes** — two maintainers modifying the same component can introduce new faults
+- **Inflexible designs:** tape-only I/O, fixed field sizes, Y2K-style shortcuts
+- **OO maintenance challenges:** deep inheritance, dynamic binding, delocalized program plans
+- **Testing difficulties:** 24/7 systems can't go offline; test data may not exist for new scenarios
+- **Concurrent changes:** two maintainers modifying the same component can introduce new faults
 
 #### Maintenance Cost
 - **1970s**: development dominated budgets
@@ -203,27 +203,27 @@ Questions to decide whether to **maintain, rebuild, or replace**:
 
 When a legacy system is no longer maintainable, **rejuvenation** strategies include:
 
-- **Re-engineering** — restructuring code and design without changing functionality
-- **Wrapping** — encapsulating legacy components with modern interfaces
-- **Migration** — porting to new platforms/languages incrementally
-- **Replacement** — building a new system to supersede the old one
+- **Re-engineering:** restructuring code and design without changing functionality
+- **Wrapping:** encapsulating legacy components with modern interfaces
+- **Migration:** porting to new platforms/languages incrementally
+- **Replacement:** building a new system to supersede the old one
 
 ---
 
 ## Key Takeaways
 
-1. **Delivery is not a ceremony** — it requires planned training and documentation designed alongside the system
-2. **Training must be ongoing** — not just at delivery; support replacement users, infrequent users, and refresher needs
-3. **Documentation must be audience-specific** — user, operator, programmer, and management each need different views
-4. **Software does not wear out** — it becomes inadequate as the world changes around it
-5. **Maintenance is the dominant cost** — plan for it from day one with good design, modularity, and documentation
-6. **Lehman's laws predict system behavior** — complexity grows, change is constant, team output stabilizes
-7. **The biggest maintenance expense is understanding** — invest in clear, cross-referenced, up-to-date documentation
+1. **Delivery is not a ceremony:** it requires planned training and documentation designed alongside the system
+2. **Training must be ongoing:** not just at delivery; support replacement users, infrequent users, and refresher needs
+3. **Documentation must be audience-specific:** user, operator, programmer, and management each need different views
+4. **Software does not wear out:** it becomes inadequate as the world changes around it
+5. **Maintenance is the dominant cost:** plan for it from day one with good design, modularity, and documentation
+6. **Lehman's laws predict system behavior:** complexity grows, change is constant, team output stabilizes
+7. **The biggest maintenance expense is understanding:** invest in clear, cross-referenced, up-to-date documentation
 
 
 ## Related
 
-- [[Engineering Foundation Overview]] — All engineering foundation topics
-- [[02 SWE Process/16_Testing_Strategies|16_Testing_Strategies]] — Testing before delivery
-- [[02 SWE Process/18_Evaluation_and_Improvement|18_Evaluation_and_Improvement]] — Maintenance measurement and improvement
-- [[02 SWE Process/10_SE_Fundamentals_and_Process|10_SE_Fundamentals_and_Process]] — Life cycle models and maintenance phase
+- [[Engineering Foundation Overview]]: All engineering foundation topics
+- [[02 SWE Process/16_Testing_Strategies|16_Testing_Strategies]]: Testing before delivery
+- [[02 SWE Process/18_Evaluation_and_Improvement|18_Evaluation_and_Improvement]]: Maintenance measurement and improvement
+- [[02 SWE Process/10_SE_Fundamentals_and_Process|10_SE_Fundamentals_and_Process]]: Life cycle models and maintenance phase

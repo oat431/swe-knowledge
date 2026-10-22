@@ -24,7 +24,7 @@ Most independent project pain originates in scope, not in code. Vague promises, 
 
 A solid scope statement contains seven parts: the client's business goal, the deliverables that mark progress, the exclusions that bound the work, the assumptions the plan rests on, the client-side dependencies with dates, the acceptance criteria that define done, and the change control that handles everything reality throws at the plan. The exclusions list is the most valuable and most neglected part (it is where scope creep dies, politely, before it exists).
 
-Exclusions are not hostility; they are honesty. Good clients respect boundaries that make outcomes testable, and difficult clients reveal themselves at the exclusions conversation, which makes the scope document a discovery instrument as much as a contract. Change control protects the relationship: the working answer to new requests is never "no", it is "yes, here is the change order, priced and scheduled".
+Exclusions are honesty. Good clients respect boundaries that make outcomes testable, and difficult clients reveal themselves at the exclusions conversation, which makes the scope document a discovery instrument as much as a contract. Change control protects the relationship: the working answer to new requests is never "no", it is "yes, here is the change order, priced and scheduled".
 
 ## Scope Statement Anatomy
 

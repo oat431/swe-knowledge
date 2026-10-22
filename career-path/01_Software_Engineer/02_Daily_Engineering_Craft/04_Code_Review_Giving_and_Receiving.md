@@ -19,7 +19,7 @@ tags:
 
 ## What Changes from Junior to Mid
 
-A junior engineer reviews by reading every line equally and comments on what looks wrong; receiving feedback feels personal. A mid-level engineer reviews in layers — design first, then correctness, then style last — labels each comment so the author knows what must change, and phrases comments so behavior actually shifts. Receiving review is a search for the truth in the comment, not a defense of the work.
+A junior engineer reviews by reading every line equally and comments on what looks wrong; receiving feedback feels personal. A mid-level engineer reviews in layers (design first, then correctness, then style last), labels each comment so the author knows what must change, and phrases comments so behavior actually shifts. Receiving review is a search for the truth in the comment, not a defense of the work.
 
 | Aspect | Junior | Mid |
 |--------|--------|-----|
@@ -74,7 +74,7 @@ flowchart LR
 
 ## In Practice
 
-**Review the design before the lines.** Read the PR description and, if needed, the issue before opening the diff. Ask whether this should exist, whether the shape is right, and where it will be in a year — a design flaw caught in review costs minutes; the same flaw in production costs a rewrite. Line-level polish on a wrong design is wasted effort.
+**Review the design before the lines.** Read the PR description and, if needed, the issue before opening the diff. Ask whether this should exist, whether the shape is right, and where it will be in a year: a design flaw caught in review costs minutes; the same flaw in production costs a rewrite. Line-level polish on a wrong design is wasted effort.
 
 **Label every comment with its severity.** Blocking, non-blocking, question, praise. Unlabeled comments force the author to guess what matters and turn every nit into a negotiation. A comment taxonomy is the cheapest way to keep review focused on what must change.
 
@@ -84,9 +84,9 @@ flowchart LR
 
 **Receiving review: evaluate the claim, not the tone.** Assume good intent and translate the comment into a factual claim you can check: is there a real edge case here, or a style preference? Fix real issues without negotiation, argue preferences with reasons, and follow up on deferred items. Your reputation grows when people see you change your own code willingly.
 
-**Respond to every comment with a resolution.** Done, argued, or deferred with a tracked follow-up — silence is the one wrong answer. Reviewers invest scarce attention; closing the loop tells them the attention was worth it and makes the next review round faster.
+**Respond to every comment with a resolution.** Done, argued, or deferred with a tracked follow-up; silence is the one wrong answer. Reviewers invest scarce attention; closing the loop tells them the attention was worth it and makes the next review round faster.
 
-**Treat review responsiveness as team courtesy.** A PR waiting days for review blocks a teammate's whole thread of work. Review promptly, even if briefly — a first-pass design comment within hours is worth more than a perfect review next week. Protect your own focus too: batch review windows instead of constant interruption.
+**Treat review responsiveness as team courtesy.** A PR waiting days for review blocks a teammate's whole thread of work. Review promptly, even if briefly: a first-pass design comment within hours is worth more than a perfect review next week. Protect your own focus too: batch review windows instead of constant interruption.
 
 ## Practical Exercise
 

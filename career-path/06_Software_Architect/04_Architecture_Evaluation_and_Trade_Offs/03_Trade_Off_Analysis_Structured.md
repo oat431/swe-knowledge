@@ -20,7 +20,7 @@ tags:
 
 ## Why This Matters
 
-Every architecture decision is a trade-off. Choosing microservices over a monolith trades deployment independence for operational complexity. Choosing synchronous over asynchronous communication trades simplicity for resilience. The problem is not that trade-offs exist. It is that they are usually made implicitly, defended by assertion, and accepted by default. "We chose X because it seemed right" is not analysis; it is preference dressed as judgment.
+Every architecture decision is a trade-off. Choosing microservices over a monolith trades deployment independence for operational complexity. Choosing synchronous over asynchronous communication trades simplicity for resilience. The problem is not that trade-offs exist. It is that they are usually made implicitly, defended by assertion, and accepted by default. "We chose X because it seemed right" is preference dressed as judgment.
 
 Structured trade-off analysis makes the architect's reasoning inspectable. A reviewer can see the criteria, the weights, the scores, and the sensitivity, and can challenge any of them. This does not make the decision "correct" in some objective sense; no weighting scheme is free of judgment. But it makes the judgment visible and contestable, which is the foundation of architecture credibility.
 

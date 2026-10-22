@@ -6,7 +6,7 @@ created: 2026-07-21
 
 # 13. Modern Construction Technologies
 
-> **SWEBOK v4 KA 4.4–4.5:** Software Construction Activities and Technologies, covering the evolving landscape of development environments, platforms, toolchains, and construction approaches that shape modern software engineering.
+> **SWEBOK v4 KA 4.4–4.5:** Software Construction Activities and Technologies, covering the development environments, platforms, toolchains, and construction approaches used in modern software engineering.
 
 The construction phase of software engineering is no longer limited to writing code in a local IDE. Modern construction spans cloud-based development environments, containerized workflows, low-code platforms, model-driven construction, sophisticated dependency management, and middleware integration. This note covers these technologies and their implications for software construction practice.
 
@@ -196,7 +196,7 @@ Low-code does not eliminate the need for professional developers. Instead, it ch
 - **Quality assurance:** Reviewing low-code applications for security, performance, and reliability
 - **Platform selection:** Evaluating and recommending appropriate platforms for each use case
 
-See also: [[01_Construction_Foundations]] for the enduring principles that apply regardless of the construction tool.
+See also: [[01_Construction_Foundations]] for the principles that apply regardless of the construction tool.
 
 ---
 
@@ -259,7 +259,7 @@ Executable UML (xUML) extends traditional UML with the goal of creating models t
 - **Precise semantics:** Every model element has a well-defined execution meaning
 - **Action semantics:** Detailed behavior specified in a platform-independent action language
 - **Translation, not generation:** Models are translated (compiled) rather than generating code templates
-- **Model as source of truth:** The model IS the code, not a documentation artifact
+- **Model as source of truth:** The model *is* the code, not a documentation artifact
 
 **xUML advantages:**
 - Platform independence (same model compiles to multiple targets)

@@ -49,7 +49,7 @@ Reverse Conway is the deliberate inversion: define the target architecture first
 | **4. Remove contradiction** | Eliminate structures that force the old coupling | Kill the integration team; make the owners integrate |
 | **5. Verify** | Watch whether the system drifts toward the target | Review ownership and coupling after two quarters |
 
-Reverse Conway is not a one-time re-org; it is a continuous practice. Every new team, every new service, and every re-org either moves the architecture toward the target or away from it. The staff engineer is the one who notices which.
+Reverse Conway is a continuous practice. Every new team, every new service, and every re-org either moves the architecture toward the target or away from it. The staff engineer is the one who notices which.
 
 ```mermaid
 %%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%

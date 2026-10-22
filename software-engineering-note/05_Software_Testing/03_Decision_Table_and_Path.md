@@ -263,7 +263,7 @@ Automated tools that **instrument** source code, execute test suites, and report
 
 #### Mathematical Foundation
 
-McCabe leverages graph theory: the **cyclomatic number** of a strongly connected graph equals the number of **linearly independent circuits**. By adding an edge from sink to source, any program graph becomes strongly connected.
+McCabe draws on graph theory: the **cyclomatic number** of a strongly connected graph equals the number of **linearly independent circuits**. By adding an edge from sink to source, any program graph becomes strongly connected.
 
 **Cyclomatic Complexity Formula:**
 

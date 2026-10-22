@@ -176,7 +176,7 @@ flowchart TD
 
 ### Key Insight
 
-Both computational neuroscience and genomics are **software engineering challenges** at their core; the math provides the models, but building correct, efficient, scalable implementations is pure SE. The math foundations you learn in notes 00–11 are not abstract theory; they are the language in which these domains express their problems and solutions.
+Both computational neuroscience and genomics are **software engineering challenges** at their core; the math provides the models, but building correct, efficient, scalable implementations is pure SE. The math foundations you learn in notes 00–11 are the language in which these domains express their problems and solutions.
 
 ---
 

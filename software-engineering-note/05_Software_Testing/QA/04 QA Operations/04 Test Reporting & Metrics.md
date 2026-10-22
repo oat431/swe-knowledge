@@ -7,7 +7,7 @@ tags:
 
 # 04 Test Reporting & Metrics
 
-Testing without reporting is invisible. Stakeholders don't read test code; they need high-level visibility into quality. Metrics and dashboards turn test results into actionable information.
+Testing without reporting is invisible. Stakeholders don't read test code, so they need a high-level view of quality. Metrics and dashboards turn test results into actionable information.
 
 ---
 

@@ -19,7 +19,7 @@ tags:
 
 ## What Changes from Junior to Mid
 
-A junior engineer treats a runbook as optional reading and improvises under pressure. A mid-level engineer treats the runbook as the team's stored judgment: they follow it faithfully while noting every step that is wrong, stale, or impossible, and they fix it afterward while the failure is fresh. The runbook is not bureaucracy — it is how a tired person at 2 a.m. acts like the team's best-informed self.
+A junior engineer treats a runbook as optional reading and improvises under pressure. A mid-level engineer treats the runbook as the team's stored judgment: they follow it faithfully while noting every step that is wrong, stale, or impossible, and they fix it afterward while the failure is fresh. A good runbook lets a tired person at 2 a.m. act like the team's best-informed self.
 
 | Aspect | Junior | Mid |
 |--------|--------|-----|
@@ -91,7 +91,7 @@ flowchart LR
 
 **Include rollback and escalation in the procedure itself.** Remediation without rollback is a one-way door taken under the worst possible conditions. Each risky step needs its undo, and the runbook needs an explicit "stop and escalate if..." boundary so one person does not keep pushing through an unfamiliar failure. The escalation instruction should name the role, the channel, and the information to hand over.
 
-**Design the template so quality is the default.** A shared template — trigger, preconditions, diagnosis, remediation, decision points, rollback, escalation, verification — makes the good structure the path of least resistance. When you write a new runbook from the template, you inherit every lesson from every incident that shaped it.
+**Design the template so quality is the default.** A shared template (trigger, preconditions, diagnosis, remediation, decision points, rollback, escalation, verification) makes the good structure the path of least resistance. When you write a new runbook from the template, you inherit every lesson from every incident that shaped it.
 
 ## Practical Exercise
 

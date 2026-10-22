@@ -53,7 +53,7 @@ A junior engineer treats commits as a save button and pull requests as a deliver
 | Fix then follow-ups | The root-cause fix | Drive-by cleanups noticed along the way |
 | Mechanism then rollout | The code path and its flag | Turning the flag on for everyone |
 
-Practical limits that hold up in review: a pull request a reviewer can read in one sitting, changed files that all serve one stated intent, and any line count that forces the reviewer to scroll without a map. When in doubt, split — stacked PRs and follow-ups are cheaper than a review that rubber-stamps.
+Practical limits that hold up in review: a pull request a reviewer can read in one sitting, changed files that all serve one stated intent, and any line count that forces the reviewer to scroll without a map. When in doubt, split: stacked PRs and follow-ups are cheaper than a review that rubber-stamps.
 
 ### PR Description Structure
 
@@ -80,7 +80,7 @@ flowchart LR
 
 **Commit at the granularity of intent.** Each commit should answer one question: "what single change does this make, and why?" If your commit message needs the word "and" between two unrelated things, it is two commits. Commits sized by intent make review, revert, and bisect all cheap at once.
 
-**Keep every commit buildable and test-passing.** Bisect is only useful if the states it visits actually run. Pair each code change with its tests in the same commit, and avoid committing broken intermediate states even on a feature branch — you will want to bisect your own work before it merges.
+**Keep every commit buildable and test-passing.** Bisect is only useful if the states it visits actually run. Pair each code change with its tests in the same commit, and avoid committing broken intermediate states even on a feature branch; you will want to bisect your own work before it merges.
 
 **Write the message for a stranger reading blame.** The reader is someone debugging at 2 a.m., possibly you, with no memory of the ticket. State the why: the constraint, the failed alternative, the observed bug. "Fix null deref in ingest" plus one sentence of cause beats a paragraph of diff narration.
 
@@ -90,7 +90,7 @@ flowchart LR
 
 **Protect bisectability like a test suite.** Avoid commits that move code and change behavior at once, avoid reverts of reverts when a rebase would do, and keep generated or formatting churn in separate commits. When a regression is found in six months, a clean history finds the guilty change in minutes.
 
-**Respond to review rounds with named follow-ups.** Push fixes as separate commits during review so reviewers see exactly what changed, then squash at merge if your team prefers. Reply to every comment with a resolution — done, argued, or deferred with a reason — so the reviewer never has to re-read the whole diff to see what moved.
+**Respond to review rounds with named follow-ups.** Push fixes as separate commits during review so reviewers see exactly what changed, then squash at merge if your team prefers. Reply to every comment with a resolution (done, argued, or deferred with a reason), so the reviewer never has to re-read the whole diff to see what moved.
 
 ## Practical Exercise
 

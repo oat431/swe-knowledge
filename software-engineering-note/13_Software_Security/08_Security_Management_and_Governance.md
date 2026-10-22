@@ -491,7 +491,7 @@ Phishing simulations are the most effective security awareness tool:
 4. **Security governance requires clear roles:** the CISO owns strategy, the security committee approves policy and accepts risk, security champions embed expertise in development teams.
 5. **Shift-left security works when automated:** SAST, SCA, DAST, and policy-as-code in CI/CD pipelines catch vulnerabilities before production without slowing delivery.
 6. **Metrics drive improvement:** track vulnerability MTTR, phishing click rates, patch compliance, and training completion; use trends, not point-in-time snapshots.
-7. **Security culture is the ultimate defense:** a proactive security culture where every employee is a sensor is more valuable than any tool.
+7. **Security culture matters more than tools:** a proactive culture where every employee is a sensor does more than any tool.
 
 ---
 

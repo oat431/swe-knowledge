@@ -76,11 +76,11 @@ flowchart LR
 
 ## In Practice
 
-**Give your account as a timeline, not a defense.** Write what you did, in order, with times and the reasoning you had at each moment — including the reasoning that turned out wrong. "At 14:40 I restarted the worker because the queue looked stuck; that was based on the dashboard, and it did not help" is exactly what the review needs. Defense hides information; timelines build it.
+**Give your account as a timeline, not a defense.** Write what you did, in order, with times and the reasoning you had at each moment, including the reasoning that turned out wrong. "At 14:40 I restarted the worker because the queue looked stuck; that was based on the dashboard, and it did not help" is exactly what the review needs. Defense hides information; timelines build it.
 
 **Describe your reasoning as it was, not as it looks now.** Hindsight makes every decision look obvious, and rewriting history with what you later learned destroys the evidence of how the system actually behaves under pressure. State what you knew at the time and what you believed; that is how reviewers find misleading dashboards and missing context, not just missing skills.
 
-**Push the whys past the person to the system.** "I forgot to run the tests" is where blameless analysis begins, not where it ends: why was it possible to forget, why did the pipeline not catch it, why did the alert not fire? The loop stops when you reach a condition you can change — a checklist, a guardrail, an alert, a default. If your last why names a person, you stopped early.
+**Push the whys past the person to the system.** "I forgot to run the tests" is where blameless analysis begins, not where it ends: why was it possible to forget, why did the pipeline not catch it, why did the alert not fire? The loop stops when you reach a condition you can change: a checklist, a guardrail, an alert, a default. If your last why names a person, you stopped early.
 
 **Name the detection gap explicitly.** Every incident is really two failures: the thing that broke and the slowness of noticing it. Ask why the monitoring, alerting, or dashboarding surfaced the problem only after users felt it, and treat improving detection as first-class action item material. Faster detection shrinks every future incident, whatever its cause.
 
@@ -88,7 +88,7 @@ flowchart LR
 
 **Own at least one action item per postmortem you participate in.** Follow-through is where postmortem participation becomes a maturity signal: closing the alert, shipping the guardrail, fixing the runbook. Track your items to completion and report when they land. The person who closes their items is the person whose future incident accounts everyone trusts.
 
-**Keep the review a study, even when the record is uncomfortable.** If the conversation drifts toward "who approved this", redirect to "what made this approvable". Blameless is not about being soft — it is about keeping every fact on the table so the analysis can reach the system conditions. The strictest honesty and the kindest framing are the same practice here.
+**Keep the review a study, even when the record is uncomfortable.** If the conversation drifts toward "who approved this", redirect to "what made this approvable". Blamelessness keeps every fact on the table so the analysis can reach the system conditions. The strictest honesty and the kindest framing are the same practice here.
 
 ## Practical Exercise
 

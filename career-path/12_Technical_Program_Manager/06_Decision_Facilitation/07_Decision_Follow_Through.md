@@ -22,7 +22,7 @@ tags:
 
 A decision without follow-through is a decision that never happened. The architecture choice was made, but the migration plan was never written. The scope trade-off was agreed, but the backlog was never updated. The vendor was selected, but the contract was never signed. These are not decision failures; they are follow-through failures: the decision was real, the commitment was sincere, and the action dissolved into the next urgent task.
 
-The TPM's follow-through discipline is what separates decision facilitation from decision theater. The decision meeting is not the end of the process; it is the midpoint. What happens after the meeting (the actions tracked, the outcomes measured, the re-review triggered) determines whether the decision delivers its intended effect or becomes a line in a log that nobody reads.
+The TPM's follow-through discipline is what separates decision facilitation from decision theater. The decision meeting is the midpoint of the process. What happens after the meeting (the actions tracked, the outcomes measured, the re-review triggered) determines whether the decision delivers its intended effect or becomes a line in a log that nobody reads.
 
 ## The Post-Decision Action Cycle
 

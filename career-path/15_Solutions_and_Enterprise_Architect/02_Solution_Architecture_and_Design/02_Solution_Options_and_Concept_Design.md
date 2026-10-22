@@ -63,7 +63,7 @@ Weighted scoring can organize the comparison but must not conceal the assumption
 | **Assumptions and constraints** | Conditions the concept relies on | What must hold true? |
 | **Open questions** | What detailed design must resolve, and by when | What is still undecided? |
 
-A concept that hides its open questions is not a concept; it is a promise that detailed design will be effortless, which it will not be.
+A concept that hides its open questions is a promise that detailed design will be effortless, which it will not be.
 
 ## From Options to Commitment
 

@@ -32,7 +32,7 @@ The jump to senior is not a faster version of the same thing. It is a change in 
 | Ambiguity | Needs criteria before starting | Drafts criteria and confirms them |
 | Reputation | Reliable on assigned work | Reliable on a feature end to end |
 
-At senior, the unit of accountability moves again — from a feature to a system area and the judgment calls inside it.
+At senior, the unit of accountability moves again: from a feature to a system area and the judgment calls inside it.
 
 ## Core Frameworks
 

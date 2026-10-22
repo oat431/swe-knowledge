@@ -23,20 +23,20 @@ Use this profile when your project meets **any** of the following criteria:
 - Team size exceeds 50 members or spans multiple organizations
 - Timeline extends beyond 18 months with formal milestone gates
 - Regulatory or certification requirements apply, including:
-  - **Aerospace** — DO-178C (Software Considerations in Airborne Systems and Equipment Certification)
-  - **Medical Devices** — IEC 62304 (Medical Device Software — Software Life Cycle Processes)
-  - **Automotive** — ISO 26262 (Road Vehicles — Functional Safety)
-  - **Defense** — MIL-STD-882, DEF STAN 00-55, NATO AQAP standards
-  - **Railway** — EN 50128 (Railway Applications — Software for Railway Control and Protection Systems)
-  - **Nuclear** — IEC 61513, IEC 62138
-  - **Industrial Automation** — IEC 61508 (Functional Safety of E/E/PE Safety-Related Systems)
+  - **Aerospace:** DO-178C (Software Considerations in Airborne Systems and Equipment Certification)
+  - **Medical Devices:** IEC 62304 (Medical Device Software — Software Life Cycle Processes)
+  - **Automotive:** ISO 26262 (Road Vehicles — Functional Safety)
+  - **Defense:** MIL-STD-882, DEF STAN 00-55, NATO AQAP standards
+  - **Railway:** EN 50128 (Railway Applications — Software for Railway Control and Protection Systems)
+  - **Nuclear:** IEC 61513, IEC 62138
+  - **Industrial Automation:** IEC 61508 (Functional Safety of E/E/PE Safety-Related Systems)
 - Independent Verification & Validation (IV&V) is mandated
 - Safety integrity levels (SIL 1–4 or DAL A–E) must be demonstrated
 - Formal audits by certification authorities are expected
 - Contractual obligations require extensive deliverable evidence
 
 > [!warning]
-> This profile is **comprehensive**. For every document listed, ask: *"Does our regulator, customer, or contract require this?"* Tailor ruthlessly — but never omit what the certification authority expects.
+> This profile is **comprehensive**. For every document listed, ask: *"Does our regulator, customer, or contract require this?"* Tailor ruthlessly, but never omit what the certification authority expects.
 
 ---
 
@@ -44,13 +44,13 @@ Use this profile when your project meets **any** of the following criteria:
 
 > This profile draws from six Bodies of Knowledge:
 >
-> - [[BABOK v3 - Overview]] — Business Analysis Body of Knowledge
-> - [[PMBOK v8 - Overview]] — Project Management Body of Knowledge
-> - [[SWEBOK v4 - Overview]] — Software Engineering Body of Knowledge
-> - [[SEBoK v2 - Overview]] — Systems Engineering Body of Knowledge (INCOSE)
-> - [[DMBoK v2 - Overview]] — Data Management Body of Knowledge
-> - [[CyBOK v1 - Overview]] — Cyber Security Body of Knowledge
-> - [[UX UI Essential Documents]] — UX/UI Design Documents
+> - [[BABOK v3 - Overview]]: Business Analysis Body of Knowledge
+> - [[PMBOK v8 - Overview]]: Project Management Body of Knowledge
+> - [[SWEBOK v4 - Overview]]: Software Engineering Body of Knowledge
+> - [[SEBoK v2 - Overview]]: Systems Engineering Body of Knowledge (INCOSE)
+> - [[DMBoK v2 - Overview]]: Data Management Body of Knowledge
+> - [[CyBOK v1 - Overview]]: Cyber Security Body of Knowledge
+> - [[UX UI Essential Documents]]: UX/UI Design Documents
 >
 > Plus applicable regulatory standards: DO-178C, IEC 62304, ISO 26262, EN 50128, IEC 61508, IEEE 730-2014, IEEE 828-2012, IEEE 1012-2017, IEEE 1044, ISO/IEC/IEEE 12207:2015, ISO/IEC/IEEE 15288:2023, ISO/IEC/IEEE 29119, ISO/IEC/IEEE 29148:2018, ISO/IEC/IEEE 42010:2022, ISO/IEC 27001:2022, ISO 9001, ISO 31000:2018, ISO 22301:2019.
 
@@ -694,12 +694,12 @@ Use this profile when your project meets **any** of the following criteria:
 
 ## Related
 
-- [[BABOK Essential Documents]] — Business Analysis Body of Knowledge
-- [[PMBOK Essential Documents]] — Project Management Body of Knowledge
-- [[SWEBOK Essential Documents]] — Software Engineering Body of Knowledge
-- [[SEBOK Essential Documents]] — Systems Engineering Body of Knowledge
-- [[DMBOK Essential Documents]] — Data Management Body of Knowledge
-- [[CyBOK Essential Documents]] — Cyber Security Body of Knowledge
-- [[Profile-Small-Startup]] — Essential documents for small/startup teams
-- [[Profile-Medium-Enterprise]] — Essential documents for medium enterprise projects
-- [[Essential Documents - Overview]] — Master overview of all essential document profiles
+- [[BABOK Essential Documents]]: Business Analysis Body of Knowledge
+- [[PMBOK Essential Documents]]: Project Management Body of Knowledge
+- [[SWEBOK Essential Documents]]: Software Engineering Body of Knowledge
+- [[SEBOK Essential Documents]]: Systems Engineering Body of Knowledge
+- [[DMBOK Essential Documents]]: Data Management Body of Knowledge
+- [[CyBOK Essential Documents]]: Cyber Security Body of Knowledge
+- [[Profile-Small-Startup]]: Essential documents for small/startup teams
+- [[Profile-Medium-Enterprise]]: Essential documents for medium enterprise projects
+- [[Essential Documents - Overview]]: Master overview of all essential document profiles

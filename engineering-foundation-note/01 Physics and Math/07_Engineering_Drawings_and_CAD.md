@@ -4,21 +4,21 @@ tags: [engineering-drawings, cad, graphical-communication, engineering]
 
 # Engineering Drawings and CAD
 
-> **Source:** *Engineering Fundamentals: An Introduction to Engineering* — Ch 16, Saeed Moaveni
+> **Source:** *Engineering Fundamentals: An Introduction to Engineering*, Ch 16, Saeed Moaveni
 
-Engineering drawings convey product information — shape, dimensions, materials, assembly steps — in a standard format that engineers, machinists, and technicians can all read. Discipline-specific drawings also exist: civil engineers use land/topographic/construction drawings; electrical engineers use PCB assembly drawings, drill plans, and wiring diagrams.
+Engineering drawings convey product information (shape, dimensions, materials, assembly steps) in a standard format that engineers, machinists, and technicians can all read. Discipline-specific drawings also exist: civil engineers use land/topographic/construction drawings; electrical engineers use PCB assembly drawings, drill plans, and wiring diagrams.
 
 ---
 
 ## 16.1 Importance of Engineering Drawing
 
 - A good technical drawing communicates shape, size, material, and assembly clearly
-- Eliminates ambiguity — a machinist can make the part from the drawing alone
-- "A picture is worth a thousand words" — in engineering, a good drawing is worth even more
+- Eliminates ambiguity: a machinist can make the part from the drawing alone
+- "A picture is worth a thousand words"; in engineering, a good drawing is worth even more
 
 ## 16.2 Orthographic Views
 
-**Orthographic views** are 2D projections of an object onto principal planes — what the object looks like from top, front, and side.
+**Orthographic views** are 2D projections of an object onto principal planes: what the object looks like from top, front, and side.
 
 ### Projection Concept
 
@@ -48,8 +48,8 @@ Every engineering drawing must include: **dimensions, tolerances, material type,
 
 ### Two Core Concepts
 
-- **Size** — how wide, long, tall the object is
-- **Location** — where the center of a hole or fillet is positioned
+- **Size:** how wide, long, tall the object is
+- **Location:** where the center of a hole or fillet is positioned
 
 ### Dimensioning Elements
 
@@ -62,11 +62,11 @@ Every engineering drawing must include: **dimensions, tolerances, material type,
 
 ### Drawing Information Box
 
-Every drawing must contain: preparer name, drawing title, date, scale, sheet number, drawing number — usually in the upper- or lower-right corner.
+Every drawing must contain: preparer name, drawing title, date, scale, sheet number, drawing number; usually in the upper- or lower-right corner.
 
 ### Fillets
 
-**Fillets** are rounded edges. Their radius must always be specified. Sharp edges cause **stress concentrations** — rounding edges with fillets creates gradual cross-section transitions and reduces failure risk under load.
+**Fillets** are rounded edges. Their radius must always be specified. Sharp edges cause **stress concentrations**; rounding edges with fillets creates gradual cross-section transitions and reduces failure risk under load.
 
 ### Tolerancing
 
@@ -77,14 +77,14 @@ When you specify a dimension (e.g., 2.50 cm), the actual machined part must be c
 
 ## 16.4 Isometric View
 
-An **isometric drawing** shows all three dimensions (width, height, depth) in a single view — used in parts manuals, repair manuals, and product catalogs.
+An **isometric drawing** shows all three dimensions (width, height, depth) in a single view, used in parts manuals, repair manuals, and product catalogs.
 
 ### Drawing Steps
 
-1. **Draw isometric axes** — width and depth axes at **30°** to horizontal; height axis at **90°** to horizontal (60° to each other axis)
+1. **Draw isometric axes:** width and depth axes at **30°** to horizontal; height axis at **90°** to horizontal (60° to each other axis)
 2. **Mark total width, height, and depth** on the axes
-3. **Create work faces** — draw front, top, and side faces using parallel lines
-4. **Complete the drawing** — finish lines and remove unwanted construction lines
+3. **Create work faces:** draw front, top, and side faces using parallel lines
+4. **Complete the drawing:** finish lines and remove unwanted construction lines
 
 ### Key Rule
 
@@ -97,7 +97,7 @@ For objects with **complex interiors** (many holes, cavities), dashed lines on o
 ### Creating a Sectional View
 
 1. Define the **cutting plane** and **direction of sight** (marked with directional arrows and identifying letters, e.g., "A–A")
-2. Show the cut surface with **cross-hatching** — parallel inclined lines marking solid material (cross-hatch patterns also indicate material type)
+2. Show the cut surface with **cross-hatching**: parallel inclined lines marking solid material (cross-hatch patterns also indicate material type)
 3. Voids (holes, cavities) are left un-hatched
 
 ### Section Types
@@ -128,11 +128,11 @@ Solid modeling software (AutoCAD, IDEAS, Pro/E) creates 3D models with realistic
 
 ### Why Use Solid Models
 
-- **Visualization** — see parts before manufacturing
-- **Assembly simulation** — test fit on screen before building
-- **Quick iteration** — change shape/size rapidly
-- **CNC integration** — send drawings directly to computer numerically controlled machines
-- **Analysis** — run stress, thermal, or other simulations on the model
+- **Visualization:** see parts before manufacturing
+- **Assembly simulation:** test fit on screen before building
+- **Quick iteration:** change shape/size rapidly
+- **CNC integration:** send drawings directly to computer numerically controlled machines
+- **Analysis:** run stress, thermal, or other simulations on the model
 
 ### Bottom-Up Modeling
 
@@ -150,12 +150,12 @@ Keypoints (vertices) → Lines (edges) → Areas (surfaces) → Volumes (solids)
 - Offset (inflate/deflate existing area)
 
 **Volume generation:**
-- **Extrude** — drag an area along a path
-- **Revolve** — rotate an area about an axis
+- **Extrude:** drag an area along a path
+- **Revolve:** rotate an area about an axis
 
 ### Top-Down Modeling
 
-Start with **primitives** — simple geometric shapes:
+Start with **primitives**, simple geometric shapes:
 
 | 2D Primitives | 3D Primitives |
 |---|---|
@@ -171,11 +171,11 @@ Combine or modify solid entities:
 | **Subtract** | Remove one volume from another (e.g., punching holes) |
 | **Intersection** | Keep only the overlapping volume |
 
-> Example: To create a bracket with holes — extrude the profile, create solid cylinders for the holes, then **subtract** the cylinders from the block.
+> Example: To create a bracket with holes, extrude the profile, create solid cylinders for the holes, then **subtract** the cylinders from the block.
 
 ## 16.8 Why Do We Need Engineering Symbols?
 
-Engineering symbols are a **language** — they convey information quickly, effectively, and inexpensively. Like traffic signs (stop = octagon + red), engineering symbols use standardized shapes and conventions to communicate without words.
+Engineering symbols are a **language**: they convey information quickly, effectively, and inexpensively. Like traffic signs (stop = octagon + red), engineering symbols use standardized shapes and conventions to communicate without words.
 
 ## 16.9 Common Engineering Symbols
 
@@ -222,5 +222,5 @@ Engineering symbols are a **language** — they convey information quickly, effe
 ## Related
 
 - [[Engineering Foundation Overview]]
-- [[01 Physics and Math/08_Engineering_Materials|08_Engineering_Materials]] — Material properties that drawings specify
-- [[01 Physics and Math/09_Math_Stats_and_Economics|09_Math_Stats_and_Economics]] — Mathematical tools for engineering analysis
+- [[01 Physics and Math/08_Engineering_Materials|08_Engineering_Materials]]: Material properties that drawings specify
+- [[01 Physics and Math/09_Math_Stats_and_Economics|09_Math_Stats_and_Economics]]: Mathematical tools for engineering analysis

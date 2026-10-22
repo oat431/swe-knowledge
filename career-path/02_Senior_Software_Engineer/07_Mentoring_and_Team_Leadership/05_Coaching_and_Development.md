@@ -312,4 +312,4 @@ Review quarterly:
 
 ## Summary
 
-Coaching and development is helping engineers grow their careers through powerful questions, development planning, and advocacy. Senior engineers use the GROW model (Goal-Reality-Options-Will) to guide coaching conversations. They help engineers identify development areas, create action plans, and provide opportunities and visibility. Coaching is not about telling people what to do; it is about helping them clarify their goals and take ownership of their growth.
+Coaching and development is helping engineers grow their careers through powerful questions, development planning, and advocacy. Senior engineers use the GROW model (Goal-Reality-Options-Will) to guide coaching conversations. They help engineers identify development areas, create action plans, and provide opportunities and visibility. Coaching helps people clarify their goals and take ownership of their growth.

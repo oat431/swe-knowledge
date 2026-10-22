@@ -1,11 +1,11 @@
 ---
 tags: [software-engineering, process, life-cycle, fundamentals]
-source: "SWE Theory & Practice — Roger Pressman & Bruce Maxim, Ch 1–2"
+source: "SWE Theory & Practice — Pfleeger & Atlee, Ch 1–2"
 ---
 
 # Software Engineering Fundamentals and Process
 
-> **Source:** *Software Engineering: A Practitioner's Approach* by Roger S. Pressman & Bruce R. Maxim — Ch 1 (Software Engineering) and Ch 2 (Modeling Process and Life Cycle)
+> **Source:** *Software Engineering: Theory and Practice* by Shari Lawrence Pfleeger & Joanne M. Atlee, Ch 1 (Why Software Engineering?) and Ch 2 (Modeling the Process and Life Cycle)
 
 ---
 
@@ -13,14 +13,14 @@ source: "SWE Theory & Practice — Roger Pressman & Bruce Maxim, Ch 1–2"
 
 ### The Software Problem
 
-Software has become the backbone of virtually every engineered system — from embedded controllers to cloud-scale platforms. Yet the industry consistently faces:
+Software has become the backbone of virtually every engineered system, from embedded controllers to cloud-scale platforms. Yet the industry consistently faces:
 
-- **Complexity** — Modern software systems contain millions of interacting components
-- **Conformity** — Software must adapt to existing business rules, hardware, and legacy systems
-- **Changeability** — Requirements shift throughout and after development
-- **Invisibility** — Software cannot be visually inspected like physical artifacts
+- **Complexity:** Modern software systems contain millions of interacting components
+- **Conformity:** Software must adapt to existing business rules, hardware, and legacy systems
+- **Changeability:** Requirements shift throughout and after development
+- **Invisibility:** Software cannot be visually inspected like physical artifacts
 
-> Software engineering is the application of a **systematic, disciplined, quantifiable** approach to the development, operation, and maintenance of software — i.e., the application of engineering to software. *(IEEE 610.12)*
+> Software engineering is the application of a **systematic, disciplined, quantifiable** approach to the development, operation, and maintenance of software, i.e., the application of engineering to software. *(IEEE 610.12)*
 
 ### What Is "Good" Software?
 
@@ -37,7 +37,7 @@ Software has become the backbone of virtually every engineered system — from e
 | **Testability** | Supports efficient fault detection and diagnosis |
 | **Security** | Protects data and resists unauthorized access |
 
-> No single attribute dominates — engineering is about **balancing trade-offs** among these qualities for a given context.
+> No single attribute dominates: engineering is about **balancing trade-offs** among these qualities for a given context.
 
 ---
 
@@ -45,23 +45,23 @@ Software has become the backbone of virtually every engineered system — from e
 
 ### Systems Thinking
 
-Software rarely exists in isolation. It is part of a larger **system** — hardware, people, processes, data, and other software. A systems approach means:
+Software rarely exists in isolation. It is part of a larger **system**: hardware, people, processes, data, and other software. A systems approach means:
 
-1. **Define the system boundary** — What is inside vs. outside the software scope?
-2. **Identify stakeholders** — Users, operators, maintainers, business owners
-3. **Understand system requirements** — Before software requirements, understand the *business need*
-4. **Allocate requirements** — Decompose system requirements into hardware, software, data, and procedural components
-5. **Interface design** — Define how components communicate across boundaries
+1. **Define the system boundary:** What is inside vs. outside the software scope?
+2. **Identify stakeholders:** Users, operators, maintainers, business owners
+3. **Understand system requirements:** Before software requirements, understand the *business need*
+4. **Allocate requirements:** Decompose system requirements into hardware, software, data, and procedural components
+5. **Interface design:** Define how components communicate across boundaries
 
 ### The Engineering Approach
 
 Engineering applies science and mathematics to solve practical problems. Software engineering adopts:
 
-- **Process** — A framework of activities, actions, and tasks
-- **Methods** — Technical how-tos (analysis, design, coding, testing techniques)
-- **Tools** — Automated or semi-automated support for methods and process
+- **Process:** A framework of activities, actions, and tasks
+- **Methods:** Technical how-tos (analysis, design, coding, testing techniques)
+- **Tools:** Automated or semi-automated support for methods and process
 
-These three layers — process, methods, tools — form the **software engineering technology stack**.
+These three layers (process, methods, tools) form the **software engineering technology stack**.
 
 ```mermaid
 flowchart TB
@@ -254,20 +254,20 @@ flowchart LR
 
 ## Key Takeaways
 
-1. **Software engineering** applies systematic, disciplined, quantifiable methods to software development — not just coding
-2. **Quality is multi-dimensional** — correctness, reliability, maintainability, security, and more must be balanced
+1. **Software engineering** applies systematic, disciplined, quantifiable methods to software development, not just coding
+2. **Quality is multi-dimensional:** correctness, reliability, maintainability, security, and more must be balanced
 3. **Systems thinking** ensures software fits the larger business and technical context
 4. **Process models** range from rigid (waterfall) to adaptive (agile); the right choice depends on project risk, size, and requirement stability
 5. **Agile methods** (Scrum, XP, Kanban) dominate modern practice for iterative, feedback-driven development
-6. **The software life cycle** spans inception through retirement — maintenance is the longest and costliest phase
+6. **The software life cycle** spans inception through retirement; maintenance is the longest and costliest phase
 7. **Process + Methods + Tools** form the technology stack of software engineering
 
 ---
 
 ## Related
 
-- [[Engineering Foundation Overview]] — All engineering foundation topics
-- [[../software-engineering-note/10_Software_Engineering_Process/Software Methodology - Overview|Software Engineering Process]] — Detailed methodology notes
-- [[../software-engineering-note/11_Software_Engineering_Models_and_Methods/Software Engineering Models and Methods Overview|Models and Methods]] — SWEBOK process models
-- [[../software-engineering-note/01_Software_Requirements/Software Requirements Overview|Software Requirements]] — Requirements engineering
-- [[01 Physics and Math/09_Math_Stats_and_Economics|09_Math_Stats_and_Economics]] — Economics foundations for cost estimation
+- [[Engineering Foundation Overview]]: All engineering foundation topics
+- [[../software-engineering-note/10_Software_Engineering_Process/Software Methodology - Overview|Software Engineering Process]]: Detailed methodology notes
+- [[../software-engineering-note/11_Software_Engineering_Models_and_Methods/Software Engineering Models and Methods Overview|Models and Methods]]: SWEBOK process models
+- [[../software-engineering-note/01_Software_Requirements/Software Requirements Overview|Software Requirements]]: Requirements engineering
+- [[01 Physics and Math/09_Math_Stats_and_Economics|09_Math_Stats_and_Economics]]: Economics foundations for cost estimation

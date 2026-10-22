@@ -96,7 +96,7 @@ For a 75 minute review, spend the first 10 minutes naming the user outcome and h
 
 ### Useful artifacts
 
-Keep the data-flow reference, abuse-case cards, decision log, control traceability, open assumptions, and evidence links together. The artifact should let a reviewer understand not only what was identified, but why it was prioritized or closed.
+Keep the data-flow reference, abuse-case cards, decision log, control traceability, open assumptions, and evidence links together. The artifact should let a reviewer understand what was identified and why it was prioritized or closed.
 
 ## Practical Exercise
 

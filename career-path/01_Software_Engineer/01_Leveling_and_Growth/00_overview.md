@@ -19,7 +19,7 @@ tags:
 
 ## What Changes from Junior to Mid
 
-A junior engineer completes well-specified tasks with regular guidance. A mid-level engineer takes a feature from a rough request to production with light supervision, surfaces problems before they become surprises, and needs help only on genuinely hard calls. This capability area owns the vault's baseline definition of that jump — every other path compares against it.
+A junior engineer completes well-specified tasks with regular guidance. A mid-level engineer takes a feature from a rough request to production with light supervision, surfaces problems before they become surprises, and needs help only on genuinely hard calls. This capability area owns the vault's baseline definition of that jump; every other path compares against it.
 
 Judgment at this level shows in:
 - Knowing when to ask for help and when to decide and note the assumption
@@ -91,6 +91,6 @@ This area covers level definitions, growth mechanics, and self-management habits
 
 ## Sources
 
-- *The Missing README* (Chris Riccomini, Dmitriy Ryaboy) — early-career engineering expectations
-- *The Staff Engineer's Path* (Tanya Reilly) — how levels and scope are judged
+- *The Missing README* (Chris Riccomini, Dmitriy Ryaboy): early-career engineering expectations
+- *The Staff Engineer's Path* (Tanya Reilly): how levels and scope are judged
 - Public engineering ladders collected at progression.fyi

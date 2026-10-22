@@ -328,7 +328,7 @@ Prototype evaluation is related to **usability testing** (Rubin & Chisnell). You
 - Security requirement patterns and threat-modeling integration
 - Performance engineering budgets (response-time budget allocation across components)
 - Availability patterns: hot standby, warm standby, cold standby, failover clusters, multi-region active-active
-- Prototyping tool landscape (current commercial/open-source options)
+- Current prototyping tools (commercial and open-source options)
 - Integrating prototyping with ATDD/BDD acceptance criteria
 
 ## Relationship to Other Topics

@@ -76,7 +76,7 @@ Full delegation does not mean no safety. The safest delegations are the ones wit
 | Time-boxed autonomy | The schedule when exploration runs long | A named checkpoint where the lead gets involved |
 | The rescue rule | The delegate's dignity when it fails | The lead helps fix the problem, never seizes it |
 
-The net is agreed before the work starts, and its triggers are explicit. The delegate knows exactly when the lead will step in. Trust with surprise interventions is not trust; it is surveillance.
+The net is agreed before the work starts, and its triggers are explicit. The delegate knows exactly when the lead will step in. Trust with surprise interventions is surveillance.
 
 ## Handling Delegation Failure Without Retaking
 

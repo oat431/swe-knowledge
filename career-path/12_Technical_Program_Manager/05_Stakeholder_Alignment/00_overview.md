@@ -18,7 +18,7 @@ tags:
 
 ## Why This Matters
 
-Multi-team programs have stakeholders with genuinely different incentives: engineering wants technical quality, product wants features and dates, leadership wants strategic outcomes and cost control, security wants risk reduction. The TPM's stakeholder work is not "managing expectations"; it is creating enough shared context that the different incentives don't produce different understandings of reality.
+Multi-team programs have stakeholders with genuinely different incentives: engineering wants technical quality, product wants features and dates, leadership wants strategic outcomes and cost control, security wants risk reduction. The TPM's stakeholder work is creating enough shared context that the different incentives don't produce different understandings of reality.
 
 Alignment fails silently: the engineering team thinks the date is aspirational, product thinks it is committed, leadership builds a roadmap on it. The TPM's weekly status is the antidote, a single source of truth that every stakeholder reads because it tells them what they need to know in their language.
 

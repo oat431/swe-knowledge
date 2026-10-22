@@ -89,7 +89,7 @@ flowchart LR
 
 **Review what returns like a pull request from a fast junior.** Speed of generation says nothing about correctness. Read every line against the acceptance criteria, check edge cases and error handling, and confirm nothing outside the declared scope changed. The review checklist in [[02_Reviewing_AI_Generated_Code]] is the same one you apply to human code, applied more strictly.
 
-**Keep ownership explicit in every artifact.** Your name goes on the commit, the pull request, and the explanation in review. If you cannot explain a line, you do not ship that line — you either understand it, rewrite it, or delete it. "The agent wrote it" is not a defense at incident review and never will be.
+**Keep ownership explicit in every artifact.** Your name goes on the commit, the pull request, and the explanation in review. If you cannot explain a line, you do not ship that line; you either understand it, rewrite it, or delete it. "The agent wrote it" is not a defense at incident review and never will be.
 
 **Prefer several small delegations over one large ask.** Small units are reviewable, verifiable, and easy to regenerate when wrong; one big ask produces a large diff you will skim, which is exactly where wrong-but-plausible code survives. When a task is large, decompose it yourself and delegate the leaves.
 
@@ -103,7 +103,7 @@ Take one real task from your current work and run it through the full delegation
 4. Write acceptance criteria as observable checks: named tests, API shapes, error behaviors.
 5. Delegate the work in plan mode first; read the plan and reject or amend it before any code is generated.
 6. Review the returned code line by line against the acceptance criteria; list every discrepancy you find, including style and convention mismatches.
-7. Fix or regenerate the gaps, run the verification steps yourself, and write the pull request description as if you had typed every line — because you are accountable for every line.
+7. Fix or regenerate the gaps, run the verification steps yourself, and write the pull request description as if you had typed every line, because you are accountable for every line.
 
 ## Practical Applications
 

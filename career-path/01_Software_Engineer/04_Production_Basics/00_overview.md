@@ -16,7 +16,7 @@ tags:
 
 # Production Basics
 
-> **Capability area:** Working safely with running systems — reading telemetry, following runbooks, joining incidents, and shipping releases — as a contributing engineer, not yet as the system's owner.
+> **Capability area:** Working safely with running systems (reading telemetry, following runbooks, joining incidents, and shipping releases), as a contributing engineer, not yet as the system's owner.
 
 ## What Changes from Junior to Mid
 
@@ -94,6 +94,6 @@ This area covers the contributing engineer's production responsibilities. It doe
 
 ## Sources
 
-- *Site Reliability Engineering* (Beyer, Jones, Petoff, Murphy) — free at sre.google; incident and operations fundamentals
-- *The Site Reliability Workbook* (Beyer, Jones, Petoff, Murphy) — practical procedures
-- *Release It!* (Michael T. Nygard) — production failure modes and safe release design
+- *Site Reliability Engineering* (Beyer, Jones, Petoff, Murphy): free at sre.google; incident and operations fundamentals
+- *The Site Reliability Workbook* (Beyer, Jones, Petoff, Murphy): practical procedures
+- *Release It!* (Michael T. Nygard): production failure modes and safe release design

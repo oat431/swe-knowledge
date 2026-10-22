@@ -149,7 +149,7 @@ my-project/
 
 ## Quick Sanity Check Before Letting an Agent Loose
 
-- [ ] CLAUDE.md has the exact build/test/lint commands: and they actually work
+- [ ] CLAUDE.md has the exact build/test/lint commands, and they actually work
 - [ ] Permissions are deny-by-default with a reviewed allowlist
 - [ ] No secrets reachable from the session (`.env`, tokens, prod credentials)
 - [ ] At least one hook enforces the "never" rules that matter (format-on-edit, block dangerous commands)

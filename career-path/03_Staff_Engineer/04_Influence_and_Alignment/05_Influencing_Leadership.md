@@ -90,7 +90,7 @@ The relationship is built with the leader's staff too: the chief of staff, the f
 
 ## When Leadership Says No
 
-A no is not the end of the process; it is data. The discipline is to read the no before re-approaching.
+Treat a no as data. The discipline is to read the no before re-approaching.
 
 | Reading | What It Means | The Move |
 |---------|---------------|----------|

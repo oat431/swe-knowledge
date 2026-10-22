@@ -19,7 +19,7 @@ tags:
 
 ## What Changes from Junior to Mid
 
-A junior engineer reads a career map the way a traveler reads a departure board: a list of destinations, one of which must be picked. A mid-level engineer reads it as a terrain map: a set of options with real trade-offs, entry points, and combinations, none of which is a one-way ticket. The skill shift is from collecting titles to framing choices — knowing what each path actually demands day to day, what it gives up, and how to test interest before committing.
+A junior engineer reads a career map the way a traveler reads a departure board: a list of destinations, one of which must be picked. A mid-level engineer reads it as a terrain map: a set of options with real trade-offs, entry points, and combinations, none of which is a one-way ticket. The skill shift is from collecting titles to framing choices: knowing what each path actually demands day to day, what it gives up, and how to test interest before committing.
 
 | Aspect | Junior | Mid |
 |--------|--------|-----|
@@ -91,7 +91,7 @@ flowchart LR
 
 **Treat every path as reachable and none as mandatory.** This map starts at Software Engineer and shows 18 onward paths; entry points and next steps are documented per path, so nothing on the map requires a specific degree, employer, or lineage. Choosing a specialty narrows your search, not your eligibility. The only irreversible move is refusing to choose anything while the years pass.
 
-**Combine a base path with a specialty instead of forcing one perfect fit.** Real careers look like Software Engineer plus reliability, or Senior Engineer plus tech-lead duties — the map's families are designed to interlock. Pick a base that keeps you employable and a depth bar that makes you distinctive, then let evidence from work decide how the mix shifts.
+**Combine a base path with a specialty instead of forcing one perfect fit.** Real careers look like Software Engineer plus reliability, or Senior Engineer plus tech-lead duties; the map's families are designed to interlock. Pick a base that keeps you employable and a depth bar that makes you distinctive, then let evidence from work decide how the mix shifts.
 
 **Check your local market against the global map before you plan around it.** The map is an abstraction of how these roles behave across the industry; in your country, industry, and company size, titles may be flattened, renamed, or absent, and demand for security, data, or platform roles may be concentrated in a few sectors. Read local job postings for the two roles you shortlisted and note what scope they actually describe. Plan against the work you can get, then keep the map for direction.
 

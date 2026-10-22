@@ -4,7 +4,7 @@ tags: [overview, essential-documents, software-engineering, project-management, 
 
 # Essential Documents — Overview
 
-> **Purpose:** A practical, phase-organized checklist of documents you need to produce across seven disciplines — Business Analysis, Software Engineering, Project Management, Systems Engineering, Cyber Security, Data Management, and UX/UI Design.
+> **Purpose:** A practical, phase-organized checklist of documents you need to produce across seven disciplines: Business Analysis, Software Engineering, Project Management, Systems Engineering, Cyber Security, Data Management, and UX/UI Design.
 > Each checklist is extracted from its respective Body of Knowledge and links back to the full reference for deeper study.
 
 ## What Is This?
@@ -24,7 +24,7 @@ This folder contains **document-only extracts** from six major Bodies of Knowled
 > 🔒🗄️ **CyBOK and DMBOK fill the cross-cutting concerns** that SWEBOK touches on but doesn't fully cover. CyBOK provides the full security program documentation (from risk governance to incident response), while DMBOK covers the complete data management lifecycle (from governance to quality).
 
 Each checklist follows the same format:
-- 🔴🟡🟢 **Priority legend** — Must Have / Nice to Have / Optional
+- 🔴🟡🟢 **Priority legend**: Must Have / Nice to Have / Optional
 - **Section-organized tables** with document name, description, priority, and ISO/IEEE reference
 - **Owner blockquote** under each section header indicating primary responsibility
 - ⚠️ **Link-back banner** pointing to the full Body of Knowledge
@@ -64,16 +64,16 @@ Not sure how much documentation your project actually needs? These profiles pre-
 
 Each profile includes:
 - Phase-by-phase document tables with priority ratings adjusted for that project size
-- A **Quick-Start Checklist** at the end (🔴 Must Have items only — printable)
+- A **Quick-Start Checklist** at the end (🔴 Must Have items only, printable)
 - Links back to all six BOK essential documents for deeper reference
 
 ## Related Vaults
 
 For the full body of knowledge behind these checklists:
 
-- [[BABOK v3 - Overview]] — Business Analysis Body of Knowledge (IIBA, 2015)
-- [[SWEBOK v4 - Overview]] — Software Engineering Body of Knowledge (IEEE, 2024)
-- [[PMBOK v8 - Overview]] — Project Management Body of Knowledge (PMI, 2025)
-- [[SEBoK v2 - Overview]] — Systems Engineering Body of Knowledge (BKCASE, 2025)
-- [[CyBOK v1 - Overview]] — Cyber Security Body of Knowledge (NCSC, 2021)
-- [[DMBoK v2 - Overview]] — Data Management Body of Knowledge (DAMA, 2017)
+- [[BABOK v3 - Overview]]: Business Analysis Body of Knowledge (IIBA, 2015)
+- [[SWEBOK v4 - Overview]]: Software Engineering Body of Knowledge (IEEE, 2024)
+- [[PMBOK v8 - Overview]]: Project Management Body of Knowledge (PMI, 2025)
+- [[SEBoK v2 - Overview]]: Systems Engineering Body of Knowledge (BKCASE, 2025)
+- [[CyBOK v1 - Overview]]: Cyber Security Body of Knowledge (NCSC, 2021)
+- [[DMBoK v2 - Overview]]: Data Management Body of Knowledge (DAMA, 2017)

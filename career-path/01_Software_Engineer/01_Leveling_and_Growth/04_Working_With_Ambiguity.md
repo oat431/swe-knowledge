@@ -19,7 +19,7 @@ tags:
 
 ## What Changes from Junior to Mid
 
-A junior engineer receives work already clarified and asks for missing pieces; a mid-level engineer takes a request that is half-formed, identifies exactly which parts are uncertain, and converts them into testable statements before writing code. The mid-level skill is narrowing uncertainty cheaply and early, so the expensive work — building — happens against assumptions that are written down and agreed.
+A junior engineer receives work already clarified and asks for missing pieces; a mid-level engineer takes a request that is half-formed, identifies exactly which parts are uncertain, and converts them into testable statements before writing code. The mid-level skill is narrowing uncertainty cheaply and early, so the expensive work (building) happens against assumptions that are written down and agreed.
 
 | Aspect | Junior | Mid |
 |--------|--------|-----|

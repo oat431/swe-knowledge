@@ -74,17 +74,17 @@ flowchart LR
 
 ## In Practice
 
-**Reproduce before you theorize.** A bug you cannot reproduce is a bug you cannot verify you fixed. Reduce the report to the smallest reliable trigger — a script, a curl call, a failing test — and confirm it fails consistently. If you cannot reproduce it yet, reproducing is the task, not a precondition you can skip.
+**Reproduce before you theorize.** A bug you cannot reproduce is a bug you cannot verify you fixed. Reduce the report to the smallest reliable trigger (a script, a curl call, a failing test) and confirm it fails consistently. If you cannot reproduce it yet, reproducing is the task, not a precondition you can skip.
 
 **Write the hypothesis as a killable sentence.** "The cache returns stale data after a deploy" is a hypothesis; "something is wrong with the cache" is not. Force the sentence to name a mechanism and a cause, then design the one experiment that would disprove it fastest. A hypothesis that survives a real test earns the next narrowing step.
 
-**Narrow along one axis at a time.** Change one dimension per experiment — input halves, commit range, or code region — so the result is interpretable. Debugging by simultaneously editing code, swapping data, and downgrading a dependency produces results you cannot attribute to anything.
+**Narrow along one axis at a time.** Change one dimension per experiment (input halves, commit range, or code region), so the result is interpretable. Debugging by simultaneously editing code, swapping data, and downgrading a dependency produces results you cannot attribute to anything.
 
 **Read the error message before reading the code.** The message, the failing assertion, and the top frames usually name the exact contract that broke. Read the whole message including the cause chain; the first line is often a wrapper. Most "impossible" bugs are a misread error message.
 
 **Choose tools by the question, not by habit.** A debugger answers state questions, tracing answers flow questions, and bisection answers time questions. Reaching for printf when you need a timeline, or a debugger when you need to find a bad commit, wastes hours. Name the question first, then pick the instrument.
 
-**Fix the root cause and name it.** A change that makes the symptom disappear without explaining it is a time bomb; the same class of bug returns elsewhere. Write one sentence naming the root cause before you commit — if you cannot write it, you have not found it yet.
+**Fix the root cause and name it.** A change that makes the symptom disappear without explaining it is a time bomb; the same class of bug returns elsewhere. Write one sentence naming the root cause before you commit; if you cannot write it, you have not found it yet.
 
 **Turn every hard bug into a write-up.** After the fix, capture the symptom, the reproduction, the root cause, and the detection gap in a short note or ticket comment. This is the artifact that turns personal debugging into team knowledge and feeds your regression tests and documentation.
 

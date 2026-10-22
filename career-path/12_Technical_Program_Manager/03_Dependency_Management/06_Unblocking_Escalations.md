@@ -149,4 +149,4 @@ If governance consistently fails to resolve escalations, the program's governanc
 
 ## Summary
 
-Unblocking escalations is the TPM's mechanism for resolving dependencies that exceed team-level authority. The discipline: escalate at the right threshold, to the right level, with a structured package (statement, facts, impact, options, recommendation, deadline), and escalate early enough that options are still viable. Escalation is not failure. It is the governance system's normal operating procedure. A program that never escalates is not a program with no problems; it is a program with problems nobody is authorized to solve.
+Unblocking escalations is the TPM's mechanism for resolving dependencies that exceed team-level authority. The discipline: escalate at the right threshold, to the right level, with a structured package (statement, facts, impact, options, recommendation, deadline), and escalate early enough that options are still viable. Escalation is not failure. It is the governance system's normal operating procedure. A program that never escalates has problems nobody is authorized to solve.

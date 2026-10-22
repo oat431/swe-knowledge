@@ -124,7 +124,7 @@ An iterative strategy to determine how analysis model objects interact. For each
 
 ## Chapter 10: Finite State Machines
 
-Finite state machines model the **control and sequencing view** of a system or object. In highly state-dependent systems (e.g., real-time systems), FSMs provide crucial insight into system complexity.
+Finite state machines model the **control and sequencing view** of a system or object. In highly state-dependent systems (e.g., real-time systems), FSMs give important insight into system complexity.
 
 In UML, a state transition diagram is called a **state machine diagram** (statechart). A state-dependent object is always in one of the states of its FSM.
 

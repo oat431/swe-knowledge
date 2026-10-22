@@ -19,7 +19,7 @@ tags:
 
 ## What Changes from Junior to Mid
 
-A junior engineer hears about incidents after the fact and learns on-call as a spectator sport at best. A mid-level engineer shadows deliberately: preparing before the shift, staying a safe second pair of hands during pages, and writing up what they learned afterward. Shadowing is the rehearsal that turns production from an abstraction into a skill you can be trusted with — and it is how the team decides you are ready for the pager.
+A junior engineer hears about incidents after the fact and learns on-call as a spectator sport at best. A mid-level engineer shadows deliberately: preparing before the shift, staying a safe second pair of hands during pages, and writing up what they learned afterward. Shadowing is the rehearsal that turns production from an abstraction into a skill you can be trusted with, and it is how the team decides you are ready for the pager.
 
 | Aspect | Junior | Mid |
 |--------|--------|-----|
@@ -77,19 +77,19 @@ flowchart LR
 
 ## In Practice
 
-**Prepare like you are already on call.** The shift is won or lost before the first page: runbooks read, access tested, dashboards open, escalation path memorized. A shadow who fumbles for login screens during a page is not just unhelpful — they pull attention from the incident. Preparation is also how you earn trust fast, because the primary can hand you real tasks immediately.
+**Prepare like you are already on call.** The shift is won or lost before the first page: runbooks read, access tested, dashboards open, escalation path memorized. A shadow who fumbles for login screens during a page is not just unhelpful; they pull attention from the incident. Preparation is also how you earn trust fast, because the primary can hand you real tasks immediately.
 
 **Agree on your exact role before anything pages.** "I will take the timeline and run whatever lookups you ask for" is a role; "I will help somehow" is not. The primary needs to know what they can delegate without thinking about it. Repeating back assignments before acting on them prevents the classic shadow failure of confidently doing the wrong task.
 
-**Stay inside your lane during the acute phase.** Your job is to make the primary faster and to learn, in that order. Run the assigned lookup, keep the timeline, and resist the pull of unassigned fixes — an uncoordinated second actor in an incident is a second incident. After the acute phase, there is usually room to discuss what happened and why.
+**Stay inside your lane during the acute phase.** Your job is to make the primary faster and to learn, in that order. Run the assigned lookup, keep the timeline, and resist the pull of unassigned fixes: an uncoordinated second actor in an incident is a second incident. After the acute phase, there is usually room to discuss what happened and why.
 
 **Timestamp everything you observe.** Note what was checked, what was found, and what was decided, with times attached; this becomes the raw material of the postmortem timeline and the incident record. Good notes turn the fog of a page into an ordered account someone else can reason from. Keep the notes factual: what you saw, not what you concluded.
 
-**Ask your questions at the debrief, not in the critical path.** Every shadow has a stream of "why did you check that?" questions; saving them is a discipline. After the page — or after the acute phase — the primary is usually glad to walk through their reasoning, and that conversation is where the real learning happens.
+**Ask your questions at the debrief, not in the critical path.** Every shadow has a stream of "why did you check that?" questions; saving them is a discipline. After the page (or after the acute phase), the primary is usually glad to walk through their reasoning, and that conversation is where the real learning happens.
 
 **Write up what you learned within a day.** The write-up is the output that justifies the whole exercise: the failure mode, the decision process you observed, the queries that worked, and every gap in the runbooks you hit. Gaps go into tickets or direct doc fixes. A shadow shift with no write-up is entertainment; one with a write-up is training.
 
-**Let readiness be earned, not declared.** Carrying the pager is justified by a track record: several shadowed pages across different failure modes, working access, calm communication, and runbook improvements you have shipped. When you and the primary both say you are ready, plan a supported first rotation — primary backup, explicit escalation comfort — rather than a cold start.
+**Let readiness be earned, not declared.** Carrying the pager is justified by a track record: several shadowed pages across different failure modes, working access, calm communication, and runbook improvements you have shipped. When you and the primary both say you are ready, plan a supported first rotation (primary backup, explicit escalation comfort) rather than a cold start.
 
 ## Practical Exercise
 
@@ -101,7 +101,7 @@ Run one complete shadow cycle and produce the artifacts that make it count:
 4. Agree with the primary on your exact role for the shift and say it back to them in one sentence.
 5. During at least one page (live or replayed), keep a timestamped log of every observation, command, and decision you witnessed.
 6. Within 24 hours, write a one-page debrief: what failed, how the primary diagnosed it, what you did, and what confused you.
-7. Turn every confusion into a concrete fix — a runbook edit, a saved query, or an access request — and track at least one to completion.
+7. Turn every confusion into a concrete fix (a runbook edit, a saved query, or an access request) and track at least one to completion.
 
 ## Practical Applications
 

@@ -15,7 +15,7 @@ tags:
 
 # Quality Assurance in Governance
 
-> **Core skill:** Ensuring that project processes and deliverables meet defined quality standards (through process audits, deliverable reviews, quality metrics, and continuous improvement), so governance is not just about "on time and on budget" but about "fit for purpose."
+> **Core skill:** Ensuring that project processes and deliverables meet defined quality standards (through process audits, deliverable reviews, quality metrics, and continuous improvement), so governance covers "fit for purpose" as well as "on time and on budget."
 
 ## Why This Matters
 
@@ -84,7 +84,7 @@ Governance accepts deliverables based on quality evidence:
 | **UAT complete** | User acceptance sign-off; acceptance criteria evidence |
 | **Release ready** | Deployment plan; rollback plan; operational readiness |
 
-Every gate is a quality checkpoint. A deliverable that passes the gate on schedule but fails on quality is not a gate pass; it is a quality failure papered over with a schedule excuse.
+Every gate is a quality checkpoint. A deliverable that passes the gate on schedule but fails on quality is a quality failure papered over with a schedule excuse.
 
 ## Quality Assurance in Programs
 

@@ -75,7 +75,7 @@ A strategy that does not change any team's work plan is not a strategy. The impl
 
 ## Length Discipline: 3-5 Pages
 
-The document must fit in three to five pages. This is not a stylistic preference; it is the mechanism that forces prioritization. A strategy long enough to cover every exception is a strategy long enough to be ignored. If a section cannot be written within the budget, the thinking is not done yet. The answer is to decide, not to add pages.
+The document must fit in three to five pages. The page limit is what forces prioritization. A strategy long enough to cover every exception is a strategy long enough to be ignored. If a section cannot be written within the budget, the thinking is not done yet. The answer is to decide, not to add pages.
 
 ## The Drafting Process
 

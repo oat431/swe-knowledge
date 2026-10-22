@@ -7,7 +7,7 @@ tags:
 
 # Clean Code Overview
 
-Clean code is code that's easy to read, easy to change, and doesn't surprise the reader. It's not about clever one-liners; it's about making life easier for the next developer (including future you). These notes cover the most impactful clean code practices for daily work.
+Clean code is code that's easy to read, easy to change, and doesn't surprise the reader. The aim is making life easier for the next developer (including future you). These notes cover the most impactful clean code practices for daily work.
 
 ---
 

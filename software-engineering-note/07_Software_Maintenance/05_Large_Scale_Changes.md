@@ -136,7 +136,7 @@ Create a class whose sole responsibility is the monster method's work. Parameter
 ### Additional Rules
 - **Extract to the current class first:** even if the name is awkward (e.g., `recalculateOrder`). Move to the right class later.
 - **Extract small pieces:** they compound into insight.
-- **Be prepared to redo extractions:** undoing and re-extracting isn't wasted effort; it's gained design insight.
+- **Be prepared to redo extractions:** undoing and re-extracting teaches you about the design, so the effort isn't wasted.
 
 ---
 

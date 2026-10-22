@@ -218,7 +218,7 @@ Must be:
 
 **Inspection** (two documents):
 1. **Inspection Session Findings Report:** immediate documentation of identified errors for correction and follow-up
-2. **Inspection Session Summary Report:** compiled after session series; summarizes findings, resources invested, quality/efficiency metrics; serves as input for CAB analysis
+2. **Inspection Session Summary Report:** compiled after session series; summarizes findings, resources invested, quality/efficiency metrics; feeds CAB analysis
 
 **Walkthrough:**
 - Walkthrough Session Findings Report only
@@ -511,7 +511,7 @@ Configuration management ensures:
 
 ### 10.3 Broader Role
 
-Configuration management serves not only maintenance but also:
+Besides maintenance, configuration management serves:
 - Development: tracking versions during iterative development
 - Subcontractor management: knowing which version each supplier is working with
 - Customer support: accurate records of each customer's installed configuration

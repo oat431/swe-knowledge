@@ -19,7 +19,7 @@ tags:
 
 ## What Changes from Junior to Mid
 
-A junior engineer attends 1:1s and answers the manager's questions. A mid-level engineer runs the meeting: brings a written agenda, spends status time in writing beforehand, asks directly for feedback and growth opportunities, and raises the awkward topics — compensation, career doubts, team friction — before they calcify. The manager is a resource for your growth; a 1:1 is the standing appointment where you spend that resource on purpose.
+A junior engineer attends 1:1s and answers the manager's questions. A mid-level engineer runs the meeting: brings a written agenda, spends status time in writing beforehand, asks directly for feedback and growth opportunities, and raises the awkward topics (compensation, career doubts, team friction) before they calcify. The manager is a resource for your growth; a 1:1 is the standing appointment where you spend that resource on purpose.
 
 | Aspect | Junior | Mid |
 |--------|--------|-----|
@@ -82,9 +82,9 @@ flowchart LR
 
 **Bring your own agenda; the meeting is yours.** A 1:1 without an agenda becomes your manager's status check, and status is the least valuable use of a live hour with someone who can change your trajectory. Keep a running note all week, rank the items, and open the meeting with your list. Managers consistently adapt to whoever brings structure; be that person.
 
-**Handle status in writing so the meeting can do what writing cannot.** Send a short update before the meeting — shipped, in flight, risks — and walk in ready to talk about judgment calls, growth, and friction. Written status also protects you: your manager has a record of your work when promotion and review conversations happen. If the meeting keeps sliding back into status, say so and renegotiate the format.
+**Handle status in writing so the meeting can do what writing cannot.** Send a short update before the meeting (shipped, in flight, risks) and walk in ready to talk about judgment calls, growth, and friction. Written status also protects you: your manager has a record of your work when promotion and review conversations happen. If the meeting keeps sliding back into status, say so and renegotiate the format.
 
-**Ask for feedback with a specific question attached.** "How am I doing?" invites a kind, vague answer; "in the design review last week, was my pushback on the API too blunt?" invites something you can act on. Specific questions lower the effort of answering honestly and make the feedback about behavior, not about you. Ask repeatedly — feedback you request regularly stops being an event and starts being a tool.
+**Ask for feedback with a specific question attached.** "How am I doing?" invites a kind, vague answer; "in the design review last week, was my pushback on the API too blunt?" invites something you can act on. Specific questions lower the effort of answering honestly and make the feedback about behavior, not about you. Ask repeatedly; feedback you request regularly stops being an event and starts being a tool.
 
 **Turn each topic into an ask or a decision.** Blockers become "can you unblock the identity team's review?"; growth becomes "can I own the next migration plan?"; friction becomes "what would you want me to try first?" Managers act on explicit requests far more reliably than on hints. If a topic has no ask attached, it probably belongs in your status update instead.
 
@@ -99,9 +99,9 @@ flowchart LR
 Run a complete 1:1 cycle for one week:
 
 1. Keep a running agenda note for five workdays; record at least six items the moment they occur, tagged as status, blocker, growth, feedback, or concern.
-2. Write the pre-meeting status update: what shipped, what is in flight, what risks exist — under one page.
+2. Write the pre-meeting status update: what shipped, what is in flight, what risks exist, under one page.
 3. Rank your agenda with the most important or hardest item first, and attach one concrete ask to every topic.
-4. Draft the opening sentence for one avoided topic — compensation, career doubt, or team friction — using specific behavior and impact.
+4. Draft the opening sentence for one avoided topic (compensation, career doubt, or team friction), using specific behavior and impact.
 5. Prepare one specific feedback question about a real recent situation, narrow enough to answer honestly.
 6. Simulate the meeting: cover the ranked agenda in order, and notice which items would have been dropped if the meeting ran short.
 7. Write the follow-up message: decisions made, asks raised, who owns each next step, and when.

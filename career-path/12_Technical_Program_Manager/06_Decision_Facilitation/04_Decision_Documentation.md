@@ -87,7 +87,7 @@ A good rationale lets a reader who was not in the meeting understand why the dec
 
 ## Recording Dissent
 
-Dissent in the decision record is not an attack on the decision; it is an insurance policy. It preserves the dissenter's reasoning so that if conditions change and the dissenter was right, the record shows it and the decision can be revisited without re-litigating.
+Dissent in the decision record is an insurance policy. It preserves the dissenter's reasoning so that if conditions change and the dissenter was right, the record shows it and the decision can be revisited without re-litigating.
 
 | What to Record | Example |
 |----------------|---------|

@@ -15,7 +15,7 @@ tags:
 
 ## What Is This?
 
-Mathematical Foundations covers the discrete mathematics and formal reasoning that underpin software engineering. These aren't math for math's sake; they're the tools for specifying systems precisely, proving properties about algorithms, reasoning about state machines, analyzing complexity, and managing uncertainty. Every time you write a loop invariant, design a state machine, or estimate a probability, you're using these foundations.
+Mathematical Foundations covers the discrete mathematics and formal reasoning that underpin software engineering. These are the tools for specifying systems precisely, proving properties about algorithms, reasoning about state machines, analyzing complexity, and managing uncertainty. Every time you write a loop invariant, design a state machine, or estimate a probability, you're using these foundations.
 
 The twelve knowledge areas form a progression: logic and proof techniques give you the language and methods for rigorous argument; sets, relations, and functions provide the structures; graphs, trees, and FSMs model system behavior; grammars define languages; counting and probability quantify uncertainty; numerical methods handle real-world computation limits; and algebraic structures abstract recurring patterns into reusable frameworks.
 

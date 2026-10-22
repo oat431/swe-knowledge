@@ -14,7 +14,7 @@ tags:
 
 ## What Is This?
 
-Requirements elicitation is the heart of requirements development, the process of identifying the needs and constraints of the various stakeholders for a software system. It is **not** "gathering requirements," nor is it transcribing what users say. Elicitation is a *collaborative and analytical* process that collects, discovers, extracts, and defines requirements across all levels: business, user, functional, and nonfunctional. Wiegers calls it "perhaps the most challenging, critical, error-prone, and communication-intensive aspect of software development."
+Requirements elicitation is the core of requirements development, the process of identifying the needs and constraints of the various stakeholders for a software system. It is **not** "gathering requirements," nor is it transcribing what users say. Elicitation is a *collaborative and analytical* process that collects, discovers, extracts, and defines requirements across all levels: business, user, functional, and nonfunctional. Wiegers calls it "perhaps the most challenging, critical, error-prone, and communication-intensive aspect of software development."
 
 The nature of elicitation is **cyclic** (Figure 7-1): elicit → study → write requirements → discover gaps → elicit again. A couple of workshops does not constitute "done." Resist designing the system before understanding the problem; emphasize user *tasks* over user *interfaces*, and true *needs* over expressed *desires*.
 
@@ -147,7 +147,7 @@ Examine existing documentation for potential requirements: requirements specific
 
 ## Planning Elicitation
 
-Early in a project, the BA should plan the elicitation approach. An **elicitation plan** includes techniques, timing, and purpose, and serves as a guide that may evolve. Explicit stakeholder commitment on resources, schedule, and deliverables prevents participants being pulled away.
+Early in a project, the BA should plan the elicitation approach. An **elicitation plan** includes techniques, timing, and purpose, and is a guide that may evolve. Explicit stakeholder commitment on resources, schedule, and deliverables prevents participants being pulled away.
 
 The plan should address:
 

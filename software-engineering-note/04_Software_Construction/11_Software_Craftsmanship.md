@@ -35,7 +35,7 @@ Nobody is really smart enough to program computers. The way you *focus* your int
 - **Problem-domain terms:** work at higher abstraction, not implementation-level details
 - **Conventions:** free your brain from arbitrary, low-payoff decisions
 
-Humility isn't weakness; it's the engine of improvement. The more humble you are, the faster you'll improve.
+Humility drives improvement: the more humble you are, the faster you'll improve.
 
 ### 33.3 Curiosity
 

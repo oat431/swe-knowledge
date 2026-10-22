@@ -5,7 +5,7 @@ source: "SWE Theory & Practice Ch 6 — Designing the Modules"
 
 # Design Principles and Patterns
 
-> *Source: Software Engineering: Theory and Practice* Chapter 6 — Designing the Modules
+> *Source: Software Engineering: Theory and Practice* Chapter 6: Designing the Modules
 
 ## Purpose
 
@@ -26,9 +26,9 @@ Module-level design bridges architecture and code. Unlike architectural design (
 
 ### Design Process Characteristics
 
-- **No clear boundary** — architecture and module design blend together
-- **Iterative process** — designers alternate between top-down, bottom-up, and outside-in
-- **Refactoring** — periodically review and revise design decisions, simplify overly complex solutions
+- **No clear boundary:** architecture and module design blend together
+- **Iterative process:** designers alternate between top-down, bottom-up, and outside-in
+- **Refactoring:** periodically review and revise design decisions, simplify overly complex solutions
 
 > **"Faking the Rational Design Process" (Parnas & Clements, 1986):** Even when the actual design process isn't purely top-down, documentation should follow the ideal process:
 > 1. Decompose into modules
@@ -93,7 +93,7 @@ Measures how closely module-internal elements are related:
 | **Functional** | All elements serve a single function |
 | **Informational** | Functional cohesion in OO design |
 
-> **Goal:** Informational cohesion — all attributes, methods, and operations are interdependent and essential to the object.
+> **Goal:** Informational cohesion: all attributes, methods, and operations are interdependent and essential to the object.
 
 ### 2.2 Interfaces
 
@@ -140,7 +140,7 @@ High fan-out (poor)         Optimized (high fan-in)
     G                        B C D E F
 ```
 
-**Breaking cycles in Uses graphs — Sandwiching technique:**
+**Breaking cycles in Uses graphs (Sandwiching technique):**
 
 ```
 Original: A ⟷ B (circular dependency)
@@ -152,10 +152,10 @@ Decomposed: A → B₂ → B₁ → A₂ (no cycle)
 ### 2.5 Abstraction
 
 **Types:**
-1. **Decomposition levels** — System → subsystem → sub-subsystem
-2. **Interface specification** — Focus on external behavior, ignore internal details
-3. **Multiple views** — Different structural views (runtime process vs code units)
-4. **Virtual machine** — Layered architecture where each layer abstracts the layer below
+1. **Decomposition levels:** System → subsystem → sub-subsystem
+2. **Interface specification:** Focus on external behavior, ignore internal details
+3. **Multiple views:** Different structural views (runtime process vs code units)
+4. **Virtual machine:** Layered architecture where each layer abstracts the layer below
 
 **Abstraction levels example (sorting algorithm):**
 
@@ -170,9 +170,9 @@ Level 3: Complete nested loop implementation code
 **Goal:** Make software units as general as possible to increase future reuse potential.
 
 **Methods to increase generality:**
-1. **Parameterization** — Turn context-specific information into parameters
-2. **Remove preconditions** — Make software work under conditions previously assumed not to occur
-3. **Simplify postconditions** — Split complex units into multiple independently usable units
+1. **Parameterization:** Turn context-specific information into parameters
+2. **Remove preconditions:** Make software work under conditions previously assumed not to occur
+3. **Simplify postconditions:** Split complex units into multiple independently usable units
 
 **Generality example:**
 
@@ -191,7 +191,7 @@ PROCEDURE SUM(a[]: INTEGER): INTEGER
   POST: Returns sum of all array elements         ← Highest generality
 ```
 
-> **Trade-off:** Generality vs customization — sometimes reducing generality is needed to optimize performance or other quality attributes.
+> **Trade-off:** Generality vs customization: sometimes reducing generality is needed to optimize performance or other quality attributes.
 
 ---
 
@@ -224,7 +224,7 @@ PROCEDURE SUM(a[]: INTEGER): INTEGER
 | **Performance** | No extra indirection layer | Introduces indirection, may impact performance |
 | **Extension** | Can override inherited methods | Can replace compatible components |
 
-> **Rule of thumb:** **Favor composition over inheritance** — runtime replaceability is more valuable.
+> **Rule of thumb:** **Favor composition over inheritance**: runtime replaceability is more valuable.
 
 ### Liskov Substitution Principle (LSP)
 
@@ -332,7 +332,7 @@ navigation ─ ─→  Navigation
 
 ## 5. OO Design Patterns
 
-> Design patterns are **templates** rather than ready-made solutions — must be modified and adapted for each specific use.
+> Design patterns are **templates** rather than ready-made solutions, so they must be modified and adapted for each specific use.
 
 ### Design Pattern Classification
 
@@ -451,13 +451,13 @@ Expr (abstract class)
 └── Variable: value
 ```
 
-**Conflict:** Conflicts with Liskov Substitution Principle — subclasses may inherit meaningless operations (e.g., Variable inherits left/right operations).
+**Conflict:** Conflicts with Liskov Substitution Principle: subclasses may inherit meaningless operations (e.g., Variable inherits left/right operations).
 
 ---
 
 ## Core Characteristics of Design Patterns
 
-> **Patterns are not libraries, not frameworks** — they are the **encoding** of design decisions and best practices.
+> **Patterns are not libraries, not frameworks:** they are the **encoding** of design decisions and best practices.
 
 **Commonalities:**
 - Heavy use of interfaces, information hiding, polymorphism
@@ -550,7 +550,7 @@ Private interface:
 
 ## Related
 
-- [[Engineering Foundation Overview]] — All engineering foundation topics
-- [[02 SWE Process/13_Software_Architecture|13_Software_Architecture]] — Architecture design (upstream)
-- [[02 SWE Process/15_Coding_Standards_and_Practices|15_Coding_Standards_and_Practices]] — Implementation (downstream)
-- [[02 SWE Process/12_Requirements_Engineering|12_Requirements_Engineering]] — Requirements that drive design decisions
+- [[Engineering Foundation Overview]]: All engineering foundation topics
+- [[02 SWE Process/13_Software_Architecture|13_Software_Architecture]]: Architecture design (upstream)
+- [[02 SWE Process/15_Coding_Standards_and_Practices|15_Coding_Standards_and_Practices]]: Implementation (downstream)
+- [[02 SWE Process/12_Requirements_Engineering|12_Requirements_Engineering]]: Requirements that drive design decisions

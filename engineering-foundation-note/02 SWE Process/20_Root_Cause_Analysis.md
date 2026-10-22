@@ -8,24 +8,24 @@ tags: [root-cause-analysis, problem-solving, engineering-foundations, swebok]
 
 ## Purpose
 
-Root Cause Analysis (RCA) is a class of problem-solving methods to identify the underlying causes of undesirable outcomes — preventing recurrence rather than just treating symptoms. RCA serves four roles in software engineering:
+Root Cause Analysis (RCA) is a class of problem-solving methods to identify the underlying causes of undesirable outcomes, preventing recurrence rather than just treating symptoms. RCA serves four roles in software engineering:
 
-1. **Identifying real problems** — distinguishing symptoms from causes
-2. **Exposing risk drivers** — understanding what could go wrong
-3. **Revealing process improvement opportunities** — finding systemic weaknesses
-4. **Discovering sources of recurring defects** — breaking the cycle
+1. **Identifying real problems:** distinguishing symptoms from causes
+2. **Exposing risk drivers:** understanding what could go wrong
+3. **Revealing process improvement opportunities:** finding systemic weaknesses
+4. **Discovering sources of recurring defects:** breaking the cycle
 
 ## Core Principle
 
-> **"Ask why five times"** — Taiichi Oho (Toyota Production System)
+> **"Ask why five times":** Taiichi Oho (Toyota Production System)
 > 
-> Every problem has a chain of causes. Dig deep enough and you find the root — the one fix that prevents the problem from happening again.
+> Every problem has a chain of causes. Dig deep enough and you find the root: the one fix that prevents the problem from happening again.
 
 ## RCA Techniques
 
 ### 1. 5-Whys
 
-The simplest RCA technique — repeatedly ask "Why?" until you reach the root cause.
+The simplest RCA technique: repeatedly ask "Why?" until you reach the root cause.
 
 **Example:**
 ```
@@ -182,12 +182,12 @@ Prioritize problems by frequency and resource consumption.
 
 ## RCA Process (6 Steps)
 
-1. **Select the problem** — Define the undesirable outcome clearly
-2. **Gather evidence** — Collect data, logs, reports, interviews
-3. **Identify root cause(s)** — Apply appropriate technique(s)
-4. **Select corrective actions** — Choose fixes that address the root cause
-5. **Implement** — Apply the fixes
-6. **Observe effectiveness** — Monitor to confirm the problem doesn't recur
+1. **Select the problem:** Define the undesirable outcome clearly
+2. **Gather evidence:** Collect data, logs, reports, interviews
+3. **Identify root cause(s):** Apply appropriate technique(s)
+4. **Select corrective actions:** Choose fixes that address the root cause
+5. **Implement:** Apply the fixes
+6. **Observe effectiveness:** Monitor to confirm the problem doesn't recur
 
 > **RCA must lead to action.** An RCA that produces a report but no changes is wasted effort.
 
@@ -204,7 +204,7 @@ Prioritize problems by frequency and resource consumption.
 
 ## Related
 
-- [[Engineering Foundation Overview]] — All engineering foundation topics
-- [[02 SWE Process/18_Evaluation_and_Improvement|18_Evaluation_and_Improvement]] — Process improvement and metrics
-- [[02 SWE Process/16_Testing_Strategies|16_Testing_Strategies]] — Finding defects before RCA is needed
-- [[02 SWE Process/11_Project_Planning_and_Management|11_Project_Planning_and_Management]] — Risk management
+- [[Engineering Foundation Overview]]: All engineering foundation topics
+- [[02 SWE Process/18_Evaluation_and_Improvement|18_Evaluation_and_Improvement]]: Process improvement and metrics
+- [[02 SWE Process/16_Testing_Strategies|16_Testing_Strategies]]: Finding defects before RCA is needed
+- [[02 SWE Process/11_Project_Planning_and_Management|11_Project_Planning_and_Management]]: Risk management

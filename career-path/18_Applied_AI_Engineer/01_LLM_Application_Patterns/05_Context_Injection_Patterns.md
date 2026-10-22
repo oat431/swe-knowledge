@@ -20,7 +20,7 @@ tags:
 
 ## Why This Is a Senior Skill
 
-A mid-level engineer stuffs whatever fits into the prompt and trusts the model to sort it out. A senior engineer treats the context window as memory with a budget: every section must earn its token cost, ordering follows how models actually attend (they weight beginnings and endings, and lose the middle), history is compacted deliberately, and context assembly is a tested, versioned component rather than string concatenation. The senior also knows that context injection is not just a RAG detail; it is the general mechanism behind every pattern in this area.
+A mid-level engineer stuffs whatever fits into the prompt and trusts the model to sort it out. A senior engineer treats the context window as memory with a budget: every section must earn its token cost, ordering follows how models actually attend (they weight beginnings and endings, and lose the middle), history is compacted deliberately, and context assembly is a tested, versioned component rather than string concatenation. The senior also knows that context injection is the general mechanism behind every pattern in this area.
 
 The senior challenge: context is the single shared resource every pattern consumes, and the model's attention does not treat it uniformly. Budgeting and ordering are correctness decisions, not formatting.
 

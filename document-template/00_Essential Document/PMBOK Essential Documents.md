@@ -185,7 +185,7 @@ tags: [overview, project-management, pmbok, essential-documents]
 
 ## Life Cycle Integration
 
-Per [[03_Project_Life_Cycles]], these documents apply across all development approaches — predictive, adaptive, or hybrid. The **level of formality** depends on the approach:
+Per [[03_Project_Life_Cycles]], these documents apply across all development approaches: predictive, adaptive, or hybrid. The **level of formality** depends on the approach:
 
 | Approach | Documentation Style |
 | --- | --- |
@@ -193,7 +193,7 @@ Per [[03_Project_Life_Cycles]], these documents apply across all development app
 | **Adaptive (Agile)** | Lighter — user stories replace SRS, backlog replaces WBS, burn charts replace EVM |
 | **Hybrid** | Formal for fixed-scope components; lighter for iterative components |
 
-> **Tailoring Note:** Per [[11_Tailoring]], adjust which documents to produce, their level of detail, and review/approval rigor based on: project complexity, criticality, team size, organizational culture, regulatory requirements, and stakeholder expectations. *No project needs every document — select what adds value.*
+> **Tailoring Note:** Per [[11_Tailoring]], adjust which documents to produce, their level of detail, and review/approval rigor based on: project complexity, criticality, team size, organizational culture, regulatory requirements, and stakeholder expectations. *No project needs every document; select what adds value.*
 
 ### Key Standards Referenced
 
@@ -216,6 +216,6 @@ Per [[03_Project_Life_Cycles]], these documents apply across all development app
 
 ## Related
 
-- [[PMBOK v8 - Overview]] — Full PMBOK knowledge base
-- [[SEBOK Essential Documents]] — SE documents by phase
-- [[SWEBOK Essential Documents]] — SWEBOK software documents by phase
+- [[PMBOK v8 - Overview]]: Full PMBOK knowledge base
+- [[SEBOK Essential Documents]]: SE documents by phase
+- [[SWEBOK Essential Documents]]: SWEBOK software documents by phase

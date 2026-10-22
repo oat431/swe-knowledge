@@ -16,7 +16,7 @@ tags:
 
 # Daily Engineering Craft
 
-> **Capability area:** The repeatable working practices — reading code, debugging, branching, reviewing, testing, estimating, documenting — that make a software engineer dependable every day.
+> **Capability area:** The repeatable working practices (reading code, debugging, branching, reviewing, testing, estimating, documenting) that make a software engineer dependable every day.
 
 ## What Changes from Junior to Mid
 
@@ -93,7 +93,7 @@ This area covers personal working practices inside a single team's flow. It does
 
 ## Sources
 
-- *The Pragmatic Programmer* (David Thomas, Andrew Hunt) — daily craft heuristics
-- *Working Effectively with Legacy Code* (Michael Feathers) — reading and changing unfamiliar code
-- *Debugging: The 9 Indispensable Rules for Finding Anything* (David Agans) — systematic debugging
-- *Software Engineering at Google* (Titus Winters, Tom Manshreck, Hyrum Wright) — review, testing, and estimation practices
+- *The Pragmatic Programmer* (David Thomas, Andrew Hunt): daily craft heuristics
+- *Working Effectively with Legacy Code* (Michael Feathers): reading and changing unfamiliar code
+- *Debugging: The 9 Indispensable Rules for Finding Anything* (David Agans): systematic debugging
+- *Software Engineering at Google* (Titus Winters, Tom Manshreck, Hyrum Wright): review, testing, and estimation practices

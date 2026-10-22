@@ -36,7 +36,7 @@ Sitting in cubicles with headphones on, backs to each other, is not collaboratio
 
 ## The Cerebellum Principle
 
-> **Collaboration isn't just a social nicety; it's a technical advantage. Pairing and close teamwork distribute knowledge, catch defects early, and prevent the fragility that comes from isolated expertise.**
+> **Collaboration is a technical advantage. Pairing and close teamwork distribute knowledge, catch defects early, and prevent the fragility that comes from isolated expertise.**
 
 When knowledge is siloed, the team is one bus factor away from disaster. When programmers pair, knowledge transfers naturally. Code gets reviewed *as it's written*, the most efficient form of review possible. And when the entire team collectively owns the code, architecture decisions benefit from multiple perspectives instead of one programmer's assumptions.
 

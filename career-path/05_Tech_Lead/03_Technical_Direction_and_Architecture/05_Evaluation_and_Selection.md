@@ -110,7 +110,7 @@ The recommendation's structure makes it auditable:
 6. The risks of the choice and the exit plan
 7. What would change the recommendation
 
-Anyone (a skeptical engineer, an executive, a future team) should be able to read the document and reconstruct the decision. If the document could not have produced the verdict, it is not an evaluation; it is a memo.
+Anyone (a skeptical engineer, an executive, a future team) should be able to read the document and reconstruct the decision. If the document could not have produced the verdict, it is only a memo.
 
 ## Avoiding Resume-Driven and Inertia-Driven Selection
 

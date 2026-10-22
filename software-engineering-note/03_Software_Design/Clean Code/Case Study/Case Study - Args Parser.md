@@ -364,7 +364,7 @@ Then do the same for `get()` → `abstract Object get()`. Each derivative return
 
 ### Phase 5: Unify the Three HashMaps into One (Listing 14-12)
 
-This is the pivotal refactoring. Add a *fourth* map (`marshalers`) and dual-populate during migration:
+This refactoring is the turning point. Add a *fourth* map (`marshalers`) and dual-populate during migration:
 
 ```java
 private Map<Character, ArgumentMarshaler> booleanArgs = ...;

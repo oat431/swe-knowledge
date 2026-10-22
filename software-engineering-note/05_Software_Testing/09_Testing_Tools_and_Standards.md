@@ -7,7 +7,7 @@ created: 2026-07-21
 # Testing Tools and Standards
 
 > **SWEBOK KA 5.8** - Testing Tools and Standards
-> This note covers the landscape of software testing tools, international standards governing testing processes, and maturity models for assessing testing capability.
+> This note covers software testing tools, international standards governing testing processes, and maturity models for assessing testing capability.
 
 ---
 
@@ -817,7 +817,7 @@ Testing tools and standards provide the infrastructure for systematic, measurabl
 | **Maturity** | TMMi provides 5-level testing maturity assessment; CMMI and SPICE complement with broader process frameworks |
 | **ODC** | Orthogonal Defect Classification enables statistical analysis of defect patterns for process improvement |
 
-The testing tool landscape continues to evolve with AI-assisted testing, low-code test automation, and observability-driven testing approaches.
+Newer tools add AI-assisted testing, low-code test automation, and observability-driven testing.
 
 ---
 

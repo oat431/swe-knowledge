@@ -20,7 +20,7 @@ tags:
 
 ## Why This Matters
 
-The network is not the cable between components; it is where latency accumulates, where segmentation enforces trust, and where availability is won or lost. Application architects often delegate it and then discover its properties define the system: a synchronous call across regions adds a hundred milliseconds to every user journey, a flat network makes every boundary policy decorative, and a single peering link is a single point of failure for everything that depends on it.
+The network is where latency accumulates, where segmentation enforces trust, and where availability is won or lost. Application architects often delegate it and then discover its properties define the system: a synchronous call across regions adds a hundred milliseconds to every user journey, a flat network makes every boundary policy decorative, and a single peering link is a single point of failure for everything that depends on it.
 
 The building blocks each carry semantics worth designing with. A gateway is an entry point and a policy choke point. A load balancer turns health checks into routing truth. A service mesh provides east-west identity, encryption, and policy without touching application code. A CDN absorbs load and shortens distance to content. Segmentation defines blast radius. Private connectivity keeps flows off public paths. Choosing and composing these blocks is application architecture wearing infrastructure clothes.
 

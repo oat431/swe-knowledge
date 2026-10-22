@@ -521,7 +521,7 @@ Requirements Modeling  →  Analysis Modeling  →  Design Modeling
 1. **COMET** is a UML-based, use case–driven, iterative method spanning requirements → analysis → design.
 2. **UML** provides standardized diagrams for multiple architectural views; use case, class, interaction, state machine, deployment.
 3. **Software life cycles** evolved from waterfall (sequential, risky) → prototyping → incremental → spiral (risk-driven) → USDP/RUP (iterative, phase-based).
-4. **Information hiding** is the cornerstone of modifiable design: encapsulate what changes behind a stable interface.
+4. **Information hiding** is the basis of modifiable design: encapsulate what changes behind a stable interface.
 5. **Concurrent processing** introduces three core problems: mutual exclusion, synchronization, and producer/consumer, solved via event signaling and message communication (async/sync).
 6. **Design patterns** capture recurring solutions at multiple scales: idioms → design patterns → architectural patterns.
 7. **Software quality attributes** (maintainability, modifiability, testability, traceability, scalability, reusability, performance, security, availability) must be addressed at architecture time.

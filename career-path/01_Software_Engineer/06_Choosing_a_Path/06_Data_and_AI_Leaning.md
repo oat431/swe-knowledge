@@ -19,7 +19,7 @@ tags:
 
 ## What Changes from Junior to Mid
 
-A junior engineer treats data and AI as a pile of new tools: a pipeline framework here, a model API there. A mid-level engineer who leans this way starts seeing the underlying discipline: data is a product with contracts and owners, models are only as good as their evaluation, and a demo is not a system. This note helps you test whether the data-and-AI family — Data and ML Engineer, Applied AI Engineer — matches your appetite for messy inputs, evaluation rigor, and tooling that moves faster than any other part of engineering.
+A junior engineer treats data and AI as a pile of new tools: a pipeline framework here, a model API there. A mid-level engineer who leans this way starts seeing the underlying discipline: data is a product with contracts and owners, models are only as good as their evaluation, and a demo is not a system. This note helps you test whether the data-and-AI family (Data and ML Engineer, Applied AI Engineer) matches your appetite for messy inputs, evaluation rigor, and tooling that moves faster than any other part of engineering.
 
 | Aspect | Junior | Mid |
 |--------|--------|-----|
@@ -80,7 +80,7 @@ flowchart LR
 
 **Data wrangling is the reality of the first role, not an insult to it.** Most of a data and ML engineer's week is understanding sources, fixing quality, reconciling definitions, and making pipelines survive upstream change. Engineers who thrive here treat a clean, monitored dataset as a finished product; engineers who suffer here are waiting to get back to features. Build one real pipeline before deciding, and watch what the middle of the work feels like.
 
-**Evaluation rigor is the core skill of applied AI.** Foundation models are probabilistic: the same input can yield different outputs, and a demo proves nothing. The applied AI engineer's leverage is the eval suite — test sets, scoring, regression tracking, threshold decisions — that turns opinion into evidence. If designing "how do we know the answer is good?" feels like a fascinating problem rather than a bureaucratic one, this role fits you.
+**Evaluation rigor is the core skill of applied AI.** Foundation models are probabilistic: the same input can yield different outputs, and a demo proves nothing. The applied AI engineer's leverage is the eval suite (test sets, scoring, regression tracking, threshold decisions) that turns opinion into evidence. If designing "how do we know the answer is good?" feels like a fascinating problem rather than a bureaucratic one, this role fits you.
 
 **Tooling churn is a constant tax you must price in.** Frameworks, model APIs, and best practices in this family change faster than anywhere else in software. The durable hedge is fundamentals: data modeling, statistics, distributed systems, and evaluation design, so tools stay interchangeable. If rapid change feels exciting you will compound; if it feels destabilizing, this family will chronically drain you.
 
@@ -95,7 +95,7 @@ Test the data and AI direction over one quarter:
 1. Write three sentences on the most rewarding data or model work you have done, and what specifically rewarded you.
 2. Build one real pipeline end to end from a source you have never touched: extraction, transformation, a quality check, and a failure alert.
 3. Define data contracts for that pipeline: freshness, schema, ownership, and what consumers may assume.
-4. Take one small AI feature — yours or a toy — and build an evaluation set with at least a dozen cases, scoring, and a way to detect regressions.
+4. Take one small AI feature (yours or a toy), and build an evaluation set with at least a dozen cases, scoring, and a way to detect regressions.
 5. Root-cause one real data or model quality problem and add the check that would have caught it.
 6. Profile one AI-backed feature for latency and cost and record one optimization with its trade-off.
 7. Review your logs of energy and drain, and name which role and which boundary the evidence supports.

@@ -138,4 +138,4 @@ The time-phased budget is the spending plan. It tells finance when money will be
 
 ## Summary
 
-Cost estimation and budgeting convert the project plan into a financial commitment. The project manager builds the estimate from the activity list (resources × duration × rate), adds contingency sized from the risk register, time-phases the budget, and manages to the approved baseline. Cost is not a separate workstream; it is the schedule expressed in currency. When scope changes, cost changes; when the risk profile shifts, contingency shifts. An honest cost estimate beats a round-number budget every time.
+Cost estimation and budgeting convert the project plan into a financial commitment. The project manager builds the estimate from the activity list (resources × duration × rate), adds contingency sized from the risk register, time-phases the budget, and manages to the approved baseline. Cost is the schedule expressed in currency. When scope changes, cost changes; when the risk profile shifts, contingency shifts. An honest cost estimate beats a round-number budget every time.

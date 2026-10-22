@@ -22,7 +22,7 @@ tags:
 
 Every team has knowledge gaps. When only one person understands a system, that person becomes a bottleneck. When knowledge is distributed, the team becomes resilient.
 
-Technical mentoring is how senior engineers distribute their knowledge systematically. It is not about answering every question; it is about teaching people how to find answers, think through problems, and develop their own technical judgment.
+Technical mentoring is how senior engineers distribute their knowledge systematically. It means teaching people how to find answers, think through problems, and develop their own technical judgment.
 
 ## Mentoring vs Teaching
 
@@ -333,4 +333,4 @@ Review monthly:
 
 ## Summary
 
-Technical mentoring is developing others through guided discovery, not just answering questions. Senior engineers assess current levels, set development goals, choose appropriate techniques (guided discovery, think-aloud, scaffolding, stretch assignments), provide ongoing feedback, and track progress. The goal is not to create clones, but to develop independent engineers with strong technical judgment. Effective mentoring multiplies the senior engineer impact across the entire team.
+Technical mentoring is developing others through guided discovery, not just answering questions. Senior engineers assess current levels, set development goals, choose appropriate techniques (guided discovery, think-aloud, scaffolding, stretch assignments), provide ongoing feedback, and track progress. The goal is to develop independent engineers with strong technical judgment. Effective mentoring multiplies the senior engineer impact across the entire team.

@@ -52,7 +52,7 @@ Before transition, the project team and operations team jointly assess readiness
 | **Continuity** | Are backup, disaster recovery, and business continuity plans in place? | DR plan; backup schedules; recovery test results |
 | **Warranty** | Is there a warranty period with project team support? | Warranty terms: duration, scope, escalation |
 
-Readiness is not assumed; it is assessed against criteria agreed during planning. A readiness gap is a transition blocker, not a handover footnote.
+Readiness is assessed against criteria agreed during planning. A readiness gap is a transition blocker, not a handover footnote.
 
 ## Transition Activities
 

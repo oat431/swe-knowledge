@@ -19,7 +19,7 @@ tags:
 
 ## What Changes from Junior to Mid
 
-A junior engineer in an incident either freezes or improvises loudly; both add load to the response. A mid-level engineer picks a role, communicates facts with timestamps, labels hypotheses as hypotheses, and stays useful under stress without being asked twice. The incident channel is not a brainstorm — it is a shared working memory with limited attention, and your job is to add signal to it.
+A junior engineer in an incident either freezes or improvises loudly; both add load to the response. A mid-level engineer picks a role, communicates facts with timestamps, labels hypotheses as hypotheses, and stays useful under stress without being asked twice. The incident channel is a shared working memory with limited attention, and your job is to add signal to it.
 
 | Aspect | Junior | Mid |
 |--------|--------|-----|
@@ -97,7 +97,7 @@ flowchart LR
 Practice incident participation with a realistic drill before the real thing:
 
 1. Take a hypothetical scenario: "your service starts returning 500s fifteen minutes after a deploy." Write your first three channel messages as facts with timestamps and sources.
-2. Assign yourself a role — responder, scribe, or communicator — and write one sentence defining what that role owns in this scenario.
+2. Assign yourself a role (responder, scribe, or communicator) and write one sentence defining what that role owns in this scenario.
 3. Write two labeled hypotheses about the scenario, each with the cheapest test that would disprove it, and describe what result would kill each.
 4. Script the "announce before act" message you would post before any mitigation, including what you are doing and why.
 5. Write a stakeholder update in plain language with no jargon: what users see, what is being done, when the next update comes.

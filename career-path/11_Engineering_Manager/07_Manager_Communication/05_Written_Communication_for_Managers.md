@@ -80,7 +80,7 @@ Performance documents are legal-grade communication: they will be reread, quoted
 | Patterned | "Three consecutive quarters of missed estimates", not "one bad quarter" |
 | Defensible | Every claim survives a reader asking "what is the evidence?" |
 
-If a performance sentence would embarrass you in an appeal, rewrite it before it ships. The document is not the manager's opinion; it is the evidence with the conclusion attached.
+If a performance sentence would embarrass you in an appeal, rewrite it before it ships. The document is the evidence with the conclusion attached.
 
 ## Writing for Scrolling
 

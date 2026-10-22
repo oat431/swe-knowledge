@@ -21,7 +21,7 @@ tags:
 
 ## Why This Matters
 
-Empathy in this role is not a personality trait; it is a technical instrument. The advocate who cannot remember what not-knowing feels like writes quickstarts that skip the step where beginners stop. The consultant who cannot hold a customer's constraints without judging them recommends architectures the customer's team cannot carry. Both failures share a root cause: the expert's own fluency substituted for the user's reality.
+Empathy in this role is a technical instrument. The advocate who cannot remember what not-knowing feels like writes quickstarts that skip the step where beginners stop. The consultant who cannot hold a customer's constraints without judging them recommends architectures the customer's team cannot carry. Both failures share a root cause: the expert's own fluency substituted for the user's reality.
 
 Professional empathy is also the most fatiguing skill in the area, because it inverts the expert's instincts all day. The expert wants to answer; empathy wants to understand the question first. The expert hears a technically wrong request; empathy hears a person describing a problem badly because the problem is genuinely confusing. Fatigue sets in, shortcuts appear, and the advocate starts responding to the user they remember instead of the one in front of them.
 

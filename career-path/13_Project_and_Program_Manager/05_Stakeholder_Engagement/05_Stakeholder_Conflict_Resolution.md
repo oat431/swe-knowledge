@@ -19,7 +19,7 @@ tags:
 
 ## Why This Matters
 
-Stakeholders disagree. The marketing team wants features that sales promised; engineering wants technical debt reduction; the sponsor wants the original date; the users want changes that break the date. These conflicts are not project failures. They are the normal condition of a project with real stakeholders who have real interests. The failure is not the conflict; it is the project manager who lets it fester.
+Stakeholders disagree. The marketing team wants features that sales promised; engineering wants technical debt reduction; the sponsor wants the original date; the users want changes that break the date. These conflicts are not project failures. They are the normal condition of a project with real stakeholders who have real interests. The failure is the project manager who lets the conflict fester.
 
 Conflict left unresolved does not disappear. It escalates. What begins as a disagreement in a requirements meeting becomes a complaint to the sponsor, then a veto at the steering committee, then an organizational crisis that consumes the project. The project manager who surfaces conflict early, facilitates resolution at the lowest level, and escalates with options rather than problems turns stakeholder tension from a project threat into a decision opportunity.
 

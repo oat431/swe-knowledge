@@ -85,7 +85,7 @@ A team that feels heard moves on in days; a team that is told to move on without
 | Re-establish rituals | Syncs, reviews, and retros re-anchored to the new shape |
 | Re-set the north star | The team's mission restated in the new context |
 
-Redeployment is not just re-reporting lines; it is rebuilding the team's sense of purpose under a new frame.
+Redeployment changes reporting lines, but the real work is rebuilding the team's sense of purpose under a new frame.
 
 ## Your Role in the New Shape
 

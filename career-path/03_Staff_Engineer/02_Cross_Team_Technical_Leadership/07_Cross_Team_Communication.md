@@ -20,7 +20,7 @@ tags:
 
 ## Why This Matters
 
-At team scale, communication can be a conversation. At org scale, the conversation is the bottleneck: twenty teams cannot all attend the meeting, and the one person who attended becomes the human cache that everything else depends on. The staff engineer's communication therefore has to be **writing that travels**: documents that inform, persuade, and record without their author present. The staff engineer's real audience is not the room; it is the org, six months from now, searching for why this decision was made.
+At team scale, communication can be a conversation. At org scale, the conversation is the bottleneck: twenty teams cannot all attend the meeting, and the one person who attended becomes the human cache that everything else depends on. The staff engineer's communication therefore has to be **writing that travels**: documents that inform, persuade, and record without their author present. The staff engineer's real audience is the org, six months from now, searching for why this decision was made.
 
 The discipline has three parts. First, the writing itself: proposals, strategies, postmortems, and standards that work standalone. Second, the conventions: decision records that are findable, linked, and statused, so the org's memory is a corpus, not a set of individuals. Third, the cadence: communication that runs async-first, with a rhythm that does not require anyone's calendar.
 

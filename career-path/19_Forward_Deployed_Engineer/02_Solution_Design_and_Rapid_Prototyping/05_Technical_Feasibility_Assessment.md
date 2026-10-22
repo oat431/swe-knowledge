@@ -71,7 +71,7 @@ The spike earns its name by being disposable. Its value is the knowledge it buys
 | Uncertain: needs a deeper spike | The critical link is untested at sufficient depth | Time-boxed investigation before any commitment |
 | Not feasible as stated | A hard constraint blocks the ask | Present alternative framings that could become feasible |
 
-The last row is not a failure; it is the assessment working. "Not feasible as stated" followed by two viable reframings is more valuable than a disguised yes that collapses during delivery.
+The last row is the assessment working. "Not feasible as stated" followed by two viable reframings is more valuable than a disguised yes that collapses during delivery.
 
 ## Practical Applications
 

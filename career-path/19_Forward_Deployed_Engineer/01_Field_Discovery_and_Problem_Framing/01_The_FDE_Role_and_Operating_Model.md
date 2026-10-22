@@ -24,7 +24,7 @@ Forward deployed engineering is not consulting with a different job title, and i
 
 The model matters most at the points of tension between those commitments. The customer asks for something that belongs in the product; the product team asks for something the customer cannot operate; sales asks for a promise engineering cannot yet keep. The operating model is the set of defaults that resolves these collisions quickly: who owns the outcome, what "done" means, when the field speaks for the customer and when it speaks for the vendor.
 
-The role exists because enterprise technology has a deployment gap. Models, platforms, and demos increasingly work in isolation, but value only appears when systems run inside real environments, with real data, real permissions, real operations, and real users. Closing that gap is not a patch to the product; it is a discipline of its own, and the operating model is what makes that discipline repeatable rather than heroic. The difference between an FDE organization that scales and one that burns out is whether the model is explicit.
+The role exists because enterprise technology has a deployment gap. Models, platforms, and demos increasingly work in isolation, but value only appears when systems run inside real environments, with real data, real permissions, real operations, and real users. Closing that gap is a discipline of its own, and the operating model is what makes that discipline repeatable rather than heroic. The difference between an FDE organization that scales and one that burns out is whether the model is explicit.
 
 ## What the Operating Model Actually Contains
 

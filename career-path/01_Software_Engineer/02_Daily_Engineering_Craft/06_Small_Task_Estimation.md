@@ -82,7 +82,7 @@ flowchart LR
 
 ## In Practice
 
-**Decompose before you estimate anything.** Estimating an undecomposed task measures your optimism, not the work. Restate the definition of done, break the task into steps that fit in a day, and mark which steps are known versus unknown. The decomposition is also where hidden scope — migration, config, review, rollout — becomes visible.
+**Decompose before you estimate anything.** Estimating an undecomposed task measures your optimism, not the work. Restate the definition of done, break the task into steps that fit in a day, and mark which steps are known versus unknown. The decomposition is also where hidden scope (migration, config, review, rollout) becomes visible.
 
 **Give ranges with confidence levels, never bare numbers.** "Two to four days at medium confidence because the export format is unverified" is information; "three days" is a guess wearing a suit. Say what drives the width of the range; the audience needs the uncertainty as much as the number, even when they ask for a number.
 
@@ -90,7 +90,7 @@ flowchart LR
 
 **Include the invisible work in the estimate.** Tests, review rounds, integration, deployment steps, and the context switch back into the code are real effort. Estimating only the coding step guarantees a miss; state what is inside the range so the comparison later is honest.
 
-**Flag slippage early and re-estimate openly.** The moment the picture changes — a dependency failed, scope grew, the spike found complexity — say so with a new range and the reason. Early bad news is a planning input; late bad news is a trust event. Re-estimating is not failure; hiding the changed picture is.
+**Flag slippage early and re-estimate openly.** The moment the picture changes (a dependency failed, scope grew, the spike found complexity), say so with a new range and the reason. Early bad news is a planning input; late bad news is a trust event. Re-estimating is not failure; hiding the changed picture is.
 
 **Never estimate with fake precision under pressure.** When pushed for one number, give the honest range and the confidence, and name the checkpoint where you will narrow it. A number invented to end an uncomfortable conversation becomes a promise you cannot keep, and the cost lands on the team's credibility.
 

@@ -40,7 +40,7 @@ Invite Infosec to product demonstrations at the end of **each development interv
 - Observe implementations as they are being built
 - Provide guidance and feedback at the **earliest stages** of the project, when there is the most time and freedom to make corrections
 
-This approach, termed **"compliance by demonstration"** by Justin Arbuckle (former chief architect at GE Capital), dramatically reduces reliance on static checklists by leveraging Infosec expertise throughout the entire SDLC.
+This approach, termed **"compliance by demonstration"** by Justin Arbuckle (former chief architect at GE Capital), dramatically reduces reliance on static checklists by drawing on Infosec expertise throughout the entire SDLC.
 
 **Key business measurements** that improved at GE Capital:
 - Development velocity (speed of delivering features to market)
@@ -201,7 +201,7 @@ Even standard changes must be **visible and recorded** in change management syst
 For changes that cannot be classified as standard:
 - Submit through the **Request for Change (RFC)** process
 - Provide: desired business outcomes, planned utility and warranty, business case with risks and alternatives, proposed schedule
-- Leverage deployment pipeline artifacts (automated links to defects fixed, features completed)
+- Use deployment pipeline artifacts (automated links to defects fixed, features completed)
 - Goal: continually demonstrate exemplary track record to eventually gain standard change classification
 
 > **Case Study: Salesforce.com: Automated Infrastructure as Standard Changes (2012)**

@@ -53,7 +53,7 @@ The State pattern suggests:
 3. The original object: called the **context:** stores a reference to *one* state object representing its current state and **delegates all state-related work** to that object.
 4. To **transition**, replace the active state object with another that represents the new state.
 
-All state classes follow the **same interface**, so the context works with them polymorphically. Crucially, **concrete states may be aware of each other and initiate transitions**; this is the key difference from Strategy.
+All state classes follow the **same interface**, so the context works with them polymorphically. **Concrete states may be aware of each other and initiate transitions**; this is the key difference from Strategy.
 
 > **Real-world analogy:** Smartphone buttons behave differently depending on device state: unlocked (execute functions), locked (show unlock screen), low charge (show charging screen).
 

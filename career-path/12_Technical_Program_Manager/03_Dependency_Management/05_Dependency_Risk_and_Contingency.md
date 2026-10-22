@@ -143,4 +143,4 @@ A program that burns through its contingency without acknowledging it is a progr
 
 ## Summary
 
-Dependency risk and contingency is the TPM's insurance discipline: assess each dependency's probability of slip, impact, and proximity; calculate the aggregate risk exposure across the program; size contingency (time, scope, alternative) to cover it; and activate contingency at defined triggers before the dependency fails. Contingency is a program asset, transparent, tracked, consumed deliberately, and never a secret. Programs that absorb dependency slips without moving their date are not lucky; they are contingently funded.
+Dependency risk and contingency is the TPM's insurance discipline: assess each dependency's probability of slip, impact, and proximity; calculate the aggregate risk exposure across the program; size contingency (time, scope, alternative) to cover it; and activate contingency at defined triggers before the dependency fails. Contingency is a program asset, transparent, tracked, consumed deliberately, and never a secret. Programs that absorb dependency slips without moving their date are contingently funded.

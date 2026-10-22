@@ -74,7 +74,7 @@ The matrix is the governance constitution; once agreed, it prevents the three mo
 
 ## Governance Agendas That Produce Decisions
 
-A governance meeting agenda is not a status review; it is a decision forum:
+A governance meeting is a decision forum:
 
 | Agenda Item | Purpose | Input | Output |
 |-------------|---------|-------|--------|

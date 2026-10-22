@@ -464,7 +464,7 @@ Great BAs are **grown from diverse backgrounds**. All should identify their gaps
 6. **Customer partnership is essential:** Frequent contact points shrink the expectation gap. Use the Bill of Rights & Responsibilities to set expectations.
 7. **Baseline, don't freeze:** Sign-off establishes a reference point, not a weapon. Changes flow through a defined process.
 8. **50+ good practices** exist across 7 categories: start with high-value, easy-to-implement ones; build a tool kit.
-9. **The BA is central:** Not just a scribe but an analyst, facilitator, leader, and creative problem-solver. Experience matters enormously.
+9. **The BA is central:** an analyst, facilitator, leader, and creative problem-solver who does far more than take notes. Experience shows in the numbers: fewer spec defects and up to one-third less project effort.
 10. **BAs come from diverse backgrounds:** each with strengths and gaps; mentoring and training are essential.
 
 ---

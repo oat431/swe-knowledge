@@ -13,7 +13,7 @@ tags:
 
 # Exploratory Testing
 
-> **Core Principle:** Exploratory testing is simultaneous learning, test design, and execution. It finds defects that scripted tests miss by leveraging tester creativity and domain knowledge.
+> **Core Principle:** Exploratory testing is simultaneous learning, test design, and execution. It finds defects that scripted tests miss by drawing on tester creativity and domain knowledge.
 
 ## What Exploratory Testing Is
 
@@ -448,7 +448,7 @@ flowchart LR
 ## Key Takeaways
 
 1. **Exploratory testing is structured:** Charters, timeboxes, session sheets
-2. **Finds defects scripted tests miss:** Leverages tester creativity
+2. **Finds defects scripted tests miss:** Draws on tester creativity
 3. **Complements scripted testing:** Use both for comprehensive coverage
 4. **Requires skill and discipline:** Training and practice improve effectiveness
 5. **Document findings:** Session sheets provide traceability

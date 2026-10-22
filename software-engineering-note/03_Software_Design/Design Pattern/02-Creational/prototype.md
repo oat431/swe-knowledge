@@ -30,7 +30,7 @@ The Prototype pattern **delegates the cloning process to the objects themselves*
 
 Declare a common interface for all objects that support cloning. This interface typically contains a single `clone` method. The implementation creates an object of the current class and carries over all field values, including private fields, since an object can access private fields of another object belonging to the same class.
 
-An object that supports cloning is called a **prototype**. When objects have dozens of fields and hundreds of possible configurations, cloning pre-configured prototypes serves as an alternative to subclassing: you create a set of objects configured in various ways, then clone them when needed instead of constructing from scratch.
+An object that supports cloning is called a **prototype**. When objects have dozens of fields and hundreds of possible configurations, cloning pre-configured prototypes is an alternative to subclassing: you create a set of objects configured in various ways, then clone them when needed instead of constructing from scratch.
 
 ### Prototype Registry
 

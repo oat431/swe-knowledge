@@ -4,7 +4,7 @@ tags: [overview, data-management, dmbok, essential-documents]
 
 # DMBOK — Essential Documents by Knowledge Area
 
-> **Source:** [[DMBoK v2 - Overview|DMBoK v2 (DAMA International, 2017)]] — 11 Knowledge Areas
+> **Source:** [[DMBoK v2 - Overview|DMBoK v2 (DAMA International, 2017)]], 11 Knowledge Areas
 > Organized by data management domain: Governance → Architecture → Modeling → Storage → Integration → Quality
 >
 > ⚠️ **This is a document-only extract.** For the full body of knowledge, see:
@@ -171,8 +171,8 @@ tags: [overview, data-management, dmbok, essential-documents]
 
 ## Related
 
-- [[SWEBOK Essential Documents]] — Software engineering documents by SDLC phase
-- [[PMBOK Essential Documents]] — Project management documents by phase
-- [[BABOK Essential Documents]] — Business analysis documents by KA
-- [[CyBOK Essential Documents]] — Cyber security documents by domain
-- [[DMBoK v2 - Overview]] — Full DMBOK knowledge base
+- [[SWEBOK Essential Documents]]: Software engineering documents by SDLC phase
+- [[PMBOK Essential Documents]]: Project management documents by phase
+- [[BABOK Essential Documents]]: Business analysis documents by KA
+- [[CyBOK Essential Documents]]: Cyber security documents by domain
+- [[DMBoK v2 - Overview]]: Full DMBOK knowledge base

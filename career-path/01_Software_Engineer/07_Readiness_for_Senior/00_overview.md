@@ -15,11 +15,11 @@ tags:
 
 # Readiness for Senior
 
-> **Capability area:** The practical bridge from reliable mid-level execution to senior-level ownership — what changes, what stalls people, and what evidence to build along the way.
+> **Capability area:** The practical bridge from reliable mid-level execution to senior-level ownership: what changes, what stalls people, and what evidence to build along the way.
 
 ## What Changes from Junior to Mid (and What's Next)
 
-This module closes the entry path. The jump ahead — mid to senior — is the shift from executing agreed work to owning problems: framing before solving, deciding without being asked, and lifting the team's output, not just your own. Every topic here previews one senior capability and gives you the mid-level practice that builds it.
+This module closes the entry path. The jump ahead (mid to senior) is the shift from executing agreed work to owning problems: framing before solving, deciding without being asked, and lifting the team's output, not just your own. Every topic here previews one senior capability and gives you the mid-level practice that builds it.
 
 Judgment at this level shows in:
 - Volunteering for ownership of a small system area before you feel "ready"
@@ -91,6 +91,6 @@ This area is the bridge and look-ahead of the entry path. The senior level itsel
 
 ## Sources
 
-- *The Staff Engineer's Path* (Tanya Reilly) — scope growth and leveling expectations
-- *A Philosophy of Software Design* (John Ousterhout) — design judgment fundamentals
-- *Software Engineering at Google* (Titus Winters, Tom Manshreck, Hyrum Wright) — ownership and maturity in large codebases
+- *The Staff Engineer's Path* (Tanya Reilly): scope growth and leveling expectations
+- *A Philosophy of Software Design* (John Ousterhout): design judgment fundamentals
+- *Software Engineering at Google* (Titus Winters, Tom Manshreck, Hyrum Wright): ownership and maturity in large codebases

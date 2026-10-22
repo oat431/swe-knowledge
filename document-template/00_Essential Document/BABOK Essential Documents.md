@@ -4,7 +4,7 @@ tags: [overview, business-analysis, babok, essential-documents]
 
 # BABOK — Standard Documents by Knowledge Area
 
-> **Source:** [[BABOK v3 - Overview|BABOK® Guide v3 (IIBA, 2015)]] — 6 Knowledge Areas, 30 Tasks, 50 Techniques
+> **Source:** [[BABOK v3 - Overview|BABOK® Guide v3 (IIBA, 2015)]], 6 Knowledge Areas, 30 Tasks, 50 Techniques
 > Organized by BA workflow: Planning → Strategy → Elicitation → Analysis & Design → Life Cycle Mgmt → Solution Evaluation
 >
 > ⚠️ **This is a document-only extract.** For the full body of knowledge, see:
@@ -121,11 +121,11 @@ Solution Evaluation        ──validates──→  Operations + Maintenance
   Recommended Actions
 ```
 
-> **Note:** Priority ratings are default recommendations. The BABOK does not prescribe a sequential process — tasks may be performed in any order based on initiative needs. All BABOK outputs should be adapted to the chosen methodology (predictive, adaptive/Agile, or hybrid).
+> **Note:** Priority ratings are default recommendations. The BABOK does not prescribe a sequential process; tasks may be performed in any order based on initiative needs. All BABOK outputs should be adapted to the chosen methodology (predictive, adaptive/Agile, or hybrid).
 
 ## Related
 
-- [[SWEBOK Essential Documents]] — Software engineering documents by SDLC phase
-- [[PMBOK Essential Documents]] — Project management documents by phase
-- [[SEBOK Essential Documents]] — Systems engineering documents by phase
-- [[BABOK v3 - Overview]] — Full BABOK knowledge base
+- [[SWEBOK Essential Documents]]: Software engineering documents by SDLC phase
+- [[PMBOK Essential Documents]]: Project management documents by phase
+- [[SEBOK Essential Documents]]: Systems engineering documents by phase
+- [[BABOK v3 - Overview]]: Full BABOK knowledge base

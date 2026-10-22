@@ -69,7 +69,7 @@ flowchart LR
     RECORD --> REVISIT["Revisit at the agreed trigger"]
 ```
 
-The record is not the end of the process; it is the license to proceed and the appointment for the next conversation. A risk accepted without a revisit trigger is a risk that has been forgotten with paperwork.
+The record is the license to proceed and the appointment for the next conversation. A risk accepted without a revisit trigger is a risk that has been forgotten with paperwork.
 
 ## Practical Applications
 

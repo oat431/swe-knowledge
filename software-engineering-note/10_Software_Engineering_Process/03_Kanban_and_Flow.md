@@ -57,7 +57,7 @@ Kanban is a Lean-based method for managing knowledge work. Unlike Scrum's timebo
 - **λ** = Throughput (items completed per unit time)
 - **W** = Average lead time (time in system)
 
-**Implication:** To reduce lead time, reduce WIP. Adding more work items doesn't speed things up; it slows everything down.
+**Implication:** To reduce lead time, reduce WIP. Adding more work items slows everything down.
 
 ## Kanban vs. Scrum
 

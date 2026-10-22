@@ -99,7 +99,7 @@ The project manager is not typically the evaluator; the evaluation may be conduc
 
 ## When the Evaluation Is Negative
 
-A negative post-project evaluation is not a project management failure; it is organizational learning:
+A negative post-project evaluation is organizational learning:
 
 | Finding | Organizational Response |
 |---------|------------------------|

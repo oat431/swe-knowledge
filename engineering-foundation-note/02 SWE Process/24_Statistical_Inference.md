@@ -8,7 +8,7 @@ tags: [statistics, hypothesis-testing, confidence-intervals, engineering-foundat
 
 ## Purpose
 
-Statistical inference lets engineers generalize from samples to populations — making decisions under uncertainty. Without inference, you can only describe what you've observed; with it, you can predict, compare, and validate.
+Statistical inference lets engineers generalize from samples to populations, making decisions under uncertainty. Without inference, you can only describe what you've observed; with it, you can predict, compare, and validate.
 
 ## Populations and Samples
 
@@ -80,13 +80,13 @@ $$\hat{p} \pm z_{\alpha/2} \cdot \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}$$
 
 **Interpretation:** "We are 95% confident that the true mean defect density is between 2.1 and 3.4 defects/KLOC."
 
-> **Common mistake:** "There's a 95% probability the mean is in this interval." Wrong — the interval either contains the mean or it doesn't. The 95% refers to the method, not the specific interval.
+> **Common mistake:** "There's a 95% probability the mean is in this interval." Wrong: the interval either contains the mean or it doesn't. The 95% refers to the method, not the specific interval.
 
 ## Hypothesis Testing
 
 ### Structure
 
-1. **Null hypothesis (H₀):** The status quo — no effect, no difference
+1. **Null hypothesis (H₀):** The status quo, no effect, no difference
 2. **Alternative hypothesis (H₁):** The claim we're testing
 3. **Test statistic:** Computed from sample data
 4. **p-value:** Probability of observing results as extreme as ours, assuming H₀ is true
@@ -99,9 +99,9 @@ $$\hat{p} \pm z_{\alpha/2} \cdot \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}$$
 | **Reject H₀** | Type I error (α) — false positive | Correct — true positive |
 | **Fail to reject H₀** | Correct — true negative | Type II error (β) — false negative |
 
-- **α (significance level):** Probability of Type I error — typically 0.05 (5%)
-- **β:** Probability of Type II error — typically 0.20 (20%)
-- **Power (1 − β):** Probability of correctly rejecting a false H₀ — typically 0.80 (80%)
+- **α (significance level):** Probability of Type I error, typically 0.05 (5%)
+- **β:** Probability of Type II error, typically 0.20 (20%)
+- **Power (1 − β):** Probability of correctly rejecting a false H₀, typically 0.80 (80%)
 
 ### One-Tailed vs Two-Tailed Tests
 
@@ -160,9 +160,9 @@ $$r = \frac{\sum(x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum(x_i - \bar{x})^2 \cdo
 
 **Model:** $y = \beta_0 + \beta_1 x + \varepsilon$
 
-- $\beta_0$ — intercept (value of y when x=0)
-- $\beta_1$ — slope (change in y per unit change in x)
-- $\varepsilon$ — error term (unexplained variation)
+- $\beta_0$: intercept (value of y when x=0)
+- $\beta_1$: slope (change in y per unit change in x)
+- $\varepsilon$: error term (unexplained variation)
 
 **R² (coefficient of determination):** Proportion of variance in y explained by x.
 
@@ -192,16 +192,16 @@ LOC explains 72% of the variance in defect count.
 
 ## Essential Concepts
 
-- **Sample must be representative** — drawn using probability sampling (known selection probabilities)
-- **Larger samples → narrower confidence intervals** — more data → more precision
-- **Power depends on effect size, α, and sample size** — to detect small effects, you need large samples
-- **Always report effect sizes** — p-values tell you if an effect exists; effect sizes tell you how big it is
-- **Check assumptions** — normality, independence, equal variance (for t-tests)
-- **Multiple testing correction** — running many tests inflates Type I error; use Bonferroni or FDR correction
+- **Sample must be representative:** drawn using probability sampling (known selection probabilities)
+- **Larger samples → narrower confidence intervals:** more data → more precision
+- **Power depends on effect size, α, and sample size:** to detect small effects, you need large samples
+- **Always report effect sizes:** p-values tell you if an effect exists; effect sizes tell you how big it is
+- **Check assumptions:** normality, independence, equal variance (for t-tests)
+- **Multiple testing correction:** running many tests inflates Type I error; use Bonferroni or FDR correction
 
 ## Related
 
-- [[Engineering Foundation Overview]] — All engineering foundation topics
-- [[02 SWE Process/21_Measurement_Theory|21_Measurement_Theory]] — Measurement scales and GQM
-- [[02 SWE Process/22_Empirical_Methods|22_Empirical_Methods]] — Designed experiments using these statistical methods
-- [[01 Physics and Math/09_Math_Stats_and_Economics|09_Math_Stats_and_Economics]] — Basic probability and statistics from Moaveni
+- [[Engineering Foundation Overview]]: All engineering foundation topics
+- [[02 SWE Process/21_Measurement_Theory|21_Measurement_Theory]]: Measurement scales and GQM
+- [[02 SWE Process/22_Empirical_Methods|22_Empirical_Methods]]: Designed experiments using these statistical methods
+- [[01 Physics and Math/09_Math_Stats_and_Economics|09_Math_Stats_and_Economics]]: Basic probability and statistics from Moaveni

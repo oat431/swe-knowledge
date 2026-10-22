@@ -23,7 +23,7 @@ A project that completes without capturing its lessons has extracted only half i
 
 Lessons learned are also the project manager's professional growth mechanism. Every project teaches something about estimation, risk, stakeholders, communication, governance, or team dynamics. The project manager who captures these lessons deliberately builds a practice; the one who moves to the next project without reflection builds a career of repeated mistakes.
 
-The discipline is not a single retrospective at the end; it is continuous capture throughout the project, periodic team retrospectives, and a final lessons learned report that is honest, specific, and actionable. A lesson that is not written down is a lesson that will be re-learned at the next project's expense.
+The discipline is continuous capture throughout the project, periodic team retrospectives, and a final lessons learned report that is honest, specific, and actionable. A lesson that is not written down is a lesson that will be re-learned at the next project's expense.
 
 ## When to Capture Lessons
 
@@ -96,7 +96,7 @@ The test of a lesson learned is whether the next project manager, facing the sam
 | **Team feedback** | Anonymous team feedback on project management, process, and environment |
 | **Appendices** | Retrospective outputs, survey results, detailed findings |
 
-The report is distributed to the sponsor, the PMO, and the project management community. It is not a confidential team document; it is an organizational asset.
+The report is distributed to the sponsor, the PMO, and the project management community. It is an organizational asset.
 
 ## Lessons Learned in Programs
 

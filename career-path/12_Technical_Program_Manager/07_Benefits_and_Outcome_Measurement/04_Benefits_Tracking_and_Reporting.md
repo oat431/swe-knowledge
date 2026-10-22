@@ -37,7 +37,7 @@ Benefits are tracked at three cadences, each serving a different purpose.
 
 ## The Benefits Status Report Section
 
-The TPM's weekly program status report includes a benefits section. It is not an appendix; it is the second thing stakeholders read, after the executive summary.
+The TPM's weekly program status report includes a benefits section. It is the second thing stakeholders read, after the executive summary.
 
 | Section Element | Content | Example |
 |-----------------|---------|---------|

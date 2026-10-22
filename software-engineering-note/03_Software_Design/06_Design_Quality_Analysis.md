@@ -8,7 +8,7 @@ tags: [design-quality, reviews, audits, metrics, software-design, swebok]
 
 ## Purpose
 
-A design isn't finished when it's written; it's finished when it's verified. Design quality analysis ensures the design meets its quality requirements before construction begins. Finding a design flaw during design review costs hours; finding it during testing costs days; finding it in production costs weeks (or more).
+A design is finished once it has been verified. Design quality analysis ensures the design meets its quality requirements before construction begins. Finding a design flaw during design review costs hours; finding it during testing costs days; finding it in production costs weeks (or more).
 
 ## Design Reviews
 

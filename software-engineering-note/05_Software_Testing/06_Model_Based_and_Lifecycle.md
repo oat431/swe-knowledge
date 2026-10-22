@@ -140,7 +140,7 @@ User story → Tasks → Write test cases FIRST → Run (fail) → Write "just e
 | **REFACTOR** | Clean up code; re-run full test suite (≈ regression) |
 
 **Key insights:**
-- Tests ARE the specification → specification-based AND code-based testing
+- Tests *are* the specification → specification-based AND code-based testing
 - Requires automated test environment (nUnit family)
 - Greatly simplified fault isolation
 

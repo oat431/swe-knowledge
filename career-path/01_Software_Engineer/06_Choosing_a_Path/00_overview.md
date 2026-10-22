@@ -15,11 +15,11 @@ tags:
 
 # Choosing a Path
 
-> **Capability area:** Reading the career map deliberately — matching what you enjoy and do well to a specialization or leadership direction, and testing the choice with evidence instead of vibes.
+> **Capability area:** Reading the career map deliberately: matching what you enjoy and do well to a specialization or leadership direction, and testing the choice with evidence instead of vibes.
 
 ## What Changes from Junior to Mid
 
-A junior engineer samples everything. A mid-level engineer has enough exposure to notice patterns in what energizes them and what drains them, and starts steering deliberately: choosing assignments, learning, and evidence that point toward a direction. No choice is permanent — this vault's paths are maps, not rails.
+A junior engineer samples everything. A mid-level engineer has enough exposure to notice patterns in what energizes them and what drains them, and starts steering deliberately: choosing assignments, learning, and evidence that point toward a direction. No choice is permanent; this vault's paths are maps, not rails.
 
 Judgment at this level shows in:
 - Describing what you actually liked about past work, not the job titles
@@ -56,7 +56,7 @@ flowchart LR
 
 ## Scope Boundary
 
-This area covers career-direction exploration for early-career engineers. It does not cover promotion mechanics (owned by [[career-path/01_Software_Engineer/07_Readiness_for_Senior/00_overview|Readiness for Senior]] and [[career-path/02_Senior_Software_Engineer/09_Promotion_Evidence_and_Capstone/00_overview|Promotion Evidence and Capstone]]), job search artifacts (resume, interviews — covered in companion career resources), or any path's technical depth (each path owns its own).
+This area covers career-direction exploration for early-career engineers. It does not cover promotion mechanics (owned by [[career-path/01_Software_Engineer/07_Readiness_for_Senior/00_overview|Readiness for Senior]] and [[career-path/02_Senior_Software_Engineer/09_Promotion_Evidence_and_Capstone/00_overview|Promotion Evidence and Capstone]]), job search artifacts (resume, interviews; covered in companion career resources), or any path's technical depth (each path owns its own).
 
 ## Key Principles
 
@@ -93,6 +93,6 @@ This area covers career-direction exploration for early-career engineers. It doe
 
 ## Sources
 
-- *The Staff Engineer's Path* (Tanya Reilly) — IC track choices and trade-offs
-- *The Manager's Path* (Camille Fournier) — what management track work actually involves
-- Public engineering ladders collected at progression.fyi — how companies define each direction
+- *The Staff Engineer's Path* (Tanya Reilly): IC track choices and trade-offs
+- *The Manager's Path* (Camille Fournier): what management track work actually involves
+- Public engineering ladders collected at progression.fyi: how companies define each direction

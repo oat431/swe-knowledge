@@ -22,7 +22,7 @@ tags:
 
 The staff engineer's influence surface is large: proposals that redirect whole teams, recommendations that leadership funds, coalitions that shape careers. Most of that influence is exercised without anyone checking it: no manager reviews every framing choice, and no committee audits every omission. The only guard is the staff engineer's own standards, applied consistently.
 
-Ethical influence is not a constraint on effectiveness; it is the precondition for it. Influence that survives disclosure compounds: every person who discovers how you operate and remains comfortable is a person who will trust you with more. Influence that depends on opacity collapses the moment it is inspected, and staff-level work is always inspected eventually. The transparency test is not a moral ornament; it is the risk management of the career.
+Ethical influence is the precondition for effectiveness. Influence that survives disclosure compounds: every person who discovers how you operate and remains comfortable is a person who will trust you with more. Influence that depends on opacity collapses the moment it is inspected, and staff-level work is always inspected eventually. The transparency test is not a moral ornament; it is the risk management of the career.
 
 ## The Staff Influence Surface
 

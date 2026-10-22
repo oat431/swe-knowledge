@@ -109,7 +109,7 @@ These two classes **should not be separated:** the things developers do are nece
 
 ### 2.4 SCM as a Team Support Discipline
 
-Version control is the **backplane** on which a software organization communicates work products. It serves as a mechanism for:
+Version control is the **backplane** on which a software organization communicates work products. It is a mechanism for:
 
 - **Communication:** who made recent changes, when something broke, what code customers are using.
 - **Change management:** controlled sharing of code, parallel development, joining up with the current state of the codeline.

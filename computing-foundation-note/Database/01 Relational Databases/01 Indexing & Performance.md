@@ -26,7 +26,7 @@ The default index type in PostgreSQL, MySQL, Oracle. A balanced tree structure:
 
 - O(log n) lookup, insert, delete
 - Supports equality (`=`) and range queries (`>`, `<`, `BETWEEN`)
-- Supports prefix matching (`LIKE 'ABC%'`: but NOT `LIKE '%ABC'`)
+- Supports prefix matching (`LIKE 'ABC%'`, but NOT `LIKE '%ABC'`)
 
 ---
 

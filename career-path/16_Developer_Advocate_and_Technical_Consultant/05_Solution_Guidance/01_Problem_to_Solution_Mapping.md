@@ -20,9 +20,9 @@ tags:
 
 ## Why This Matters
 
-Between a customer's stated problem and a workable solution sits a mapping step most engagements skip: the jump from "we need X" to "here is the architecture" is where recommendations go wrong. The consultant's value is not choosing technology; it is establishing that the technology chosen actually fits the problem as it exists: the constraints, the skills, the budget, the legacy, the politics.
+Between a customer's stated problem and a workable solution sits a mapping step most engagements skip: the jump from "we need X" to "here is the architecture" is where recommendations go wrong. The consultant's value is establishing that the technology chosen actually fits the problem as it exists: the constraints, the skills, the budget, the legacy, the politics.
 
-A good mapping makes the problem legible before the solution becomes visible. It separates symptoms from causes, stated wants from underlying needs, and technical problems from process problems wearing technical clothes. The output is not a design; it is a small set of options with trade-offs, each traceable back to evidence.
+A good mapping makes the problem legible before the solution becomes visible. It separates symptoms from causes, stated wants from underlying needs, and technical problems from process problems wearing technical clothes. The output is a small set of options with trade-offs, each traceable back to evidence.
 
 This discipline also protects the engagement. When options trace to constraints and evidence, the recommendation survives scrutiny; when they trace to preference, the first budget cut or design review dissolves it. Mapping is how guidance stays honest and how the customer keeps ownership of the reasoning.
 
@@ -54,7 +54,7 @@ Framing converts a complaint into a bounded problem worth solving:
 
 ## Option Mapping
 
-A recommendation is not a solution; it is a short list with reasoning:
+A recommendation is a short list with reasoning:
 
 | Approach | Fits When | What It Costs | Key Risk |
 |----------|-----------|---------------|----------|
@@ -86,7 +86,7 @@ flowchart LR
     RECOMMEND --> VALIDATE["Validate - customer owns the reasoning"]
 ```
 
-Mapping is not complete when the consultant is convinced; it is complete when the customer can repeat the reasoning without the consultant in the room.
+Mapping is complete when the customer can repeat the reasoning without the consultant in the room.
 
 ## Practical Applications
 

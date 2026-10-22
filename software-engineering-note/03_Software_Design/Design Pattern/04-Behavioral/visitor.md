@@ -184,7 +184,7 @@ class Application is
       shape.accept(exportVisitor)
 ```
 
-**Key benefit with Composite:** When visiting a `CompoundShape`, the visitor can recursively call `accept()` on each child, leveraging the Composite tree. The visitor can also accumulate intermediate state (e.g., tracking nesting depth, building output buffer) across the traversal.
+**Key benefit with Composite:** When visiting a `CompoundShape`, the visitor can recursively call `accept()` on each child, walking the Composite tree. The visitor can also accumulate intermediate state (e.g., tracking nesting depth, building output buffer) across the traversal.
 
 ---
 

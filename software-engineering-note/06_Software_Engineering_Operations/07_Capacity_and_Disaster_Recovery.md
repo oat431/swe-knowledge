@@ -423,7 +423,7 @@ flowchart TD
 - **Version control:** Track changes to DR infrastructure
 - **Testing:** Validate DR by applying to a test environment
 - **Speed:** Automated provisioning vs. manual setup
-- **Documentation:** The code IS the documentation
+- **Documentation:** The code *is* the documentation
 
 ---
 

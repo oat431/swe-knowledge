@@ -16,7 +16,7 @@ tags:
 
 # Dependency and Integration Management
 
-> **Core skill:** Managing what the system relies on and serves: a mapped, tiered, versioned dependency landscape where changes never surprise the team.
+> **Core skill:** Managing what the system relies on and serves: a mapped, tiered, versioned set of dependencies where changes never surprise the team.
 
 ## Why This Matters
 
@@ -55,7 +55,7 @@ The tier decides the strategy. Owned dependencies are engineering; shared depend
 | Change notification | Consumers surprised by intent | A change channel: announce before you break |
 | Deprecation timeline | Forced migrations | Fixed windows: announce, deprecate, remove, with dates |
 
-A contract is not a document; it is a set of enforced behaviors. The team's interface policy should say how contracts change, who may change them, and how long consumers get to adapt.
+A contract is a set of enforced behaviors. The team's interface policy should say how contracts change, who may change them, and how long consumers get to adapt.
 
 ## Upgrade Strategies
 

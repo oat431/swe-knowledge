@@ -17,13 +17,13 @@ tags:
 
 # Needs and Context Discovery
 
-> **Core skill:** Uncovering not just what developers and customers want, but the workflow, goals, and constraints around it: the full context that decides whether any solution can fit.
+> **Core skill:** Uncovering what developers and customers want, plus the workflow, goals, and constraints around it: the full context that decides whether any solution can fit.
 
 ## Why This Matters
 
 A stated request is the beginning of understanding, not the end of it. "We need single sign-on" may mean forty users on one domain, or a regulated enterprise with federation partners and an audit process; the same words lead to solutions that differ in cost by an order of magnitude. The advocate and consultant who receives requests at face value build for the letter of the request and fail the spirit of the need.
 
-Context is the difference between generic guidance and guidance that lands. Every technical recommendation is actually a fit claim: this approach, for this workflow, within these constraints, with this team. Strip the context and what remains is a stack-overflow answer: correct in general, unreliable here. Discovering context is not gather-everything documentation; it is finding the few facts that change the shape of the recommendation.
+Context is the difference between generic guidance and guidance that lands. Every technical recommendation is actually a fit claim: this approach, for this workflow, within these constraints, with this team. Strip the context and what remains is a stack-overflow answer: correct in general, unreliable here. Discovering context means finding the few facts that change the shape of the recommendation.
 
 The craft is mostly discipline about sequence: understand the situation before the goal, the goal before the requirements, the constraints before the options. Each layer reframes the layer beneath it. Teams that skip layers produce precise answers to the wrong question, and the consultant's job is to notice that before implementation does.
 

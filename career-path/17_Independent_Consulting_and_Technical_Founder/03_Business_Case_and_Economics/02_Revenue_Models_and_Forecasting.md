@@ -21,7 +21,7 @@ tags:
 
 ## Why This Matters
 
-A revenue model is not a label on an invoice; it is a shape of cash. Hourly work pays linearly and stops when you stop. Retainers pay in calm repeating pulses. Products pay late but can pay while you sleep. Fixed-price work pays a known amount against an uncertain cost. The mix you choose determines how predictable your income is, how much risk each month carries, and how much of your time is sellable at all.
+A revenue model is a shape of cash. Hourly work pays linearly and stops when you stop. Retainers pay in calm repeating pulses. Products pay late but can pay while you sleep. Fixed-price work pays a known amount against an uncertain cost. The mix you choose determines how predictable your income is, how much risk each month carries, and how much of your time is sellable at all.
 
 Forecasting is where discipline shows. Most independent income collapses come from forecasts built on best cases: the big proposal counted as won, the client's verbal commitment treated as signed, the conversion rate taken from the single best month. A conservative forecast is not pessimism. It is the operating budget. Upside is a bonus; the conservative case must cover the cost baseline or the plan is fiction.
 

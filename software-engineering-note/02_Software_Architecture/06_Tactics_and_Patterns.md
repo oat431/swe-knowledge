@@ -320,7 +320,7 @@ Patterns are categorized by the **dominant type of elements** they show:
 
 **Weaknesses:** Overhead not justified for small data sets; requires similarly sized data subsets for parallelism; multiple reduces are complex to orchestrate
 
-> Cornerstone of Google, Facebook, eBay, Yahoo! data processing. Foundation of the NoSQL movement.
+> Used for data processing at Google, Facebook, eBay, and Yahoo!, and a foundation of the NoSQL movement.
 
 ---
 

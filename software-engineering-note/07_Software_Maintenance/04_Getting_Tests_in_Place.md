@@ -400,7 +400,7 @@ A **pinch point** is a narrowing in an effect sketch: a place where tests agains
 
 ### Characterization Tests
 
-A **characterization test** documents the *actual* behavior of the system, not what it *should* do, but what it *does* do. The goal isn't bug finding; it's creating a safety net for future changes.
+A **characterization test** documents what the system *actually* does, not what it *should* do. The goal is a safety net for future changes, not bug finding.
 
 **Algorithm:**
 
@@ -534,7 +534,7 @@ Understanding legacy code is often the biggest time-sink. Two low-tech but high-
 
 ### Notes/Sketching
 
-- Draw **informal diagrams** while browsing code. They don't need UML precision; they're tools for conversation and memory.
+- Draw **informal diagrams** while browsing code. They're aids for conversation and memory, so they don't need UML precision.
 - Write down important names; draw lines for relationships.
 - Sketches are **infectious:** when pairing, sketch as you explain; the other person will engage and contribute.
 

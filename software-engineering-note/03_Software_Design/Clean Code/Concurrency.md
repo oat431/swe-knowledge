@@ -36,7 +36,7 @@ Motivations:
 **Sound bites:**
 - Concurrency incurs **overhead** in both performance and additional code.
 - Correct concurrency is **complex**, even for simple problems.
-- Concurrency bugs aren't repeatable; they get dismissed as one-offs.
+- Concurrency bugs aren't repeatable, so they get dismissed as one-offs.
 - Concurrency often demands a **fundamental redesign**.
 
 ---

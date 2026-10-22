@@ -20,7 +20,7 @@ The Singleton pattern addresses two problems simultaneously (which also means it
 
 2. **Provide a global access point to that instance.** Global variables are convenient but unsafe: any code can overwrite them and crash the application. The pattern gives you the accessibility of a global variable while protecting the instance from being replaced by other code.
 
-Additionally, the logic that guarantees a single instance should be centralized in one class rather than scattered across the program.
+The logic that guarantees a single instance should also live in one class instead of being scattered across the program.
 
 ## Solution
 

@@ -18,7 +18,7 @@ tags:
 
 ## Why This Matters
 
-Projects that deliver on time and budget but produce no value are not successes; they are efficiently built failures. The project manager's final responsibility is the honest assessment: did the project achieve its objectives? Were benefits realized? What did we learn? This assessment is uncomfortable when the answers are "partially," "not yet," and "don't do that again", which makes it the most important assessment the project manager writes.
+Projects that deliver on time and budget but produce no value are efficiently built failures. The project manager's final responsibility is the honest assessment: did the project achieve its objectives? Were benefits realized? What did we learn? This assessment is uncomfortable when the answers are "partially," "not yet," and "don't do that again", which makes it the most important assessment the project manager writes.
 
 Closure is also the transition: handing deliverables to operations, releasing resources, archiving knowledge, and formally ending the project's organizational existence. A project that never closes drifts forever, consuming resources without accountability. The project manager who closes well leaves a clean slate; the one who avoids closure leaves a ghost.
 

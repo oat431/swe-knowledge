@@ -20,7 +20,7 @@ tags:
 
 ## Why This Matters
 
-Disagreement is not a failure of alignment; it is what alignment is made of. Every consequential technical decision contains real disagreements about merit, priorities, and risk, and the quality of the decision depends on whether those disagreements were worked through honestly or papered over. An organization that suppresses disagreement gets compliance: decisions that are never challenged and fail quietly.
+Alignment is built out of disagreement. Every consequential technical decision contains real disagreements about merit, priorities, and risk, and the quality of the decision depends on whether those disagreements were worked through honestly or papered over. An organization that suppresses disagreement gets compliance: decisions that are never challenged and fail quietly.
 
 The staff engineer is the person who can afford to make disagreement safe: they have the standing to structure it, the evidence base to resolve it, and the obligation to model how strong people disagree without breaking the work. The craft is in the sequence: understand what kind of disagreement it is, make it structured and written, decide against agreed criteria, and commit fully afterward.
 
@@ -51,7 +51,7 @@ The power of written positions is that they are stable: a written claim cannot b
 
 ## Escalation as Last Resort
 
-Escalation is not the first move when a disagreement is hard; it is the move when the structured process has failed or the disagreement sits above your pay grade. The form of escalation determines whether you gain credibility or burn it.
+Escalate only when the structured process has failed or the disagreement sits above your pay grade. The form of escalation determines whether you gain credibility or burn it.
 
 | Complaint escalation | Options escalation |
 |----------------------|--------------------|

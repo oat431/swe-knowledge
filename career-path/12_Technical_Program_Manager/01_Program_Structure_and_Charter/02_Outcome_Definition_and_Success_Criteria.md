@@ -158,4 +158,4 @@ Leading indicators are the TPM's early-warning system. Every program outcome sho
 
 ## Summary
 
-Outcome definition is the TPM's steering wheel: define success as the changed state the program exists to create, measure it with SMART criteria adapted to program scale, align stakeholders on a single definition before workstreams begin, and build a review cadence that checks trajectory, not just at the end but continuously. A program with a clear outcome knows when it is done; a program without one never finishes, it just stops.
+Outcome definition is the TPM's steering wheel: define success as the changed state the program exists to create, measure it with SMART criteria adapted to program scale, align stakeholders on a single definition before workstreams begin, and build a review cadence that checks trajectory continuously instead of only at the end. A program with a clear outcome knows when it is done; a program without one never finishes, it just stops.

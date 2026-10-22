@@ -8,7 +8,7 @@ created: 2026-07-21
 
 > **SWEBOK v4 KA 4.5:** Software Construction Activities, including modern tools and practices that augment the construction process with artificial intelligence.
 
-AI-assisted programming represents a paradigm shift in how software is constructed. Rather than replacing the developer, current AI tools act as intelligent collaborators that accelerate code writing, review, testing, and debugging. This note covers the landscape of AI coding tools, their capabilities, limitations, and responsible adoption practices.
+AI-assisted programming has changed how software is constructed. Current AI tools work alongside developers instead of replacing them, speeding up code writing, review, testing, and debugging. This note covers AI coding tools, their capabilities and limitations, and practices for adopting them responsibly.
 
 ---
 

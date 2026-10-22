@@ -19,7 +19,7 @@ tags:
 
 ## What Changes from Junior to Mid
 
-A junior engineer bolts AI onto one step of their day — usually typing code faster — and calls it a workflow. A mid-level engineer integrates assistance across the whole craft loop: reading code, estimating, implementing, testing, reviewing, documenting, with explicit checkpoints where human judgment gates progress. The workflow is honest about what the tool does well and what stays human, and it stays stable enough that teammates can see and trust how work actually gets done.
+A junior engineer bolts AI onto one step of their day (usually typing code faster) and calls it a workflow. A mid-level engineer integrates assistance across the whole craft loop: reading code, estimating, implementing, testing, reviewing, documenting, with explicit checkpoints where human judgment gates progress. The workflow is honest about what the tool does well and what stays human, and it stays stable enough that teammates can see and trust how work actually gets done.
 
 | Aspect | Junior | Mid |
 |--------|--------|-----|
@@ -83,19 +83,19 @@ flowchart LR
 
 ## In Practice
 
-**Integrate assistance into the loop, not onto it.** The daily loop is read, estimate, implement, test, review, document — assistance belongs at each stage in a defined role, not as a bolt-on at the typing step. Define for each stage what the tool does and what stays human, then keep that split stable for a while. A workflow you change every week is a habit you cannot evaluate.
+**Integrate assistance into the loop, not onto it.** The daily loop is read, estimate, implement, test, review, document; assistance belongs at each stage in a defined role, not as a bolt-on at the typing step. Define for each stage what the tool does and what stays human, then keep that split stable for a while. A workflow you change every week is a habit you cannot evaluate.
 
-**Keep a human gate at every stage where judgment is the product.** Plan approval, line-by-line understanding, independent tests, security and license verdicts, and final review calls are checkpoints where a person decides. Each gate needs a question and an evidence standard — not "does this feel fine" but "does every line explain, do my tests pass." Gates without evidence are theater.
+**Keep a human gate at every stage where judgment is the product.** Plan approval, line-by-line understanding, independent tests, security and license verdicts, and final review calls are checkpoints where a person decides. Each gate needs a question and an evidence standard: not "does this feel fine" but "does every line explain, do my tests pass." Gates without evidence are theater.
 
 **Write the failing test before generation touches the code.** A hand-written failing test defines correct behavior independently of whatever the tool will produce, and it keeps testing instinct sharp. Generation can then expand the case matrix and fixtures around your anchor test. The order matters: definition of done first, volume second.
 
-**Estimate by decomposition; let AI surface scope, not set numbers.** Use the tool to list affected files, hidden edge cases, and migration costs you might have missed — genuinely useful for making estimates complete. But the estimate is a commitment under your name, so you set it from your own decomposition. Tools that produce code fast distort duration intuition; that is exactly when estimates need more structure, not less.
+**Estimate by decomposition; let AI surface scope, not set numbers.** Use the tool to list affected files, hidden edge cases, and migration costs you might have missed, genuinely useful for making estimates complete. But the estimate is a commitment under your name, so you set it from your own decomposition. Tools that produce code fast distort duration intuition; that is exactly when estimates need more structure, not less.
 
-**Document while the context is hot, and declare assistance.** Generate the PR description and doc drafts from the real diff, then correct every claim yourself — generated summaries overstate completeness confidently. State in the PR where and how AI was used, so reviewers calibrate their scrutiny. Deception by omission here quietly lowers the team's review quality.
+**Document while the context is hot, and declare assistance.** Generate the PR description and doc drafts from the real diff, then correct every claim yourself; generated summaries overstate completeness confidently. State in the PR where and how AI was used, so reviewers calibrate their scrutiny. Deception by omission here quietly lowers the team's review quality.
 
-**Review with the checklist, verdict included.** Use the tool for a fast first scan of style and obvious gaps, but run your own pass for correctness, security, and license provenance, per [[02_Reviewing_AI_Generated_Code]]. The verdict — accept, fix, reject — is yours and must be explainable in one paragraph. A review with no human verdict is not a review.
+**Review with the checklist, verdict included.** Use the tool for a fast first scan of style and obvious gaps, but run your own pass for correctness, security, and license provenance, per [[02_Reviewing_AI_Generated_Code]]. The verdict (accept, fix, reject) is yours and must be explainable in one paragraph. A review with no human verdict is not a review.
 
-**Keep the workflow honest by measuring and sharing.** Track outcomes around AI-assisted work — lead time, review rounds, defects, rework — and compare them to your baseline as in [[05_Measuring_Real_Productivity]]. Share failed experiments alongside wins so the team's expectations track reality. Honest workflow hygiene is what turns tool adoption into delivery improvement.
+**Keep the workflow honest by measuring and sharing.** Track outcomes around AI-assisted work (lead time, review rounds, defects, rework) and compare them to your baseline as in [[05_Measuring_Real_Productivity]]. Share failed experiments alongside wins so the team's expectations track reality. Honest workflow hygiene is what turns tool adoption into delivery improvement.
 
 ## Practical Exercise
 
@@ -106,7 +106,7 @@ Build your own AI-assisted daily workflow for one week and pressure-test it:
 3. Define the evidence for each gate: which tests, which checks, which explanations must exist before the stage passes.
 4. Run one real task through the workflow end to end, recording where the gates actually caught something and where they were skipped.
 5. Write the PR description from the real diff, correct every claim yourself, and include a declaration of where AI was used.
-6. Collect the week's numbers — lead time, review rounds, defects found in review, rework — and compare against your own recent baseline.
+6. Collect the week's numbers (lead time, review rounds, defects found in review, rework) and compare against your own recent baseline.
 7. Adjust one thing in the workflow based on what the week showed, and write one sentence on what you would tell a teammate about what is safe to delegate and what is not.
 
 ## Practical Applications

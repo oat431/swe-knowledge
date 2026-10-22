@@ -22,7 +22,7 @@ tags:
 
 Every incident is a paid lesson; the postmortem is where the team decides whether to keep it. A good postmortem converts an expensive failure into durable prevention: a system change, a process change, a training gap closed. A bad one does the opposite: it finds a scapegoat, teaches everyone to hide their mistakes, and guarantees the next incident follows the same script.
 
-Blamelessness is not kindness; it is the only method that works. When people fear consequences, facts get soft: timelines get fuzzy, decisions get rationalized, and the contributing factors that would have prevented the incident stay buried. The tech lead's job is to run a review that is rigorous enough to find the truth and safe enough that the truth gets told, then to make sure the findings become finished work. This note covers blameless principles, timeline reconstruction, contributing-factor analysis, action generation, facilitation, and the postmortem document.
+Blamelessness is the only method that works. When people fear consequences, facts get soft: timelines get fuzzy, decisions get rationalized, and the contributing factors that would have prevented the incident stay buried. The tech lead's job is to run a review that is rigorous enough to find the truth and safe enough that the truth gets told, then to make sure the findings become finished work. This note covers blameless principles, timeline reconstruction, contributing-factor analysis, action generation, facilitation, and the postmortem document.
 
 ## Blameless Principles
 
@@ -184,4 +184,4 @@ The lead's test: did another team avoid an incident because they read ours? That
 
 ## Summary
 
-Blameless postmortem leadership turns failure into prevention: reconstruct the timeline from evidence, analyze contributing factors as conditions rather than culprits, generate few systemic actions with owners and deadlines, facilitate with responders in the room, and publish learnings beyond the team. The measure is not how well the document reads; it is whether the same failure ever gets the chance to happen again.
+Blameless postmortem leadership turns failure into prevention: reconstruct the timeline from evidence, analyze contributing factors as conditions rather than culprits, generate few systemic actions with owners and deadlines, facilitate with responders in the room, and publish learnings beyond the team. The measure is whether the same failure ever gets the chance to happen again.

@@ -195,7 +195,7 @@ ADD is an iterative method packaging the generate-and-test strategy. At each ite
 - If chosen element is not the whole system, construct a focused utility tree.
 
 #### Step 3: Generate a Design Solution
-The heart of ADD: application of generate-and-test. For each ASR, develop a solution:
+ADD's core step is generate-and-test. For each ASR, develop a solution:
 - **Initial design candidate** inspired by patterns, augmented by tactics
 - **Refine** using design checklists (Ch 5–11) to instantiate the pattern
 - Patterns often address multiple ASRs simultaneously
@@ -241,7 +241,7 @@ Creating an architecture isn't enough; it must be communicated so stakeholders c
 Architecture documentation is both **prescriptive** (constraining future decisions) and **descriptive** (recounting decisions already made). Three fundamental uses:
 
 1. **Education:** introducing new team members, external analysts, customers, or a new architect
-2. **Communication among stakeholders:** especially the *future architect* (who may be the same person). Documentation serves as a repository of design decisions too numerous to reproduce from memory.
+2. **Communication among stakeholders:** especially the *future architect* (who may be the same person). Documentation is a repository of design decisions too numerous to reproduce from memory.
 3. **Basis for system analysis and construction:** tells implementers what to implement; provides fodder for evaluation; incorporates models for code-generation tools
 
 ### 18.2 Notations for Architecture Documentation

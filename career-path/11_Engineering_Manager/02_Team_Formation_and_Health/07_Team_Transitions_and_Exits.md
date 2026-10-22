@@ -86,7 +86,7 @@ The communication rules: facts first, gratitude included, rumors preempted, and 
 | Reconnect | A team moment that is not about the exit: the work, the mission, a win |
 | Watch | Energy and mood for weeks; exits echo longer than expected |
 
-Morale repair is not distraction; it is honesty plus structure. The team that knows what happens next, and that its loss was acknowledged, settles faster than the team that is told to stay positive.
+Morale repair takes honesty plus structure. The team that knows what happens next, and that its loss was acknowledged, settles faster than the team that is told to stay positive.
 
 ## Re-Org Transitions
 

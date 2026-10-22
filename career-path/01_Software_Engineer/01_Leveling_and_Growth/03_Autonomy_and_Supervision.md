@@ -19,7 +19,7 @@ tags:
 
 ## What Changes from Junior to Mid
 
-A junior engineer's default is to ask before moving; a mid-level engineer's default is to decide, note the assumption, and keep moving. The mid-level skill is not "never ask" — it is routing each question to the right channel: self-serve decision, quick check-in, or formal escalation. Supervision decreases as your decisions become predictable and reversible, and as your manager learns that nothing important reaches them late.
+A junior engineer's default is to ask before moving; a mid-level engineer's default is to decide, note the assumption, and keep moving. The mid-level skill is routing each question to the right channel: self-serve decision, quick check-in, or formal escalation. Supervision decreases as your decisions become predictable and reversible, and as your manager learns that nothing important reaches them late.
 
 | Aspect | Junior | Mid |
 |--------|--------|-----|
@@ -95,7 +95,7 @@ flowchart LR
 
 **Make uncertainty visible early, in writing, with impact.** The message is not "I'm worried" but "X is uncertain, it affects Y, I suggest Z until we know more." Visibility early is cheap; visibility late is a postmortem. Write it in the channel where the affected people already read, and address the person who owns the outcome.
 
-**Calibrate reversals as the price of autonomy.** Decide alone and you accept a duty: if the decision is disputed or wrong, revert first and discuss second. Engineers who defend solo decisions instead of reverting lose their autonomy quickly. The habit that grows autonomy is not boldness; it is cheap reversals and honest notes.
+**Calibrate reversals as the price of autonomy.** Decide alone and you accept a duty: if the decision is disputed or wrong, revert first and discuss second. Engineers who defend solo decisions instead of reverting lose their autonomy quickly. Autonomy grows from cheap reversals and honest notes more than from boldness.
 
 ## Practical Exercise
 

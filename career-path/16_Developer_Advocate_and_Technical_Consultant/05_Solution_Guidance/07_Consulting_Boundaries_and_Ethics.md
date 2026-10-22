@@ -22,7 +22,7 @@ tags:
 
 Every consulting engagement runs on an invisible contract: the customer trusts that the advice they receive is aimed at their success, not at the consultant's convenience, quota, or ego. That trust is the entire asset. It is also easy to trade away in small ways: recommending the tool you know instead of the tool that fits, staying quiet about a design you believe will fail, extending an engagement because the revenue is comfortable.
 
-Boundaries make the trust concrete. A consultant with visible boundaries (what they will do, what they will not, when they will say no) is easier to trust than one who agrees to everything. Saying no to a badly scoped engagement is not a lost sale; it is a demonstration that the consultant's yes means something.
+Boundaries make the trust concrete. A consultant with visible boundaries (what they will do, what they will not, when they will say no) is easier to trust than one who agrees to everything. Saying no to a badly scoped engagement demonstrates that the consultant's yes means something.
 
 Technical consulting adds its own ethical layer: advice shapes systems that people depend on. Recommending a fragile architecture to close a deal, hiding a known limitation, or letting a customer build on an assumption you know is false are all ordinary-looking decisions with consequences that outlast the engagement. The standard is simple to state and demanding to practice: give the advice you would want to receive, and make its basis visible.
 
@@ -62,7 +62,7 @@ Scope is an ethics instrument: a vague scope lets both sides interpret success d
 
 ## Boundaries Around Expertise
 
-A boundary that consultants underrate is the edge of their own competence. Advising confidently outside your expertise is not a service; it is a risk transferred to the customer invisibly. The disciplined move is to name the edge ("this is outside my depth; here is who should review it"), which builds more trust than a fluent guess ever does. The same applies to organizational politics: consultants can advise on systems, but should be careful about manipulating internal power dynamics, even when invited.
+A boundary that consultants underrate is the edge of their own competence. Advising confidently outside your expertise is a risk transferred to the customer invisibly. The disciplined move is to name the edge ("this is outside my depth; here is who should review it"), which builds more trust than a fluent guess ever does. The same applies to organizational politics: consultants can advise on systems, but should be careful about manipulating internal power dynamics, even when invited.
 
 ## The Boundary Decision
 

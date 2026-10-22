@@ -15,7 +15,7 @@ tags:
 
 # AI Assisted Engineering
 
-> **Capability area:** Using coding assistants and agents as part of a normal engineering workflow — delegating safely, verifying output, and keeping security, licensing, and real productivity in view.
+> **Capability area:** Using coding assistants and agents as part of a normal engineering workflow: delegating safely, verifying output, and keeping security, licensing, and real productivity in view.
 
 ## What Changes from Junior to Mid
 
@@ -63,7 +63,7 @@ This area covers AI as a development tool for working engineers. It does not cov
 - Generated code is untrusted input until verified: correct, secure, licensed, and understood
 - Context quality determines output quality more than prompt cleverness
 - Assistance should be measured by outcomes (lead time, defect escape), not by keystrokes saved
-- Some work — learning a system, security-critical paths, novel design — is better done without generation
+- Some work (learning a system, security-critical paths, novel design) is better done without generation
 
 ## Common Anti-Patterns
 
@@ -92,6 +92,6 @@ This area covers AI as a development tool for working engineers. It does not cov
 
 ## Sources
 
-- *The Pragmatic Programmer* (David Thomas, Andrew Hunt) — ownership and verification habits
-- *Software Engineering at Google* (Titus Winters, Tom Manshreck, Hyrum Wright) — code review and testing discipline that AI output must also pass
+- *The Pragmatic Programmer* (David Thomas, Andrew Hunt): ownership and verification habits
+- *Software Engineering at Google* (Titus Winters, Tom Manshreck, Hyrum Wright): code review and testing discipline that AI output must also pass
 - OWASP guidance on AI-generated code risks (owasp.org)

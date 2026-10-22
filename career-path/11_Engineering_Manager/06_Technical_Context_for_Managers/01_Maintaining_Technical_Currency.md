@@ -34,7 +34,7 @@ Currency is the entry ticket to credibility. The team forgives a manager who doe
 | Skill atrophy | Old expertise fades without practice | Quarterly hands-on spikes |
 | Confidence illusion | Past competence is mistaken for current competence | Regular currency tests |
 
-The decay is not a character flaw; it is physics. The only question is whether the schedule compensates for it.
+The decay happens to everyone. The only question is whether the schedule compensates for it.
 
 ## Currency Strategies
 
@@ -71,7 +71,7 @@ Can you, unaided:
 - Read a design doc and ask questions that change it for the better?
 - Follow an incident discussion to its technical root?
 
-A "no" on any of these is not a verdict; it is a to-do list.
+A "no" on any of these becomes a to-do item.
 
 ## Currency vs Depth
 

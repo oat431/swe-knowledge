@@ -546,4 +546,4 @@ Industry foundations increasingly fill roles traditionally held by professional 
 3. **National societies (BCS, ACS) can have legal standing** that international societies lack, particularly through Royal Charters or government-recognized certification.
 4. **Societies define the profession** through BoK documents, standards, conferences, certification, and disciplinary mechanisms, though enforcement remains weaker than in medicine or law.
 5. **Getting involved is a career multiplier:** reviewing papers, joining committees, and contributing to standards builds reputation and network that pure technical work alone cannot.
-6. **The landscape is evolving:** open source communities and industry foundations are competing with traditional societies for professional engagement, and societies must adapt to remain relevant.
+6. **Professional communities are changing:** open source communities and industry foundations are competing with traditional societies for professional engagement, and societies must adapt to remain relevant.

@@ -24,7 +24,7 @@ Pilot success is a midpoint, not a finish line. A prototype that delighted a wor
 
 The gap exists because prototypes are optimized for learning and production systems are optimized for standing up to reality. Field prototypes skip error handling because errors interrupt the story; they use admin credentials because access models slow the demo; they avoid scale questions because sample data is small. Each shortcut is rational in its moment and fatal if it silently persists. The same code path that ignored a malformed record in a demo will meet thousands of malformed records in production, in front of users whose trust was earned by the demo.
 
-Hardening is therefore treated as a first-class phase with its own plan, estimates, gates, and ownership, not as cleanup squeezed in after go-live. The FDE's promise to the customer is not that the prototype is production-ready; it is that the path from one to the other is understood, estimated, and resourced before anyone is surprised by it. And the last component of that path, handover, is the true test: production is reached when the customer can operate the system without the FDE in the room.
+Hardening is therefore treated as a first-class phase with its own plan, estimates, gates, and ownership, not as cleanup squeezed in after go-live. The FDE promises the customer that the path from prototype to production is understood, estimated, and resourced before anyone is surprised by it. And the last component of that path, handover, is the true test: production is reached when the customer can operate the system without the FDE in the room.
 
 ## What Hardening Actually Adds
 

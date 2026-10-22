@@ -752,7 +752,7 @@
 ### Killed Mutants
 
 - [ ] **What it means:** your test suite detected the artificial bug. This is the desired outcome.
-- [ ] **No action needed:** but verify it's not a false kill (test failing for unrelated reasons like a timeout).
+- [ ] **No action needed**, but verify it's not a false kill (test failing for unrelated reasons like a timeout).
 
 ### Survived Mutants
 

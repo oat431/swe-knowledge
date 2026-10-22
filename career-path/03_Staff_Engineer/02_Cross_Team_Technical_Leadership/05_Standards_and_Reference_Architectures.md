@@ -56,7 +56,7 @@ A reference architecture is a **decision aid**, not a spec: it compresses the or
 | Risk: change risk, breakage | Risk: unpatched variants, unknown seams | Adoption risk < divergence risk |
 | Career: learning new skills | Career: being blocked, being blamed | Adoption is visible and valued |
 
-The lever is not persuasion; it is **cost reduction**. Every standard should ship with the things that lower adoption cost: examples, tooling, a working path. A standard that requires a team to do more work than staying divergent is a standard that will fail, and the failure is the standard's, not the team's.
+The lever is **cost reduction**. Every standard should ship with the things that lower adoption cost: examples, tooling, a working path. A standard that requires a team to do more work than staying divergent is a standard that will fail, and the failure is the standard's, not the team's.
 
 ## Enablement Tooling
 

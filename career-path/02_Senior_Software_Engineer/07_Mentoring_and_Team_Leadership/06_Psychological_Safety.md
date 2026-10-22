@@ -294,4 +294,4 @@ Assess your team's psychological safety:
 
 ## Summary
 
-Psychological safety is the foundation of high-performing teams. Senior engineers build safety by modeling vulnerability, responding to mistakes with curiosity instead of blame, inviting participation from everyone, celebrating learning, and establishing clear norms. Safety is not about being nice; it is about creating an environment where people can take risks, ask questions, admit mistakes, and share ideas. Teams with high psychological safety learn faster, innovate more, and deliver better outcomes.
+Psychological safety is the foundation of high-performing teams. Senior engineers build safety by modeling vulnerability, responding to mistakes with curiosity instead of blame, inviting participation from everyone, celebrating learning, and establishing clear norms. Safety means an environment where people can take risks, ask questions, admit mistakes, and share ideas. Teams with high psychological safety learn faster, innovate more, and deliver better outcomes.

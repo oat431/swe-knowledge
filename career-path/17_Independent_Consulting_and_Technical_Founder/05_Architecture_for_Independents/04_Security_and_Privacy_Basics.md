@@ -24,7 +24,7 @@ Security for an independent is asymmetric: the effort of prevention is moderate 
 
 Proportionality is the guiding principle. Most independent work does not need the controls of a bank; it needs the fundamentals done consistently: strong unique credentials with multi factor authentication, least privilege access, encryption in transit and at rest through managed defaults, backups that are actually tested, dependencies that get patched, and data that is collected only when there is a reason. These are conventions and habits more than technologies, and they are achievable by one person with a modest time budget.
 
-Privacy adds a second obligation: not just protecting data, but handling it lawfully and only as agreed. Client data arrives with contractual promises and, depending on jurisdiction and industry, with legal duties attached. The independent needs to know what they hold, why, where it lives, how long it stays, and who can touch it, and must be able to answer those questions to a client's due diligence without improvisation. Where local law specifics matter, qualified local advice (a lawyer or privacy professional) is part of the baseline, not a luxury.
+Privacy adds a second obligation: handling data lawfully and only as agreed. Client data arrives with contractual promises and, depending on jurisdiction and industry, with legal duties attached. The independent needs to know what they hold, why, where it lives, how long it stays, and who can touch it, and must be able to answer those questions to a client's due diligence without improvisation. Where local law specifics matter, qualified local advice (a lawyer or privacy professional) is part of the baseline, not a luxury.
 
 ## The Solo Security Baseline
 

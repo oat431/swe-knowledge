@@ -16,7 +16,7 @@ tags:
 
 ## Chapter 9: Data Flow Testing
 
-Data flow testing focuses on the points at which variables receive values (definitions) and the points at which those values are used. It serves as a "reality check" on path testing, while cumbersome at the unit level, it is well suited for object-oriented code. Two mainline forms exist: **define/use testing** (Rapps–Weyuker metrics) and **slice-based testing**.
+Data flow testing focuses on the points at which variables receive values (definitions) and the points at which those values are used. It is a "reality check" on path testing, while cumbersome at the unit level, it is well suited for object-oriented code. Two mainline forms exist: **define/use testing** (Rapps–Weyuker metrics) and **slice-based testing**.
 
 ### 9.1 Define/Use Testing
 

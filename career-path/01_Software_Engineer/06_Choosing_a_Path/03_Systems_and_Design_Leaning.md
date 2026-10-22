@@ -19,7 +19,7 @@ tags:
 
 ## What Changes from Junior to Mid
 
-A junior engineer thinks of design as the diagram you draw before coding. A mid-level engineer who leans toward systems and design starts noticing the real work: the trade-off nobody has named, the design review that goes sideways because the problem was never framed, the subsystem that keeps absorbing rework because its boundaries are wrong. This note helps you test whether the architecture and staff-track family — Staff Engineer, Principal and Distinguished Engineer, Software Architect — matches how you want to spend your attention.
+A junior engineer thinks of design as the diagram you draw before coding. A mid-level engineer who leans toward systems and design starts noticing the real work: the trade-off nobody has named, the design review that goes sideways because the problem was never framed, the subsystem that keeps absorbing rework because its boundaries are wrong. This note helps you test whether the architecture and staff-track family (Staff Engineer, Principal and Distinguished Engineer, Software Architect) matches how you want to spend your attention.
 
 | Aspect | Junior | Mid |
 |--------|--------|-----|
@@ -85,9 +85,9 @@ flowchart LR
 
 **Long horizons change the reward schedule.** Architecture and strategy pay off in avoided rework and coherent systems measured in quarters, and your name may be attached to outcomes you can no longer trace to a single commit. Engineers who need visible weekly output to feel productive often suffer in these roles despite being good at them. Check what evidence of progress you need to stay motivated.
 
-**Expect coding to shrink, not vanish.** Senior design roles keep technical credibility through selective deep work — spikes, reviews, prototypes — not through full feature load. If you stop touching systems entirely, your judgment decays; if you insist on a full coding load, the design work gets starved. Decide deliberately what your coding floor will be.
+**Expect coding to shrink, not vanish.** Senior design roles keep technical credibility through selective deep work (spikes, reviews, prototypes), not through full feature load. If you stop touching systems entirely, your judgment decays; if you insist on a full coding load, the design work gets starved. Decide deliberately what your coding floor will be.
 
-**Run fit tests before you chase the title.** All five tests in the framework run inside a current software engineering job and cost nothing but attention. The evidence you collect — how ADR writing, review facilitation, and subsystem ownership actually felt — predicts the role far better than the prestige of the title does.
+**Run fit tests before you chase the title.** All five tests in the framework run inside a current software engineering job and cost nothing but attention. The evidence you collect (how ADR writing, review facilitation, and subsystem ownership actually felt) predicts the role far better than the prestige of the title does.
 
 ## Practical Exercise
 

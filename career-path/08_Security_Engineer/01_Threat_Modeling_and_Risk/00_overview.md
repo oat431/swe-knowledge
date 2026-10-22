@@ -20,7 +20,7 @@ tags:
 
 # Threat Modeling and Risk
 
-> **Core idea:** A senior security engineer turns an uncertain system, adversary, and consequence landscape into explicit risk decisions with accountable owners and usable evidence.
+> **Core idea:** A senior security engineer turns uncertainty about the system, its adversaries, and the consequences into explicit risk decisions with accountable owners and usable evidence.
 
 ## What This Capability Means at Senior Level
 

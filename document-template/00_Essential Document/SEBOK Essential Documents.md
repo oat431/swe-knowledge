@@ -4,7 +4,7 @@ tags: [overview, systems-engineering, sebok, essential-documents]
 
 # SEBoK — Essential Documents by Phase
 
-> **Source:** [[SEBoK v2 - Overview|SEBoK v2 — Systems Engineering Body of Knowledge (BKCASE, 2025)]]
+> **Source:** [[SEBoK v2 - Overview|SEBoK v2: Systems Engineering Body of Knowledge (BKCASE, 2025)]]
 > Organized by the systems engineering life cycle: Concept → Architecture → Realization → Operations → Maintenance
 > Plus technical management and cross-cutting documents
 >
@@ -225,7 +225,7 @@ Per [[05_Life_Cycles_and_Processes]], the formality and timing of these document
 
 ## Related
 
-- [[SEBoK v2 - Overview]] — Full SEBoK knowledge base
-- [[09_Systems_Engineering_Standards]] — Deep dive on SE standards
-- [[PMBOK Essential Documents]] — Project management documents by phase
-- [[SWEBOK Essential Documents]] — SWEBOK software documents by phase
+- [[SEBoK v2 - Overview]]: Full SEBoK knowledge base
+- [[09_Systems_Engineering_Standards]]: Deep dive on SE standards
+- [[PMBOK Essential Documents]]: Project management documents by phase
+- [[SWEBOK Essential Documents]]: SWEBOK software documents by phase

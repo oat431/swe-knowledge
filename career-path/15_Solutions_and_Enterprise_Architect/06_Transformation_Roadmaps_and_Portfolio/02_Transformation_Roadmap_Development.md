@@ -24,7 +24,7 @@ Sequencing is where transformations succeed or die. The target can be right and 
 
 A roadmap is also the primary communication artifact between architecture and the rest of the organization. Executives read it for value and timing, delivery reads it for what comes next, finance reads it for funding waves, and risk reads it for exposure over time. One roadmap, several readings, which means the roadmap must express value, dependencies, and assumptions so plainly that each audience can do its own arithmetic.
 
-The best roadmaps are living instruments. They show what is committed now, what is planned next, and what is directional: with decision gates where funding and scope are re-examined against evidence. A roadmap that is never revised is not a commitment to a plan; it is a refusal to learn.
+The best roadmaps are living instruments. They show what is committed now, what is planned next, and what is directional: with decision gates where funding and scope are re-examined against evidence. A roadmap that is never revised is a refusal to learn.
 
 ## Anatomy of a Transformation Roadmap
 

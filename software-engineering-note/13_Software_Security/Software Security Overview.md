@@ -18,7 +18,7 @@ tags:
 
 Software Security is the engineering discipline of building software that resists attack, protects the confidentiality, integrity, and availability (CIA triad) of data and services, and fails safely when compromised. SWEBOK v4 elevates this to a full Knowledge Area, reflecting the reality that security is now a fundamental quality attribute for virtually all software systems. The core principle: build security in from the start; don't bolt it on afterward.
 
-The threat landscape has expanded dramatically with cloud-native architectures, APIs, IoT devices, supply chain dependencies, and AI/ML systems each introducing unique attack surfaces. Modern security engineering takes a "shift left" approach: threat modeling during design, secure coding during construction, security testing during verification, and vulnerability management during operations. DevSecOps operationalizes this by embedding security automation into CI/CD pipelines.
+Cloud-native architectures, APIs, IoT devices, supply chain dependencies, and AI/ML systems have each added new attack surfaces. Modern security engineering takes a "shift left" approach: threat modeling during design, secure coding during construction, security testing during verification, and vulnerability management during operations. DevSecOps operationalizes this by embedding security automation into CI/CD pipelines.
 
 Organizational governance matters too. The SSE-CMM measures process capability, ISO/IEC 27001 establishes Information Security Management Systems, and the Common Criteria (ISO/IEC 15408) provides evaluation frameworks. In Agile contexts, security teams must become enablers rather than blockers, working iteratively, automating checks, and integrating with development workflows.
 

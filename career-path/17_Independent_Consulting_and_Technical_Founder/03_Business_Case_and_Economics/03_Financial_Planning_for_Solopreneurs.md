@@ -23,7 +23,7 @@ tags:
 
 A solo business has no finance department, no payroll office, and no one to catch mistakes. Every function a company splits across specialists (bookkeeping, tax reserves, budgeting, collections, compliance) lands on the same person who is also supposed to be delivering client work. The result is predictable: finances run reactively, taxes arrive as shocks, and business cash and personal cash blur into one anxious pool.
 
-The fix is not sophistication; it is a small set of mechanical habits. Separated accounts remove ambiguity about what money belongs to whom. A tax reserve policy converts a yearly lump-sum dread into a monthly transfer. A budgeting cadence keeps the cost baseline current. None of this requires an accountant on staff. It requires a ritual that survives busy months precisely because it is short.
+The fix is a small set of mechanical habits. Separated accounts remove ambiguity about what money belongs to whom. A tax reserve policy converts a yearly lump-sum dread into a monthly transfer. A budgeting cadence keeps the cost baseline current. None of this requires an accountant on staff. It requires a ritual that survives busy months precisely because it is short.
 
 Financial hygiene also buys negotiation strength. An independent with reserves, current books, and a known runway can decline bad deals, ask for deposits, and walk away from clients who pay late. Financial chaos has the opposite effect: it forces you to accept whatever is offered, which is how margins and standards erode together.
 

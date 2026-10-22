@@ -84,7 +84,7 @@ As clever amplification attacks were closed, attackers turned to brute-force flo
 
 **First DDoS:** Morris worm (1980s, accidental); first deliberate: Panix ISP (1996).
 
-**Modern landscape:**
+**Today:**
 - **IoT botnets** (Mirai, 2016+): CCTV cameras, routers with known default passwords, un-patchable firmware
 - **DDoS-for-hire:** Underground market; schoolkids targeting gamers, blackmail of online bookmakers, political suppression
 - **Law enforcement response:** Raiding and arresting DDoS-for-hire operators

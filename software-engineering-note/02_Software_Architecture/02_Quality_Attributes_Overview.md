@@ -128,7 +128,7 @@ Establish allowable ranges of variation, when and by whom they are bound:
 
 ## 7. Quality Attribute in Detail: Availability (Ch 5)
 
-Availability serves as the book's detailed walkthrough of one QA, illustrating scenarios, tactics, and design checklists.
+Availability is the book's detailed walkthrough of one QA, with scenarios, tactics, and design checklists.
 
 ### 7.1 Definition
 

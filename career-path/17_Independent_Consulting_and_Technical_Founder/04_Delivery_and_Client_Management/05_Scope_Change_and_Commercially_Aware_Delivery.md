@@ -21,7 +21,7 @@ tags:
 
 ## Why This Matters
 
-Change is not an anomaly in technical engagements; it is the normal weather. Clients learn what they want by seeing what they get, priorities move, environments shift, and the best requirements arrive mid-demo. An independent who treats every change as an imposition lives in constant conflict; one who absorbs every change to be agreeable watches margin dissolve silently. The professional posture is a third path: treat change as a process, run it warmly, and price it exactly.
+Change is the normal weather in technical engagements. Clients learn what they want by seeing what they get, priorities move, environments shift, and the best requirements arrive mid-demo. An independent who treats every change as an imposition lives in constant conflict; one who absorbs every change to be agreeable watches margin dissolve silently. The professional posture is a third path: treat change as a process, run it warmly, and price it exactly.
 
 The commercial heart of delivery is a simple awareness: every day of work has a cost, and unlogged favors are discounts. The first small favor feels generous; by the tenth, the relationship has a subtle imbalance. The client believes responsiveness is included, the independent resents the growing gap, and nobody said anything at the point where saying something was easy. Change discipline is how both sides stay honest, and the clients who appreciate it most are the ones who have been burned by vendors who hid the same arithmetic until the invoice.
 

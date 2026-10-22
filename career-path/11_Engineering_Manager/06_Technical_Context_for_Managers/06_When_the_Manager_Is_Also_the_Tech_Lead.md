@@ -22,7 +22,7 @@ tags:
 
 On small teams, in startups, and wherever a TL seat sits unfilled, the manager carries both mandates: people and conditions, system and direction. The combined role is survivable and often necessary, but it is a different operating model from either role alone, with failure modes that are specific and predictable.
 
-The danger is not that the work is hard; it is that the role drifts. Without a deliberate design, the manager-TL slowly becomes a bottleneck (all decisions wait), or a ghost (people work starves while technical work glows), or a burnout (both mandates compete for one calendar). The combined role must be run as a temporary, designed configuration (with an exit plan) or it becomes a permanent structural flaw.
+The danger is that the role drifts. Without a deliberate design, the manager-TL slowly becomes a bottleneck (all decisions wait), or a ghost (people work starves while technical work glows), or a burnout (both mandates compete for one calendar). The combined role must be run as a temporary, designed configuration (with an exit plan) or it becomes a permanent structural flaw.
 
 ## The Combined Role Reality
 
@@ -88,7 +88,7 @@ The combined role's survival strategy is shrinking the technical half:
 - Give seniors the visible TL work: running design reviews, owning technical risk lists
 - Grow them toward the TL role as the exit path
 
-Delegation is not abandonment; it is the team's technical depth being exercised instead of monopolized.
+Delegation exercises the team's technical depth instead of monopolizing it.
 
 ## Transitioning Out
 

@@ -22,7 +22,7 @@ tags:
 
 Principles are decision precedent. When a review, a design discussion, or a budget conversation hits a recurring trade-off, principles are the enterprise's standing answer: reuse before buy, master data at its source, integrate through interfaces rather than databases. Without them, every decision relitigates from zero, outcomes depend on who is in the room, and the same argument consumes a different project team every quarter.
 
-The failure modes sit at both extremes. No principles means an enterprise of local optima: thirty teams, thirty answers to the same question. Too many principles, or principles that read like aspirations, means nobody remembers them and nothing is ever refused. A principle that has never caused anyone to change a plan is not a principle; it is decoration.
+The failure modes sit at both extremes. No principles means an enterprise of local optima: thirty teams, thirty answers to the same question. Too many principles, or principles that read like aspirations, means nobody remembers them and nothing is ever refused. A principle that has never caused anyone to change a plan is decoration.
 
 The senior architect writes few principles, makes each one testable, attaches consequences, and enforces them in the places where decisions actually get made. Principles are also living: exceptions teach you where they were wrong, patterns of exception teach you when to revise them, and a principle that stopped matching strategy gets retired loudly rather than quietly ignored.
 

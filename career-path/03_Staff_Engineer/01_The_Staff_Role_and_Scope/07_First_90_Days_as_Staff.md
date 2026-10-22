@@ -20,7 +20,7 @@ tags:
 
 ## Why This Matters
 
-The first 90 days set the role's trajectory for years. What you do in month one defines what teams expect from you; what you negotiate in month two defines what leadership expects; what you ship in month three defines whether either expectation holds. The most common first-year failure is the reverse order: proposing in week two (before understanding the org), accepting a vague mandate (before understanding the leverage), and disappearing into the codebase (before building the influence).
+The first 90 days shape the role for years. What you do in month one defines what teams expect from you; what you negotiate in month two defines what leadership expects; what you ship in month three defines whether either expectation holds. The most common first-year failure is the reverse order: proposing in week two (before understanding the org), accepting a vague mandate (before understanding the leverage), and disappearing into the codebase (before building the influence).
 
 The role is a new contract with the org, and the first quarter is the negotiation window. The org is most open to defining the role in your favor during the honeymoon. The mandate agreed in month two will not be re-opened in month six. The 90-day plan is therefore: listen, then negotiate, then deliver a small proof that the model works.
 

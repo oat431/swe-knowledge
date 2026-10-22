@@ -20,7 +20,7 @@ tags:
 
 ## Why This Matters
 
-At principal level, influence is not exercised in meetings. It is exercised in relationships built over years. The trusted advisor position is not a role on an org chart; it is a reputation earned through consistent behavior: reliable analysis delivered on time, honest assessment even when it contradicts the leader's inclination, and the discretion to handle sensitive information without leaking it. When this reputation is established, the principal is called before decisions are made, not briefed after them.
+At principal level, influence is not exercised in meetings. It is exercised in relationships built over years. The trusted advisor position is a reputation earned through consistent behavior: reliable analysis delivered on time, honest assessment even when it contradicts the leader's inclination, and the discretion to handle sensitive information without leaking it. When this reputation is established, the principal is called before decisions are made, not briefed after them.
 
 The trusted advisor position is fragile. It is built over years and lost in a single breach of trust: a recommendation that proved wrong and was not accompanied by a candid post-mortem, a confidence shared outside the relationship, advice that served the principal's agenda rather than the leader's interest. The principal who maintains this position across multiple leaders, organizational changes, and contested decisions is the principal whose influence compounds.
 

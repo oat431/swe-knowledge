@@ -107,7 +107,7 @@ The lead's stance: communication coaching is part of reviewing work, not a separ
 
 ## Communication as a Team Standard
 
-Strong communication is not a talent the team happens to contain; it is a standard the team holds for itself. The lead makes the standard visible and shared.
+Strong communication is a standard the team holds for itself. The lead makes the standard visible and shared.
 
 | Standard element | How the lead holds it |
 |------------------|-----------------------|

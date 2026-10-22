@@ -8,7 +8,7 @@ tags: [design-fundamentals, design-principles, software-design, swebok]
 
 ## Purpose
 
-Software design fundamentals are the enduring principles that govern good design, independent of language, framework, or methodology. Every software engineer must internalize these as second nature.
+Software design fundamentals are the principles of good design that hold regardless of language, framework, or methodology. Every software engineer should know them well enough to apply them without thinking.
 
 ## Design Thinking
 

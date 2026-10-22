@@ -19,7 +19,7 @@ tags:
 
 ## What Changes from Junior to Mid
 
-A junior engineer receives a ticket that already contains the problem and the proposed solution, and implements it faithfully. A mid-level engineer notices when the request is underspecified and drafts acceptance criteria before starting — but usually still accepts the framing that came with the work.
+A junior engineer receives a ticket that already contains the problem and the proposed solution, and implements it faithfully. A mid-level engineer notices when the request is underspecified and drafts acceptance criteria before starting, but usually still accepts the framing that came with the work.
 
 The senior shift is to treat the framing itself as part of the job. Before estimating or designing, you establish what problem is being solved, for whom, at what cost, and what would count as success. This is the cheapest place to prevent waste: a wrong solution to a well-framed problem is a setback; a right solution to the wrong problem is a quarter lost.
 

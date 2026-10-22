@@ -40,7 +40,7 @@ For implants and medical devices, additional factors apply:
 
 ## Phases of Matter
 
-Matter exists in four states: **solid**, **liquid**, **gas**, and **plasma**. Phase affects material properties — for example, ice, liquid water, and steam all have different densities.
+Matter exists in four states: **solid**, **liquid**, **gas**, and **plasma**. Phase affects material properties; for example, ice, liquid water, and steam all have different densities.
 
 > Properties depend not only on phase but also on **temperature** and **pressure**. Always account for operating conditions when selecting materials.
 
@@ -155,7 +155,7 @@ Matter exists in four states: **solid**, **liquid**, **gas**, and **plasma**. Ph
 
 ### Lightweight Metals
 
-**Aluminum, titanium, and magnesium** — called lightweight metals for their low density relative to steel and high strength-to-weight ratios. Widely used in structural and aerospace applications.
+**Aluminum, titanium, and magnesium:** called lightweight metals for their low density relative to steel and high strength-to-weight ratios. Widely used in structural and aerospace applications.
 
 #### Aluminum
 
@@ -215,13 +215,13 @@ Matter exists in four states: **solid**, **liquid**, **gas**, and **plasma**. Ph
 - **Thermophysical properties** include thermal expansion, conductivity, heat capacity, viscosity, and vapor pressure
 - **Lightweight metals** (Al, Ti, Mg) offer high strength-to-weight ratios for aerospace and structural use
 - **Copper alloys** excel in electrical and thermal conductivity
-- **Steel** is the workhorse structural material — properties tuned by carbon content and alloying elements
-- **Concrete** dominates construction — strength depends on mix ratios and curing conditions
+- **Steel** is the workhorse structural material; properties tuned by carbon content and alloying elements
+- **Concrete** dominates construction; strength depends on mix ratios and curing conditions
 
 
 ## Related
 
-- [[Engineering Foundation Overview]] — All engineering foundation topics
-- [[01 Physics and Math/03_Force_and_Mechanics|03_Force_and_Mechanics]] — Mechanical properties and stress
-- [[01 Physics and Math/04_Temperature_and_Thermal|04_Temperature_and_Thermal]] — Thermal properties
-- [[01 Physics and Math/07_Engineering_Drawings_and_CAD|07_Engineering_Drawings_and_CAD]] — Engineering drawings and specifications
+- [[Engineering Foundation Overview]]: All engineering foundation topics
+- [[01 Physics and Math/03_Force_and_Mechanics|03_Force_and_Mechanics]]: Mechanical properties and stress
+- [[01 Physics and Math/04_Temperature_and_Thermal|04_Temperature_and_Thermal]]: Thermal properties
+- [[01 Physics and Math/07_Engineering_Drawings_and_CAD|07_Engineering_Drawings_and_CAD]]: Engineering drawings and specifications

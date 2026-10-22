@@ -19,7 +19,7 @@ tags:
 
 ## Why This Matters
 
-Solution architecture is not a document; it is a process with a beginning, middle, and end. It begins when a business need is framed, moves through options and concept when commitments are still cheap to change, settles into detailed design when the direction is approved, and continues through delivery and transition until the solution runs. Architects who treat it as an event (a document produced once, then abandoned) leave the two most valuable phases, delivery support and handover, to improvisation.
+Solution architecture is a process with a beginning, middle, and end. It begins when a business need is framed, moves through options and concept when commitments are still cheap to change, settles into detailed design when the direction is approved, and continues through delivery and transition until the solution runs. Architects who treat it as an event (a document produced once, then abandoned) leave the two most valuable phases, delivery support and handover, to improvisation.
 
 The process exists to control a specific risk: the cost of changing your mind rises steeply as delivery proceeds. Every gate the process installs (options before concept, concept before commitment, design before build) is placed where options are still viable and decisions are still cheap. Skipping gates does not accelerate delivery; it moves the correction cost from the whiteboard to production.
 

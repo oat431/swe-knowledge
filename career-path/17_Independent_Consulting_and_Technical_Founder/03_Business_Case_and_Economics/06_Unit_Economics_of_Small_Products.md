@@ -23,7 +23,7 @@ tags:
 
 Small products fail quietly. Nobody writes a headline about the tool with four hundred users that costs its founder every weekend in support; it simply grinds the founder down until the product is abandoned. Unit economics is the instrument that makes the grinding visible early: what each user actually contributes, what each acquisition actually costs, and how long until the spend returns. Numbers this small are unglamorous and exactly why they matter: at small scale, a wrong per-user margin is not a rounding error, it is the entire business.
 
-The metrics also change decisions. A product with strong retention and a short payback deserves more investment; a product with churn that eats every new user does not deserve more growth spending, because growth on a leaky product multiplies losses. The point of measuring is not reporting; it is choosing (reprice, reinvest, reposition, or stop) before the decision makes itself.
+The metrics also change decisions. A product with strong retention and a short payback deserves more investment; a product with churn that eats every new user does not deserve more growth spending, because growth on a leaky product multiplies losses. The point of measuring is choosing (reprice, reinvest, reposition, or stop) before the decision makes itself.
 
 For an independent, the trap is counting revenue and feeling fine. Revenue is what users pay; contribution is what remains after variable costs; profit is what remains after fixed costs and your own time. Only the last two fund a life. A product can grow forever and never reach either.
 

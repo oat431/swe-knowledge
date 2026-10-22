@@ -70,7 +70,7 @@ The tactics are organized into four categories: **Detect**, **Resist**, **React*
 
 #### Recover from Attacks
 
-- **Restore services:** leverage availability tactics (Chapter 5); keep additional servers/connections in reserve.
+- **Restore services:** use availability tactics (Chapter 5); keep additional servers/connections in reserve.
 - **Maintain audit trail:** record user and system actions and their effects to trace/identify attackers, support prosecution, and improve future defenses.
 
 ### 1.3 Security Tactics Tree

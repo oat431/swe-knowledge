@@ -65,7 +65,7 @@ The pre-read contract is cultural, not contractual. It is established in the fir
 
 ## Handling Dissent in the Room
 
-Dissent in the decision meeting is not a problem; it is evidence that the process is working. Dissent that is silenced produces fake commitment. Dissent that is surfaced and recorded produces real commitment, because the dissenter was heard, their alternative was considered, and the decision was made with their objection on the record.
+Dissent in the decision meeting is evidence that the process is working. Dissent that is silenced produces fake commitment. Dissent that is surfaced and recorded produces real commitment, because the dissenter was heard, their alternative was considered, and the decision was made with their objection on the record.
 
 | Facilitation Move | Example |
 |--------------------|---------|
@@ -89,7 +89,7 @@ Not every decision meeting produces a decision. The TPM recognizes failure early
 | New option surfaces in the meeting | "That option was not in the framing. I will price it and circulate an updated framing document by [date]. We will decide on [date]." |
 | Genuine deadlock | "We have two positions and cannot resolve. [Decider], would you like to decide now, or shall we escalate to [sponsor/steering committee] with both positions priced?" |
 
-Every failure converts to a specific next step with a date. "Let's discuss this later" is not a facilitation move; it is an abdication.
+Every failure converts to a specific next step with a date. "Let's discuss this later" is an abdication.
 
 ```mermaid
 %%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%

@@ -19,7 +19,7 @@ tags:
 
 ## What Changes from Junior to Mid
 
-A junior engineer takes the ticket as given and is glad the code works. A mid-level engineer who leans toward product and customers starts asking why this ticket exists, who the user is, and whether the built thing actually solved their problem. This note helps you test whether the product-and-customer family — Product Manager, Forward Deployed Engineer, Developer Advocate and Technical Consultant, Solutions and Enterprise Architect — is where your energy goes: toward customer contact, communication, and the messy gap between what people say and what they need.
+A junior engineer takes the ticket as given and is glad the code works. A mid-level engineer who leans toward product and customers starts asking why this ticket exists, who the user is, and whether the built thing actually solved their problem. This note helps you test whether the product-and-customer family (Product Manager, Forward Deployed Engineer, Developer Advocate and Technical Consultant, Solutions and Enterprise Architect) is where your energy goes: toward customer contact, communication, and the messy gap between what people say and what they need.
 
 | Aspect | Junior | Mid |
 |--------|--------|-----|
@@ -80,7 +80,7 @@ flowchart LR
 
 **The common thread of this family is customer contact plus communication.** All four roles live in the gap between a person with a problem and a technical system that might solve it: discovering what is needed, delivering it in the customer's environment, teaching a community, or designing a solution before the deal. If talking to real users and translating across contexts is the part of engineering you would do more of, this family matches; if it is the part you tolerate, it will dominate your week and exhaust you.
 
-**Product management is problem selection, not project management.** The product manager's craft is deciding which problem deserves the team and proving it was solved: discovery interviews, prioritization under scarcity, crisp problem statements, and honest outcome metrics. Engineers often move toward it because they are tired of building the wrong thing — but the daily work is writing, alignment, and stakeholder negotiation, not design elegance. Test the taste of that work with a real discovery conversation before you commit.
+**Product management is problem selection, not project management.** The product manager's craft is deciding which problem deserves the team and proving it was solved: discovery interviews, prioritization under scarcity, crisp problem statements, and honest outcome metrics. Engineers often move toward it because they are tired of building the wrong thing, but the daily work is writing, alignment, and stakeholder negotiation, not design elegance. Test the taste of that work with a real discovery conversation before you commit.
 
 **Field and solutions work trades depth for immediacy.** Forward Deployed Engineers and Solutions Architects see their code or design work in the customer's own environment, under real constraints, often with travel and hard deadlines. The reward is visible, direct impact and rapid learning across domains; the cost is shallow tooling depth, unpredictable schedules, and emotional load when the customer is unhappy. Weigh the schedule and travel terms of the specific role, not the romance of "being close to the customer."
 
@@ -88,7 +88,7 @@ flowchart LR
 
 **Ambiguity is the standing condition here.** Customer problems arrive fuzzy, requirements change mid-flight, and success may be defined only after delivery. Every role in this family requires shaping unclear needs into decisions and being comfortable revising them. If your best work happens inside tight specifications, the product-and-customer family will feel like permanent improvisation.
 
-**Run the cheap tests first, and include the cost side.** A discovery conversation, a written guide, or one demo takes days, not years, and tells you far more than a job title does. Log not only whether the activity energized you but what it cost: prep anxiety, travel fatigue, recovery time. Fit is the exchange rate between energy and cost, and this family's costs are unusually personal.
+**Run the cheap tests first, and include the cost side.** A discovery conversation, a written guide, or one demo takes days, not years, and tells you far more than a job title does. Log whether the activity energized you and also what it cost: prep anxiety, travel fatigue, recovery time. Fit is the exchange rate between energy and cost, and this family's costs are unusually personal.
 
 ## Practical Exercise
 

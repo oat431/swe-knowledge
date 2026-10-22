@@ -20,7 +20,7 @@ tags:
 
 ## Why This Matters
 
-Information flows whether or not it is designed, but undesigned flow produces the classic failures: urgent news buried in a chat thread, decisions scattered across documents no one can find, meetings duplicating what a doc already said, and a team that checks five channels because anything could be anywhere. The cost is not just attention; it is trust. When the team cannot find the truth, it invents it.
+Information flows whether or not it is designed, but undesigned flow produces the classic failures: urgent news buried in a chat thread, decisions scattered across documents no one can find, meetings duplicating what a doc already said, and a team that checks five channels because anything could be anywhere. The cost is attention and, more importantly, trust. When the team cannot find the truth, it invents it.
 
 The manager's job is to design the system: every message type gets a home, every home gets a rhythm, and the whole map is small enough that the team holds it in their heads. A designed information system makes the right behavior the default: the team stops asking "where do I find this?" and starts asking "what do we decide?"
 
@@ -60,7 +60,7 @@ Rhythms are the system's heartbeat: they must run even when nothing is urgent, b
 - Writing quality is a team skill: invest in it; templates, review, examples
 - Async discipline: read before the meeting, respond in the thread, never re-decide in the room
 
-Async-first is not anti-meeting; it is meeting protection. The meetings that remain are the ones that genuinely need the room.
+Async-first protects meetings. The meetings that remain are the ones that genuinely need the room.
 
 ## Information Overload Diagnosis
 

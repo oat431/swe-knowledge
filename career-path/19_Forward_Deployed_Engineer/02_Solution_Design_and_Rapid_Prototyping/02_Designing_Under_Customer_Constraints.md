@@ -20,9 +20,9 @@ tags:
 
 ## Why This Matters
 
-The architecture that a lab or a greenfield side project would produce is almost never available in the field. The customer does not control their vendors, cannot upgrade the database this year, will not get budget for new infrastructure, cannot move data across a border, and cannot change a process that a regulator examines. Every design decision in forward deployment is made inside a box, and the FDE's job is not to wish the box away, but to find the best solution that fits inside it and still reaches the outcome.
+The architecture that a lab or a greenfield side project would produce is almost never available in the field. The customer does not control their vendors, cannot upgrade the database this year, will not get budget for new infrastructure, cannot move data across a border, and cannot change a process that a regulator examines. Every design decision in forward deployment is made inside a box, and the FDE's job is to find the best solution that fits inside it and still reaches the outcome.
 
-This constraint realism is what separates field design from theoretical design. An elegant solution that requires a cloud service the security team will never approve is not elegant; it is fiction. A beautiful data pipeline across a legal boundary the company cannot cross is not a design, it is a liability. The FDE learns to treat constraints the way civil engineers treat gravity: not as obstacles to argue with, but as forces that shape every valid structure.
+This constraint realism is what separates field design from theoretical design. An elegant solution that requires a cloud service the security team will never approve is fiction. A beautiful data pipeline across a legal boundary the company cannot cross is not a design, it is a liability. The FDE learns to treat constraints the way civil engineers treat gravity: not as obstacles to argue with, but as forces that shape every valid structure.
 
 The skill has a second half, though, because constraints are not uniform. Some are immovable: physics, law, contract. Others are soft: policy defaults, ossified habits, decisions nobody has revisited since a reorganization. Telling hard constraints from soft ones is where judgment lives, and the FDE who can move a soft constraint with evidence creates design space for everyone. The rule is simple: design inside the hard limits, but never accept a soft limit without asking who owns it and what would change their mind.
 
@@ -60,7 +60,7 @@ flowchart LR
     TRADEOFF --> AGREE["Agree the design"]
 ```
 
-Presenting trade-offs is not weakness; it is the opposite. "Given three constraints we cannot move, here are two viable designs and what each costs" is the most credible design conversation there is.
+Presenting trade-offs signals strength. "Given three constraints we cannot move, here are two viable designs and what each costs" is the most credible design conversation there is.
 
 ## Trade-Off Conversations
 
@@ -124,4 +124,4 @@ Each row should end in a decision the customer makes with their eyes open. A tra
 
 ## Summary
 
-Designing under customer constraints means treating the customer's real limits (technical, legal, contractual, and organizational) as the space in which every valid solution must live. The FDE collects the full constraint set, separates hard from soft, designs inside the immovable bounds, moves what can legitimately move with evidence, and presents trade-offs as explicit decisions for named owners. The result is not the theoretically best design; it is the best design that can actually run.
+Designing under customer constraints means treating the customer's real limits (technical, legal, contractual, and organizational) as the space in which every valid solution must live. The FDE collects the full constraint set, separates hard from soft, designs inside the immovable bounds, moves what can legitimately move with evidence, and presents trade-offs as explicit decisions for named owners. The result is the best design that can actually run.

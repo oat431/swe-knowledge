@@ -22,7 +22,7 @@ tags:
 
 Every team has a production culture; the question is only whether it is the one they chose. In a reactive culture, production is the on-call person's problem, incidents are blame events, and the team discovers its operational weaknesses the hard way, repeatedly. In an excellent culture, production is everyone's work, operational behavior is celebrated and learned from, and reliability is a source of pride rather than fear.
 
-Culture is not a poster; it is the accumulated result of what the team does, celebrates, and tolerates, and the tech lead is its primary author. Not by decree, but by modeling: answering pages, joining incidents, reading dashboards, treating operational work as real engineering, and making the team's rituals teach the values. This note covers the production-first mindset, operational rituals, celebration, hiring, onboarding, the lead's modeling role, and sustaining the culture through growth and pressure.
+Culture is the accumulated result of what the team does, celebrates, and tolerates, and the tech lead is its primary author. Not by decree, but by modeling: answering pages, joining incidents, reading dashboards, treating operational work as real engineering, and making the team's rituals teach the values. This note covers the production-first mindset, operational rituals, celebration, hiring, onboarding, the lead's modeling role, and sustaining the culture through growth and pressure.
 
 ## The Production-First Mindset
 
@@ -76,7 +76,7 @@ Culture is defended at the hiring door. The lead asks questions that reveal how 
 | "What is a runbook to you?" | Is operations work real work to them? |
 | "When was the last time you read your own dashboards?" | Is production curiosity habitual? |
 
-The bar is not "has done on-call"; it is the orientation: does this person treat production as something they own?
+The bar is orientation: does this person treat production as something they own?
 
 ## Production Excellence in Onboarding
 

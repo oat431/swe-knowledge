@@ -24,7 +24,7 @@ Every technology choice is a commitment to maintain it, and with no team to abso
 
 The selection criteria for one maintainer are easy to state and easy to violate: boring, mainstream, well documented, managed where possible, and easy to replace. The strongest test is handover. Could another generalist contractor take over this system within a week, with the documentation you would leave behind? If not, the choice is a trap disguised as progress. This standard protects both the independent and the client, whose system should outlive any single engagement.
 
-There is also a second-order effect: clients and buyers judge durability. Telling a client "this runs on a stack any contractor can pick up" is a sales feature, not a compromise. Maturity, community size, and clear upgrade paths read as professionalism. The independent who picks boring technology is not settling; they are buying down risk with every component.
+There is also a second-order effect: clients and buyers judge durability. Telling a client "this runs on a stack any contractor can pick up" is a sales feature, not a compromise. Maturity, community size, and clear upgrade paths read as professionalism. The independent who picks boring technology is buying down risk with every component.
 
 ## Solo Technology Selection Criteria
 

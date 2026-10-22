@@ -164,7 +164,7 @@ priority = ─────────────
 
 #### Formal Peer Reviews / Inspections
 - Well-defined process; produces a report identifying material, reviewers, and judgment on acceptability.
-- **Inspection** (Fagan 1976) is the best-established formal peer review: one of the highest-leverage software quality techniques.
+- **Inspection** (Fagan 1976) is the best-established formal peer review: one of the most effective software quality techniques.
 - Companies have avoided up to **10 hours of labor for every hour invested** in inspecting requirements (Grady & Van Slack 1994), a 1,000% ROI.
 - Use **risk analysis** to decide what to inspect formally vs. review informally when time is limited.
 
@@ -367,7 +367,7 @@ priority = ─────────────
 
 - **Prioritize early and often.** If everything is high priority, nothing is. Use the importance/urgency two-dimensional scale; reserve the value/cost/risk spreadsheet for contentious, discretionary requirements.
 - **Validate continuously.** Thread reviews, inspections, prototyping, and conceptual testing throughout requirements development, not as a final gate. The V model makes test planning a parallel activity, not a late one.
-- **Inspections are high-leverage.** Up to 10× ROI; preparation finds ~75% of defects; limit teams to ≤7; keep meetings ≤2 hours.
+- **Inspections pay off.** Up to 10× ROI; preparation finds ~75% of defects; limit teams to ≤7; keep meetings ≤2 hours.
 - **Tests debug requirements.** Writing conceptual tests from requirements reveals ambiguities, missing requirements, and unnecessary requirements before any code is written.
 - **Acceptance criteria ≠ "all tests passed."** They define business-ready conditions across functionality, quality, defects, compliance, and transition.
 - **Reuse is eternal but not free.** Requires quality artifacts, infrastructure (shared repository or RM tool), and cultural commitment. Reuse by reference > copy-and-paste. Sets of related requirements > isolated statements.

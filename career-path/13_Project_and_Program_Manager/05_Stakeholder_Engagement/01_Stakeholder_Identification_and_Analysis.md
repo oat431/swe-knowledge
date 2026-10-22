@@ -22,7 +22,7 @@ tags:
 
 A stakeholder omitted at initiation becomes a veto at delivery. The stakeholder the project manager never identified is the one who blocks the release, withdraws the funding, or refuses the handover, and does so with the righteous indignation of someone who was never consulted.
 
-Identification is not brainstorming names in a meeting. It is a structured sweep of the project's organizational, operational, contractual, and regulatory landscape, followed by analysis that answers the only questions that matter for engagement: what do they care about, how much power do they have, and how much attention do they need from us.
+Identification is not brainstorming names in a meeting. It is a structured sweep of the project's organizational, operational, contractual, and regulatory environment, followed by analysis that answers the only questions that matter for engagement: what do they care about, how much power do they have, and how much attention do they need from us.
 
 ## The Identification Sweep
 

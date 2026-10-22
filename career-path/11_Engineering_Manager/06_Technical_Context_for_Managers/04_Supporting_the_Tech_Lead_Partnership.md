@@ -22,7 +22,7 @@ tags:
 
 The tech lead and the engineering manager are the team's two hemispheres. The TL owns the system and its direction; the EM owns the people and the conditions they work in. A team with both roles in genuine partnership gets technical direction that is funded, staffed, and protected, and people management that is informed by what the work actually demands.
 
-When the partnership is weak, the team pays twice: either the TL and EM drift apart (technical decisions without people context, people decisions without technical reality) or they collide (two bosses, conflicting instructions, politics between the chairs). The partnership is not a relationship that happens; it is an operating model that must be built, maintained, and occasionally repaired, and the EM carries most of the responsibility for building it.
+When the partnership is weak, the team pays twice: either the TL and EM drift apart (technical decisions without people context, people decisions without technical reality) or they collide (two bosses, conflicting instructions, politics between the chairs). The partnership is an operating model that must be built, maintained, and occasionally repaired, and the EM carries most of the responsibility for building it.
 
 ## Complementary Mandates
 
@@ -34,7 +34,7 @@ When the partnership is weak, the team pays twice: either the TL and EM drift ap
 | Risk | Technical risk identification | Risk appetite and business translation |
 | Communication | Technical decisions upward | Team representation and context down |
 
-The boundary is not rigid; it is a shared understanding that gets re-negotiated as the team changes. What must be rigid is the public face: the team should never be able to play the two roles against each other.
+The boundary is a shared understanding that gets re-negotiated as the team changes. What must be rigid is the public face: the team should never be able to play the two roles against each other.
 
 ## The Operating Rhythm
 
@@ -71,7 +71,7 @@ The rule: disagreements are private; alignment is public.
 - Never let your skepticism of the TL become the team's sport
 - Credit the TL for technical wins the same way you credit the team for delivery wins
 
-Public backing is not surrender; it is the price of the TL's authority, and the TL's authority is the team's technical effectiveness.
+Public backing is the price of the TL's authority, and the TL's authority is the team's technical effectiveness.
 
 ## When TL and EM Disagree
 

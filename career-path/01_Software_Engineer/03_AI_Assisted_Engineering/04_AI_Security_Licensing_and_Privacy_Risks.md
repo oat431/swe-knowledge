@@ -19,7 +19,7 @@ tags:
 
 ## What Changes from Junior to Mid
 
-A junior engineer uses whichever tool is fastest and pastes whatever the task seems to need, including real credentials and real customer records. A mid-level engineer treats every AI tool as a data-processing third party and every generated change as code with unknown provenance: secrets and customer data never enter a tool, output is scanned for vulnerability patterns and license contamination, and the tool itself is chosen from what the organization approves. Risk discipline here is not paranoia; it is the same boundary discipline you already apply to dependencies and logs.
+A junior engineer uses whichever tool is fastest and pastes whatever the task seems to need, including real credentials and real customer records. A mid-level engineer treats every AI tool as a data-processing third party and every generated change as code with unknown provenance: secrets and customer data never enter a tool, output is scanned for vulnerability patterns and license contamination, and the tool itself is chosen from what the organization approves. Risk discipline here is the same boundary discipline you already apply to dependencies and logs.
 
 | Aspect | Junior | Mid |
 |--------|--------|-----|
@@ -84,7 +84,7 @@ flowchart LR
 
 **Choose tools by policy and data class, not by convenience.** Know which tools your organization approves and what data each is allowed to touch. When the task involves classified or proprietary material and no approved path exists, the correct move is to escalate or work without the tool, not to route around the policy. Tool choice is a security decision that happens before any prompt is written.
 
-**Review generated code for vulnerability patterns on every change.** Injection-prone string building, missing authorization checks, unsafe deserialization, and weak credential handling are the recurring classes; OWASP guidance on AI-generated code risks is a reliable map of the rest. Run your static analysis and secret scanners on AI-assisted changes like any others — more often, not less, because the volume of plausible code rises.
+**Review generated code for vulnerability patterns on every change.** Injection-prone string building, missing authorization checks, unsafe deserialization, and weak credential handling are the recurring classes; OWASP guidance on AI-generated code risks is a reliable map of the rest. Run your static analysis and secret scanners on AI-assisted changes like any others; more often, not less, because the volume of plausible code rises.
 
 **Check license provenance before accepting recognizable code.** When output resembles a known library or a verbatim example, determine where it came from and under what terms before it enters your tree. If provenance is unclear, rewrite the logic yourself rather than gamble on attribution. A license problem discovered after release is far more expensive than ten minutes of checking now.
 
@@ -103,7 +103,7 @@ Run a security and provenance pass on a real AI-assisted change:
 3. Confirm the tool you are using is on your approved list for that data class; if not, stop and pick an approved path.
 4. Review the output specifically for the vulnerability table: injection, authz, credentials, deserialization, bounds; note each hit with the line it occurs on.
 5. Scan for license provenance: identify any block resembling third-party code, and either establish its terms or rewrite it yourself.
-6. Run your scanners — secret scanning, static analysis, dependency checks — and record what they found that your reading missed.
+6. Run your scanners (secret scanning, static analysis, dependency checks) and record what they found that your reading missed.
 7. Write the incident drill as if one redacted secret had slipped through: rotation steps, who to notify, and the one process change that prevents recurrence.
 
 ## Practical Applications

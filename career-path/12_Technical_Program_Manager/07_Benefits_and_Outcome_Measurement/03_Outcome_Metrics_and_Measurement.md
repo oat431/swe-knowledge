@@ -22,7 +22,7 @@ tags:
 
 An outcome without a metric is an aspiration. "Reduce operating costs" is not an outcome; it is a direction. "Reduce operating costs by 30 percent, from a baseline of $0.12 per transaction to $0.08 per transaction, measured monthly via the cloud billing dashboard" is an outcome. The difference is the metric, the baseline, the target, and the measurement method, and without all four, the program cannot know whether it succeeded.
 
-The TPM's measurement discipline is not data science; it is operational definition. For every outcome in the benefits map, the TPM defines what will be measured, how it will be measured, what the starting point is, what the success threshold is, and when the measurement will be taken. Programs that define these five things before delivery begins can answer "is it working?" at any point. Programs that do not can only answer "is it done?"
+The TPM's measurement discipline is operational definition. For every outcome in the benefits map, the TPM defines what will be measured, how it will be measured, what the starting point is, what the success threshold is, and when the measurement will be taken. Programs that define these five things before delivery begins can answer "is it working?" at any point. Programs that do not can only answer "is it done?"
 
 ## The Metric Definition: Five Required Fields
 

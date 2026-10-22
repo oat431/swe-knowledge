@@ -12,7 +12,7 @@ source: "Engineering Fundamentals Ch 11"
 
 ## Temperature as a Fundamental Dimension
 
-Temperature is one of seven fundamental (base) dimensions in engineering — along with length, mass, time, electric current, amount of substance, and luminous intensity. It quantifies the level of molecular activity and internal energy of an object.
+Temperature is one of seven fundamental (base) dimensions in engineering, along with length, mass, time, electric current, amount of substance, and luminous intensity. It quantifies the level of molecular activity and internal energy of an object.
 
 > **Key Insight:** Temperature represents, by a single macroscopic number, the level of microscopic molecular movement in a region. Molecules at higher temperature move, rotate, and bounce faster than those at lower temperature.
 
@@ -162,7 +162,7 @@ Heat **always flows** from a high-temperature region to a low-temperature region
 
 ### 1. Conduction
 
-Heat transfer through a medium due to a temperature gradient — energy is transported from more-energetic molecules to less-energetic neighbors.
+Heat transfer through a medium due to a temperature gradient: energy is transported from more-energetic molecules to less-energetic neighbors.
 
 **Fourier's Law:**
 
@@ -244,7 +244,7 @@ Key relationships:
 
 ### 3. Radiation
 
-(Referenced in the chapter as the third mode; heat transfer via electromagnetic waves — no medium required.)
+(Referenced in the chapter as the third mode; heat transfer via electromagnetic waves, no medium required.)
 
 ---
 
@@ -256,7 +256,7 @@ Rearranging Fourier's law:
 
 $$q = \frac{T_1 - T_2}{L/(kA)} = \frac{\text{temperature difference}}{\text{thermal resistance}}$$
 
-**Thermal resistance:** R' = L/(kA) — units: °C/W or K/W
+**Thermal resistance:** R' = L/(kA); units: °C/W or K/W
 
 **Analogy to Ohm's Law:**
 
@@ -365,7 +365,7 @@ The rate at which the human body generates heat. Important in HVAC design for si
 
 ## Related
 
-- [[Engineering Foundation Overview]] — All engineering foundation topics
-- [[01 Physics and Math/06_Energy_and_Power|06_Energy_and_Power]] — Energy and thermodynamics
-- [[01 Physics and Math/08_Engineering_Materials|08_Engineering_Materials]] — Thermal properties of materials
-- [[01 Physics and Math/01_Dimensions_and_Measurement|01_Dimensions_and_Measurement]] — Fundamental dimensions
+- [[Engineering Foundation Overview]]: All engineering foundation topics
+- [[01 Physics and Math/06_Energy_and_Power|06_Energy_and_Power]]: Energy and thermodynamics
+- [[01 Physics and Math/08_Engineering_Materials|08_Engineering_Materials]]: Thermal properties of materials
+- [[01 Physics and Math/01_Dimensions_and_Measurement|01_Dimensions_and_Measurement]]: Fundamental dimensions

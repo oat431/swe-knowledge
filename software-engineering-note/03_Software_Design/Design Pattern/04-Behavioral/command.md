@@ -21,7 +21,7 @@ Imagine building a text editor with a toolbar full of buttons, Copy, Cut, Paste,
 This approach implodes under three problems:
 
 1. **Subclass explosion.** Every new action demands a new `Button` subclass. Modify the base `Button` class and you risk breaking every subclass, the GUI layer becomes awkwardly dependent on volatile business logic.
-2. **Same action, multiple triggers.** Copying text isn't just a toolbar button; it's also a context-menu item, a keyboard shortcut (`Ctrl+C`), and maybe a voice command. Without Command, the code for "copy text" gets duplicated across every trigger class, or worse, menus become dependent on buttons.
+2. **Same action, multiple triggers.** Copying text can come from a toolbar button, a context-menu item, a keyboard shortcut (`Ctrl+C`), and maybe a voice command. Without Command, the code for "copy text" gets duplicated across every trigger class, or worse, menus become dependent on buttons.
 3. **No undo.** A flat subclass-per-button design provides no natural place to track what was done, in what order, or how to reverse it.
 
 ## Solution

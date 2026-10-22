@@ -16,7 +16,7 @@ tags:
 
 # Influence Without Authority
 
-> **Core skill:** Senior engineers lead through expertise and trust, not title and authority. They guide decisions and shape outcomes by building credibility and leveraging relationships.
+> **Core skill:** Senior engineers lead through expertise and trust, not title and authority. They guide decisions and shape outcomes by building credibility and relationships.
 
 ## Why This Matters
 

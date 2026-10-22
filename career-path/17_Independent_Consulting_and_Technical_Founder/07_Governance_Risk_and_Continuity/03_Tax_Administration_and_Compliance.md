@@ -20,7 +20,7 @@ tags:
 
 ## Why This Matters
 
-Tax is the one obligation that does not forgive inexperience. Deadlines are fixed, penalties accrue automatically, and the rules differ by jurisdiction in ways no general guide can settle. For independents, the real danger is rarely complexity. It is avoidance. The paperwork gets deferred until it becomes a pile, the pile becomes a penalty, and the penalty becomes a very bad month that could have been avoided with a weekly habit. Tax is not a project to finish; it is a rhythm to keep.
+Tax is the one obligation that does not forgive inexperience. Deadlines are fixed, penalties accrue automatically, and the rules differ by jurisdiction in ways no general guide can settle. For independents, the real danger is rarely complexity. It is avoidance. The paperwork gets deferred until it becomes a pile, the pile becomes a penalty, and the penalty becomes a very bad month that could have been avoided with a weekly habit. Tax is a rhythm to keep.
 
 The defense is that rhythm, not heroics. Register for what applies, invoice in the required form, move a portion of every payment into a tax reserve the day it arrives, file on the calendar, and keep records that would satisfy a review. Each element is small. Together they mean the independent never experiences a tax crisis, never scrambles for receipts at deadline, and always knows approximately what is owed. The specifics of what applies (income tax, consumption or value added style taxes, withholding, social contributions) depend entirely on the jurisdiction and the structure, so the applicable set must be confirmed with a local accountant, especially when a new market such as Thailand is involved.
 

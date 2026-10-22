@@ -24,7 +24,7 @@ Enterprises are usually described in layers because change propagates through th
 
 The four domains (business, data, application, technology) are the standard scaffold because each answers a different question for a different audience. Business architecture answers what the organization does and how value flows. Data architecture answers what the organization knows and how it moves. Application architecture answers what systems do the work. Technology architecture answers what platforms everything runs on.
 
-The senior architect's discipline is bidirectional reasoning. Downward, every business change is traced to its data, application, and technology implications before it is funded. Upward, every technology and platform shift is asked what new business options it creates or forecloses. Domains are not silos to be owned; they are lenses that must agree with each other.
+The senior architect's discipline is bidirectional reasoning. Downward, every business change is traced to its data, application, and technology implications before it is funded. Upward, every technology and platform shift is asked what new business options it creates or forecloses. Domains are lenses that must agree with each other.
 
 ## The Four Domains
 

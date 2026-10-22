@@ -21,7 +21,7 @@ tags:
 
 Mentoring changes clientele at staff level. Juniors need craft; seniors need the three gaps that separate them from staff: scope (team-sized to org-sized problems), influence (leading without authority), and judgment (deciding under ambiguity). Teaching craft to a senior is noise; sponsoring an org-scale arc is signal.
 
-The multiplication logic is direct: every senior you grow into staff-level judgment is a second person who can see the whole. The org's ceiling is not its staff headcount; it is the pipeline of seniors being deliberately grown toward it. Mentoring seniors is also how your own scope expands: you cannot sponsor what you cannot see, and the sponsorship forces you to keep seeing more.
+The multiplication logic is direct: every senior you grow into staff-level judgment is a second person who can see the whole. The org's ceiling is the pipeline of seniors being deliberately grown toward it. Mentoring seniors is also how your own scope expands: you cannot sponsor what you cannot see, and the sponsorship forces you to keep seeing more.
 
 ## The Senior-to-Staff Gap
 
@@ -32,7 +32,7 @@ The multiplication logic is direct: every senior you grow into staff-level judgm
 | **Judgment** | Decides with context | Decides under ambiguity | Framing, trade-offs, second-order thinking |
 | **Visibility** | Known for delivery | Known for leverage | Writing, reviews, decision ownership |
 
-The gap is not skill; it is altitude. A senior who can already do staff work at team scale needs practice at org scale, and that practice is what the mentoring relationship exists to arrange.
+The gap is altitude. A senior who can already do staff work at team scale needs practice at org scale, and that practice is what the mentoring relationship exists to arrange.
 
 ## Mentoring Contracts
 

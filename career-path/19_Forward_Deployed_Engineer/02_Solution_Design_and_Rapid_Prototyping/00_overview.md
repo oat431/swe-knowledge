@@ -21,7 +21,7 @@ In forward deployment, the first artifact is rarely a specification. It is a wor
 
 But speed creates a dangerous illusion. Prototypes built in a demo-grade environment hide the work that production demands: error handling, data quality, permissions, scale, and operations. The FDE must hold two modes in mind at once: "what can I show this week" and "what would it actually take to run this for real". Confusing the two is how deployments die in the gap between a successful pilot and an unshipped production system.
 
-Designing under constraints is also the daily condition. The customer does not control their vendors, cannot upgrade their database, will not get budget for infrastructure, and cannot move data across a border. The best design in these environments is not the theoretically elegant one; it is the one that respects constraints while still reaching the outcome, and that can be explained to both engineers and executives in the same breath.
+Designing under constraints is also the daily condition. The customer does not control their vendors, cannot upgrade their database, will not get budget for infrastructure, and cannot move data across a border. The best design in these environments is the one that respects constraints while still reaching the outcome, and that can be explained to both engineers and executives in the same breath.
 
 ## Topics in This Capability Area
 
@@ -87,4 +87,4 @@ Run both tracks consciously. A prototype that cannot become production is a demo
 
 ## Summary
 
-Solution design and rapid prototyping is how the FDE converts understanding into alignment: fast, demo-driven design under the customer's real constraints, conscious iteration with field users, honest feasibility judgment, and a disciplined hardening path from pilot to production. The skill is not building fast; it is building fast without lying to yourself, or the customer, about what still stands between the demo and production.
+Solution design and rapid prototyping is how the FDE converts understanding into alignment: fast, demo-driven design under the customer's real constraints, conscious iteration with field users, honest feasibility judgment, and a disciplined hardening path from pilot to production. The skill is building fast without lying to yourself, or the customer, about what still stands between the demo and production.

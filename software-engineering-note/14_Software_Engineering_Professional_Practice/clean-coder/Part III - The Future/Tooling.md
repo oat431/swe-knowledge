@@ -39,7 +39,7 @@ Today's tooling is dramatically better, but the principles endure.
 - **CVS:** good for its day, but weak on file renames, directory deletion, and the dreaded "attic."
 - **Subversion (SVN):** whole-system checkout, simple update/merge/commit. Works well as long as you avoid heavy branching.
 - **Uncle Bob's SVN-era branching rule:** if you create a branch, merge it back before the end of the iteration. Branching was rare.
-- **Git** (late 2008 onward): a complete game changer. Distributed, no central repository, no true "main line." Every developer keeps the entire project history locally. Short-lived branches and merges become the natural workflow. "git, and tools like it, are what the future of source code control looks like."
+- **Git** (late 2008 onward): a major shift. Distributed, no central repository, no true "main line." Every developer keeps the entire project history locally. Short-lived branches and merges become the natural workflow. "git, and tools like it, are what the future of source code control looks like."
 
 ---
 

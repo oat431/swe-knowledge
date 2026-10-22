@@ -99,7 +99,7 @@ flowchart LR
 A well-written RFC or design document can influence hundreds of engineers and shape decisions for years. Writing scales your impact far beyond what you can achieve through meetings alone.
 
 ### 2. Influence is built on trust
-Senior engineers influence through expertise, consistency, and reliability. They build credibility by delivering high-quality work, then leverage that trust to guide decisions.
+Senior engineers influence through expertise, consistency, and reliability. They build credibility by delivering high-quality work, then use that trust to guide decisions.
 
 ### 3. Facilitation is not dictation
 Effective facilitators guide discussions to better outcomes without imposing their own solutions. They ask the right questions, ensure all voices are heard, and help the group reach alignment.

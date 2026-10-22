@@ -20,7 +20,7 @@ tags:
 
 ## Why This Matters
 
-A principal who mentors ten engineers directly has helped ten engineers. A principal who develops ten mentors (each of whom mentors ten engineers) has helped a hundred. The shift from mentoring individuals to mentoring mentors is the difference between personal impact and organizational leverage. At the principal level, mentoring is not a relationship; it is a system.
+A principal who mentors ten engineers directly has helped ten engineers. A principal who develops ten mentors (each of whom mentors ten engineers) has helped a hundred. The shift from mentoring individuals to mentoring mentors is the difference between personal impact and organizational leverage. At the principal level, mentoring becomes a system.
 
 The mentor-of-mentors role is also the principal's succession strategy. When staff engineers and technical leads can develop their own people effectively, the principal's departure does not create a mentoring vacuum. The principal's legacy is not the engineers they personally developed. It is the mentoring capability they embedded in the organization's leadership layer.
 
@@ -161,4 +161,4 @@ flowchart TD
 
 ## Summary
 
-Mentoring technical leaders is the principal's shift from individual development to system design: operating as a mentor of mentors who develops staff engineers and tech leads into effective developers of others, designing cohort-based programs that scale mentoring beyond one-on-one relationships, modeling and teaching the meta-skills of diagnosis, question craft, feedback, scope calibration, sponsorship, and letting go, and measuring mentoring impact through mentee progression, mentoring density, and the multiplier effect, not satisfaction surveys. The principal's mentoring legacy is not the engineers they directly developed; it is the mentoring capability that persists in the organization's leadership layer after the principal leaves.
+Mentoring technical leaders is the principal's shift from individual development to system design: operating as a mentor of mentors who develops staff engineers and tech leads into effective developers of others, designing cohort-based programs that scale mentoring beyond one-on-one relationships, modeling and teaching the meta-skills of diagnosis, question craft, feedback, scope calibration, sponsorship, and letting go, and measuring mentoring impact through mentee progression, mentoring density, and the multiplier effect, not satisfaction surveys. The principal's mentoring legacy is the mentoring capability that persists in the organization's leadership layer after the principal leaves.

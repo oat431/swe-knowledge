@@ -19,7 +19,7 @@ tags:
 
 ## What Changes from Junior to Mid
 
-A junior engineer accumulates breadth by necessity: every task is new. A mid-level engineer faces the opposite pressure — the temptation to drop everything except the one thing they are good at. Staying T-shaped is the discipline of doing both on purpose: a broad working competence across the shared capabilities of software engineering, and one depth bar deep enough to be trusted with hard problems. This note is about keeping the breadth alive while the depth compounds.
+A junior engineer accumulates breadth by necessity: every task is new. A mid-level engineer faces the opposite pressure: the temptation to drop everything except the one thing they are good at. Staying T-shaped is the discipline of doing both on purpose: a broad working competence across the shared capabilities of software engineering, and one depth bar deep enough to be trusted with hard problems. This note is about keeping the breadth alive while the depth compounds.
 
 | Aspect | Junior | Mid |
 |--------|--------|-----|
@@ -77,13 +77,13 @@ flowchart LR
 
 **Depth is chosen from evidence, not from fashion.** The depth bar should come from what your fit tests showed: the work you return to, the problems you finish, the feedback that says you see things others miss. Picking a depth for market heat alone produces a bar you will not be willing to grind when the work gets unglamorous. Use the leaning notes in this area as the input; the depth decision is their output.
 
-**Depth compounds only through deliberate repetition.** A deep bar is built by doing the hard version of the work repeatedly: the ambiguous design, the nasty production bug, the evaluation nobody wants to build. Comfortable repetition of easy work builds tenure, not depth. Seek the version of the task that is just beyond your current reach and leave artifacts — write-ups, tools, talks — that prove the work happened.
+**Depth compounds only through deliberate repetition.** A deep bar is built by doing the hard version of the work repeatedly: the ambiguous design, the nasty production bug, the evaluation nobody wants to build. Comfortable repetition of easy work builds tenure, not depth. Seek the version of the task that is just beyond your current reach and leave artifacts (write-ups, tools, talks) that prove the work happened.
 
 **Breadth has to be scheduled or it dies.** When deadlines press, breadth is the first thing dropped and the last thing noticed missing. Assign a cadence: one pairing session per month, one adjacent-team document per week, one rotation per year. The cost is real and worth it, because a breadth habit is what keeps you employable when the domain shifts.
 
 **Widen when your narrowness blocks the work; deepen when it no longer does.** The tests are practical: can you follow an adjacent team's design review, can you debug across a boundary you did not build, can you explain the system beyond your slice? If the answer is no and it costs you, widen. If every interesting problem still demands more depth than you have, deepen.
 
-**The T is allowed to move.** Career checkpoints — promotion, role change, a new company, a yearly review — are the natural moments to re-measure your shape. A depth bar that served you at mid-level may not be the one the next five years need, and switching depth mid-career is normal when the evidence says so. What is expensive is switching every year; what is fatal is never measuring.
+**The T is allowed to move.** Career checkpoints (promotion, role change, a new company, a yearly review) are the natural moments to re-measure your shape. A depth bar that served you at mid-level may not be the one the next five years need, and switching depth mid-career is normal when the evidence says so. What is expensive is switching every year; what is fatal is never measuring.
 
 **Teaching is how the two halves integrate.** When you teach your specialty to generalists or your broad base to newcomers, you find the gaps in both. Engineers who teach regularly maintain breadth almost for free and sharpen the join between their bars. If you cannot explain your specialty to a mid-level engineer in an hour, that is the next learning target.
 
@@ -95,9 +95,9 @@ Measure and shape your T over one quarter:
 2. Choose your depth bar from evidence: cite the fit tests and past work that show you return to this area and improve at it.
 3. Write a deliberate practice plan for the bar: three hard tasks, at the edge of your ability, each leaving an artifact.
 4. Schedule one breadth habit with a real cadence: pairing, reading adjacent designs, or a rotation; put it on the calendar.
-5. Take one whole-system slice end to end — design through monitoring — and note every boundary where your knowledge thinned.
+5. Take one whole-system slice end to end (design through monitoring), and note every boundary where your knowledge thinned.
 6. Teach one concept from your specialty to a generalist audience and collect where the explanations broke.
-7. Review the quarter at a checkpoint: widen, deepen, or shift the bar — and record the rule you will use next time.
+7. Review the quarter at a checkpoint: widen, deepen, or shift the bar, and record the rule you will use next time.
 
 ## Practical Applications
 

@@ -28,10 +28,10 @@ where *a* is the slope (Δy/Δx) and *b* is the y-intercept.
 
 **Examples of linear models in engineering:**
 
-- **Hooke's Law (Spring):** F = kx — spring force is directly proportional to deformation. The slope *k* is the spring constant (N/mm or lb/in).
-- **Temperature Distribution Across a Plane Wall:** T(x) = T₂ + [(T₁ - T₂)/L] × x — temperature varies linearly through the wall thickness.
-- **Temperature Scale Conversion:** T(°F) = (9/5)T(°C) + 32 — the relationship between Fahrenheit and Celsius scales.
-- **Electrical Resistance:** R = ρl/A — for constant resistivity and cross-section, resistance is linear with length.
+- **Hooke's Law (Spring):** F = kx; spring force is directly proportional to deformation. The slope *k* is the spring constant (N/mm or lb/in).
+- **Temperature Distribution Across a Plane Wall:** T(x) = T₂ + [(T₁ - T₂)/L] × x; temperature varies linearly through the wall thickness.
+- **Temperature Scale Conversion:** T(°F) = (9/5)T(°C) + 32; the relationship between Fahrenheit and Celsius scales.
+- **Electrical Resistance:** R = ρl/A; for constant resistivity and cross-section, resistance is linear with length.
 
 **Key characteristics of linear models:**
 - The slope is always constant
@@ -44,13 +44,13 @@ where *a* is the slope (Δy/Δx) and *b* is the y-intercept.
 
 ### 1.3 Nonlinear Models
 
-Nonlinear models predict actual engineering relationships more accurately than linear models. They have variable slopes — the change in the dependent variable depends on where in the range the change is introduced.
+Nonlinear models predict actual engineering relationships more accurately than linear models. They have variable slopes: the change in the dependent variable depends on where in the range the change is introduced.
 
 **Examples:**
 
-- **Laminar Fluid Velocity in a Pipe:** u(r) = V_c[1 - (r/R)²] — a second-order polynomial (parabolic velocity profile)
-- **Stopping Sight Distance (AASHTO):** S = V²/[2g(f ± G)] + TV — a second-order polynomial model used by civil engineers for roadway design
-- **Beam Deflection:** y = (-wx²/24EI)(x² - 4Lx + 6L²) — a fourth-order polynomial for cantilever beam deflection
+- **Laminar Fluid Velocity in a Pipe:** u(r) = V_c[1 - (r/R)²], a second-order polynomial (parabolic velocity profile)
+- **Stopping Sight Distance (AASHTO):** S = V²/[2g(f ± G)] + TV, a second-order polynomial model used by civil engineers for roadway design
+- **Beam Deflection:** y = (-wx²/24EI)(x² - 4Lx + 6L²), a fourth-order polynomial for cantilever beam deflection
 
 **General polynomial function:**
 $$y = f(x) = a_0 + a_1x + a_2x^2 + a_3x^3 + \cdots + a_nx^n$$
@@ -74,11 +74,11 @@ $$y = f(x) = a_0 + a_1x + a_2x^2 + a_3x^3 + \cdots + a_nx^n$$
 **Key characteristic:** The value of the dependent variable begins to level off as the independent variable increases.
 
 **Applications:**
-- **Cooling of Steel Plates (Annealing):** (T - T_env)/(T_initial - T_env) = exp[-2h/(ρcL)]t — models exponential temperature decay
+- **Cooling of Steel Plates (Annealing):** (T - T_env)/(T_initial - T_env) = exp[-2h/(ρcL)]t, models exponential temperature decay
 - **Probability distributions:** f(x) = e^(-x²) produces a bell-shaped curve
 
-**Growth form:** f(x) = f₀ + a₀·e^(a₁·x) — exponential growth
-**Decay form:** f(x) = f₀ - a₀·e^(-a₁·x) — exponential decay (levels off toward f₀)
+**Growth form:** f(x) = f₀ + a₀·e^(a₁·x), exponential growth
+**Decay form:** f(x) = f₀ - a₀·e^(-a₁·x), exponential decay (levels off toward f₀)
 
 **Logarithmic functions** are the inverse of exponential functions:
 - If 10^x = y, then log y = x (common logarithm, base 10)
@@ -119,7 +119,7 @@ Calculus is divided into two areas: differential and integral calculus.
 
 #### Differential Calculus
 
-Deals with the rate of change — how a variable changes with respect to another.
+Deals with the rate of change: how a variable changes with respect to another.
 
 **Definition of derivative:**
 $$f'(x) = \frac{df}{dx} = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}$$
@@ -144,8 +144,8 @@ $$f'(x) = \frac{df}{dx} = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}$$
 Related to summation or addition of things. The integral sign ∫ is a big "S" for summation.
 
 **Applications:**
-- **Second Moment of Area (Area Moment of Inertia):** I_y-y = ∫x²dA — measures resistance to bending. For a rectangle: I = wh³/12
-- **Hydrostatic Force on a Dam:** Net Force = ∫dF = ∫ρgy·dA = ½ρgwH² — integrating pressure over area to find total force
+- **Second Moment of Area (Area Moment of Inertia):** I_y-y = ∫x²dA; measures resistance to bending. For a rectangle: I = wh³/12
+- **Hydrostatic Force on a Dam:** Net Force = ∫dF = ∫ρgy·dA = ½ρgwH²; integrating pressure over area to find total force
 
 **Basic integral rules:**
 
@@ -372,7 +372,7 @@ When the frequency of uniform series differs from the compounding frequency, cal
 
 ## Related
 
-- [[Engineering Foundation Overview]] — All engineering foundation topics
-- [[01 Physics and Math/01_Dimensions_and_Measurement|01_Dimensions_and_Measurement]] — Units and dimensional analysis
-- [[01 Physics and Math/03_Force_and_Mechanics|03_Force_and_Mechanics]] — Applied mechanics calculations
-- [[01 Physics and Math/06_Energy_and_Power|06_Energy_and_Power]] — Energy calculations
+- [[Engineering Foundation Overview]]: All engineering foundation topics
+- [[01 Physics and Math/01_Dimensions_and_Measurement|01_Dimensions_and_Measurement]]: Units and dimensional analysis
+- [[01 Physics and Math/03_Force_and_Mechanics|03_Force_and_Mechanics]]: Applied mechanics calculations
+- [[01 Physics and Math/06_Energy_and_Power|06_Energy_and_Power]]: Energy calculations

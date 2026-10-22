@@ -78,13 +78,13 @@ flowchart LR
 
 **Ask "is it my change?" as a timed question, not a guilty feeling.** Find the exact minute the metric deviated, then pull the deploy and config-change log for the window around it. If your release sits inside the window, say so plainly in the channel and check the error logs for your service's signature; if it does not, you have cleared yourself with evidence instead of anxiety.
 
-**Filter logs along one dimension at a time.** Start with time range and severity, then add service, then correlation ID — each filter should remove noise while keeping the event you are hunting. Dumping an unfiltered stream into a search box or filtering five fields at once both hide the signal. When you find one bad request, take its correlation ID and follow it end to end.
+**Filter logs along one dimension at a time.** Start with time range and severity, then add service, then correlation ID; each filter should remove noise while keeping the event you are hunting. Dumping an unfiltered stream into a search box or filtering five fields at once both hide the signal. When you find one bad request, take its correlation ID and follow it end to end.
 
 **Read the shape of the graph, not just the number.** A flat line where there was noise is as suspicious as a spike: it can mean the reporter stopped, not that the system got calm. Look for change points, missing traffic, step functions after deploys, and gradual slopes that signal slow leaks. The shape usually tells you the failure class before any log does.
 
-**Cross-check before you believe a single signal.** Metrics can be wrong because instrumentation broke; logs can be sampled; a dashboard can be pointing at the wrong environment. Confirm a suspicion with a second, independent signal — errors against latency, one instance against the fleet, logs against traces. One signal is a hypothesis; two agreeing signals are a finding.
+**Cross-check before you believe a single signal.** Metrics can be wrong because instrumentation broke; logs can be sampled; a dashboard can be pointing at the wrong environment. Confirm a suspicion with a second, independent signal: errors against latency, one instance against the fleet, logs against traces. One signal is a hypothesis; two agreeing signals are a finding.
 
-**Know when to stop looking and escalate.** If after a bounded effort — say, twenty focused minutes — you have established the timeline but cannot localize the cause, escalate with your findings: what changed, when, what you checked, what you ruled out. Escalating with a clean summary is useful; escalating with "something is broken" is not. The escalation is a handoff of context, not a handoff of the problem.
+**Know when to stop looking and escalate.** If after a bounded effort (say, twenty focused minutes), you have established the timeline but cannot localize the cause, escalate with your findings: what changed, when, what you checked, what you ruled out. Escalating with a clean summary is useful; escalating with "something is broken" is not. The escalation is a handoff of context, not a handoff of the problem.
 
 **Write down the query that found the answer.** The log filter or metric query that cracked the question is a team asset: paste it into the incident channel, the ticket, or the runbook. Telemetry skill compounds only when the queries survive past the person who wrote them.
 
@@ -93,12 +93,12 @@ flowchart LR
 Practice a full telemetry investigation on a real or simulated problem:
 
 1. Pick a service dashboard and widen the time range to seven days; write three sentences describing what normal looks like, including peak hours and the noise band.
-2. Choose one recent anomaly — a spike, a dip, or a deploy window — and pin its change time to the minute using the graph.
+2. Choose one recent anomaly (a spike, a dip, or a deploy window) and pin its change time to the minute using the graph.
 3. Pull the deploy or config-change log for the window fifteen minutes either side of that time and list what shipped.
 4. Open the log system and build a filter step by step: time range, then severity, then service; record each filter and what it removed.
 5. Find one failing request, take its correlation ID, and follow it through the logs across every service it touched; write the request's story in order.
 6. Answer "is it my change?" in one sentence with evidence, and state one second signal you used to cross-check it.
-7. Write a short findings summary — timeline, evidence, ruled-out causes, open questions — as if you were escalating to a senior engineer.
+7. Write a short findings summary (timeline, evidence, ruled-out causes, open questions) as if you were escalating to a senior engineer.
 
 ## Practical Applications
 

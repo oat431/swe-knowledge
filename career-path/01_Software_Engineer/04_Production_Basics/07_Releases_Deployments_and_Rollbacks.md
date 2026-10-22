@@ -19,7 +19,7 @@ tags:
 
 ## What Changes from Junior to Mid
 
-A junior engineer treats the deploy button as the finish line and hopes the next hours go well. A mid-level engineer designs the release before shipping: what verifies success, what proves rollback works, how far the change spreads on the way to everyone, and what happens in the watch window. Deploying is an event; releasing is a controlled experiment with an undo button — and the rollback decision is made before the release, not during the panic.
+A junior engineer treats the deploy button as the finish line and hopes the next hours go well. A mid-level engineer designs the release before shipping: what verifies success, what proves rollback works, how far the change spreads on the way to everyone, and what happens in the watch window. Deploying is an event; releasing is a controlled experiment with an undo button, and the rollback decision is made before the release, not during the panic.
 
 | Aspect | Junior | Mid |
 |--------|--------|-----|
@@ -81,7 +81,7 @@ flowchart LR
 
 **Make verification specific and timed.** "Check that it works" is not a verification step; "error rate on checkout stays below baseline and p95 latency does not regress, checked at 5 and 15 minutes after each rollout step" is. Name the signal, the threshold, and the time, and assign the watching. Verification that lives in someone's head gets skipped when the release window gets busy.
 
-**Size the rollout to the blast radius.** The bigger the audience that feels a failure, the smaller the first exposure should be. A change to a shared serializer earns a tiny canary and a long watch; a change to one internal tool might justify a faster path. When unsure, choose the smaller step — the cost of patience is minutes, the cost of overexposure is the outage.
+**Size the rollout to the blast radius.** The bigger the audience that feels a failure, the smaller the first exposure should be. A change to a shared serializer earns a tiny canary and a long watch; a change to one internal tool might justify a faster path. When unsure, choose the smaller step: the cost of patience is minutes, the cost of overexposure is the outage.
 
 **Watch the window like it is part of the deploy.** The release is not done when the pipeline goes green; it is done when production evidence has stayed good through the watch window. Keep the dashboards open, resist the pull of the next task, and have the rollback command ready to run. The window is where your plan meets reality, and reality speaks in metrics.
 
@@ -89,16 +89,16 @@ flowchart LR
 
 **Write rollback triggers as numbers, not feelings.** "If it looks bad" cannot be acted on under stress; "if checkout error rate exceeds 2% for five minutes, or p95 latency regresses 30% over baseline, roll back" can. Pre-committed triggers remove the debate that happens when people are tired and hopeful. Define them before the release and honor them during it.
 
-**Communicate the release like a change to users' world.** Release notes should say what changed for users, what to watch, and what to do if something looks wrong — written for whoever is on call and whoever is curious. Announce the window, announce completion, announce any rollback without spin. Silent ships turn every later surprise into a guessing game.
+**Communicate the release like a change to users' world.** Release notes should say what changed for users, what to watch, and what to do if something looks wrong, written for whoever is on call and whoever is curious. Announce the window, announce completion, announce any rollback without spin. Silent ships turn every later surprise into a guessing game.
 
 ## Practical Exercise
 
 Plan and execute a real or rehearsal release with the full discipline:
 
-1. Take a change — real, or a hypothetical "new validation on the checkout endpoint" — and write its user-facing intent in one sentence.
+1. Take a change (real, or a hypothetical "new validation on the checkout endpoint") and write its user-facing intent in one sentence.
 2. Map the blast radius: which endpoints, tenants, and downstream flows feel it if the change is wrong.
 3. Write the verification steps as named signals with thresholds and check times, for each rollout step.
-4. Choose the rollout shape — canary, gradual, or full — and justify it from the blast radius in one sentence.
+4. Choose the rollout shape (canary, gradual, or full) and justify it from the blast radius in one sentence.
 5. Write the rollback plan: exact command or action, who executes it, how many minutes it takes; confirm it is tested or testable.
 6. Write numeric rollback triggers and pre-commit to honoring them; put them in the release checklist before deploying.
 7. Execute the rollout step by step with the watch window staffed; record what each verification showed, and publish release notes including any holds or rollbacks.

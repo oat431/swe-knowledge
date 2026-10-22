@@ -20,7 +20,7 @@ tags:
 
 ## Why This Matters
 
-The plan is a guess about a workflow, and the field is where guesses get corrected. Feedback loops are the mechanism by which a deployment stays honest: small increments reach real users quickly, their behavior, not their politeness, is studied, and the next increment answers what the last one revealed. In an environment where requirements shift with every reorganization and regulation, an iteration cadence is not a methodology preference; it is the only way the solution remains aimed at the actual problem.
+The plan is a guess about a workflow, and the field is where guesses get corrected. Feedback loops are the mechanism by which a deployment stays honest: small increments reach real users quickly, their behavior, not their politeness, is studied, and the next increment answers what the last one revealed. In an environment where requirements shift with every reorganization and regulation, an iteration cadence is the only way the solution remains aimed at the actual problem.
 
 Field feedback is also where adoption is won or lost. Users who watch a tool take shape around their real work become its advocates; users who receive a finished system built from meeting notes become its audience, and audiences defect quietly. The FDE who routes each iteration through the people doing the work is compounding trust with every cycle, and trust is the currency that buys the benefit of the doubt when something misbehaves in production.
 

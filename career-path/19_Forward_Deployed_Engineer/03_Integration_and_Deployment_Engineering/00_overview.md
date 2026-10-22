@@ -21,7 +21,7 @@ This is the capability that separates forward deployed engineering from every ad
 
 Integration is where demos become systems. Real data is dirtier, real interfaces are undocumented, and real constraints (network zones, licensing, approval chains) decide the design more than engineering taste does. The FDE learns to read an enterprise landscape the way an engineer reads a codebase: find the systems of record, the boundaries, the brittle joints, and the places where a small change is safe.
 
-Deployment and handover are equally first-class. A system that only the FDE can run is not a deployment; it is a dependency. The craft includes release and change management inside the customer's processes, field debugging when something breaks at 9 a.m. on their busiest day, runbooks and operational handover, and the judgment to know what to automate and what to leave human.
+Deployment and handover are equally first-class. A system that only the FDE can run is a dependency. The craft includes release and change management inside the customer's processes, field debugging when something breaks at 9 a.m. on their busiest day, runbooks and operational handover, and the judgment to know what to automate and what to leave human.
 
 ## Topics in This Capability Area
 

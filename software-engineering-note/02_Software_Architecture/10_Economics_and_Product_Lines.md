@@ -280,7 +280,7 @@ Variability is a special form of modifiability, the ability of a core asset to a
 
 **Tactical role:** The architecture discriminates between what's constant and what varies across family members. All architectures are abstractions that admit multiple instances; product line architectures make this explicit with built-in variation points.
 
-**Strategic role:** The core asset base (crowned by the architecture) serves as a springboard into new markets. Example: Cummins used its automotive diesel engine product line to rapidly dominate the neighboring industrial diesel engine market.
+**Strategic role:** The core asset base (crowned by the architecture) is a springboard into new markets. Example: Cummins used its automotive diesel engine product line to rapidly dominate the neighboring industrial diesel engine market.
 
 **Three unique product line architect concerns:**
 1. Identifying variation points (from scope definition and requirements)

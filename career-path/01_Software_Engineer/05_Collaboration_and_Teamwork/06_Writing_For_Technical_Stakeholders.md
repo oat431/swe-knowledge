@@ -19,7 +19,7 @@ tags:
 
 ## What Changes from Junior to Mid
 
-A junior engineer writes updates to prove they were busy: long, chronological, and defensive. A mid-level engineer writes updates so other people can act: short, structured, risks first, calibrated to the reader. They know the difference between reporting progress — "here is what moved" — and making risk visible — "here is what could break the plan, and here is what I need." Writing becomes a tool for coordination, not a performance of effort.
+A junior engineer writes updates to prove they were busy: long, chronological, and defensive. A mid-level engineer writes updates so other people can act: short, structured, risks first, calibrated to the reader. They know the difference between reporting progress ("here is what moved") and making risk visible ("here is what could break the plan, and here is what I need"). Writing becomes a tool for coordination, not a performance of effort.
 
 | Aspect | Junior | Mid |
 |--------|--------|-----|
@@ -79,15 +79,15 @@ flowchart LR
 
 **Lead with what the reader needs, not with what you did.** The first line decides whether the rest is read. "Checkout is on track; the tax service risk is now closed" gives the reader their answer before the details; "this week I continued work on…" gives them a chore. Write the headline last, after the details are on the page, and put it first.
 
-**Put risks above progress, always.** Progress accumulates quietly; risks compound silently, and every day a risk stays unspoken is a day nobody can act on it. A visible risk is not a confession of failure — it is the update doing its job. Name the risk, its trigger, its rough likelihood, and what would reduce it, and the update becomes a decision tool instead of a status ritual.
+**Put risks above progress, always.** Progress accumulates quietly; risks compound silently, and every day a risk stays unspoken is a day nobody can act on it. Making a risk visible is the update doing its job. Name the risk, its trigger, its rough likelihood, and what would reduce it, and the update becomes a decision tool instead of a status ritual.
 
-**Separate "here is where we are" from "here is what I need."** Mixing narration and asks hides both: readers skim the story and miss the request, or read the request without the context that makes it reasonable. Give asks their own section with a named person and a date. A single crisp ask — "need a decision on the export format by Thursday" — outperforms a page of implicit pressure.
+**Separate "here is where we are" from "here is what I need."** Mixing narration and asks hides both: readers skim the story and miss the request, or read the request without the context that makes it reasonable. Give asks their own section with a named person and a date. A single crisp ask ("need a decision on the export format by Thursday") outperforms a page of implicit pressure.
 
 **Write decision records that survive the meeting.** A decision write-up holds the context, the options considered, why the winner won, and what would reopen the decision. Without it, the same debate returns every quarter with less memory. Keep it short enough to reread and specific enough to argue with; a decision record nobody can challenge is a decision record nobody trusts.
 
-**Calibrate the same facts to each audience.** One project, three updates: the PM gets the date and the trade-off, the peer engineer gets the interface change and the fragile path, the manager gets the ask and the risk to commitments. This is not spin — it is translation. Sending everyone the same paragraph guarantees that at most one reader gets what they need.
+**Calibrate the same facts to each audience.** One project, three updates: the PM gets the date and the trade-off, the peer engineer gets the interface change and the fragile path, the manager gets the ask and the risk to commitments. This is translation: the facts stay the same. Sending everyone the same paragraph guarantees that at most one reader gets what they need.
 
-**Keep updates short on purpose and on schedule.** Brevity is respect for the reader's attention, and regularity is what makes people read the next one. A three-bullet update that always arrives beats a thorough essay that arrives late. If the update needs to be long — a decision write-up, a postmortem — say so up front and give a one-paragraph summary before the depth.
+**Keep updates short on purpose and on schedule.** Brevity is respect for the reader's attention, and regularity is what makes people read the next one. A three-bullet update that always arrives beats a thorough essay that arrives late. If the update needs to be long (a decision write-up, a postmortem), say so up front and give a one-paragraph summary before the depth.
 
 **Make the risk specific enough to act on.** "There might be delays" is noise; "if the identity team's API is not ready by the 14th, the launch window moves" is information a manager can work with. Specificity means a trigger, a consequence, and a mitigation. Vague risk language protects the writer; specific risk language protects the plan.
 
@@ -96,9 +96,9 @@ flowchart LR
 Produce the writing set for one project week, twice over:
 
 1. Take a project in flight and write the headline: one sentence in outcome terms, no activity verbs.
-2. Write the five-part update — headline, state, risks, asks, next steps — for a generic stakeholder, then cut it by half without losing any action a reader would take.
+2. Write the five-part update (headline, state, risks, asks, next steps) for a generic stakeholder, then cut it by half without losing any action a reader would take.
 3. Rewrite the same update three ways: for a PM (outcomes and dates), for a peer engineer (technical state), and for your manager (asks and risks).
-4. Write a risk entry for a real or hypothetical threat with all four parts: trigger, consequence, likelihood, mitigation — and one ask with a named owner and date.
+4. Write a risk entry for a real or hypothetical threat with all four parts: trigger, consequence, likelihood, mitigation, and one ask with a named owner and date.
 5. Write a decision record for a technical choice: context, the three options considered, why the winner won, and what evidence would reopen it.
 6. Compare a progress-only paragraph with a risk-visible version of the same week; note which one would change what a reader does.
 7. Schedule the update: pick the day and channel, and write the subject line that tells a skimmer the state before they open it.

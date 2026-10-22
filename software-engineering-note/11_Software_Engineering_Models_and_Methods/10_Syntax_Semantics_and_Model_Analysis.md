@@ -784,7 +784,7 @@ flowchart TD
 Effective use of software engineering models requires understanding their formal foundations:
 
 1. **Syntax** defines structure: abstract vs. concrete syntax, grammars (BNF/EBNF), metamodels (MOF/Ecore), and the M0-M3 hierarchy provide the formal framework for model representation
-2. **Semantics** defines meaning: structural (well-formedness), behavioral (operational/denotational/axiomatic), and OCL constraints ensure models are not just syntactically correct but meaningful
+2. **Semantics** defines meaning: structural (well-formedness), behavioral (operational/denotational/axiomatic), and OCL constraints ensure models are meaningful as well as syntactically correct
 3. **Pragmatics** defines use: model purpose, audience, abstraction level, and granularity must be aligned with the engineering task
 4. **Quality** ensures fitness: completeness, consistency, correctness, and readability are assessed through static analysis, simulation, and human review
 5. **Analysis techniques** extract value: reachability analysis, deadlock detection, performance analysis, and model-based testing transform models from documentation into engineering tools

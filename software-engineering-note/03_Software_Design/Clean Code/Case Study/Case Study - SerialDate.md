@@ -35,7 +35,7 @@ The refactoring of SerialDate is a textbook demonstration of the Boy Scout Rule 
 - Original tests cover only **91 statements (~50%):** the coverage map looks "like a patchwork quilt."
 - Several dead functions have zero coverage (e.g., `MonthCodeToQuarter` is never called, **Code Smells Catalog#Dead Code**).
 
-**Key Insight:** *You cannot refactor what you cannot test.* The first step isn't cleaning code; it's writing tests that exercise the code.
+**Key Insight:** *You cannot refactor what you cannot test.* The first step is writing tests that exercise the code; cleanup comes after.
 
 ### 2.2 Writing Independent Unit Tests
 
@@ -541,7 +541,7 @@ Uncle Bob performed an elegant chain of refactorings:
 
 > *"Fool me once, shame on you. Fool me twice, shame on me!"*
 
-*Lesson:* Before investing in refactoring a method, check if anything actually calls it. Dead code isn't worth polishing; it's worth deleting. **Code Smells Catalog#Dead Code**.
+*Lesson:* Before investing in refactoring a method, check if anything actually calls it. Delete dead code instead of polishing it. **Code Smells Catalog#Dead Code**.
 
 ---
 

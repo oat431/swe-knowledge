@@ -27,7 +27,7 @@ The cost of coupling to premature decisions is enormous (multiplied development 
 
 Frameworks, databases, web servers, dependency injection libraries, utility toolkits; these are *details*. A good system architecture makes these decisions ancillary and deferrable. You should be able to swap them out at the latest possible moment without significant impact. The architect's goal is to minimize human resources; coupling to premature decisions is what saps that resource.
 
-The history of software is littered with architectures that bet on the wrong technology too early. The cost isn't just the initial wrong choice; it's the compounding tax of every feature built on top of that premature commitment.
+The history of software is littered with architectures that bet on the wrong technology too early. The initial wrong choice is only part of the cost; every feature built on top of that premature commitment adds more.
 
 ### 2. The Sad Story of Company P: Three-Tier Gone Wrong
 

@@ -21,7 +21,7 @@ tags:
 
 Projects change. Requirements evolve, risks materialize, stakeholders discover what they actually need, and the environment shifts. Change is not failure; unmanaged change is. When changes are accepted informally (a nod in a meeting, an email that "we'll figure it out," a scope addition that nobody costed), the project silently drifts from its baseline until it is unrecognizable.
 
-The change control process is the project's immune system: it detects changes, assesses their impact on the triple constraint, presents options to the decision-maker, and records the outcome. The process is not a bureaucracy to slow the project down; it is a discipline to keep the project honest about what it is delivering against what it was chartered to deliver. Every change that bypasses the process is a withdrawal from the project's integrity account.
+The change control process is the project's immune system: it detects changes, assesses their impact on the triple constraint, presents options to the decision-maker, and records the outcome. The process is a discipline to keep the project honest about what it is delivering against what it was chartered to deliver. Every change that bypasses the process is a withdrawal from the project's integrity account.
 
 ## The Change Control Sequence
 
@@ -169,4 +169,4 @@ Program change control adds a dimension:
 
 ## Summary
 
-The change control process is the project's immune system: every change to scope, schedule, or cost is requested, logged, assessed for impact on all dimensions, classified by decision authority, decided by the right body, communicated to affected stakeholders, and implemented with baseline updates. The change log is the audit trail that answers "what changed and why" for every stakeholder and every audit. The process is not bureaucracy; it is the discipline that keeps the project honest about what it is delivering against what it was chartered to deliver. A project without change control drifts; a project with change control adapts deliberately. The difference is not whether change happens; it is whether change is visible, assessed, and accountable.
+The change control process is the project's immune system: every change to scope, schedule, or cost is requested, logged, assessed for impact on all dimensions, classified by decision authority, decided by the right body, communicated to affected stakeholders, and implemented with baseline updates. The change log is the audit trail that answers "what changed and why" for every stakeholder and every audit. The process is the discipline that keeps the project honest about what it is delivering against what it was chartered to deliver. A project without change control drifts; a project with change control adapts deliberately. The difference is not whether change happens; it is whether change is visible, assessed, and accountable.

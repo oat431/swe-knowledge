@@ -20,9 +20,9 @@ tags:
 
 ## Why This Matters
 
-A workflow is not a ceremony; it is the team's operating system for converting intent into shipped work. When it fits, work moves visibly, people know what to pick up next, and quality checks happen at natural points. When it does not fit, the team experiences pileups, thrash, and invisible work, and no amount of individual effort fixes a broken flow.
+A workflow is the team's operating system for converting intent into shipped work. When it fits, work moves visibly, people know what to pick up next, and quality checks happen at natural points. When it does not fit, the team experiences pileups, thrash, and invisible work, and no amount of individual effort fixes a broken flow.
 
-The tech lead owns the team's workflow the way an architect owns the system: the default is not to switch frameworks, but to understand why the current one is straining, tune it, and change it deliberately only when the evidence says the context has changed. This note covers the main workflow options, how to diagnose dysfunction, and how to change the way of working without losing the team's trust.
+The tech lead owns the team's workflow the way an architect owns the system: the default is to understand why the current one is straining, tune it, and change it deliberately only when the evidence says the context has changed. This note covers the main workflow options, how to diagnose dysfunction, and how to change the way of working without losing the team's trust.
 
 ## Workflow Options and Fit
 

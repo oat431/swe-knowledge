@@ -24,7 +24,7 @@ Most quality attribute requirements arrive as adjectives: "it should be fast," "
 
 The workshop gathers stakeholders who care about system qualities, walks them through scenario creation until every quality concern has a measurable expression, and prioritizes the results so the architect knows where to spend structural rigor. The output (a scenario catalog) becomes the evidence base for architectural decisions, the target for increment validation, and the shared language for discussing trade-offs.
 
-Equally important, the workshop aligns stakeholders. When the product owner sees that "fast" means a specific p95 latency target and the operations lead sees an agreed recovery time, the organization has converged on what the system must deliver, not just in features, but in behavior under stress.
+Equally important, the workshop aligns stakeholders. When the product owner sees that "fast" means a specific p95 latency target and the operations lead sees an agreed recovery time, the organization has converged on what the system must deliver, in behavior under stress as well as in features.
 
 ## Stakeholder Selection
 
@@ -52,7 +52,7 @@ The architect facilitates, not dictates. The architect's job is to keep the work
 
 ## Scenario Refinement
 
-The refinement phase is the heart of the workshop. Each raw concern ("the system should be fast") must survive the six-part test:
+The refinement phase is the core of the workshop. Each raw concern ("the system should be fast") must survive the six-part test:
 
 | Part | Prompt Question | Example Refinement | Bad Refinement (rejected) |
 |------|----------------|--------------------|--------------------------|

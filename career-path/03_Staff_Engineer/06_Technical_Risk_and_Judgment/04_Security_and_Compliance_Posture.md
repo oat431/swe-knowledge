@@ -19,7 +19,7 @@ tags:
 
 ## Why This Matters
 
-Code-level security is the team's job: input validation, auth checks, dependency hygiene. The staff view is the level above: what the whole architecture exposes, where data sprawls beyond classification, how access accumulates faster than it is revoked, and whether the org could respond to a breach at all. These are not bugs; they are posture, and posture is what gets the org breached, fined, or failed in an audit.
+Code-level security is the team's job: input validation, auth checks, dependency hygiene. The staff view is the level above: what the whole architecture exposes, where data sprawls beyond classification, how access accumulates faster than it is revoked, and whether the org could respond to a breach at all. These are posture problems, and posture is what gets the org breached, fined, or failed in an audit.
 
 Compliance at this level is a design constraint, not a checklist: data residency shapes where systems can run, audit trails shape what must be logged, retention shapes what must be deleted. Every new system inherits the posture; the staff engineer makes posture part of the design conversation rather than a surprise at audit time.
 

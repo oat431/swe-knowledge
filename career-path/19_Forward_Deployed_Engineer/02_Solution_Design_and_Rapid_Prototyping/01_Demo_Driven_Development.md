@@ -57,7 +57,7 @@ flowchart LR
     DECISION --> GAP["Log the gap to production"]
 ```
 
-The gap list is not an apology; it is the most valuable artifact the demo produces for engineering. It is also what protects the FDE when the demo is remembered as more than it was.
+The gap list is the most valuable artifact the demo produces for engineering. It is also what protects the FDE when the demo is remembered as more than it was.
 
 ## Demo Hygiene
 

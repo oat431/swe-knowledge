@@ -20,7 +20,7 @@ tags:
 
 ## Why This Matters
 
-Reliability is not what the system does when everything works; it is what the system does when things fail. A team that has never practiced failure discovers its resilience gaps at the worst possible moment, during the real incident, with users waiting. Practice is how the team learns its failure modes cheaply, in a controlled room, where the lesson costs nothing but an hour.
+Reliability is what the system does when things fail. A team that has never practiced failure discovers its resilience gaps at the worst possible moment, during the real incident, with users waiting. Practice is how the team learns its failure modes cheaply, in a controlled room, where the lesson costs nothing but an hour.
 
 The tech lead builds the practice program: game days that rehearse realistic failures, pre-mortems that find design flaws before launch, drills that exercise dependency failures, and resilience patterns (timeouts, retries, circuit breakers) adopted as standards rather than left to individual judgment. This note covers each practice, how to scope it safely, and how to measure whether the team's resilience is actually improving.
 
@@ -33,7 +33,7 @@ The tech lead builds the practice program: game days that rehearse realistic fai
 | **Execution** | The team responds to the injected failure as if it were real | The on-call process is exercised; roles and runbooks are used, not improvised |
 | **Debrief** | Review what happened: what worked, what broke, what was slow | The output is a finding list, exactly like a postmortem |
 
-The goal is not for the team to win the game; it is for the team to learn where the system and the process are weakest, with the lesson costing a rehearsal hour instead of an incident.
+The goal is for the team to learn where the system and the process are weakest, with the lesson costing a rehearsal hour instead of an incident.
 
 ## Scoping Failure Practice Safely
 

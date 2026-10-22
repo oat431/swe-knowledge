@@ -58,12 +58,12 @@ At senior, the same reasoning applies to system-level decisions: cross-team cont
 
 ### Choosing Reversibility
 
-- **Feature flag** — buys instant rollback and a staged rollout, costs a second code path and flag debt to clean up.
-- **Interface seam** — buys the ability to swap implementations later, costs an abstraction that may be premature.
-- **Expand-contract migration** — buys a schema change without a flag day, costs two write paths for a transition period.
-- **Small batches** — buy cheap correction when the design is wrong, cost more releases and more coordination.
-- **Default off** — buys reversibility without a redeploy, costs the risk that nobody owns the flip.
-- **Compatibility window** — buys time for consumers to migrate, costs old paths that linger until retired on purpose.
+- **Feature flag:** buys instant rollback and a staged rollout, costs a second code path and flag debt to clean up.
+- **Interface seam:** buys the ability to swap implementations later, costs an abstraction that may be premature.
+- **Expand-contract migration:** buys a schema change without a flag day, costs two write paths for a transition period.
+- **Small batches:** buy cheap correction when the design is wrong, cost more releases and more coordination.
+- **Default off:** buys reversibility without a redeploy, costs the risk that nobody owns the flip.
+- **Compatibility window:** buys time for consumers to migrate, costs old paths that linger until retired on purpose.
 
 ### Common Beginner Design Errors
 
@@ -102,7 +102,7 @@ flowchart LR
 
 **Ask for review from someone who does not share your assumptions.** A reviewer inside the feature will tend to fill the same gaps you did. Bring the ADR to a neighbouring team or a more senior engineer and ask a specific question: "Where would this break?" Specific questions get specific challenges.
 
-**Set a trigger for revisiting.** Decisions expire when their context changes. Name the condition — traffic level, team size, a new compliance rule — that would reopen the question. Without a trigger, old decisions silently become constraints that nobody remembers choosing.
+**Set a trigger for revisiting.** Decisions expire when their context changes. Name the condition (traffic level, team size, a new compliance rule) that would reopen the question. Without a trigger, old decisions silently become constraints that nobody remembers choosing.
 
 ## Practical Exercise
 

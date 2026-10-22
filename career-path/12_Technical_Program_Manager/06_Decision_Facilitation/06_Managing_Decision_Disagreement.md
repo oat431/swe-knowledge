@@ -20,7 +20,7 @@ tags:
 
 ## Why This Matters
 
-Disagreement is not a threat to the decision process; it is evidence that the process is working. A decision with no dissent is either trivial or suppressed. A decision with surfaced, structured, and recorded dissent is a decision that has been tested, and a decision that has been tested is more likely to survive execution because its weaknesses were examined before commitment.
+Disagreement is evidence that the decision process is working. A decision with no dissent is either trivial or suppressed. A decision with surfaced, structured, and recorded dissent is a decision that has been tested, and a decision that has been tested is more likely to survive execution because its weaknesses were examined before commitment.
 
 The TPM's disagreement management discipline is distinct from stakeholder conflict resolution. Stakeholder conflict is about interests, what different groups want from the program. Decision disagreement is about choices, which option best serves the program's outcomes given the criteria and the evidence. The TPM manages both, but the tools are different: conflict resolution uses interest-based negotiation; decision disagreement uses criteria-based evaluation.
 
@@ -177,4 +177,4 @@ flowchart TD
 
 ## Summary
 
-Managing decision disagreement is the TPM's process for turning dissent into better decisions: classifying the disagreement type, structuring it through written positions and agreed criteria, recording dissent without erasing it, and producing explicit commitment from those who argued against the outcome. Disagreement is not a threat to the decision process; it is how the process tests decisions before they meet reality. The TPM who suppresses disagreement gets fake consensus; the TPM who channels it into structured resolution gets tested decisions and real commitment.
+Managing decision disagreement is the TPM's process for turning dissent into better decisions: classifying the disagreement type, structuring it through written positions and agreed criteria, recording dissent without erasing it, and producing explicit commitment from those who argued against the outcome. Disagreement is how the decision process tests decisions before they meet reality. The TPM who suppresses disagreement gets fake consensus; the TPM who channels it into structured resolution gets tested decisions and real commitment.

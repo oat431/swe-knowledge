@@ -19,7 +19,7 @@ tags:
 
 ## What Changes from Junior to Mid
 
-A junior engineer writes tests to make the coverage number look good and tests whatever the framework makes easy. A mid-level engineer reads the risk in the change first — money moves, state corrupts, a parser breaks — and chooses the test level that would catch that risk if it regressed. The question is never "how many tests?" but "which failure would hurt, and what test notices it first?"
+A junior engineer writes tests to make the coverage number look good and tests whatever the framework makes easy. A mid-level engineer reads the risk in the change first (money moves, state corrupts, a parser breaks) and chooses the test level that would catch that risk if it regressed. The question is never "how many tests?" but "which failure would hurt, and what test notices it first?"
 
 | Aspect | Junior | Mid |
 |--------|--------|-----|
@@ -73,7 +73,7 @@ flowchart LR
 
 ## In Practice
 
-**Choose the test level by asking what could hurt.** A pricing calculation deserves dense unit tests on edge cases; a SQL migration deserves integration tests against a real schema; a login flow deserves one end-to-end check. Writing three unit tests for an integration risk protects nothing — match the instrument to the failure you are guarding against.
+**Choose the test level by asking what could hurt.** A pricing calculation deserves dense unit tests on edge cases; a SQL migration deserves integration tests against a real schema; a login flow deserves one end-to-end check. Writing three unit tests for an integration risk protects nothing; match the instrument to the failure you are guarding against.
 
 **Write the regression test first when fixing a bug.** A bug fix without a test is a promise nobody can check. The test should fail without the fix and pass with it; that pair proves you found the cause. Every bug report is a free test case specification.
 
@@ -81,7 +81,7 @@ flowchart LR
 
 **Name tests so the failure is a sentence.** A failing test name should state the missing behavior: "rejects an expired token" beats test_token_2. When the suite breaks at 2 a.m., readable names are the triage tool. The name plus the assertion should be enough to know what broke without opening the implementation.
 
-**Treat flaky tests as defects, not weather.** A test that fails without a code change is either wrong or the code is nondeterministic — both are real bugs. Diagnose the cause (shared state, timing, order dependence), fix it, or quarantine it with a ticket; never let the team absorb a retry ritual. Flakiness trains everyone to ignore red builds.
+**Treat flaky tests as defects, not weather.** A test that fails without a code change is either wrong or the code is nondeterministic: both are real bugs. Diagnose the cause (shared state, timing, order dependence), fix it, or quarantine it with a ticket; never let the team absorb a retry ritual. Flakiness trains everyone to ignore red builds.
 
 **Use manual and exploratory testing where judgment matters.** New interfaces, unclear requirements, and one-off data problems are better explored by a human clicking around with intent than by scripted checks. Automate what must stay true; explore what you are still learning. Exploratory sessions belong in the plan, not as guilt afterthoughts.
 

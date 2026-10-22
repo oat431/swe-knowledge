@@ -41,7 +41,7 @@ This is the safety net that makes aggressive refactoring possible. Without it, t
 
 ## ### The Original Code: What's Wrong?
 
-The original `ComparisonCompactor.java` (**Listing 15-2**) is already "nicely partitioned, reasonably expressive, and simple in structure." But the Boy Scout Rule demands we leave it better. Here's what needs fixing:
+The original `ComparisonCompactor.java` (**Listing 15-2**) is already "nicely partitioned, reasonably expressive, and simple in structure." But the Boy Scout Rule says to leave it better, and these things need fixing:
 
 | Issue | Smell | Impact |
 |-------|-------|--------|

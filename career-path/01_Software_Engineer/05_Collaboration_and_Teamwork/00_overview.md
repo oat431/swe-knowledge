@@ -16,7 +16,7 @@ tags:
 
 # Collaboration and Teamwork
 
-> **Capability area:** Working effectively with product managers, designers, QA engineers, and your own manager — turning cross-functional friction into shared understanding and better software.
+> **Capability area:** Working effectively with product managers, designers, QA engineers, and your own manager, turning cross-functional friction into shared understanding and better software.
 
 ## What Changes from Junior to Mid
 
@@ -63,7 +63,7 @@ This area covers individual cross-functional collaboration skills. It does not c
 - Disagreement is useful when it is specific, evidenced, and paired with an alternative
 - Written context outlives meetings; handoffs are acts of respect
 - Your manager is a tool for your growth, not just an evaluator of it
-- Feedback delayed is feedback wasted — give it while the context is alive
+- Feedback delayed is feedback wasted; give it while the context is alive
 
 ## Common Anti-Patterns
 
@@ -92,6 +92,6 @@ This area covers individual cross-functional collaboration skills. It does not c
 
 ## Sources
 
-- *Crucial Conversations* (Patterson, Grenny, McMillan, Switzler) — high-stakes discussion structure
-- *The Missing README* (Chris Riccomini, Dmitriy Ryaboy) — cross-functional collaboration for engineers
-- *Debugging Teams* (Brian Fitzpatrick, Ben Collins-Sussman) — team dynamics and feedback habits
+- *Crucial Conversations* (Patterson, Grenny, McMillan, Switzler): high-stakes discussion structure
+- *The Missing README* (Chris Riccomini, Dmitriy Ryaboy): cross-functional collaboration for engineers
+- *Debugging Teams* (Brian Fitzpatrick, Ben Collins-Sussman): team dynamics and feedback habits

@@ -101,7 +101,7 @@ Passive aggression is conflict that lost its courage. It is the residue of a dis
 | Debrief | The manager reviews what worked; the team learns the pattern |
 | Watch | The manager checks the relationship's temperature for weeks |
 
-Repair is not pretending nothing happened; it is demonstrating that the team survived the conflict and is stronger for the decision. The team learns from every resolved conflict how to resolve the next one faster.
+Repair means demonstrating that the team survived the conflict and is stronger for the decision. The team learns from every resolved conflict how to resolve the next one faster.
 
 ## Conflict as Information
 

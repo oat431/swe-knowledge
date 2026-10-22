@@ -99,7 +99,7 @@ source: "McConnell, Code Complete 2nd Edition, Chapters 20–24"
 - NASA study (Card 1987): increased QA → decreased error rate, no increase in overall development cost.
 - IBM (Jones 2000): projects with lowest defects had shortest schedules and highest productivity.
 - DeMarco & Lister (1985): median-time programmers produced the *most* defects; both faster and slower groups had fewer defects.
-- **Resources are redistributed** from downstream debugging/refactoring to upstream QA; upstream activities have more leverage.
+- **Resources are redistributed** from downstream debugging/refactoring to upstream QA; upstream activities pay off more.
 
 ---
 

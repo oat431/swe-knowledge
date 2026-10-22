@@ -208,7 +208,7 @@ Artifacts to include in the shared repo:
 - TDD practices turn test suites into **living, up-to-date specifications**
 - Any engineer can look at test suites to find working examples of API usage
 - Each library has a single owner/team: knowledge and expertise reside there
-- Only one version used in production: leverages the best collective knowledge
+- Only one version used in production: draws on the best collective knowledge
 - Create discussion groups/chat rooms for each library
 
 ### Design for Operations Through Codified Non-Functional Requirements
@@ -281,7 +281,7 @@ Ross Clanton's **30-Day Challenges:** internal teams work with dedicated coaches
 
 ### Share Experiences from DevOps Conferences
 
-- **DevOpsDays:** Vibrant self-organized conference series: free or nearly free
+- **DevOpsDays:** Self-organized conference series, free or nearly free
 - **DevOps Enterprise Summit (2014+):** Experience reports from technology leaders in large, complex organizations
 
 **Internal conferences:**
@@ -323,7 +323,7 @@ The Third Way practices create:
 - Mechanisms to convert **local discoveries into global improvements**
 - Dedicated time for **improvement and learning**
 
-The goal is not just to learn faster than the competition, but to create a safer, more resilient work culture where people are excited to contribute and achieve their highest potential.
+The goal is to learn faster than the competition and to create a safer, more resilient work culture where people are excited to contribute and achieve their highest potential.
 
 ---
 

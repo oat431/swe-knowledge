@@ -232,7 +232,7 @@ $$\text{Power} = \text{Capacitive Load} \times \text{Voltage}^2 \times \text{Fre
 2. The **ISA** is the critical hardware/software interface; multiple implementations can exist for one ISA.
 3. **Performance** = f(Instruction Count, CPI, Clock Rate): measured as execution time.
 4. The **power wall** ended the era of ever-increasing clock rates and forced the shift to **multicore**.
-5. **Parallelism** is now the primary path to performance improvement: but parallel programming remains a fundamental challenge.
+5. **Parallelism** is now the primary path to performance improvement, but parallel programming remains a fundamental challenge.
 6. **Moore's Law** (transistor doubling every 18–24 months) has driven the technology revolution for nearly 40 years.
 
 

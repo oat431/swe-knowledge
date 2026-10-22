@@ -22,7 +22,7 @@ tags:
 
 At staff level, strategy connects technical work to multi-team priorities. At principal level, the scope jumps to the enterprise: the strategy must hold across products with different business models, platforms with different lifecycles, and business units with competing incentives. Writing a strategy that survives this diversity is a synthesis skill nobody else in the organization is paid to perform.
 
-The document is not the strategy. The decisions it drives are. A strategy that does not decline specific investments by reference to its own logic is not a strategy; it is a wishlist. The principal's strategy document earns its authority by being specific enough to be wrong, and reviewed often enough to be right.
+The document is not the strategy. The decisions it drives are. A strategy that does not decline specific investments by reference to its own logic is a wishlist. The principal's strategy document earns its authority by being specific enough to be wrong, and reviewed often enough to be right.
 
 ## The Scope Jump: Staff to Principal
 

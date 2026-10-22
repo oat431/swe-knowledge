@@ -4,7 +4,7 @@ tags: [time, mass, motion, engineering, fundamentals, physics]
 
 # 02 — Time, Mass & Motion
 
-> **Source:** *Engineering Fundamentals: An Introduction to Engineering* by Saeed Moaveni — Chapters 8–9
+> **Source:** *Engineering Fundamentals: An Introduction to Engineering* by Saeed Moaveni, Chapters 8–9
 
 ## Overview
 
@@ -102,7 +102,7 @@ Traffic engineering uses time-related parameters to design highways and control 
 
 $$\text{average speed} = \frac{\text{distance traveled}}{\text{time}}$$
 
-**Scalar** — has magnitude only. Common units: m/s, km/h, ft/s, mph.
+**Scalar:** has magnitude only. Common units: m/s, km/h, ft/s, mph.
 
 ### 4.2 Instantaneous Velocity
 
@@ -193,7 +193,7 @@ Units: rad/s²
 ### 7.1 What Is Mass?
 
 - **Mass** = quantitative measure of the amount of matter (atoms/molecules) in an object
-- Mass is a **scalar** — has magnitude only
+- Mass is a **scalar**: has magnitude only
 - Mass provides a **measure of resistance to motion** (inertia)
 - The distribution of mass about a rotation axis determines **rotational resistance**
 
@@ -224,13 +224,13 @@ $$\rho = \frac{\text{mass}}{\text{volume}}$$
 
 $$v = \frac{\text{volume}}{\text{mass}} = \frac{1}{\rho}$$
 
-- SI: m³/kg — commonly used in thermodynamics
+- SI: m³/kg, commonly used in thermodynamics
 
 ### 8.3 Specific Gravity
 
 $$SG = \frac{\rho_{\text{material}}}{\rho_{\text{water at 4°C}}}$$
 
-- **Unitless** — ratio of two densities
+- **Unitless:** ratio of two densities
 - Same value regardless of unit system
 
 ### 8.4 Specific Weight
@@ -270,7 +270,7 @@ where ρ = density, Q = volume flow rate.
 
 ## 10. Mass Moment of Inertia
 
-The mass moment of inertia measures **resistance to rotational acceleration** — analogous to mass for linear motion. The farther mass is from the axis, the harder it is to rotate.
+The mass moment of inertia measures **resistance to rotational acceleration**, analogous to mass for linear motion. The farther mass is from the axis, the harder it is to rotate.
 
 **For a point mass:**
 
@@ -295,7 +295,7 @@ $$I_{z-z} = \int r^2 \, dm$$
 
 $$\vec{L} = m\vec{V}$$
 
-- **Vector** — direction is same as velocity
+- **Vector:** direction is same as velocity
 - SI: kg·m/s | BG: slug·ft/s
 - A small-mass object at high velocity (bullet) can have large momentum
 - At rest → momentum is **zero**
@@ -347,6 +347,6 @@ Mass-dependent; detailed treatment in the Energy & Power chapter.
 
 ## See Also
 
-- [[01 Physics and Math/01_Dimensions_and_Measurement|01_Dimensions_and_Measurement]] — Fundamental dimensions, unit systems
-- [[01 Physics and Math/03_Force_and_Mechanics|03_Force_and_Mechanics]] — Force, weight, Newton's laws, work, pressure
-- [[01 Physics and Math/06_Energy_and_Power|06_Energy_and_Power]] — Kinetic energy, work-energy theorem
+- [[01 Physics and Math/01_Dimensions_and_Measurement|01_Dimensions_and_Measurement]]: Fundamental dimensions, unit systems
+- [[01 Physics and Math/03_Force_and_Mechanics|03_Force_and_Mechanics]]: Force, weight, Newton's laws, work, pressure
+- [[01 Physics and Math/06_Energy_and_Power|06_Energy_and_Power]]: Kinetic energy, work-energy theorem

@@ -133,4 +133,4 @@ Each checkpoint is a gate: delivery progress and architecture viability are asse
 
 ## Summary
 
-Transition planning designs the middle of the journey: intermediate architectures that are explicitly scoped, operationally viable, and validated at checkpoints before the enterprise moves on. Duplication and temporary mechanisms are deliberate, owned, and time-boxed; double-running costs are funded; risky steps carry fallbacks. The architect's promise is not that transformation will be elegant, but that at every point along the way the enterprise will still work.
+Transition planning designs the middle of the journey: intermediate architectures that are explicitly scoped, operationally viable, and validated at checkpoints before the enterprise moves on. Duplication and temporary mechanisms are deliberate, owned, and time-boxed; double-running costs are funded; risky steps carry fallbacks. The architect promises that at every point along the way the enterprise will still work, even if the transformation is not elegant.

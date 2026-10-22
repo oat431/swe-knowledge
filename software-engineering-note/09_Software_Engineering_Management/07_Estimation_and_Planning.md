@@ -141,7 +141,7 @@ A structured estimation technique that harnesses collective expert wisdom while 
 6. Repeat steps 3-5 until estimates converge (typically 2-3 rounds)
 7. Final estimate = average of the last round
 
-**Advantages:** Leverages diverse experience; reduces individual bias; builds team buy-in.
+**Advantages:** Draws on diverse experience; reduces individual bias; builds team buy-in.
 
 **Disadvantages:** Time-consuming; quality depends on expert selection.
 

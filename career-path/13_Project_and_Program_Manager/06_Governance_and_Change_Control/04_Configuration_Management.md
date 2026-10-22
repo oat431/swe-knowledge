@@ -21,7 +21,7 @@ tags:
 
 A project that operates without configuration management has multiple versions of the truth. The schedule in the status report disagrees with the schedule in the steering committee deck. The scope statement referenced in the change request was superseded three weeks ago. The risk register the sponsor reviewed is not the risk register the team is working from. Every discrepancy is a decision made on fiction, and every such decision compounds into a project that is managed against a phantom.
 
-Configuration management is the discipline of the single source of truth: every project artifact has a known version, baselines are formally established and updated through change control, and the project team and stakeholders reference the same information. It is not glamorous work; it is file naming, version control, and baseline discipline. But it is the foundation on which every status report, every change assessment, and every governance decision rests.
+Configuration management is the discipline of the single source of truth: every project artifact has a known version, baselines are formally established and updated through change control, and the project team and stakeholders reference the same information. The work is file naming, version control, and baseline discipline. But it is the foundation on which every status report, every change assessment, and every governance decision rests.
 
 ## What Configuration Management Controls
 

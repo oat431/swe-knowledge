@@ -77,7 +77,7 @@ Every status report should include a benefits section:
 | **Assumption status** | Any key assumptions that have changed |
 | **Benefit owner engagement** | Any concerns about benefit owner involvement |
 
-Benefits status is not a separate report; it is integrated into the project status report alongside schedule, cost, and risk. The project is on track only if all four dimensions are on track.
+Benefits status is integrated into the project status report alongside schedule, cost, and risk. The project is on track only if all four dimensions are on track.
 
 ## Benefits in Program Tracking
 

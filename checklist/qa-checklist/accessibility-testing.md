@@ -1591,8 +1591,8 @@
 
 ### Vestibular Disorders
 
-- [ ] **Avoid parallax scrolling:** or provide a toggle to disable.
-- [ ] **Avoid auto-scrolling carousels:** or provide pause/stop controls.
+- [ ] **Avoid parallax scrolling**, or provide a toggle to disable.
+- [ ] **Avoid auto-scrolling carousels**, or provide pause/stop controls.
 - [ ] **Avoid motion on scroll:** elements that move/rotate as user scrolls can trigger nausea.
 - [ ] **Avoid zoom animations:** sudden scale changes during transitions.
 

@@ -35,7 +35,7 @@ A charter is also the manager's fairness instrument. When a working agreement is
 | Meeting map | Which meetings exist, for whom, how often | Standup, planning, retro, reviews: with purpose |
 | Collaboration norms | How work flows between people | Code review SLAs, on-call, pairing, focus time |
 
-The charter's power is not the document; it is the conversation. Teams that argue through these six components once own their norms in a way no imposed process can match.
+The charter's power comes from the conversation that produces it. Teams that argue through these six components once own their norms in a way no imposed process can match.
 
 ## Co-Creating the Charter
 

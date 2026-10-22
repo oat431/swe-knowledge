@@ -197,7 +197,7 @@ Architecture provides a **common language** at an intellectually manageable leve
 - **Manager:** Teams can work independently, interacting in disciplined ways
 - **Architect:** Strategies to achieve all those goals
 
-Architecture (even a box-and-line diagram) serves as a vehicle for surfacing requirements questions that might otherwise go unasked.
+Architecture (even a box-and-line diagram) surfaces requirements questions that might otherwise go unasked.
 
 ### 5.5 Carrying Early Design Decisions
 
@@ -246,7 +246,7 @@ By restricting ourselves to a relatively small number of proven element/interact
 
 ### 5.13 Providing a Basis for Training
 
-Architecture serves as the first introduction to the system for new team members. Module views show project structure and team assignments. C&C views explain how the system works.
+Architecture is the first introduction to the system for new team members. Module views show project structure and team assignments. C&C views explain how the system works.
 
 ---
 

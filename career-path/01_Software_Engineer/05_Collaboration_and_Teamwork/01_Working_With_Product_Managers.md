@@ -82,9 +82,9 @@ flowchart LR
 
 **Push back with evidence and an alternative, never with mood.** "This feels wrong" cannot be acted on; "the full sync would take six weeks because of the legacy export format, but a one-time import gets us the same user outcome in one week" can. Pair every objection with at least one option that moves the goal forward. You are not vetoing the PM's decision; you are making sure the decision is made with the real cost visible.
 
-**Ask the unglamorous discovery questions.** Volume, failure modes, data availability, migration, reversibility, and dependencies are where estimates go to die. These questions are not pessimism; they are the discovery work that belongs to engineering. Ten minutes of them in a planning conversation saves the sprint-long surprise that follows when the request meets production reality.
+**Ask the unglamorous discovery questions.** Volume, failure modes, data availability, migration, reversibility, and dependencies are where estimates go to die. These questions are discovery work, and that work belongs to engineering. Ten minutes of them in a planning conversation saves the sprint-long surprise that follows when the request meets production reality.
 
-**Agree on success signals before building.** If nobody can say how we will know the work succeeded, nobody can say when it is done, and every post-launch debate becomes opinion versus opinion. Push for one or two observable signals — a metric, a support-ticket count, a behavior change — and write them down. After launch, reading those signals together with the PM turns the relationship from handoff into partnership.
+**Agree on success signals before building.** If nobody can say how we will know the work succeeded, nobody can say when it is done, and every post-launch debate becomes opinion versus opinion. Push for one or two observable signals (a metric, a support-ticket count, a behavior change) and write them down. After launch, reading those signals together with the PM turns the relationship from handoff into partnership.
 
 **Use tickets as memory, not as a substitute for conversation.** A ticket can hold the agreed problem, constraints, and signals; it cannot hold the reasoning behind them or answer the next question that discovery raises. Hold the conversation, then write down what the conversation established. When the ticket is the only channel, you are building from a document that was stale the moment the last edge case was found.
 
@@ -94,11 +94,11 @@ flowchart LR
 
 Run a full request-translation cycle on a realistic fuzzy request:
 
-1. Take a deliberately vague request — for example, "we need users to be able to export their data" — and write the underlying problem in one sentence without using the word "export."
+1. Take a deliberately vague request (for example, "we need users to be able to export their data"), and write the underlying problem in one sentence without using the word "export."
 2. List every constraint you can think of that the request does not mention: data volume, formats, dependencies, privacy, legacy records, failure modes.
 3. Draft three clarifying questions in the discovery categories: one about volume, one about failure modes, one about data reality.
 4. Propose two alternative solutions at different cost levels, and for each write one sentence on what the user gets and what it costs the team.
-5. Define two success signals — one user-facing, one technical — that would tell you the work succeeded.
+5. Define two success signals (one user-facing, one technical) that would tell you the work succeeded.
 6. Write a short "shared understanding" comment as if posting it to the ticket: problem, constraints, signals, chosen scope, open questions.
 7. Role-play the pushback turn: say the expensive version of the request is out of scope for this cycle, and deliver the message with one alternative attached.
 

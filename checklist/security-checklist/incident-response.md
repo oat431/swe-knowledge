@@ -1,6 +1,6 @@
 # Incident Response Checklist
 
-> **Incident response (IR)** is the operating loop for when security fails: detect → triage → contain → eradicate → recover → learn. The goal isn't to never have incidents; it's to detect fast, contain fast, and get better every time.
+> **Incident response (IR)** is the operating loop for when security fails: detect → triage → contain → eradicate → recover → learn. The goal is to detect fast, contain fast, and get better every time.
 > The master checklist ([[security]]) §10 says "incident response plan, IR practiced." This file is *how* to structure the plan, run tabletop exercises, and conduct blameless postmortems.
 > Deep references: → [[04 Monitoring & Incident Response]], [[Incident-Response-Plan]] template.
 > Last updated: 2026-08-07

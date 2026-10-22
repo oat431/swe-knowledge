@@ -22,7 +22,7 @@ tags:
 
 Programs end. Benefits are supposed to persist. The platform migration reduced costs, but six months after the program closed, the old platform was never fully decommissioned, and costs crept back. The onboarding flow reduced time-to-value, but a year later, the flow had been modified by three different teams and the original improvement was lost. The security posture improved, but the new controls were gradually bypassed because nobody owned them after the program ended.
 
-Benefits sustainment is the discipline that prevents benefits erosion. It is not program work; it is the handoff from program to operations that ensures the benefit does not die when the program team disbands. The TPM who delivers a benefit and walks away has delivered a temporary outcome. The TPM who hands off a benefit with an owner, a metric, and an intervention threshold has delivered a lasting one.
+Benefits sustainment is the discipline that prevents benefits erosion. It is the handoff from program to operations that ensures the benefit does not die when the program team disbands. The TPM who delivers a benefit and walks away has delivered a temporary outcome. The TPM who hands off a benefit with an owner, a metric, and an intervention threshold has delivered a lasting one.
 
 ## The Sustainment Handoff
 

@@ -8,7 +8,7 @@ tags: [industry-4.0, continuous-se, iot, ai, engineering-foundations, swebok]
 
 ## Purpose
 
-Industry 4.0 — the fourth industrial revolution — is transforming how we build and operate systems. At its core: software. Every enabling technology (IoT, AI/ML, Big Data, cybersecurity, cloud computing) depends on software engineering. This note covers the intersection of Industry 4.0 and software engineering, and the continuous practices that make it possible.
+Industry 4.0 (the fourth industrial revolution) is transforming how we build and operate systems. At its core: software. Every enabling technology (IoT, AI/ML, Big Data, cybersecurity, cloud computing) depends on software engineering. This note covers the intersection of Industry 4.0 and software engineering, and the continuous practices that make it possible.
 
 ## Industry 4.0 — What It Is
 
@@ -163,13 +163,13 @@ Industry 4.0 — the fourth industrial revolution — is transforming how we bui
 - **IoT introduces physical-world constraints.** Resource limits, real-time requirements, security threats from physical access.
 - **AI/ML challenges traditional SE.** Non-deterministic behavior, data dependency, explainability requirements.
 - **Big Data requires new architectures.** Distributed processing, stream processing, data governance.
-- **Cybersecurity is everyone's job.** Not just the security team — built into every phase of development.
+- **Cybersecurity is everyone's job.** It is built into every phase of development, not left to the security team.
 - **Cloud enables but complicates.** Scalability and flexibility, but also distributed system complexity.
-- **Continuous practices require cultural change.** Automation alone isn't enough — teams must embrace feedback and adaptation.
+- **Continuous practices require cultural change.** Automation alone isn't enough; teams must embrace feedback and adaptation.
 
 ## Related
 
-- [[Engineering Foundation Overview]] — All engineering foundation topics
-- [[02 SWE Process/19_Future_of_Software_Engineering|19_Future_of_Software_Engineering]] — Technology transfer and professionalization
-- [[02 SWE Process/18_Evaluation_and_Improvement|18_Evaluation_and_Improvement]] — Process improvement in continuous contexts
-- [[02 SWE Process/10_SE_Fundamentals_and_Process|10_SE_Fundamentals_and_Process]] — Process models and life cycle
+- [[Engineering Foundation Overview]]: All engineering foundation topics
+- [[02 SWE Process/19_Future_of_Software_Engineering|19_Future_of_Software_Engineering]]: Technology transfer and professionalization
+- [[02 SWE Process/18_Evaluation_and_Improvement|18_Evaluation_and_Improvement]]: Process improvement in continuous contexts
+- [[02 SWE Process/10_SE_Fundamentals_and_Process|10_SE_Fundamentals_and_Process]]: Process models and life cycle

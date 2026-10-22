@@ -184,4 +184,4 @@ Before starting a mentoring relationship, verify:
 
 ## Summary
 
-Mentoring and team leadership is how senior engineers multiply their impact. It is not about formal authority; it is about developing others through code reviews, pairing, feedback, and creating psychologically safe environments. Strong mentors ask questions instead of giving answers, share context and reasoning, and measure success by the growth of their mentees. The ultimate sign of a senior engineer is not just technical excellence, but the ability to raise the capability of the entire team.
+Mentoring and team leadership is how senior engineers multiply their impact. It works by developing others through code reviews, pairing, feedback, and creating psychologically safe environments. Strong mentors ask questions instead of giving answers, share context and reasoning, and measure success by the growth of their mentees. The ultimate sign of a senior engineer is not just technical excellence, but the ability to raise the capability of the entire team.

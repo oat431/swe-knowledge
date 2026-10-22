@@ -22,7 +22,7 @@ tags:
 
 Technology governance sits between two failures. Without it, every team picks its own stack, the platform fragments, support costs compound, and the organization's technical surface becomes unmanageable. With the wrong kind of it (approval boards, mandatory standards, veto culture) innovation freezes, engineers route around the process, and governance becomes the thing everyone lies to.
 
-The manager's job is the middle: an explicit spectrum of permissiveness, adoption criteria that catch the expensive mistakes without slowing the good ones, an exception process that is fast and honest, and golden paths that make the right choice the easy choice. Governance is not a gate; it is a design problem: how do the team's choices stay aligned with the organization's interests without the team feeling governed?
+The manager's job is the middle: an explicit spectrum of permissiveness, adoption criteria that catch the expensive mistakes without slowing the good ones, an exception process that is fast and honest, and golden paths that make the right choice the easy choice. Governance is a design problem: how do the team's choices stay aligned with the organization's interests without the team feeling governed?
 
 ## The Adoption Spectrum
 

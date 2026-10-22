@@ -20,7 +20,7 @@ tags:
 
 ## Why This Matters
 
-Most architecture is single-system architecture: a bounded application, service, or platform under one team's control. At the principal level, the architect works across systems of systems: collections of independent systems, each with its own owners, lifecycles, and incentives, that must interoperate to produce enterprise outcomes. The architecture is not a design you draw; it is a set of constraints, standards, and governance mechanisms that shape behavior across autonomous actors.
+Most architecture is single-system architecture: a bounded application, service, or platform under one team's control. At the principal level, the architect works across systems of systems: collections of independent systems, each with its own owners, lifecycles, and incentives, that must interoperate to produce enterprise outcomes. The architecture is a set of constraints, standards, and governance mechanisms that shape behavior across autonomous actors.
 
 This is the layer where emergent behavior dominates. Two systems that work perfectly in isolation can produce catastrophic failure when integrated. The principal's contribution is designing the interfaces, standards, and governance that make the system of systems behave coherently without requiring centralized control.
 

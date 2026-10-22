@@ -373,4 +373,4 @@ partial failures caused data inconsistency. See incident report: [link]
 
 ## Summary
 
-Code reviews are the most frequent teaching opportunity for senior engineers. Effective reviewers use questions to guide discovery, explain the "why" behind suggestions, share context and reasoning, and focus on building judgment rather than just finding bugs. They establish team norms, automate what they can, and recognize good reviews. The goal is not just to catch problems, but to develop authors who write better code independently.
+Code reviews are the most frequent teaching opportunity for senior engineers. Effective reviewers use questions to guide discovery, explain the "why" behind suggestions, share context and reasoning, and focus on building judgment rather than just finding bugs. They establish team norms, automate what they can, and recognize good reviews. Beyond catching problems, the goal is to develop authors who write better code independently.

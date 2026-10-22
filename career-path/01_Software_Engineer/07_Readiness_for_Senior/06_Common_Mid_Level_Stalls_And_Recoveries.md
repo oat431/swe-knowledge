@@ -19,7 +19,7 @@ tags:
 
 ## What Changes from Junior to Mid
 
-A junior engineer's growth is mostly additive: learn the tools, learn the codebase, learn to finish. A mid-level engineer has usually mastered that loop, and the next jump is not more of the same practice — it is a change in the kind of work they take on and the kind of risk they accept.
+A junior engineer's growth is mostly additive: learn the tools, learn the codebase, learn to finish. A mid-level engineer has usually mastered that loop, and the next jump is a change in the kind of work they take on and the kind of risk they accept.
 
 That is why mid-level careers stall. The behaviors that produced competent delivery are rewarded, so they get repeated past the point where they produce growth. The stall is rarely dramatic; it looks like being busy, reliable, and slightly bored for a year.
 
@@ -84,7 +84,7 @@ flowchart LR
 
 **Name the stall out loud, in specific terms.** "I feel stuck" is not actionable; "I have shipped the same kind of CRUD endpoint for four quarters and have not made a design decision outside that pattern" is. Naming the pattern converts a mood into a target, and it makes the conversation with your manager possible.
 
-**Distinguish a skill gap from an opportunity gap.** If you have never framed a problem because nobody let you, more practice will not help — you need scope. If you have the scope but avoid the discomfort, more scope will not help — you need practice. The intervention is different, and applying the wrong one wastes a quarter.
+**Distinguish a skill gap from an opportunity gap.** If you have never framed a problem because nobody let you, more practice will not help: you need scope. If you have the scope but avoid the discomfort, more scope will not help: you need practice. The intervention is different, and applying the wrong one wastes a quarter.
 
 **Change one variable at a time.** Stalls usually have several contributing habits, and trying to fix all of them at once produces a vague resolution that survives two weeks. Pick the single behavior with the largest effect, define what you will do differently, and give it a quarter before judging it.
 
@@ -92,7 +92,7 @@ flowchart LR
 
 **Make the recovery visible in artifacts.** A stall breaks when the evidence changes: a charter, an ADR, a completed outcome, a piece of work someone else now owns. If the recovery produces no artifact, it is indistinguishable from intention, both to you and to the people evaluating your level.
 
-**Set a review date and be willing to change the diagnosis.** A quarter is enough to see whether an intervention is working. If the same frustration persists after a genuine attempt, the diagnosis was probably wrong — it may be the environment, or a different stall underneath. Update the plan instead of grinding harder.
+**Set a review date and be willing to change the diagnosis.** A quarter is enough to see whether an intervention is working. If the same frustration persists after a genuine attempt, the diagnosis was probably wrong; it may be the environment, or a different stall underneath. Update the plan instead of grinding harder.
 
 **Treat leaving as a legitimate recovery, not a failure.** Some environments cannot offer the scope you need, and no amount of personal discipline creates a senior role that does not exist. A move made with a clear diagnosis and a specific goal is a career decision; a move made out of frustration is a coin flip. Do the diagnosis first.
 

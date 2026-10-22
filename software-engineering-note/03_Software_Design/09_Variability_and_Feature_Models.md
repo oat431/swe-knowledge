@@ -640,7 +640,7 @@ Product Line v2.3.0
 
 ### The SPL Testing Challenge
 
-Testing a product line means testing not just individual products but the **variability mechanism itself** and the **interactions between features**.
+Testing a product line covers individual products, the **variability mechanism itself**, and the **interactions between features**.
 
 ### SPL Testing Levels
 

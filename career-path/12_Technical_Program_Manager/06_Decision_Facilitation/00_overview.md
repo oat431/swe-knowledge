@@ -18,7 +18,7 @@ tags:
 
 ## Why This Matters
 
-Programs stall on unmade decisions. The architecture choice nobody owns, the scope trade-off that keeps getting deferred, the vendor selection stuck in analysis: these are not technical problems; they are decision-process problems. The TPM does not make these decisions. The TPM makes the decisions happen: who decides, by when, based on what criteria, with what options, recorded where.
+Programs stall on unmade decisions. The architecture choice nobody owns, the scope trade-off that keeps getting deferred, the vendor selection stuck in analysis: these are decision-process problems. The TPM does not make these decisions. The TPM makes the decisions happen: who decides, by when, based on what criteria, with what options, recorded where.
 
 Decision facilitation is the TPM's highest-leverage activity because one unmade decision blocks an entire workstream, while one well-facilitated decision unblocks weeks of dependent work. The skill is process design, not content: framing options without advocating, managing disagreement without taking sides, and producing a record that survives the meeting.
 

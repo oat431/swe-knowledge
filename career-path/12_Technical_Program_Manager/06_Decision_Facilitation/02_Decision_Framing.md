@@ -20,7 +20,7 @@ tags:
 
 ## Why This Matters
 
-A well-framed decision is half-decided. The decider reads the framing document and understands the landscape: what must be decided, what the options are, what each option costs, what each option risks, and which conditions would make each option the right choice. The decider's job is reduced to judgment (the one thing that cannot be delegated) because the analysis has already been done.
+A well-framed decision is half-decided. The decider reads the framing document and understands the situation: what must be decided, what the options are, what each option costs, what each option risks, and which conditions would make each option the right choice. The decider's job is reduced to judgment (the one thing that cannot be delegated) because the analysis has already been done.
 
 Poorly framed decisions put the analysis burden on the decider during the meeting. The decider asks questions the document should have answered, requests data the document should have included, and defers the decision to get the missing information. A decision deferred for missing information is a decision-framing failure, the information existed; the framing did not include it.
 
@@ -40,7 +40,7 @@ Every decision-framing document has five sections. The structure is non-negotiab
 
 ## Pricing Options: The Trade-Off Table
 
-The heart of the framing document is the trade-off table. Every option gets a row; every relevant dimension gets a column.
+The core of the framing document is the trade-off table. Every option gets a row; every relevant dimension gets a column.
 
 | Option | Cost (time, money, people) | Benefit (what improves) | Risk (what could go wrong) | Right When (condition that makes this the best choice) |
 |--------|---------------------------|------------------------|---------------------------|-------------------------------------------------------|
@@ -67,7 +67,7 @@ Criteria with weights prevent the most common decision-framing failure: scoring 
 
 ## The Recommendation: With Honest Confidence
 
-The TPM's recommendation is not advocacy; it is the synthesis of the analysis, stated with honest confidence.
+The TPM's recommendation is the synthesis of the analysis, stated with honest confidence.
 
 | Confidence Level | Meaning | Example |
 |------------------|---------|---------|
@@ -79,7 +79,7 @@ A recommendation with low confidence is not a failure; it is an honest assessmen
 
 ## The "Do Nothing" Option
 
-Every framing document includes a "do nothing" or "status quo" option. It is not a straw man; it is the baseline against which every other option is measured. The do-nothing option is priced honestly: here is the cost of inaction, here is what continues unchanged, here is when the problem forces a decision anyway.
+Every framing document includes a "do nothing" or "status quo" option. It is the baseline against which every other option is measured. The do-nothing option is priced honestly: here is the cost of inaction, here is what continues unchanged, here is when the problem forces a decision anyway.
 
 The do-nothing option matters because it forces the question: "Is the problem bad enough to justify the cost of fixing it?" If the answer is no, the decision is deferred, and that is a valid outcome, as long as the deferral is explicit and the re-evaluation trigger is set.
 

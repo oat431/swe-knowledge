@@ -16,7 +16,7 @@ tags:
 
 > **Professionalism is all about taking responsibility. A professional holds themselves accountable for errors, delivers code they know works, continuously cares for the structure of the software, and owns their career growth, even though perfection is unattainable, the professional strives relentlessly toward it.**
 
-Professionalism isn't a badge you wear; it's a daily discipline of accountability. The nonprofessional makes a mistake and shrugs; "stuff happens." The professional writes the company a check. That mindset shift changes everything about how you approach your work.
+Professionalism is accountability, practiced every day. The nonprofessional makes a mistake and shrugs; "stuff happens." The professional writes the company a check. That mindset shift changes everything about how you approach your work.
 
 ---
 
@@ -108,7 +108,7 @@ If you can't write quicksort without looking it up, don't know what a Nassi-Schn
 Programming is an act of **supreme arrogance**; you create order from chaos, commanding machines in precise detail. Professionals don't pretend otherwise. But they also know their calculations will sometimes be wrong and their abilities will fall short.
 
 - When you're the butt of the joke, **laugh first**. Never ridicule others for mistakes; you may be next.
-- Real confidence isn't about never failing; it's about knowing you will fail and handling it with grace.
+- Confidence comes from knowing you will fail sometimes and handling it with grace.
 
 > *"A professional understands his supreme arrogance, and that the fates will eventually notice and level their aim. When that aim connects, the best you can do is take Howard's advice: Laugh."*
 

@@ -61,7 +61,7 @@ tags:
 - Does solving this advance our product vision?
 - Does it support our business objectives?
 - Does it serve our target market?
-- Does it leverage our unique capabilities?
+- Does it build on our unique capabilities?
 
 **Alignment matrix:**
 ```

@@ -57,7 +57,7 @@ Templates are the org's accumulated writing judgment:
 | Standard template | The adoption structure that spreads |
 | Review checklist | The criteria the org has learned to apply |
 
-The staff move is not writing every document; it is writing the templates that make everyone's documents good. A template that forces the decision, the options, and the cost is worth a hundred documents you could have written yourself.
+The staff move is writing the templates that make everyone's documents good. A template that forces the decision, the options, and the cost is worth a hundred documents you could have written yourself.
 
 ## Encouraging a Writing Culture
 
@@ -82,7 +82,7 @@ The bar for every staff document: would a new senior understand it in one pass?
 | **Context test** | Does it stand alone, or does it assume the meeting? |
 | **Six-month test** | Would it make sense to someone who missed all context? |
 
-The document that fails these tests is not too long; it is too inside. Rewrite for the new senior; the experts will still understand, and the org gains a reader.
+The document that fails these tests is too inside, whatever its length. Rewrite for the new senior; the experts will still understand, and the org gains a reader.
 
 ## Archiving and Findability
 

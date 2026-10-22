@@ -23,7 +23,7 @@ tags:
 
 Solo planning fails differently from team planning. On a team, a wrong estimate is absorbed by collective capacity; there are others to review, to cover a sick day, to carry two workstreams in parallel. On your own, every plan is a plan for one person's finite week, and every assumption about availability is also an assumption about your health, focus, and admin load. A plan that assumes a perfect calendar is not optimistic. It is fiction, and fiction collapses at the first integration problem.
 
-The core discipline is planning at realistic capacity. Independent work is roughly half billable at best: sales, invoicing, learning, support, and admin consume the rest, and none of it pauses for a delivery deadline. Estimates calibrated on your best days become deadlines missed on the merely human ones. Planning at around sixty to seventy percent of nominal capacity is not slack; it is the correction that makes commitments keepable.
+The core discipline is planning at realistic capacity. Independent work is roughly half billable at best: sales, invoicing, learning, support, and admin consume the rest, and none of it pauses for a delivery deadline. Estimates calibrated on your best days become deadlines missed on the merely human ones. Planning at around sixty to seventy percent of nominal capacity is the correction that makes commitments keepable.
 
 The plan is also a communication instrument. Milestones that appear weekly keep the client oriented and provide early warning when something slips. One enormous milestone at the end hides all risk until it is too late to react. Designing the sequence (small checkpoints, visible progress, buffers attached to the risky parts) sets the engagement up to succeed in front of witnesses.
 
@@ -53,7 +53,7 @@ Plan no more than roughly sixty to seventy percent of nominal working hours as d
 | Contingency | 15 to 25 percent on the total | 14 hours |
 | Committed estimate | Sum, rounded up | 110 hours |
 
-The gap between the raw estimate and the committed one is not padding to be quietly consumed; it is the difference between a plan that communicates reality and one that performs precision.
+The gap between the raw estimate and the committed one is the difference between a plan that communicates reality and one that performs precision.
 
 ## Milestone Design
 

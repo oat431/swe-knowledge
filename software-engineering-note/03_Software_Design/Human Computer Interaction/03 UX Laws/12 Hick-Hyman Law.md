@@ -11,7 +11,7 @@ tags:
 
 > **The more choices you give someone, the longer they take to decide.**
 
-Every additional option increases decision time. This isn't linear; it's logarithmic. But the user experience impact IS linear: more options = more cognitive load = more abandonment.
+Every additional option increases decision time. This isn't linear; it's logarithmic. But the user experience impact *is* linear: more options = more cognitive load = more abandonment.
 
 ---
 

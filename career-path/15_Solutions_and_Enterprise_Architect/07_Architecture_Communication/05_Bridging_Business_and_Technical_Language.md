@@ -22,7 +22,7 @@ tags:
 
 The same words carry different meanings on either side of the business-technology divide. "Real time" means sub-second to an engineer and "today rather than next week" to an operations director. "Flexible" means configurable to one and endlessly changeable to the other. "Secure" is a property to be designed and a feeling to be trusted. Translation failure is one of the most reliable causes of solutions that meet their specification and disappoint their users.
 
-The architect is the organization's standing interpreter. This is not a soft skill layered on top of the technical work; it is the mechanism by which requirements become design and design becomes acceptance. Translating a business intent into precise technical constraints (and translating technical consequences back into the business outcomes they affect) is where the architect adds value that neither side can produce alone.
+The architect is the organization's standing interpreter. This is the mechanism by which requirements become design and design becomes acceptance. Translating a business intent into precise technical constraints (and translating technical consequences back into the business outcomes they affect) is where the architect adds value that neither side can produce alone.
 
 The asymmetry matters: business language is the final arbiter, because the business owns the outcomes. Technical translation serves that end. The danger is false fluency: the architect who believes each side has understood because each nodded. Understanding has to be tested: restated, played back, walked through scenarios, and written into a shared glossary that both sides can point to when memory and goodwill diverge.
 

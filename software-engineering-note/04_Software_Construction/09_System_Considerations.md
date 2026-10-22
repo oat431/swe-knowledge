@@ -375,7 +375,7 @@ Programmers spend up to **40% of their time editing source code**. A good IDE sh
 
 ### 30.4 Tool-Oriented Environments
 
-Integrated environments where tools work together seamlessly: Unix with its small-tools philosophy, or integrated CASE environments.
+Integrated environments where tools work together: Unix with its small-tools philosophy, or integrated CASE environments.
 
 ### 30.5 Building Your Own Programming Tools
 

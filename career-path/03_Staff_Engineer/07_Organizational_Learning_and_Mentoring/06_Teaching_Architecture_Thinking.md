@@ -72,7 +72,7 @@ The reading list is how the lens gets its depth:
 | **System stories** | How great systems evolved | Architecture blogs and retrospectives, read critically |
 | **Classics** | The durable canon | The timeless architecture and design texts |
 
-The practice is not the list; it is the discussion. A monthly session where three people argue about one paper transfers more than a personal library ever will.
+The discussion is the practice. A monthly session where three people argue about one paper transfers more than a personal library ever will.
 
 ## Growing Reviewers
 
@@ -99,7 +99,7 @@ New seniors inherit the lens faster with a deliberate path:
 | **Kata participation** | One practice round before production pressure |
 | **Constraint briefing** | The org's load-bearing constraints, and why |
 
-The goal is not faster ramp-up to code; it is faster ramp-up to judgment. A senior who understands why the boundaries exist will defend them; one who does not will propose solutions that violate them.
+The goal is faster ramp-up to judgment. A senior who understands why the boundaries exist will defend them; one who does not will propose solutions that violate them.
 
 ## Measuring Spread
 

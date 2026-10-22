@@ -98,7 +98,7 @@ Feature: Order Checkout
 
 ## ATDD (Acceptance Test-Driven Development)
 
-Tests are written collaboratively by dev, QA, and product owner BEFORE development starts. The test IS the specification.
+Tests are written collaboratively by dev, QA, and product owner BEFORE development starts. The test *is* the specification.
 
 ```
 Product Owner: "User should be able to cancel an order before it ships"

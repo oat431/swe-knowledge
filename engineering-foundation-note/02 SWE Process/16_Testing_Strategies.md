@@ -1,11 +1,11 @@
 ---
 tags: [testing, verification, validation, software-engineering]
-source: "SWE Theory & Practice — Roger Pressman & Bruce Maxim, Ch 8–9"
+source: "SWE Theory & Practice — Pfleeger & Atlee, Ch 8–9"
 ---
 
 # Testing Strategies
 
-> **Source:** *Software Engineering: A Practitioner's Approach* by Roger S. Pressman & Bruce R. Maxim — Ch 8 (Testing the Programs) and Ch 9 (Testing the System)
+> **Source:** *Software Engineering: Theory and Practice* by Shari Lawrence Pfleeger & Joanne M. Atlee, Ch 8 (Testing the Programs) and Ch 9 (Testing the System)
 
 ---
 
@@ -14,8 +14,8 @@ source: "SWE Theory & Practice — Roger Pressman & Bruce Maxim, Ch 8–9"
 > **Testing aims to find faults, not to prove correctness.** The absence of detected faults does not guarantee correctness.
 
 Key distinctions:
-- **Fault** — a defect in requirements, design, code, documentation, or test cases
-- **Failure** — a problem in the functioning of the system at runtime
+- **Fault:** a defect in requirements, design, code, documentation, or test cases
+- **Failure:** a problem in the functioning of the system at runtime
 - A fault causes a failure only when the right conditions are met; latent faults may never manifest during testing
 
 ### Fault-Discovery Efficiency
@@ -31,7 +31,7 @@ Olsen (1993) tracked faults in an 184K-LOC system and found that **no single tec
 | System & regression testing | 16.6% |
 | Post-deployment (field) | 0.1% |
 
-> **Lesson:** Use a diverse portfolio of techniques — inspections, reviews, prototyping, and dynamic testing — to catch different fault types.
+> **Lesson:** Use a diverse portfolio of techniques (inspections, reviews, prototyping, and dynamic testing) to catch different fault types.
 
 ---
 
@@ -41,9 +41,9 @@ Olsen (1993) tracked faults in an 184K-LOC system and found that **no single tec
 
 Tests based on the internal structure of the code:
 
-- **Statement testing** — execute every statement at least once
-- **Branch testing** — exercise every decision outcome (true and false)
-- **Path testing** — traverse all possible paths through the program
+- **Statement testing:** execute every statement at least once
+- **Branch testing:** exercise every decision outcome (true and false)
+- **Path testing:** traverse all possible paths through the program
 
 | Coverage Type | What It Guarantees |
 |---|---|
@@ -81,7 +81,7 @@ When individual components pass unit testing, they are combined into a working s
 - Object-oriented systems
 - Large numbers of reusable components
 
-**Drawback:** Top-level (controlling) components are tested last — major design faults discovered late.
+**Drawback:** Top-level (controlling) components are tested last: major design faults discovered late.
 
 ### Top-Down Integration
 
@@ -100,11 +100,11 @@ When individual components pass unit testing, they are combined into a working s
 
 ### Modified Top-Down
 
-Components at each level are tested individually before merging — combines isolation benefits of bottom-up with early design validation of top-down. **Requires both stubs and drivers.**
+Components at each level are tested individually before merging. Combines isolation benefits of bottom-up with early design validation of top-down. **Requires both stubs and drivers.**
 
 ### Big-Bang Integration
 
-All components tested in isolation, then thrown together at once. **Not recommended** — faults are extremely difficult to isolate.
+All components tested in isolation, then thrown together at once. **Not recommended**: faults are extremely difficult to isolate.
 
 ### Sandwich Integration
 
@@ -152,14 +152,14 @@ Microsoft's market-driven approach:
 
 ### Key OO Testing Concerns
 
-1. **State tracking** — develop tests that track an object's state transitions
-2. **Concurrency & synchronization** — beware of race conditions in concurrent objects
-3. **Inherited method retesting** — required when:
+1. **State tracking:** develop tests that track an object's state transitions
+2. **Concurrency & synchronization:** beware of race conditions in concurrent objects
+3. **Inherited method retesting:** required when:
    - Method is redefined in subclass
    - Method has specific behavior in derived class
    - Other functions in the class must be consistent with inherited behavior
-4. **Reuse doesn't eliminate testing** — "a program adequately tested in isolation may not be adequately tested in combination" (Perry & Kaiser 1990)
-5. **Coverage metrics differ** — traditional cyclomatic complexity is less useful; interaction-based coverage is more important
+4. **Reuse doesn't eliminate testing:** "a program adequately tested in isolation may not be adequately tested in combination" (Perry & Kaiser 1990)
+5. **Coverage metrics differ:** traditional cyclomatic complexity is less useful; interaction-based coverage is more important
 
 ### OO Testing Challenges
 
@@ -174,12 +174,12 @@ Microsoft's market-driven approach:
 
 ### Six Steps of Test Planning
 
-1. **Establish test objectives** — what kinds of faults to look for
-2. **Design test cases** — representative, thorough exercise of functions
-3. **Write test cases** — implement as executable scripts
-4. **Test test cases** — verify correctness and coverage before execution
-5. **Execute tests** — run and capture results
-6. **Evaluate test results** — compare actual vs. expected outcomes
+1. **Establish test objectives:** what kinds of faults to look for
+2. **Design test cases:** representative, thorough exercise of functions
+3. **Write test cases:** implement as executable scripts
+4. **Test test cases:** verify correctness and coverage before execution
+5. **Execute tests:** run and capture results
+6. **Evaluate test results:** compare actual vs. expected outcomes
 
 ### Test Plan Contents
 
@@ -191,7 +191,7 @@ Microsoft's market-driven approach:
 - Automated tool requirements
 - Schedule, personnel, and resource needs
 
-> The test plan is developed **as the system is developed** — not after. The testing perspective often encourages questioning the nature of the problem and the appropriateness of the design.
+> The test plan is developed **as the system is developed**, not after. The testing perspective often encourages questioning the nature of the problem and the appropriateness of the design.
 
 ---
 
@@ -210,7 +210,7 @@ Where:
 - s = seeded faults found
 - n = indigenous faults found
 
-**Limitation:** Assumes seeded faults are representative of actual faults — difficult to guarantee.
+**Limitation:** Assumes seeded faults are representative of actual faults, difficult to guarantee.
 
 ### Two-Group Method
 
@@ -238,7 +238,7 @@ Track statement, branch, and path coverage using automated tools. Stop when targ
 
 ### Identifying Fault-Prone Code
 
-**Classification tree analysis** (Porter & Selby 1990) — statistical technique that identifies which measurements best predict fault-prone components:
+**Classification tree analysis** (Porter & Selby 1990): statistical technique that identifies which measurements best predict fault-prone components:
 - Size (LOC), number of decisions, nesting depth, coupling, cohesion, number of modifications
 - Example: Components with 100–300 LOC and ≥15 decisions, or >300 LOC with no design review and ≥5 changes, are fault-prone
 
@@ -257,21 +257,21 @@ Track statement, branch, and path coverage using automated tools. Stop when targ
 
 ### Dynamic Analysis (program running)
 
-- **Program monitors** — capture execution state, statement/branch/path coverage
-- **Breakpoints** — stop execution when conditions met
-- **Trace tools** — forward/backward control flow and data change tracking
+- **Program monitors:** capture execution state, statement/branch/path coverage
+- **Breakpoints:** stop execution when conditions met
+- **Trace tools:** forward/backward control flow and data change tracking
 
 ### Test Execution Tools
 
-- **Capture-and-replay** — record keystrokes and responses, compare expected vs. actual
-- **Automated stubs and drivers** — generate test harnesses automatically
-- **Test environments** — integrate databases, measurement tools, code analysis, and simulation
+- **Capture-and-replay:** record keystrokes and responses, compare expected vs. actual
+- **Automated stubs and drivers:** generate test harnesses automatically
+- **Test environments:** integrate databases, measurement tools, code analysis, and simulation
 
 ### Test Case Generators
 
-- **Structural generators** — based on source code structure (paths, branches)
-- **Functional generators** — based on function/state coverage
-- **Combinatorial generators** (e.g., AETG) — cover all pairwise or n-way parameter combinations
+- **Structural generators:** based on source code structure (paths, branches)
+- **Functional generators:** based on function/state coverage
+- **Combinatorial generators** (e.g., AETG): cover all pairwise or n-way parameter combinations
 
 ---
 
@@ -288,12 +288,12 @@ Track statement, branch, and path coverage using automated tools. Stop when targ
 ### Sources of System Faults
 
 Faults can be introduced at **any** point:
-- Requirements — ambiguous, incorrect, or missing
-- System design — misinterpretation of requirements
-- Program design — misinterpretation of higher-level design
-- Implementation — syntax/semantic errors
-- Maintenance — new faults introduced when fixing old ones
-- Documentation — unclear or incorrect user guidance
+- Requirements: ambiguous, incorrect, or missing
+- System design: misinterpretation of requirements
+- Program design: misinterpretation of higher-level design
+- Implementation: syntax/semantic errors
+- Maintenance: new faults introduced when fixing old ones
+- Documentation: unclear or incorrect user guidance
 
 ### System Testing Steps
 
@@ -301,16 +301,16 @@ Faults can be introduced at **any** point:
 Integrated modules → Function test → Performance test → Acceptance test → Installation test → SYSTEM IN USE
 ```
 
-1. **Function testing** — verifies integrated system performs functions as specified in requirements
-2. **Performance testing** — compares system against nonfunctional requirements (speed, security, reliability)
-3. **Acceptance testing** — customer-led evaluation confirming the system meets their needs
-4. **Installation testing** — verifies system works correctly at the actual deployment site
+1. **Function testing:** verifies integrated system performs functions as specified in requirements
+2. **Performance testing:** compares system against nonfunctional requirements (speed, security, reliability)
+3. **Acceptance testing:** customer-led evaluation confirming the system meets their needs
+4. **Installation testing:** verifies system works correctly at the actual deployment site
 
 ---
 
 ## Function Testing
 
-Also called **thread testing** — focuses on functionality, ignoring system structure (closed-box approach).
+Also called **thread testing**. Focuses on functionality, ignoring system structure (closed-box approach).
 
 ### Cause-and-Effect Graphs (IBM)
 
@@ -319,7 +319,7 @@ Converts natural-language requirements into formal test cases:
 1. Separate requirements into individual functions
 2. Identify **causes** (inputs) and **effects** (outputs/transformations)
 3. Draw Boolean relationships (AND, OR, NOT, NAND, NOR)
-4. Convert graph to a **decision table** — each column = one test case
+4. Convert graph to a **decision table**: each column = one test case
 5. Eliminate redundant and low-priority combinations
 
 **Benefits:**
@@ -365,8 +365,8 @@ Tests the **nonfunctional** requirements:
 
 ### Key Measures
 
-- **MTTF** — Mean Time to Failure (average interfailure time)
-- **MTTR** — Mean Time to Repair
+- **MTTF:** Mean Time to Failure (average interfailure time)
+- **MTTR:** Mean Time to Repair
 - **MTBF** = MTTF + MTTR
 
 Derived measures:
@@ -378,10 +378,10 @@ M = 1 / (1 + MTTR)           Maintainability
 
 ### Failure Severity Levels (MIL-STD-1629A)
 
-1. **Catastrophic** — death or system loss
-2. **Critical** — severe injury or mission loss
-3. **Marginal** — minor injury or mission degradation
-4. **Minor** — unscheduled maintenance only
+1. **Catastrophic:** death or system loss
+2. **Critical:** severe injury or mission loss
+3. **Marginal:** minor injury or mission degradation
+4. **Minor:** unscheduled maintenance only
 
 ### Hardware vs. Software Reliability
 
@@ -400,7 +400,7 @@ M = 1 / (1 + MTTR)           Maintainability
 
 **Littlewood Model** (more realistic):
 - Each fault's contribution is an independent random variable (gamma distribution)
-- Doubly stochastic — handles both types of uncertainty
+- Doubly stochastic: handles both types of uncertainty
 - Uses Pareto distribution for fault discovery
 
 **Motorola Zero-Failure Testing:**
@@ -409,8 +409,8 @@ M = 1 / (1 + MTTR)           Maintainability
 
 ### Operational Profile & Statistical Testing
 
-- **Operational profile** — probability distribution of likely user inputs over time
-- **Statistical testing** — test data reflects the operational profile
+- **Operational profile:** probability distribution of likely user inputs over time
+- **Statistical testing:** test data reflects the operational profile
 - Benefits: concentrates on most-used paths; reliability predictions match user experience
 
 ---
@@ -447,9 +447,9 @@ Final testing at the actual user site:
 
 ### Versions and Releases
 
-- **Version** — a configuration for a particular platform or situation
-- **Release** — an improved system replacing a previous one
-- Version tracking is essential — working with wrong code listing wastes time and may introduce new faults
+- **Version:** a configuration for a particular platform or situation
+- **Release:** an improved system replacing a previous one
+- Version tracking is essential: working with wrong code listing wastes time and may introduce new faults
 
 ### Change Control
 
@@ -464,7 +464,7 @@ Applied to new versions/releases to verify that:
 2. Previously working functions are not broken
 3. Essential functions from prior version still work
 
-> **California billing disaster:** 167,000 customers billed $667,000 for unwarranted calls because a software upgrade to a telephone switch used the wrong area code — caught by regression testing would have prevented this.
+> **California billing disaster:** 167,000 customers billed $667,000 for unwarranted calls because a software upgrade to a telephone switch used the wrong area code. Regression testing would have caught it.
 
 ### Version Control Approaches
 
@@ -480,20 +480,20 @@ Applied to new versions/releases to verify that:
 
 Safety-critical systems require additional rigor:
 
-- **Fault tolerance** — system must continue operating (possibly in degraded mode) despite faults
-- **Redundancy** — multiple independent paths to critical functions
-- **Formal verification** — mathematical proof of correctness for critical components
-- **Extensive coverage requirements** — e.g., 100% statement coverage mandated by contract
-- **Independent test teams** — not involved in design or implementation
-- **Failure mode analysis** — exhaustively catalog failure modes and their consequences
+- **Fault tolerance:** system must continue operating (possibly in degraded mode) despite faults
+- **Redundancy:** multiple independent paths to critical functions
+- **Formal verification:** mathematical proof of correctness for critical components
+- **Extensive coverage requirements:** e.g., 100% statement coverage mandated by contract
+- **Independent test teams:** not involved in design or implementation
+- **Failure mode analysis:** exhaustively catalog failure modes and their consequences
 
 ### Ariane-5 Lessons
 
 The Ariane-5 failure demonstrated that:
-- **No test verified SRI behavior under Ariane-5 trajectory** — the specification didn't include Ariane-5 trajectory data
+- **No test verified SRI behavior under Ariane-5 trajectory:** the specification didn't include Ariane-5 trajectory data
 - Reviews were conducted at all levels but **failed to notice inadequate test coverage**
 - A nonexpert reviewer might have questioned assumptions others took for granted
-- Root cause was in **requirements**, not code — it could have been caught much earlier
+- Root cause was in **requirements**, not code; it could have been caught much earlier
 
 > **Key principle:** For safety-critical systems, mandatory declaration of limitations should be part of every requirements document. Test coverage must be assessed for completeness, not assumed.
 
@@ -512,30 +512,30 @@ The Ariane-5 failure demonstrated that:
 
 ### Test Plan Components
 
-1. **Objectives** — guide management and technical effort
-2. **Document references** — traceability to requirements, design, and code
-3. **System summary** — context for readers not involved in earlier phases
-4. **Major tests** — function, performance, acceptance, installation
-5. **Schedule** — milestones, locations, pre-test requirements
-6. **Materials needed** — deliverables, site-supplied resources, training
+1. **Objectives:** guide management and technical effort
+2. **Document references:** traceability to requirements, design, and code
+3. **System summary:** context for readers not involved in earlier phases
+4. **Major tests:** function, performance, acceptance, installation
+5. **Schedule:** milestones, locations, pre-test requirements
+6. **Materials needed:** deliverables, site-supplied resources, training
 
 ---
 
 ## Key Takeaways
 
-- Testing is **risk management** — you can never test everything, so prioritize based on fault-proneness, criticality, and usage patterns
-- **Diverse techniques** catch diverse faults — inspections + structural testing + functional testing + system testing
-- **Integration strategy** affects fault isolation capability — choose based on system structure and project constraints
+- Testing is **risk management**: you can never test everything, so prioritize based on fault-proneness, criticality, and usage patterns
+- **Diverse techniques** catch diverse faults: inspections + structural testing + functional testing + system testing
+- **Integration strategy** affects fault isolation capability; choose based on system structure and project constraints
 - **OO systems** require more extensive integration testing despite easier unit testing
-- **Regression testing** is not optional — it prevents new faults from hiding behind fixed ones
+- **Regression testing** is not optional: it prevents new faults from hiding behind fixed ones
 - **Reliability** is probabilistic and measured over execution time; models predict but never guarantee
-- **Acceptance testing** is the customer's reality check — requirements are often incomplete until users work with the system
+- **Acceptance testing** is the customer's reality check: requirements are often incomplete until users work with the system
 - **Automated tools** are essential for handling the volume and complexity of modern testing
-- **Test early, test often** — faults found late are exponentially more expensive to fix
+- **Test early, test often:** faults found late are exponentially more expensive to fix
 
 ---
 
 ## See Also
 
-- [[02 SWE Process/10_SE_Fundamentals_and_Process|10_SE_Fundamentals_and_Process]] — Software process and life cycle models
-- [[01 Physics and Math/08_Engineering_Materials|08_Engineering_Materials]] — Quality attributes and engineering trade-offs
+- [[02 SWE Process/10_SE_Fundamentals_and_Process|10_SE_Fundamentals_and_Process]]: Software process and life cycle models
+- [[01 Physics and Math/08_Engineering_Materials|08_Engineering_Materials]]: Quality attributes and engineering trade-offs

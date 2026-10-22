@@ -23,7 +23,7 @@ tags:
 
 A demo is an argument made with running software. For the advocate it is how a new capability becomes concrete for developers who will never read the release notes; for the consultant it is how a customer sees their own problem solved before committing budget. When it works, skepticism converts to curiosity in minutes. When it fails, the audience remembers the failure, not the technology.
 
-Credibility is the currency. Technical audiences have finely tuned fake detectors: they can feel when a demo is a scripted happy path designed to hide problems, and they discount everything that follows. A demo that shows real behavior (including a considered error and its recovery) earns more belief than one that glides over the edges. The advocate's job is not to pretend the product is finished; it is to show honestly what it does and why that matters.
+Credibility is the currency. Technical audiences have finely tuned fake detectors: they can feel when a demo is a scripted happy path designed to hide problems, and they discount everything that follows. A demo that shows real behavior (including a considered error and its recovery) earns more belief than one that glides over the edges. The advocate's job is to show honestly what it does and why that matters.
 
 Demos also scale badly if they are not built to last: the same demo is often delivered a dozen times, by you and by others, so the story, the environment, and the fallback plan must all be artifacts, not improvisation. Treating a demo as a designed deliverable rather than a rehearsal of your own knowledge is the difference between a talk you give and an asset your organization owns.
 

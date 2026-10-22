@@ -20,7 +20,7 @@ tags:
 
 ## Why This Matters
 
-Expectation management is the TPM's daily alignment work. It is not a quarterly presentation or a steering committee agenda item; it is the continuous discipline of ensuring that what stakeholders believe about the program matches what the program is actually doing. When expectations and reality stay in contact, the program is boring, and boring is the goal. When they diverge, the program generates a surprise, and surprises are the TPM's failure mode.
+Expectation management is the TPM's daily alignment work. It is the continuous discipline of ensuring that what stakeholders believe about the program matches what the program is actually doing. When expectations and reality stay in contact, the program is boring, and boring is the goal. When they diverge, the program generates a surprise, and surprises are the TPM's failure mode.
 
 The divergence mechanism is innocent: the engineering team gives a best-case estimate, product hears a commitment, leadership builds a roadmap, and nobody said anything false. The TPM's job is to catch these divergences at formation (when the estimate is still an estimate, the commitment is still a target, and the roadmap is still a draft) and to correct them before they harden into expectation.
 
@@ -76,7 +76,7 @@ Prevention is cheaper than correction. The TPM builds expectation management int
 
 ## When Stakeholders Reject Reality
 
-Some stakeholders refuse to accept that the program cannot meet their expectation. The TPM's response is not to argue harder; it is to make the gap visible in a forum where the stakeholder cannot ignore it.
+Some stakeholders refuse to accept that the program cannot meet their expectation. The TPM's response is to make the gap visible in a forum where the stakeholder cannot ignore it.
 
 | Escalation | Forum | Content |
 |------------|-------|---------|

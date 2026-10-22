@@ -87,7 +87,7 @@ Momentum is maintained by visible progress and bounded blockage. The dashboard i
 | Completion declaration | A written record: what was migrated, what the old system was, what the outcome is |
 | Retrospective | What made it work, what would be done differently |
 
-The completion declaration matters more than it looks: it is what the org remembers, and it is what prevents the zombie migration, the 40% migration that stays "in progress" forever. A migration without a declaration is not finished; it is paused.
+The completion declaration matters more than it looks: it is what the org remembers, and it is what prevents the zombie migration, the 40% migration that stays "in progress" forever. A migration without a declaration is only paused.
 
 ```mermaid
 %%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%

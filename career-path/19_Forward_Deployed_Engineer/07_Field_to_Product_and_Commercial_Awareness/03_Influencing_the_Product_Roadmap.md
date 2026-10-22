@@ -57,7 +57,7 @@ flowchart LR
     PRESENT --> FOLLOW["Track the decision and follow up"]
 ```
 
-The follow-up step is where most FDEs drop the baton. A roadmap conversation is not over when the meeting ends; it is over when a decision is recorded and the field is told. Chasing the decision (politely, persistently, with new evidence when it arrives) separates the FDE whose asks get scheduled from the FDE whose asks get listened to.
+The follow-up step is where most FDEs drop the baton. A roadmap conversation is over when a decision is recorded and the field is told. Chasing the decision (politely, persistently, with new evidence when it arrives) separates the FDE whose asks get scheduled from the FDE whose asks get listened to.
 
 ## Practical Applications
 

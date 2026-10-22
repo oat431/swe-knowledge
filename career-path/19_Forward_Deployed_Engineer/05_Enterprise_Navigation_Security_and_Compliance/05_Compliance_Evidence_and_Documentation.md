@@ -22,7 +22,7 @@ tags:
 
 Every gate in an enterprise deployment eventually asks the same underlying question: prove it. The security reviewer wants the data-flow diagram, the auditor samples the access records, legal reads the retention description, procurement files the questionnaire against the standard. The FDE produces the technical substrate for all of it: the descriptions of how the system actually behaves, backed by artifacts that can be inspected. Evidence is the currency of every approval, and like any currency, it only works when it is real.
 
-The discipline has two halves. The first is mapping: every claim the organization makes about the deployment should trace to an artifact someone can open and verify. When a pack is a folder of documents rather than a set of claims with evidence attached, reviewers spend their time connecting dots, question rounds multiply, and gaps surface late. When the mapping exists, review becomes verification instead of investigation. The second half is honesty: an evidence pack must describe the system as built, not as hoped. A single overstated claim (a control that is planned but not implemented, an encryption path that exists in the design but not in the deployment) will eventually be tested, and its failure retroactively discredits everything else in the pack. Compliance honesty is not a virtue the FDE can afford to treat as optional; it is the mechanism that keeps every future approval cheap.
+The discipline has two halves. The first is mapping: every claim the organization makes about the deployment should trace to an artifact someone can open and verify. When a pack is a folder of documents rather than a set of claims with evidence attached, reviewers spend their time connecting dots, question rounds multiply, and gaps surface late. When the mapping exists, review becomes verification instead of investigation. The second half is honesty: an evidence pack must describe the system as built, not as hoped. A single overstated claim (a control that is planned but not implemented, an encryption path that exists in the design but not in the deployment) will eventually be tested, and its failure retroactively discredits everything else in the pack. Compliance honesty is the mechanism that keeps every future approval cheap.
 
 There is also a maintenance dimension that separates good FDEs from convenient ones. Deployments change: scope grows, integrations are added, personnel rotate, product versions move. Evidence written once decays quietly, and stale evidence is worse than missing evidence because it creates false confidence right up to the moment it is tested. The FDE who builds evidence by design (generated from the real system where possible, refreshed on defined triggers, owned by a name) turns the recurring burden of audits into a routine that costs almost nothing.
 
@@ -71,7 +71,7 @@ flowchart LR
     SUBMIT --> MAINTAIN["Maintain as the deployment changes"]
 ```
 
-The expensive part of this loop is not writing documents; it is the moment of truth at the gaps step. A missing artifact that is named and remediated is a normal engineering task. A missing artifact that is papered over becomes a finding, and findings have a way of arriving at the worst possible time.
+The expensive part of this loop is the moment of truth at the gaps step. A missing artifact that is named and remediated is a normal engineering task. A missing artifact that is papered over becomes a finding, and findings have a way of arriving at the worst possible time.
 
 ## Practical Applications
 

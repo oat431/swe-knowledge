@@ -19,7 +19,7 @@ tags:
 
 ## What Changes from Junior to Mid
 
-A junior engineer reviews generated code by reading it for fluency: it looks clean, the names are sensible, it must be right. A mid-level engineer treats generated code as untrusted input — the same category as a patch from an unknown contributor or data from a user. Fluent style is precisely what makes generated defects dangerous, so review runs against the spec, the tests, and the codebase's real conventions, not against how the code feels.
+A junior engineer reviews generated code by reading it for fluency: it looks clean, the names are sensible, it must be right. A mid-level engineer treats generated code as untrusted input: the same category as a patch from an unknown contributor or data from a user. Fluent style is precisely what makes generated defects dangerous, so review runs against the spec, the tests, and the codebase's real conventions, not against how the code feels.
 
 | Aspect | Junior | Mid |
 |--------|--------|-----|
@@ -98,13 +98,13 @@ flowchart LR
 
 Review a generated change as untrusted input, end to end:
 
-1. Take a real generated patch — or generate one deliberately for a small feature with a written spec and acceptance criteria.
+1. Take a real generated patch, or generate one deliberately for a small feature with a written spec and acceptance criteria.
 2. Print or open the diff and read it against the spec first, marking each acceptance criterion met, unmet, or unverifiable.
 3. Make a second pass for edge cases: empty inputs, boundaries, nulls, and error paths; write down every case the patch does not handle.
 4. Make a third pass for security and provenance: injection surfaces, authz on new paths, and any block that resembles third-party code.
 5. Check conventions and scope: naming, layering, and nothing changed outside the declared boundary.
 6. Decide per defect: fix forward or reject wholesale, with one sentence of rationale for each major decision.
-7. Verify with tests you trust — including at least one test you wrote yourself that the generated code did not produce — then write the review comment explaining the accepted code's approach in your own words.
+7. Verify with tests you trust (including at least one test you wrote yourself that the generated code did not produce), then write the review comment explaining the accepted code's approach in your own words.
 
 ## Practical Applications
 

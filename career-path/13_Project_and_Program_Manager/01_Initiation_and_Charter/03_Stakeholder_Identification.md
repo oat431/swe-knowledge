@@ -23,7 +23,7 @@ A project succeeds or fails on its stakeholders. Miss a stakeholder at initiatio
 
 Stakeholder identification is not a one-time exercise. Stakeholders change as the project moves through its lifecycle: new groups are affected by detailed design decisions, regulators appear when a permit is needed, end users become relevant when deployment approaches. The initial identification exercise produces a stakeholder register that grows and refines throughout the project.
 
-The discipline is not only about listing names. It is about understanding interests. A stakeholder who supports the project's objectives but opposes the chosen approach is not an enemy; they are a source of information about a constraint that was missed. The project manager distinguishes between stakeholders who oppose the project and stakeholders who oppose the current plan, and engages both differently.
+The discipline is not only about listing names. It is about understanding interests. A stakeholder who supports the project's objectives but opposes the chosen approach is a source of information about a constraint that was missed. The project manager distinguishes between stakeholders who oppose the project and stakeholders who oppose the current plan, and engages both differently.
 
 ## Stakeholder Categories
 

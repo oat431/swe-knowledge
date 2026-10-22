@@ -86,7 +86,7 @@ flowchart LR
 
 ## In Practice
 
-**Every task starts with its intended outcome, not its code.** Before you open an editor, write one line: "this should change X, and we will know by Y." If you cannot name X and Y, the task is not ready to build — that is an ambiguity problem to fix first. This habit alone converts task lists into impact chains over time.
+**Every task starts with its intended outcome, not its code.** Before you open an editor, write one line: "this should change X, and we will know by Y." If you cannot name X and Y, the task is not ready to build; that is an ambiguity problem to fix first. This habit alone converts task lists into impact chains over time.
 
 **Report in chains, not in lists.** A status update that says "change, expected effect, observed effect, remaining risk" is worth five task lines. It lets your manager forward it unchanged, lets teammates see where to help, and leaves an artifact that later becomes evidence. Practice until the chain format is your default written voice.
 
@@ -96,7 +96,7 @@ flowchart LR
 
 **Make risk visible as part of impact, not as an apology.** "On track" that later slips destroys more trust than "at risk on X, mitigation is Y" ever will. Risk language names the commitment threatened, the cause, and what you propose. Writing risk into the same status artifact as impact makes you the person who sees around corners.
 
-**Distinguish prevented impact from delivered impact, with proof.** The bug you stopped before ship, the migration you prevented by checking first — these are real impact but invisible unless written down. Record them as short incident notes: what could have happened, how you found it, what changed as a result. Prevention claims without evidence read as self-promotion; with evidence they read as judgment.
+**Distinguish prevented impact from delivered impact, with proof.** The bug you stopped before ship, the migration you prevented by checking first: these are real impact but invisible unless written down. Record them as short incident notes: what could have happened, how you found it, what changed as a result. Prevention claims without evidence read as self-promotion; with evidence they read as judgment.
 
 ## Practical Exercise
 

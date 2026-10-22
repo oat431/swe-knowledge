@@ -20,7 +20,7 @@ tags:
 
 ## Why This Matters
 
-Every team claims to improve; few actually do. The difference is not intention; it is rhythm. A retrospective is not a meeting where problems are named; it is a loop in which problems become actions, actions become done work, and done work becomes measurable change. When the loop breaks, the meeting becomes what everyone secretly knows it is: a place where the same complaints are aired every two weeks and nothing moves.
+Every team claims to improve; few actually do. The difference is rhythm. A retrospective is not a meeting where problems are named; it is a loop in which problems become actions, actions become done work, and done work becomes measurable change. When the loop breaks, the meeting becomes what everyone secretly knows it is: a place where the same complaints are aired every two weeks and nothing moves.
 
 The tech lead runs that loop: choosing the right format for the moment, forcing action-item discipline, tracking items to closure, escalating recurring issues before they calcify into culture, and watching for retro fatigue in the team itself. This note covers formats and their fit, the discipline that makes actions stick, escalation of recurring patterns, measurement, and treatment for the most common retro disease.
 
@@ -75,7 +75,7 @@ The single highest-leverage retro practice is ruthless action discipline. Most r
 
 ## Recurring Issue Escalation
 
-The same topic appearing in three consecutive retros is not bad luck; it is a systemic problem the team's normal process cannot fix.
+The same topic appearing in three consecutive retros signals a systemic problem the team's normal process cannot fix.
 
 | Signal | Interpretation | Escalation |
 |--------|----------------|------------|

@@ -81,13 +81,13 @@ flowchart LR
 
 **Context quality caps output quality.** No phrasing can compensate for the tool not knowing your layering, your data shapes, or the rule behind the requirement. Before rewording anything, ask what a competent new teammate would need to read first, and put exactly that in the context. Rewording is the last lever, not the first.
 
-**Show the desired shape instead of describing it.** One existing example of the output you want — a function, a test, a doc block in your style — constrains naming, structure, and tone faster than three paragraphs of description. Pair it with a counterexample when you keep getting the same wrong pattern. Examples are the highest-bandwidth context you can send.
+**Show the desired shape instead of describing it.** One existing example of the output you want (a function, a test, a doc block in your style) constrains naming, structure, and tone faster than three paragraphs of description. Pair it with a counterexample when you keep getting the same wrong pattern. Examples are the highest-bandwidth context you can send.
 
-**Structure every code prompt the same way.** Goal, context, constraints, examples, output format, acceptance criteria — every time, in that order. A fixed structure makes omissions visible: if you cannot fill in the constraints block, the task is not understood well enough to delegate. It also makes prompts comparable and debuggable across attempts.
+**Structure every code prompt the same way.** Goal, context, constraints, examples, output format, acceptance criteria: every time, in that order. A fixed structure makes omissions visible: if you cannot fill in the constraints block, the task is not understood well enough to delegate. It also makes prompts comparable and debuggable across attempts.
 
 **Diagnose failures before regenerating.** When output is wrong, name what was missing: the file the tool never saw, the constraint you assumed was obvious, the domain rule that lives only in your head. Fix that specific gap in the brief, then regenerate. Blind regeneration on the same input is a random number generator with formatting.
 
-**Keep prompts and outputs reproducible.** Save the prompt, the context list, and the settings alongside the resulting change — in the repo, the PR description, or a team prompt library. Reproducibility lets a teammate regenerate the same work, lets you compare approaches honestly, and turns personal prompting tricks into team assets. An undocumented one-off is a claim you cannot back.
+**Keep prompts and outputs reproducible.** Save the prompt, the context list, and the settings alongside the resulting change: in the repo, the PR description, or a team prompt library. Reproducibility lets a teammate regenerate the same work, lets you compare approaches honestly, and turns personal prompting tricks into team assets. An undocumented one-off is a claim you cannot back.
 
 **Respect context limits by cutting, not shrinking.** When the context does not fit, drop the least load-bearing material: boilerplate, generated files, unrelated modules, verbose logs. Keep the spec, the touched code, its callers and tests, and the conventions. A short summary of cut material is better than truncated real code, which reads as complete when it is not.
 
@@ -95,7 +95,7 @@ flowchart LR
 
 ## Practical Exercise
 
-Take one real code task and run it twice — once with a bare prompt, once with a designed brief — then compare:
+Take one real code task and run it twice (once with a bare prompt, once with a designed brief), then compare:
 
 1. Pick a small real task: a bug fix, a test addition, or a refactor of one module.
 2. Run it with a bare one-line prompt and save the output; note every defect and mismatch you would have to fix.

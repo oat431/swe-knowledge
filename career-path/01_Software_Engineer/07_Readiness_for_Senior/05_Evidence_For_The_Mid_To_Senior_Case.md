@@ -21,7 +21,7 @@ tags:
 
 A junior engineer's progress is visible in their tickets: the work is assigned, the review is recorded, and the manager can see the output. A mid-level engineer's progress becomes harder to read from the tracker, because the valuable parts are the decisions, the unblocking, and the problems that never became tickets.
 
-The promotion case is assembled from what you can show, and most engineers start collecting too late. The habit that prevents this is not a bigger document; it is capturing the artifact at the moment the work happens — the same week, in a form a stranger could understand a year later.
+The promotion case is assembled from what you can show, and most engineers start collecting too late. The habit that prevents this is capturing the artifact at the moment the work happens: the same week, in a form a stranger could understand a year later.
 
 | Aspect | Junior | Mid |
 |--------|--------|-----|
@@ -32,7 +32,7 @@ The promotion case is assembled from what you can show, and most engineers start
 | Promotion thinking | Not applicable yet | Understands the case is built continuously |
 | Gap awareness | Waits to be told what is missing | Tracks evidence gaps quarterly |
 
-At senior, evidence becomes less about individual artifacts and more about sustained scope and direction — which is why the habit must be in place before the level changes.
+At senior, evidence becomes less about individual artifacts and more about sustained scope and direction, which is why the habit must be in place before the level changes.
 
 ## Core Frameworks
 
@@ -93,13 +93,13 @@ flowchart LR
 
 **Ask for the evidence conversation before the cycle.** In a 1:1, ask: "If I applied next cycle, which of these artifacts would you use, and what is missing?" The answer tells you whether your mental model of senior matches your manager's, and it gives you a quarter to close the gap instead of a week.
 
-**Treat the evidence log as a by-product, not a project.** The log should take minutes a week, drawing on artifacts that already exist for other reasons. If maintaining it becomes a separate job, you are either writing too much or doing work that produces no artifacts at all — both are useful signals.
+**Treat the evidence log as a by-product, not a project.** The log should take minutes a week, drawing on artifacts that already exist for other reasons. If maintaining it becomes a separate job, you are either writing too much or doing work that produces no artifacts at all: both are useful signals.
 
 **Do not manufacture evidence for its own sake.** Starting a book club to tick "team lift" or writing an ADR for a decision nobody will revisit is evidence theater. Reviewers can tell the difference between artifacts that changed something and artifacts that were produced to be seen. The work comes first; the record follows.
 
 ## Practical Exercise
 
-1. Create a single evidence file — one document, chronological, one entry per artifact.
+1. Create a single evidence file: one document, chronological, one entry per artifact.
 2. Backfill the last two quarters from memory, tickets, docs, and chat history; mark each entry with a date and a link.
 3. Tag every entry with one of the six evidence types and note the senior dimension it supports.
 4. Count the entries per dimension and identify the two dimensions with the fewest.

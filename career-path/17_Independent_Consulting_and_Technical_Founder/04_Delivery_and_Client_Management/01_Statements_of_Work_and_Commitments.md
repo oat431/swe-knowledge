@@ -21,7 +21,7 @@ tags:
 
 ## Why This Matters
 
-A statement of work is the constitution of an engagement. Everything that later becomes a dispute (what was included, what was assumed, what "done" means, who owes what and when) is either settled in the SOW or left to memory, and memory is a losing arbiter. Clients are not adversaries; they are simply differently informed, and a precise document protects both sides from the gaps between those perspectives. The SOW is how a professional relationship starts with a shared map instead of a shared assumption.
+A statement of work is the constitution of an engagement. Everything that later becomes a dispute (what was included, what was assumed, what "done" means, who owes what and when) is either settled in the SOW or left to memory, and memory is a losing arbiter. Clients are simply differently informed, and a precise document protects both sides from the gaps between those perspectives. The SOW is how a professional relationship starts with a shared map instead of a shared assumption.
 
 The commercial stakes are concrete. Engagements without written commitments drift into scope that was never priced, acceptance that arrives late or never, and payment terms that were "understood" but never defined. Each of these erodes margin quietly and trust loudly. The independent who can point to a signed, specific, line-by-line agreement resolves borderline moments in minutes instead of weeks, and looks organized while doing it, which compounds into referrals.
 

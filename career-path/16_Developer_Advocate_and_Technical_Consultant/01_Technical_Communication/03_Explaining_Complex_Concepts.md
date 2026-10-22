@@ -20,7 +20,7 @@ tags:
 
 ## Why This Matters
 
-Explanation is not describing a system; it is building a model of that system in someone else's mind. The difference shows up immediately: a description lists what exists, while an explanation predicts what the listener can now do with it. An engineer who understands a caching layer can reason about a cache miss they have never seen; an engineer who merely memorized the description cannot. The advocate's explanation is successful only when the learner can go beyond the material and handle cases the explanation did not cover.
+Explanation means building a model of a system in someone else's mind. The difference shows up immediately: a description lists what exists, while an explanation predicts what the listener can now do with it. An engineer who understands a caching layer can reason about a cache miss they have never seen; an engineer who merely memorized the description cannot. The advocate's explanation is successful only when the learner can go beyond the material and handle cases the explanation did not cover.
 
 Complex systems resist this because they are genuinely complex: many moving parts, interacting constraints, failure modes that only appear at scale. The novice's problem is not intelligence but context. They lack the anchors that make the deep details meaningful. The expert's failure mode is the opposite: starting at mechanism because mechanism is what the expert finds interesting, when the listener has no model to attach it to. Good explanations are engineered to the learner's current state, the way good APIs are designed to the caller's needs.
 

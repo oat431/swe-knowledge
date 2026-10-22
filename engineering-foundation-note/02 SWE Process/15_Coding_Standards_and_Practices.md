@@ -10,15 +10,15 @@ source: SWE Theory & Practice Ch 7
 
 # Coding Standards and Practices
 
-> **Source:** *Software Engineering: Theory and Practice* — Chapter 7: Writing the Programs
+> **Source:** *Software Engineering: Theory and Practice*, Chapter 7: Writing the Programs
 
 ## Overview
 
 Writing programs is the critical step where design becomes executable software. This chapter addresses how to write code that is:
 
-- **Understandable** — to yourself during testing and to others as the system evolves
-- **Reusable** — taking advantage of design organization, data structure, and language constructs
-- **Consistent** — following standards that enable team collaboration and maintenance
+- **Understandable:** to yourself during testing and to others as the system evolves
+- **Reusable:** taking advantage of design organization, data structure, and language constructs
+- **Consistent:** following standards that enable team collaboration and maintenance
 
 The chapter does not teach programming; rather, it explains the **software engineering practices** that should guide code writing.
 
@@ -48,10 +48,10 @@ Throughout a career, developers write code across many projects, domains, and to
 
 Code reuse is a fundamental software engineering goal. Key principles:
 
-- **Design for reuse** — write modules with clear interfaces and minimal dependencies
-- **Library and toolkit usage** — leverage existing, tested components rather than reinventing
-- **Framework integration** — use frameworks as partially completed applications, filling in specialized modules
-- **Component catalogs** — maintain searchable repositories of reusable code
+- **Design for reuse:** write modules with clear interfaces and minimal dependencies
+- **Library and toolkit usage:** leverage existing, tested components rather than reinventing
+- **Framework integration:** use frameworks as partially completed applications, filling in specialized modules
+- **Component catalogs:** maintain searchable repositories of reusable code
 
 ### Reuse Hierarchy
 
@@ -85,13 +85,13 @@ The program design acts as a bridge from architectural design to code. Key conne
 
 Code-level documentation embedded within the source:
 
-- **Header comments** — module purpose, author, date, revision history
-- **Function/method comments** — parameters, return values, side effects, preconditions
-- **Inline comments** — explaining non-obvious logic, algorithms, workarounds
-- **Assertions** — formal preconditions, postconditions, and invariants
+- **Header comments:** module purpose, author, date, revision history
+- **Function/method comments:** parameters, return values, side effects, preconditions
+- **Inline comments:** explaining non-obvious logic, algorithms, workarounds
+- **Assertions:** formal preconditions, postconditions, and invariants
 
 **Best practices:**
-- Comment *why*, not *what* — the code shows what, comments explain intent
+- Comment *why*, not *what*; the code shows what, comments explain intent
 - Keep comments synchronized with code changes
 - Use consistent comment style throughout the project
 
@@ -99,19 +99,19 @@ Code-level documentation embedded within the source:
 
 Documentation outside the code that supports understanding and use:
 
-- **Software Architecture Document (SAD)** — system-level design decisions
-- **Program design documents** — module-level specifications
-- **API documentation** — generated from code comments (e.g., Javadoc, docstrings)
-- **User guides** — how to use the software
-- **README files** — project overview, setup, contribution guidelines
+- **Software Architecture Document (SAD):** system-level design decisions
+- **Program design documents:** module-level specifications
+- **API documentation:** generated from code comments (e.g., Javadoc, docstrings)
+- **User guides:** how to use the software
+- **README files:** project overview, setup, contribution guidelines
 
 ### Design by Contract
 
 A documentation approach where each module has an interface specification that precisely describes what the module does:
 
-- **Preconditions** (`require`) — what must be true before the module executes
-- **Postconditions** (`ensure`) — what the module guarantees after execution
-- **Invariants** — properties that hold after every method invocation
+- **Preconditions** (`require`): what must be true before the module executes
+- **Postconditions** (`ensure`): what the module guarantees after execution
+- **Invariants:** properties that hold after every method invocation
 
 Example contract for a dictionary module:
 
@@ -130,20 +130,20 @@ invariant: forall (key1, Element1) and (key2, Element2) in dictionary,
 
 Contracts help ensure:
 - Modules interoperate correctly
-- Substitutability — any implementation adhering to the contract can replace another
-- Testing basis — assertions provide clear test targets
-- Change evaluation — each assertion can be checked when design changes
+- Substitutability: any implementation adhering to the contract can replace another
+- Testing basis: assertions provide clear test targets
+- Change evaluation: each assertion can be checked when design changes
 
 ## 5. Exception Handling in Code
 
 Exception handling separates error checking from normal program logic:
 
 - Use **try–rescue** constructs to isolate unsafe code
-- **Weaken preconditions** by converting them to exceptions — the module checks validity itself rather than trusting callers
+- **Weaken preconditions** by converting them to exceptions: the module checks validity itself rather than trusting callers
 - Provide **targeted recovery** schemes in rescue clauses
 - Raise **new exceptions** to propagate errors to calling code when recovery fails
 
-**Example — network transmission with retry:**
+**Example (network transmission with retry):**
 
 ```
 attempt_transmission(message: STRING) raises TRANSMISSIONEXCEPTION
@@ -171,7 +171,7 @@ attempt_transmission(message: STRING) raises TRANSMISSIONEXCEPTION
 
 ## See Also
 
-- [[01 Physics and Math/01_Dimensions_and_Measurement|01_Dimensions_and_Measurement]] — Engineering measurement fundamentals
-- Software Architecture Document (SAD) — Chapter 5 design documentation
-- Design Patterns — Composite, Visitor, Observer, Decorator
-- OO Measurement — Chidamber–Kemerer metrics, Lorenz and Kidd measures
+- [[01 Physics and Math/01_Dimensions_and_Measurement|01_Dimensions_and_Measurement]]: Engineering measurement fundamentals
+- Software Architecture Document (SAD): Chapter 5 design documentation
+- Design Patterns: Composite, Visitor, Observer, Decorator
+- OO Measurement: Chidamber–Kemerer metrics, Lorenz and Kidd measures

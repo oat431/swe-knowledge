@@ -19,7 +19,7 @@ tags:
 
 ## What Changes from Junior to Mid
 
-A junior engineer reaches for generation whenever it is available, because generation always produces something. A mid-level engineer knows that producing something is not the goal — understanding, correctness, and judgment are — and that some work is damaged by early plausible output. Choosing not to use AI is a positive skill: it protects learning, protects irreversible and security-critical changes, and keeps your fundamentals from decaying into prompt-reading.
+A junior engineer reaches for generation whenever it is available, because generation always produces something. A mid-level engineer knows that producing something is not the goal (understanding, correctness, and judgment are), and that some work is damaged by early plausible output. Choosing not to use AI is a positive skill: it protects learning, protects irreversible and security-critical changes, and keeps your fundamentals from decaying into prompt-reading.
 
 | Aspect | Junior | Mid |
 |--------|--------|-----|
@@ -84,17 +84,17 @@ flowchart LR
 
 ## In Practice
 
-**Learning work must not be delegated.** When you are new to a system, domain, or codebase, the struggle to trace and understand it is the deliverable — the mental model you build is what makes every future task faster. A tool-generated summary feels like learning and produces none of its durable structure. Do the first pass yourself; use AI afterward to check your understanding or fill specific gaps.
+**Learning work must not be delegated.** When you are new to a system, domain, or codebase, the struggle to trace and understand it is the deliverable: the mental model you build is what makes every future task faster. A tool-generated summary feels like learning and produces none of its durable structure. Do the first pass yourself; use AI afterward to check your understanding or fill specific gaps.
 
 **Security-critical and irreversible changes get the slow path.** Auth logic, permission models, data migrations, destructive operations, and cryptographic code have error costs far beyond their line counts. These are changes where you work by hand or with exhaustive verification, where another human reviews closely, and where generation at most drafts alternatives you evaluate deliberately. The asymmetry is the point: a wrong plausible line here is not a bug, it is an incident.
 
-**Do not let generated design anchor you.** Plausible first options crowd out the design space; once you have seen a workable shape, imagining better ones gets harder. For novel design, think through the constraints and sketch options before any tool runs — then, if you like, use generation to critique or stress-test your designs rather than to originate them. The design is the part that is yours to do.
+**Do not let generated design anchor you.** Plausible first options crowd out the design space; once you have seen a workable shape, imagining better ones gets harder. For novel design, think through the constraints and sketch options before any tool runs; then, if you like, use generation to critique or stress-test your designs rather than to originate them. The design is the part that is yours to do.
 
 **When generation is slower, do the work.** For a tiny fix or an obvious change, composing a prompt, reviewing the output, and correcting its mismatches costs more than typing the change. Estimate both paths honestly; "the tool is fast" is not the same as "the task is faster with the tool." Two minutes of typing beats ten minutes of prompting and un-guessing.
 
-**Guard against plausible output that replaces your thinking.** Early exposure to a decent answer measurably changes how you approach a problem afterward; it feels like help and works like an anchor. When the value of the task is your own judgment — debugging, designing, understanding — think first and consult later. Consultation is a checkpoint, not a starting gun.
+**Guard against plausible output that replaces your thinking.** Early exposure to a decent answer measurably changes how you approach a problem afterward; it feels like help and works like an anchor. When the value of the task is your own judgment (debugging, designing, understanding), think first and consult later. Consultation is a checkpoint, not a starting gun.
 
-**Practice fundamentals on purpose, on a schedule.** Fluency in reading code, debugging, testing, and design decays when tools carry those loads daily. Set deliberate reps: trace a code path by hand, write a failing test before any generation, do a small exercise with the tool closed. Skill maintenance is not nostalgia; it is what lets you evaluate output you did not write.
+**Practice fundamentals on purpose, on a schedule.** Fluency in reading code, debugging, testing, and design decays when tools carry those loads daily. Set deliberate reps: trace a code path by hand, write a failing test before any generation, do a small exercise with the tool closed. Maintaining these skills is what lets you evaluate output you did not write.
 
 **Keep a written list of what you never delegate.** Codify the categories: learning passes on unfamiliar systems, security-critical paths, irreversible changes, design origination on novel problems. A written list converts a judgment you feel into a policy you follow under deadline pressure. Review the list as tools and your skills change, but change it deliberately.
 
@@ -103,10 +103,10 @@ flowchart LR
 Audit one week of your work for delegation judgment:
 
 1. List every task you worked on in a recent week and mark each: delegated to AI, partially delegated, or done by hand.
-2. For each delegated task, answer one question: what was the goal — shipping, or building my understanding? Flag any learning work that was delegated.
+2. For each delegated task, answer one question: what was the goal: shipping, or building my understanding? Flag any learning work that was delegated.
 3. Identify any security-critical or irreversible change in the list; check whether its handling matched the slow-path standard.
 4. Pick one recent design decision you made with generated input and redo it cold: sketch two alternative designs by hand before looking at the generated one; note where the anchor pulled.
-5. Time two small tasks both ways — with generation and by hand — and record which was genuinely faster and why.
+5. Time two small tasks both ways (with generation and by hand) and record which was genuinely faster and why.
 6. Write your personal never-delegate list: at least four categories, each with one sentence of rationale.
 7. Schedule one deliberate fundamentals rep per week for the next month (hand-tracing, failing-test-first, no-tool debugging) and note what you relearned.
 

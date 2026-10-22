@@ -304,7 +304,7 @@ Identify underlying factors that contribute to observed problems, **distinguishi
 - Additional bones show answers to subsequent "why" questions.
 - Fundamental root causes are in the most highly branched bones.
 
-> [!tip] **Pareto principle (80/20 rule):** ~20% of vital root causes lead to ~80% of observed problems. Even a simple root cause analysis will reveal the high-leverage causes your improvement actions should target.
+> [!tip] **Pareto principle (80/20 rule):** ~20% of vital root causes lead to ~80% of observed problems. Even a simple root cause analysis will show which causes your improvement actions should target.
 
 ---
 

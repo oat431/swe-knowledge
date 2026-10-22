@@ -61,7 +61,7 @@ Accuracy is also procedural, not aspirational. Claims that can be demonstrated, 
 | Unintentional undisclosed interest | Disclose and re-frame the affected content | Immediate |
 | Overstated roadmap language | Restate plainly; thank whoever noticed | At the next communication touch |
 
-Corrections are not confessions; they are the visible machinery of an accuracy standard. The audience should see that the standard is enforced. Silently corrected content teaches onlookers that claims are not load-bearing.
+Corrections are the visible machinery of an accuracy standard. The audience should see that the standard is enforced. Silently corrected content teaches onlookers that claims are not load-bearing.
 
 ## The Trust Compounding Cycle
 

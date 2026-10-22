@@ -95,7 +95,7 @@ flowchart LR
 
 **Ask for feedback in a form that is safe and answerable to give.** Specific, behavior-level questions about a recent window get real answers; global character questions get comforting ones. Ask the person who observes the behavior most, not the person who likes you most. One good ask per month beats a yearly "tell me everything."
 
-**Receive with SBI before you react.** When feedback arrives, probe for its components: in what situation, what exactly did I do, and what was the impact. This separates the data from the delivery, lowers the temperature, and often reveals that the feedback is narrower — and more fixable — than it first sounded. Thank first, analyze later, respond never in the moment.
+**Receive with SBI before you react.** When feedback arrives, probe for its components: in what situation, what exactly did I do, and what was the impact. This separates the data from the delivery, lowers the temperature, and often reveals that the feedback is narrower (and more fixable) than it first sounded. Thank first, analyze later, respond never in the moment.
 
 **Check feedback against your own evidence instead of accepting or rejecting it wholesale.** Your job is to triangulate: the feedback, your artifact trail, and one more view. Sometimes the feedback is right and your self-image is stale; sometimes it is one person's context and your record says otherwise. Either way the output is the same: a written note on what you believe and why.
 

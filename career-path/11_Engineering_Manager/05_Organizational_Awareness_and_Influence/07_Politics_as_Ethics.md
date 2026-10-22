@@ -22,7 +22,7 @@ tags:
 
 "Office politics" is usually discussed as a disease, but power moves through organizations whether or not anyone acknowledges it: budgets are won with allies, decisions are shaped before meetings, reputations precede facts. The manager who pretends politics does not exist surrenders the team's interests to those who play; the manager who plays dirty forfeits the trust that the team's future runs on.
 
-The manager's real task is to practice politics as ethics: using the levers of organizational influence while staying on lines the team could audit. This is not a compromise position; it is the only sustainable one. Dirty politics wins meetings and loses careers; ethical influence builds a reputation that compounds.
+The manager's real task is to practice politics as ethics: using the levers of organizational influence while staying on lines the team could audit. It is the only sustainable position. Dirty politics wins meetings and loses careers; ethical influence builds a reputation that compounds.
 
 ## Politics Defined
 
@@ -34,7 +34,7 @@ The manager's real task is to practice politics as ethics: using the levers of o
 | Relationship to trust | Builds it | Spends it |
 | Outcome | The team's interests advanced transparently | Individual wins, collective damage |
 
-The same skill set serves both columns. The difference is not technique; it is the line.
+The same skill set serves both columns. The difference is the line.
 
 ## The Manager's Ethical Lines
 

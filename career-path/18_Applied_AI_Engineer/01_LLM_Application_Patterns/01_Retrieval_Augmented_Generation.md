@@ -72,7 +72,7 @@ Retrieve wide (50–200 candidates), rerank narrow (top 5–10). Reranking the c
 
 **Use hybrid retrieval by default for production corpora.** Real queries mix paraphrase ("how do I reset my access") with exact tokens ("error E-1042"). Dense-only search misses exact codes; sparse-only misses paraphrase. Hybrid fusion covers both classes and costs little compared to a wrong answer, so single-strategy retrieval needs a justification, not the other way around.
 
-**Treat the index as a deployed artifact with a lifecycle.** Documents change, and stale chunks answer from outdated facts. Re-embed on a schedule or event, version the index together with the embedding model and chunking config, and run retrieval metrics against index changes exactly like a regression suite. An index is not a one-time import; it is a living component with a pipeline.
+**Treat the index as a deployed artifact with a lifecycle.** Documents change, and stale chunks answer from outdated facts. Re-embed on a schedule or event, version the index together with the embedding model and chunking config, and run retrieval metrics against index changes exactly like a regression suite. An index is a living component with a pipeline.
 
 **Design augmentation for how models actually attend to context.** Models weight the beginning and end of context and miss material in the middle ("lost in the middle"). Order chunks by confidence, put the strongest evidence first, dedupe near-identical chunks, and prefix each with source metadata (title, section) so the generator can cite precisely and the middle never holds the best evidence.
 

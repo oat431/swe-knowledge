@@ -20,7 +20,7 @@ tags:
 
 ## Why This Matters
 
-Transformation is not one program; it is a portfolio of programs, each with its own manager, budget, and pressures, all reshaping the same estate over years. Without governance at the transformation level, local optimizations collide: two programs rebuild the same capability, a dependency slips in one and blocks three others, and the target architecture quietly becomes whatever the sum of local decisions produces. Transformation governance exists to hold the whole.
+Transformation is a portfolio of programs, each with its own manager, budget, and pressures, all reshaping the same estate over years. Without governance at the transformation level, local optimizations collide: two programs rebuild the same capability, a dependency slips in one and blocks three others, and the target architecture quietly becomes whatever the sum of local decisions produces. Transformation governance exists to hold the whole.
 
 This governance is different from delivery governance. Delivery governance asks whether a project is on track against its plan; transformation governance asks whether the portfolio of changes still adds up to the intended destination: sequencing across programs, dependencies between them, risk aggregated rather than viewed in fragments, and changes to the target itself made deliberately rather than by drift.
 

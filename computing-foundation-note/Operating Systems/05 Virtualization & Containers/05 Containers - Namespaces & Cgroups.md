@@ -247,7 +247,7 @@ Consequences: layer caching makes builds fast; **write-heavy paths** (databases)
 
 - **The kernel itself.** One kernel, one syscall table, one scheduler. A kernel LPE bug (Dirty COW, Dirty Pipe, netfilter UAFs) = every container on the host falls.
 - **`/proc` quirks.** `/proc/cpuinfo`, `/proc/meminfo`, `uptime`, `/proc/loadavg` still show **host** values; they're not namespaced. Only `/proc/[pid]` listings follow the PID namespace.
-- **Time** (offsets only since 5.6: and container runtimes don't use it; you can't give a container its own clock rate).
+- **Time** (offsets only since 5.6, and container runtimes don't use it; you can't give a container its own clock rate).
 - **`dmesg`** (restricted, not virtualized), kernel modules, hardware clocks.
 
 > A container escape (break out of namespaces → host root) is categorically easier than a VM escape (defeat the hypervisor's hardware-enforced boundary). That's why untrusted multi-tenant code goes in microVMs; see [[05 Virtualization - KVM & Hypervisors]].

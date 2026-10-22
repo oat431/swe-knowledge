@@ -22,7 +22,7 @@ tags:
 
 A decision without a deadline is a decision that will not be made, until the dependency it blocks becomes a crisis, and the decision is forced with one option and no analysis. The TPM's deadline discipline is what prevents decision-by-crisis: setting the deadline before the dependent work is scheduled to start, tracking progress toward the deadline, escalating when the deadline is at risk, and making visible the cost of indecision when the deadline passes.
 
-Accountability for decisions is not about blaming deciders who choose poorly; it is about ensuring deciders choose at all, on time, with the information they need. The TPM's accountability mechanism is the decision register, reviewed weekly, with overdue decisions surfaced immediately at the program level and escalated to the steering committee when they threaten dependent work.
+Accountability for decisions means ensuring deciders choose at all, on time, with the information they need. The TPM's accountability mechanism is the decision register, reviewed weekly, with overdue decisions surfaced immediately at the program level and escalated to the steering committee when they threaten dependent work.
 
 ## Setting Decision Deadlines
 
@@ -35,7 +35,7 @@ Decision deadlines are set by the work they unblock, not by convenience, not by 
 | Sequence-driven | Anchored to a predecessor milestone in the program plan | "M2 completes on Oct 30. The M3 scope decision must be made by Oct 15 to allow M3 planning." |
 | Risk-driven | Set to prevent a risk from materializing while the decision is pending | "The security finding must be resolved within 30 days. The remediation approach decision must be made by day 15 to allow 15 days for implementation." |
 
-The deadline is communicated with the consequence of missing it: "If this decision is not made by [date], [dependent workstream] will be delayed by [duration] at a cost of [impact]." The consequence is not a threat; it is a fact that the decider needs to weigh against the cost of deciding with incomplete information.
+The deadline is communicated with the consequence of missing it: "If this decision is not made by [date], [dependent workstream] will be delayed by [duration] at a cost of [impact]." The consequence is a fact that the decider needs to weigh against the cost of deciding with incomplete information.
 
 ## The Decision Countdown
 

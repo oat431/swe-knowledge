@@ -26,7 +26,7 @@ ROI and value communication is the TPM's upward translation discipline: converti
 
 ## ROI Calculation for Programs
 
-Program ROI is not a single number; it is a family of calculations that answer different questions.
+Program ROI is a family of calculations that answer different questions.
 
 | ROI Metric | Formula | Question Answered | When to Use |
 |------------|---------|-------------------|-------------|

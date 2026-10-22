@@ -10,7 +10,7 @@ tags:
 
 > The book describes 22 classic GoF design patterns. You can read cover-to-cover or jump to patterns of interest via cross-reference anchors. All code is presented in pseudocode to remain language-agnostic. Readers new to OOP should brush up on key OOP terms and UML diagram basics first.
 
-This chapter serves as a navigation guide for the book. It establishes two reading paths (sequential or interest-driven) and explains the connective tissue between patterns through cross-references. It also notes that pseudocode keeps the material universal and suggests the OOP primer for those who need it.
+This chapter is a navigation guide for the book. It establishes two reading paths (sequential or interest-driven) and explains the connective tissue between patterns through cross-references. It also notes that pseudocode keeps the material universal and suggests the OOP primer for those who need it.
 
 ## Key Points
 

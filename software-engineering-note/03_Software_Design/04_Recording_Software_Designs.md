@@ -23,7 +23,7 @@ Designs must be communicated. Recording a design means representing it in forms 
 
 ## Model-Based Design (MBD)
 
-**Definition:** Use models as the primary design artifacts, not just documentation but executable, analyzable specifications.
+**Definition:** Use models as the primary design artifacts. They are executable, analyzable specifications as well as documentation.
 
 **Key characteristics:**
 - **Models are the source of truth:** code may be generated from them

@@ -453,12 +453,12 @@ tags:
 
 ## Related
 
-- [[BABOK Essential Documents]] — Business Analysis Body of Knowledge
-- [[PMBOK Essential Documents]] — Project Management Body of Knowledge
-- [[SWEBOK Essential Documents]] — Software Engineering Body of Knowledge
-- [[CyBOK Essential Documents]] — Cyber Security Body of Knowledge
-- [[DMBOK Essential Documents]] — Data Management Body of Knowledge
-- [[SEBOK Essential Documents]] — Systems Engineering Body of Knowledge
+- [[BABOK Essential Documents]]: Business Analysis Body of Knowledge
+- [[PMBOK Essential Documents]]: Project Management Body of Knowledge
+- [[SWEBOK Essential Documents]]: Software Engineering Body of Knowledge
+- [[CyBOK Essential Documents]]: Cyber Security Body of Knowledge
+- [[DMBOK Essential Documents]]: Data Management Body of Knowledge
+- [[SEBOK Essential Documents]]: Systems Engineering Body of Knowledge
 - [[Profile-Small-Startup]]
 - [[Profile-Large-Safety-Critical]]
 - [[Essential Documents - Overview]]

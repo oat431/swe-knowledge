@@ -39,7 +39,7 @@ The TPM does not critique the architecture. The TPM asks: "At this boundary, wha
 
 ## Interface Types and Their Integration Risks
 
-Different interface types carry different integration profiles. The TPM categorizes every interface in the program's architecture by type to understand the integration risk landscape.
+Different interface types carry different integration profiles. The TPM categorizes every interface in the program's architecture by type to understand its integration risks.
 
 | Interface Type | How It Works | Integration Risk Profile | TPM's Focus |
 |---------------|-------------|-------------------------|-------------|

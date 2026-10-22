@@ -19,7 +19,7 @@ tags:
 
 ## What Changes from Junior to Mid
 
-A junior engineer feels faster because more code appears on screen per hour, and calls that productivity. A mid-level engineer knows that speed of typing was never the bottleneck: what matters is lead time from idea to reliable production change, including review rounds, defect escape, and rework. AI shifts effort from typing to specifying and verifying, so honest measurement tracks outcomes around the change, not activity during it — and watches for quality debt that arrives later than the speedup.
+A junior engineer feels faster because more code appears on screen per hour, and calls that productivity. A mid-level engineer knows that speed of typing was never the bottleneck: what matters is lead time from idea to reliable production change, including review rounds, defect escape, and rework. AI shifts effort from typing to specifying and verifying, so honest measurement tracks outcomes around the change, not activity during it, and watches for quality debt that arrives later than the speedup.
 
 | Aspect | Junior | Mid |
 |--------|--------|-----|
@@ -92,7 +92,7 @@ flowchart LR
 
 **Beware of quality debt as a silent borrower.** Plausible code with missing edge cases, inflated abstractions, and unexplained complexity ships fast and costs slow. Periodically audit AI-assisted changes a month later: what had to be fixed, explained, or deleted? That audit is your real interest rate on generated speed.
 
-**Write conclusions down and act on them.** An experiment nobody wrote down is an anecdote; a written result — "assistance cut lead time on small migrations, did nothing for design work" — becomes a delegation policy. Update what you delegate and how you measure as the tools change. This is measurement in service of judgment, not dashboards in service of comfort.
+**Write conclusions down and act on them.** An experiment nobody wrote down is an anecdote; a written result ("assistance cut lead time on small migrations, did nothing for design work") becomes a delegation policy. Update what you delegate and how you measure as the tools change. This is measurement in service of judgment, not dashboards in service of comfort.
 
 ## Practical Exercise
 
@@ -109,7 +109,7 @@ Run a small controlled self-experiment over one to two weeks:
 ## Practical Applications
 
 - [ ] I have recorded a baseline for at least one task class before claiming AI made me faster
-- [ ] My metrics include lead time, review rounds, defect escape, and rework — not lines or generation counts
+- [ ] My metrics include lead time, review rounds, defect escape, and rework, not lines or generation counts
 - [ ] Specifying and verifying time is included in my effort tallies
 - [ ] Comparisons are like-for-like on task size, area, and risk, over several samples
 - [ ] I inspect AI-assisted changes after merge for defects and complexity debt

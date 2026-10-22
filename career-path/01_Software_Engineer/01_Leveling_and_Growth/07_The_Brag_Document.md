@@ -95,7 +95,7 @@ flowchart LR
 
 **Include the misses with what you learned.** A document that records only wins is not honest evidence, and reviewers can smell it. One line about what failed and what you changed reads as judgment at mid level and beyond. It also protects you: when the same miss appears twice, your own document will tell you before anyone else does.
 
-**Name collaborators in every shared entry.** Joint work recorded as solo work is a debt that comes due at the worst moment — in a calibration where someone else's account exists. "With Priya on the schema migration" costs nothing and makes every claim stronger. Your document should be readable by the people in it without embarrassment.
+**Name collaborators in every shared entry.** Joint work recorded as solo work is a debt that comes due at the worst moment: in a calibration where someone else's account exists. "With Priya on the schema migration" costs nothing and makes every claim stronger. Your document should be readable by the people in it without embarrassment.
 
 **Keep it private and treat it as working memory.** This document exists for your recall and your preparation; it is not a status report and not shared by default. Privacy keeps it honest: you can record misses, doubts, and unpolished observations. Share the summaries you distill from it, never the raw log.
 

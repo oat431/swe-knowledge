@@ -96,7 +96,7 @@ This is the same idea as **YAGNI** ("You Ain't Gonna Need It"), only implement o
 
 ### Architecture Evaluation in Agile
 
-An architecture evaluation is **perfectly Agile-consistent** because meeting stakeholders' important concerns is a cornerstone of Agile philosophy.
+An architecture evaluation is **perfectly Agile-consistent** because meeting stakeholders' important concerns is a core Agile value.
 
 The **ATAM** (Architecture Tradeoff Analysis Method, Chapter 21):
 - Does **not** analyze all or even most of an architecture.
@@ -123,7 +123,7 @@ Web-conferencing systems are complex and demanding:
 
 These goals **trade off** against each other: security (encryption) vs. real-time performance; modifiability vs. time-to-market; availability/performance vs. cost.
 
-Additionally:
+Also:
 - Stringent **time-to-market** constraints prevented exhaustive requirements analysis.
 - Trying to support all possible uses was **intractable**.
 - Users were poorly equipped to envision all potential uses.

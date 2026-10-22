@@ -20,7 +20,7 @@ tags:
 
 ## Why This Matters
 
-Scaling is where technical ambition and business reality most often diverge for independents. The engineer in the room sees load graphs and wants headroom; the business in the room has revenue, margin, and attention as its scarce resources. Every scaling investment (more infrastructure, more services, more automation) buys capacity at the price of complexity, and complexity is exactly what a solo operator can least afford. The skill is not learning how to scale; it is learning to see the difference between a system that is genuinely constrained and one that merely looks busy.
+Scaling is where technical ambition and business reality most often diverge for independents. The engineer in the room sees load graphs and wants headroom; the business in the room has revenue, margin, and attention as its scarce resources. Every scaling investment (more infrastructure, more services, more automation) buys capacity at the price of complexity, and complexity is exactly what a solo operator can least afford. The skill is learning to see the difference between a system that is genuinely constrained and one that merely looks busy.
 
 Real scaling pressure has signatures: latency that breaches what clients notice, error rates that rise with load, queues that grow faster than they drain, costs that multiply faster than revenue, or operational work that crowds out delivery. Each of these can be measured. Imagined scaling pressure, by contrast, arrives as a feeling ("this will never hold up"), usually triggered by a growth story rather than a growth chart. The independent's discipline is to demand the measurement before spending the money.
 

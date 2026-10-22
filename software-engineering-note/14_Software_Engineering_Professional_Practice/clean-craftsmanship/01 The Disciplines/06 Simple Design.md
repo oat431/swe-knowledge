@@ -31,7 +31,7 @@ Coverage is not a management metric. It's a team tool. Use it to find untested c
 
 ## Design?
 
-Simple design IS a design activity. You're not "skipping design." You're designing in small increments, guided by tests, constrained by the need for simplicity.
+Simple design *is* a design activity. You're not "skipping design." You're designing in small increments, guided by tests, constrained by the need for simplicity.
 
 ---
 

@@ -24,7 +24,7 @@ A target without a path is a poster; a path without a target is drift. Target st
 
 The classic failure is the big-bang blueprint: an exhaustive future state that would require everything to change at once. It is intellectually satisfying and organizationally impossible, so it is either ignored or descoped into irrelevance. The senior alternative is a directional target (opinionated on structure, deliberately silent on details that will be decided closer to delivery) plus explicit transition architectures that sequence the crossing.
 
-Good targets have an owner and a horizon. They state which decisions they are meant to constrain, which constraints (budget, regulation, contracts) shape them, and what would cause them to change. A target that cannot be revised when strategy shifts is not a target; it is a monument.
+Good targets have an owner and a horizon. They state which decisions they are meant to constrain, which constraints (budget, regulation, contracts) shape them, and what would cause them to change. A target that cannot be revised when strategy shifts is a monument.
 
 ## From Strategy to Target
 

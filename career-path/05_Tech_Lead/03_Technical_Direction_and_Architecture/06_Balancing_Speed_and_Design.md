@@ -20,7 +20,7 @@ tags:
 
 ## Why This Matters
 
-The speed-versus-design tension is not a problem to solve; it is a decision to make, repeatedly and explicitly. The team that always goes solid misses deadlines and opportunities. The team that always goes fast builds a system that costs more than it saves, a quarter at a time. Both are failures of judgment, not of intent.
+The speed-versus-design tension is a decision to make, repeatedly and explicitly. The team that always goes solid misses deadlines and opportunities. The team that always goes fast builds a system that costs more than it saves, a quarter at a time. Both are failures of judgment, not of intent.
 
 The tech lead's value here is the judgment itself: reading each change for what it actually risks, matching design effort to that risk, and naming the trade-off out loud. The team inherits the judgment in two ways: through the decisions they see you make, and through the decision rules you write down so they can make the same calls without you.
 

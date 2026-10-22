@@ -54,7 +54,7 @@ Every translation answers three questions: what changes, what it means for us, w
 | Q&A | Questions answered honestly, unknowns labeled | 15 minutes |
 | Capture | Concerns and open questions recorded with owners | 5 minutes |
 
-The format's job is bidirectional: the team hears the translation, and the manager hears where the translation does not hold. Concerns captured in the meeting are not optional; they are the manager's upward feed.
+The format's job is bidirectional: the team hears the translation, and the manager hears where the translation does not hold. Concerns captured in the meeting are the manager's upward feed.
 
 ## What Cannot Be Shared
 

@@ -38,7 +38,7 @@ The senior architect treats current state as a living instrument, not a project.
 
 ## Levels of Detail
 
-Current state is not one document; it is a pyramid of views at different zoom levels.
+Current state is a pyramid of views at different zoom levels.
 
 | Level | Scope | Typical Content | Refresh Trigger |
 |-------|-------|-----------------|-----------------|

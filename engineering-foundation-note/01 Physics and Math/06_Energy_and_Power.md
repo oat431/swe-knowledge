@@ -30,7 +30,7 @@ $$\Delta KE = \frac{1}{2}mV_2^2 - \frac{1}{2}mV_1^2$$
 
 ### Potential Energy
 
-Gravitational potential energy — work required to lift an object:
+Gravitational potential energy, work required to lift an object:
 
 $$\Delta PE = mg\Delta h$$
 
@@ -73,7 +73,7 @@ Conversions:
 - 1 Btu = 778 ft·lb_f
 - 1 Btu = 1055 J
 
-**Internal energy** — molecular activity related to temperature; higher temperature → higher internal energy.
+**Internal energy:** molecular activity related to temperature; higher temperature → higher internal energy.
 
 ---
 
@@ -85,7 +85,7 @@ $$Q - W = \Delta E$$
 
 - **Q** = net heat transfer *into* the system (J)
 - **W** = net work done *by* the system (J)
-- **ΔE** = net change in total energy (J) — includes internal, kinetic, potential, elastic, and other forms
+- **ΔE** = net change in total energy (J); includes internal, kinetic, potential, elastic, and other forms
 
 **Sign convention:**
 | Direction | Sign |
@@ -95,7 +95,7 @@ $$Q - W = \Delta E$$
 | Work done by system | + |
 | Work done on system | − |
 
-> "When it comes to energy, the best you can do is break even." (And the second law says you can't even do that — there are always losses.)
+> "When it comes to energy, the best you can do is break even." (And the second law says you can't even do that: there are always losses.)
 
 ---
 
@@ -184,10 +184,10 @@ $$\text{Efficiency} = \frac{\text{power input to fluid by pump}}{\text{power inp
 ### Heating, Cooling, and Refrigeration
 
 **Vapor-compression cycle** components:
-- **Evaporator** — absorbs heat (cold side)
-- **Compressor** — raises refrigerant temperature/pressure
-- **Condenser** — ejects heat (hot side)
-- **Expansion valve** — drops temperature/pressure
+- **Evaporator:** absorbs heat (cold side)
+- **Compressor:** raises refrigerant temperature/pressure
+- **Condenser:** ejects heat (hot side)
+- **Expansion valve:** drops temperature/pressure
 
 **Coefficient of Performance (COP):**
 $$COP = \frac{\text{heat removal from evaporator}}{\text{energy input to compressor}}$$
@@ -250,8 +250,8 @@ $$COP = \frac{EER}{3.412}$$
 
 ## Related
 
-- [[Engineering Foundation Overview]] — All engineering foundation topics
-- [[01 Physics and Math/03_Force_and_Mechanics|03_Force_and_Mechanics]] — Work and force relationships
-- [[01 Physics and Math/04_Temperature_and_Thermal|04_Temperature_and_Thermal]] — Thermal energy and heat transfer
-- [[01 Physics and Math/05_Electrical_Fundamentals|05_Electrical_Fundamentals]] — Electrical energy
-- [[01 Physics and Math/01_Dimensions_and_Measurement|01_Dimensions_and_Measurement]] — Fundamental dimensions
+- [[Engineering Foundation Overview]]: All engineering foundation topics
+- [[01 Physics and Math/03_Force_and_Mechanics|03_Force_and_Mechanics]]: Work and force relationships
+- [[01 Physics and Math/04_Temperature_and_Thermal|04_Temperature_and_Thermal]]: Thermal energy and heat transfer
+- [[01 Physics and Math/05_Electrical_Fundamentals|05_Electrical_Fundamentals]]: Electrical energy
+- [[01 Physics and Math/01_Dimensions_and_Measurement|01_Dimensions_and_Measurement]]: Fundamental dimensions

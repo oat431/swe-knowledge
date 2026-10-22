@@ -59,7 +59,7 @@ A designed rhythm also scales. When the cadence (weekly written update, fortnigh
 | Own it plainly | Defensive or over-apologetic framing | State the cause, the fix, and what changes |
 | One message | Fragmented hints across days | A single clear message, then follow-up cadence |
 
-Demos deserve the same discipline. A demo is not a victory lap; it is a decision mechanism. Show working software on the client's data, list known limitations honestly, and end with the specific decisions you need. Clients who feel the demos are honest stop auditing the work behind them.
+Demos deserve the same discipline. A demo is a decision mechanism. Show working software on the client's data, list known limitations honestly, and end with the specific decisions you need. Clients who feel the demos are honest stop auditing the work behind them.
 
 ```mermaid
 %%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%

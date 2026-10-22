@@ -171,7 +171,7 @@
 
 ## 15. Security
 
-- [ ] **No `bypassSecurityTrustHtml`** unless absolutely forced: and only with DOMPurify first.
+- [ ] **No `bypassSecurityTrustHtml`** unless absolutely forced, and only with DOMPurify first.
 - [ ] **`DomSanitizer`:** Angular sanitizes `[innerHTML]` by default. Don't bypass it.
 - [ ] **No secrets in Angular code:** everything ships to the browser. Environment files contain public keys, not secrets.
 - [ ] **CSP compatible:** Angular v18+ supports strict CSP without `unsafe-inline`. Templates are AOT-compiled, styles are component-scoped. Verify in production build with `ng serve --configuration production`.

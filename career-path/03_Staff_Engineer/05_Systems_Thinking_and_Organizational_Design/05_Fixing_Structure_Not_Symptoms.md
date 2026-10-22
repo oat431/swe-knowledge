@@ -77,7 +77,7 @@ A good cut is small enough to pilot, sharp enough to notice, and structural enou
 | **Measure** | Compare the pilot metrics to the baseline | Improvement here, deterioration elsewhere |
 | **Decide** | Roll out, adjust, or revert | The loop's true shape, now visible |
 
-Secondary effects are not failures; they are information. A cut that moves incidents from team A to team B has revealed a second producing loop, which is exactly what the pilot was for.
+Secondary effects are information. A cut that moves incidents from team A to team B has revealed a second producing loop, which is exactly what the pilot was for.
 
 ## Case Patterns
 

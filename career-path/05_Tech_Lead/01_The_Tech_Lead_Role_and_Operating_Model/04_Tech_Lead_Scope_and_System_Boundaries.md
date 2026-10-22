@@ -37,7 +37,7 @@ There is no right answer in the abstract. The test is concrete: can the team sta
 
 ## Defining the System Boundary
 
-A boundary is not a diagram line; it is a set of explicit agreements. The ownership charter must specify:
+A boundary is a set of explicit agreements. The ownership charter must specify:
 
 | Boundary element | What to define | Example |
 |------------------|----------------|---------|

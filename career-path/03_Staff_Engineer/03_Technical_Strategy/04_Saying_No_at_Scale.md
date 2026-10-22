@@ -20,7 +20,7 @@ tags:
 
 ## Why This Matters
 
-At staff level, requests arrive faster than capacity, from every direction: product wants features, teams want platforms, leadership wants initiatives, and each one is reasonable on its own. Saying yes to all of them is not generosity; it is a decision to underfund everything. The only sustainable response is a system for saying no that is consistent, written, and free of personal conflict.
+At staff level, requests arrive faster than capacity, from every direction: product wants features, teams want platforms, leadership wants initiatives, and each one is reasonable on its own. Saying yes to all of them is a decision to underfund everything. The only sustainable response is a system for saying no that is consistent, written, and free of personal conflict.
 
 The staff engineer's no carries unusual weight because it is delivered without authority. It must therefore be based on something impersonal (the strategy, the capacity model, the priced trade) and it must leave the requester with a path. A no without a path is a wall; a no with a path is a prioritization.
 

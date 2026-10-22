@@ -22,7 +22,7 @@ tags:
 
 The moment a community ignites, the advocate's leverage changes: instead of being the person who answers and organizes, the advocate becomes the person who equips others to do it. Programs are that leverage, formalized: champions who teach, ambassadors who organize locally, partners who integrate. Done well, a program multiplies one advocate into dozens of advocates; done poorly, it invents a status hierarchy that corrodes the very community it was meant to serve.
 
-The failure modes are well documented and endlessly repeated. A program that asks for marketing amplification but offers only a badge is not a program; it is unpaid advertising, and members eventually say so. A program with no exit for inactive members accumulates dead titles. A program that rewards volume over quality optimizes for spam. The antidote is reciprocity: every program element pairs a real contribution with real value (access, support, resources, recognition, or career benefit).
+The failure modes are well documented and endlessly repeated. A program that asks for marketing amplification but offers only a badge is unpaid advertising, and members eventually say so. A program with no exit for inactive members accumulates dead titles. A program that rewards volume over quality optimizes for spam. The antidote is reciprocity: every program element pairs a real contribution with real value (access, support, resources, recognition, or career benefit).
 
 Programs also need to survive the advocate. If the program's vitality depends on one staff member remembering birthdays and sending swag, it is a personal project with a logo. Durable programs run on clear criteria, visible value, member leadership, and rhythms that outlast any individual's tenure.
 

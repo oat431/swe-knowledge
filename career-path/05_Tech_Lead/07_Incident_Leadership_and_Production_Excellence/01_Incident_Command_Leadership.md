@@ -161,4 +161,4 @@ An incident ends cleanly, not just when the graph is green:
 
 ## Summary
 
-Incident command leadership is the discipline of structure under pressure: the commander steps away from the keyboard to assign roles, make decisions in public, own communication, and drive the incident to a monitoring-verified close. The first fifteen minutes set the tone (acknowledge, assess, assign), and every decision point afterward is a chance to keep the response fast, coordinated, and learning-ready. Command is not about being the best debugger in the room; it is about making the room work like a team.
+Incident command leadership is the discipline of structure under pressure: the commander steps away from the keyboard to assign roles, make decisions in public, own communication, and drive the incident to a monitoring-verified close. The first fifteen minutes set the tone (acknowledge, assess, assign), and every decision point afterward is a chance to keep the response fast, coordinated, and learning-ready. Command means making the room work like a team.

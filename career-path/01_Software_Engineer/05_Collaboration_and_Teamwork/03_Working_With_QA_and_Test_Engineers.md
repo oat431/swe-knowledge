@@ -79,13 +79,13 @@ flowchart LR
 
 ## In Practice
 
-**Send testers context before they ask for it.** A short message — what changed, what to watch, what worries you, how to force the risky states — moves testing effort directly onto the risk. Testers cannot read your commit log's mind: the refactor that "changed nothing" is invisible without your help, and it is exactly where breakage hides. The message costs five minutes and routinely shortens the whole test cycle.
+**Send testers context before they ask for it.** A short message (what changed, what to watch, what worries you, how to force the risky states) moves testing effort directly onto the risk. Testers cannot read your commit log's mind: the refactor that "changed nothing" is invisible without your help, and it is exactly where breakage hides. The message costs five minutes and routinely shortens the whole test cycle.
 
 **Describe risk in terms of user behavior, not just code.** "The retry logic in the payment client changed" is weaker than "double-submitting the form is the risky path now." QA thinks in user-visible behavior and consequences; meeting them there gets you better coverage than a diff summary ever will. Code-level detail can follow, but lead with what the user can do and what could go wrong.
 
 **Build testability in, do not request it later.** Feature flags, stable element identifiers, seeded test data, and seams to force error states decide whether a flow can be tested at all. If testing requires heroic setup, the coverage will be thinner than the risk deserves. Raise testability during design, next to the states and flows, and treat a hard-to-test flow as a design defect.
 
-**Reproduce before you opine.** When a bug report lands, run their steps exactly — same build, same environment, same data if possible. Reproducing takes you from opinion to observation, and it shows respect for the reporter's work. Half the arguments about whether a bug is real end the moment someone actually follows the steps.
+**Reproduce before you opine.** When a bug report lands, run their steps exactly: same build, same environment, same data if possible. Reproducing takes you from opinion to observation, and it shows respect for the reporter's work. Half the arguments about whether a bug is real end the moment someone actually follows the steps.
 
 **Treat severity as a discussion about users, not about your schedule.** "It only happens sometimes" is not a downgrade if it loses user data; "it happens always" is not a catastrophe if it is cosmetic and visible. Negotiate severity against impact on the user and the product, with evidence. If you disagree with the reporter's call, bring the scenario, not the adjective.
 
@@ -97,10 +97,10 @@ flowchart LR
 
 Simulate one full QA partnership cycle around a small change:
 
-1. Pick a change with real risk — say, a modified checkout validation — and write the context package: what changed, what to watch, known risks, and how to force each risky state.
+1. Pick a change with real risk (say, a modified checkout validation), and write the context package: what changed, what to watch, known risks, and how to force each risky state.
 2. Write the same message twice: once in code-level terms, once in user-behavior terms, and compare which one you would send.
 3. Invent a realistic bug report for your change with reproduction steps, environment, and a severity claim; then follow those steps yourself and write what you would find.
-4. Isolate the bug to a minimal case and decide: code defect, environment gap, or requirement ambiguity — and write the precise one-paragraph explanation for the reporter.
+4. Isolate the bug to a minimal case and decide: code defect, environment gap, or requirement ambiguity, and write the precise one-paragraph explanation for the reporter.
 5. Design the regression coverage for the fix: name the automated cases, the manual checks, and who maintains each.
 6. Write a severity negotiation reply where you disagree with the reporter's severity using user impact evidence.
 7. Write the closing message: root cause, what shipped, what now covers it.

@@ -62,7 +62,7 @@ Small practices merge roles; the mistake is merging the capability map owner wit
 | 4: Managed | Practice measured; exceptions managed | Influence metrics reported; standards current | Tie portfolio and strategy cycles together |
 | 5: Adaptive | Practice self-renews with strategy | Framework and principles revised deliberately | Continuous; coach other functions |
 
-Maturity is not a scorecard to chase; it is a description of what the practice can currently deliver. Claiming level 4 without the evidence of level 3 is how practices lose the credibility they will need later.
+Maturity is a description of what the practice can currently deliver. Claiming level 4 without the evidence of level 3 is how practices lose the credibility they will need later.
 
 ## First 90 Days
 

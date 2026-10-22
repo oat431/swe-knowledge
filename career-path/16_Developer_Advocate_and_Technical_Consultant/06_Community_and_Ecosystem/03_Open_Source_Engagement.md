@@ -24,7 +24,7 @@ Every technology company's stack rests on open source it does not control. The p
 
 The advocate stands at the seam between the company's needs and the project's health. On one side: features the product wants, bugs that affect customers, performance the roadmap demands. On the other: maintainer bandwidth, project direction, and the norms of a community that predates any single company's interest. The skilled advocate translates between the two without bullying the smaller side, and actively resists the pattern where a large company's "contribution" is really a demand with a patch attached.
 
-The strategic layer matters too. Good OSS engagement is not charity; it is infrastructure investment with compounding returns: fixes that stop recurring, influence on direction, a pipeline of contributors, and a credible public record that the company shows up rather than just consumes.
+The strategic layer matters too. Good OSS engagement is infrastructure investment with compounding returns: fixes that stop recurring, influence on direction, a pipeline of contributors, and a credible public record that the company shows up rather than just consumes.
 
 ## Modes of Engagement
 
