@@ -1,6 +1,6 @@
 ---
 tags: [project-management, estimation, risk, software-engineering, cocomo, planning, wbs, critical-path, swe-foundation]
-source: "SWE Theory & Practice Ch 3 — Planning and Managing the Project"
+source: "SWE Theory & Practice Ch 3: Planning and Managing the Project"
 ---
 
 # Project Planning and Management
@@ -18,7 +18,7 @@ Project management is one of the core practices of software engineering. It cove
 The Work Breakdown Structure decomposes a project into a hierarchy of **Phase → Step → Activity**:
 
 ```mermaid
-%%{init: {'theme':'dark'}}%%
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 graph TD
     P["PROJECT"]
     P1["Phase 1"]
@@ -43,9 +43,9 @@ graph TD
     S12 --> A121
     S12 --> A122
 
-    style P fill:#2d6a4f,stroke:#40916c,color:#fff
-    style P1 fill:#264653,stroke:#2a9d8f,color:#fff
-    style P2 fill:#264653,stroke:#2a9d8f,color:#fff
+    style P fill:#1FB854,stroke:#000000,color:#000000
+    style P1 fill:#19362D,stroke:#1FB854,color:#CDD3D1
+    style P2 fill:#19362D,stroke:#1FB854,color:#CDD3D1
 ```
 
 - **Activity** is a measurable event with clear completion criteria
@@ -331,7 +331,7 @@ $$E = b \cdot S^c \cdot m(\vec{X})$$
 |---|---|---|---|
 | Screen | 1 | 2 | 3 |
 | Report | 2 | 5 | 8 |
-| 3GL component | — | — | 10 |
+| 3GL component | N/A | N/A | 10 |
 
 | Developer Experience | CASE Maturity | Productivity Factor |
 |---|---|---|
@@ -461,7 +461,7 @@ The project plan contains 15 core components:
 
 | # | Component | Description |
 |---|---|---|
-| 1 | **Project Scope** | System boundary — what's included, what's not |
+| 1 | **Project Scope** | System boundary: what's included, what's not |
 | 2 | **Project Schedule** | WBS, deliverables, timeline, Gantt chart |
 | 3 | **Team Organization** | Personnel assignment, org structure, resource allocation chart |
 | 4 | **Technical Description** | Hardware, software, compilers, interfaces, special equipment |

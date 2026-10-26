@@ -179,7 +179,7 @@ Differential equations contain derivatives of functions and represent the balanc
 
 Statistical models are used by engineers to address quality control, reliability, failure analysis, signal processing, and experimental design.
 
-### 2.1 Probability — Basic Ideas
+### 2.1 Probability: Basic Ideas
 
 - **Trial:** Each repetition of an experiment
 - **Outcome:** The result of an experiment
@@ -188,7 +188,7 @@ Statistical models are used by engineers to address quality control, reliability
 
 **Odds:** If probability of an event is p, the odds in favor = p/(1-p). If odds are x to y, then p = x/(x+y).
 
-### 2.2 Statistics — Basic Ideas
+### 2.2 Statistics: Basic Ideas
 
 Statistics deals with collection, organization, analysis, and interpretation of data.
 

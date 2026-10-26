@@ -81,16 +81,16 @@ Formal, top-down deductive method using Boolean logic (AND/OR gates) to trace fr
 **Symbols:**
 ```
     ┌─────────┐
-    │  Event  │  — Undesirable event or intermediate cause
+    │  Event  │: Undesirable event or intermediate cause
     └────┬────┘
          │
     ┌────┴────┐
-    │  AND    │  — All input events must occur for output
-    │  OR     │  — Any input event triggers output
+    │  AND    │: All input events must occur for output
+    │  OR     │: Any input event triggers output
     └────┬────┘
          │
     ┌────┴────┐
-    │ Basic   │  — Root cause (no further decomposition)
+    │ Basic   │: Root cause (no further decomposition)
     │ Event   │
     └─────────┘
 ```

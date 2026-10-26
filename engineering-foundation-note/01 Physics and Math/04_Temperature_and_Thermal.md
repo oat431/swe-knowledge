@@ -22,7 +22,7 @@ Temperature is one of seven fundamental (base) dimensions in engineering, along 
 |---|---|
 | **Electrical/Computer** | Cooling chips with heat sinks and fans to maintain operating temperature |
 | **Civil** | Designing pavements, bridges for thermal expansion/contraction of concrete and steel |
-| **Mechanical** | HVAC design — heat transfer, air temperature, moisture content |
+| **Mechanical** | HVAC design: heat transfer, air temperature, moisture content |
 | **Automotive** | Engine cooling system design |
 | **Food Processing** | Monitoring drying and cooling process temperatures |
 | **Materials** | Creating materials with desirable thermal properties |
@@ -69,14 +69,14 @@ Where:
 - R = gas constant (J/kg·K or ft·lb/lbm·°R)
 - T = absolute temperature (K or °R)
 
-### Kelvin (K) — SI Absolute Scale
+### Kelvin (K): SI Absolute Scale
 
 $$T_K = T_{°C} + 273.15$$
 
 - Absolute zero = 0 K (theoretical lower limit of temperature)
 - No theoretical upper limit to temperature
 
-### Rankine (°R) — US Customary Absolute Scale
+### Rankine (°R): US Customary Absolute Scale
 
 $$T_{°R} = T_{°F} + 459.67$$
 
@@ -232,10 +232,10 @@ Where:
 
 | Convection Type | h (W/m²·K) | h (Btu/h·ft²·°R) |
 |---|---|---|
-| Free — Gases | 2 to 25 | 0.35 to 4.4 |
-| Free — Liquids | 50 to 1,000 | 8.8 to 175 |
-| Forced — Gases | 25 to 250 | 4.4 to 44 |
-| Forced — Liquids | 100 to 20,000 | 17.6 to 3,500 |
+| Free: Gases | 2 to 25 | 0.35 to 4.4 |
+| Free: Liquids | 50 to 1,000 | 8.8 to 175 |
+| Forced: Gases | 25 to 250 | 4.4 to 44 |
+| Forced: Liquids | 100 to 20,000 | 17.6 to 3,500 |
 
 Key relationships:
 - h is **higher** for forced convection than free convection

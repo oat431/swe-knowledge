@@ -96,8 +96,8 @@ $$\hat{p} \pm z_{\alpha/2} \cdot \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}$$
 
 | | H₀ is true | H₀ is false |
 |---|---|---|
-| **Reject H₀** | Type I error (α) — false positive | Correct — true positive |
-| **Fail to reject H₀** | Correct — true negative | Type II error (β) — false negative |
+| **Reject H₀** | Type I error (α): false positive | Correct: true positive |
+| **Fail to reject H₀** | Correct: true negative | Type II error (β): false negative |
 
 - **α (significance level):** Probability of Type I error, typically 0.05 (5%)
 - **β:** Probability of Type II error, typically 0.20 (20%)

@@ -1,6 +1,6 @@
 ---
 tags: [dimensions, units, measurement, engineering, SI, USCS, length, area, volume]
-source: "Engineering Fundamentals: An Introduction to Engineering — Saeed Moaveni, Ch 6–7"
+source: "Engineering Fundamentals: An Introduction to Engineering, Saeed Moaveni, Ch 6–7"
 ---
 
 # Dimensions and Measurement
@@ -17,7 +17,7 @@ All physical phenomena can be described using **seven fundamental (base) dimensi
 | Force | F | newton (N) | Pressure (F/L²), Stress (F/L²), Work/Energy (FL), Moment (FL), Power (F/t) |
 | Temperature | θ | kelvin (K) | Thermal expansion (L/LT), Specific heat (FL/MT) |
 | Electric Current | I | ampere (A) | Charge (It), Current density (I/L²) |
-| Luminous Intensity | J | candela (cd) | — |
+| Luminous Intensity | J | candela (cd) | N/A |
 
 > All other engineering quantities are **derived** from these fundamentals.
 

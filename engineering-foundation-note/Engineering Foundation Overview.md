@@ -2,7 +2,7 @@
 tags: [engineering, fundamentals, software-engineering, overview]
 ---
 
-# Engineering Foundation — Overview
+# Engineering Foundation: Overview
 
 > **Sources:**
 > - *Engineering Fundamentals: An Introduction to Engineering* by Saeed Moaveni, 4th Edition (2011), Physics & math foundations
@@ -68,6 +68,7 @@ Together they cover both the *physics* and the *process* of engineering.
 ## How These Topics Relate
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TD
     subgraph Part1["Part 1: Physics & Math"]
         DIM["Dimensions & Units"]
@@ -153,8 +154,8 @@ flowchart TD
 ## Related
 
 - [[../../body-of-knowledge/SWEBOK/18_Engineering_Foundations|SWEBOK Engineering Foundations]]: The KA these notes fill
-- [[../../software-engineering-note/Software Design/Software Design - Overview|Software Design]]: Design process and patterns
-- [[../../math-for-software-engineering-note/|Math for Software Engineering]]: Mathematical foundations
+- [[software-engineering-note/03_Software_Design/Software Design Note Overview|Software Design]]: Design process and patterns
+- [[math-for-software-engineering-note/Math For SE Note Overview|Math for Software Engineering]]: Mathematical foundations
 
 ---
 

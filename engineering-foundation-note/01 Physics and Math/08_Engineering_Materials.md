@@ -92,7 +92,7 @@ Matter exists in four states: **solid**, **liquid**, **gas**, and **plasma**. Ph
 | Brass | 96–110 | 36–41 |
 | Bronze | 96–120 | 36–44 |
 | Cast iron | 83–170 | 32–69 |
-| Concrete (compression) | 17–31 | — |
+| Concrete (compression) | 17–31 | N/A |
 | Copper alloys | 110–120 | 40–47 |
 | Glass | 48–83 | 19–35 |
 | Magnesium alloys | 41–45 | 15–17 |
@@ -100,7 +100,7 @@ Matter exists in four states: **solid**, **liquid**, **gas**, and **plasma**. Ph
 | Steel | 190–210 | 75–80 |
 | Titanium alloys | 100–120 | 39–44 |
 | Tungsten | 340–380 | 140–160 |
-| Nylon | 2.1–3.4 | — |
+| Nylon | 2.1–3.4 | N/A |
 | Rubber | 0.0007–0.004 | 0.0002–0.001 |
 
 ### Density
@@ -127,7 +127,7 @@ Matter exists in four states: **solid**, **liquid**, **gas**, and **plasma**. Ph
 | Brass | 70–550 | 200–620 |
 | Bronze | 82–690 | 200–830 |
 | Cast iron (tension) | 120–290 | 69–480 |
-| Concrete (compression) | — | 10–70 |
+| Concrete (compression) | N/A | 10–70 |
 | Copper alloys | 55–760 | 230–830 |
 | Steel (high-strength) | 340–1000 | 550–1200 |
 | Steel (structural) | 200–700 | 340–830 |

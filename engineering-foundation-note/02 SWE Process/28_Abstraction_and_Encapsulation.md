@@ -45,7 +45,7 @@ Abstractions are organized in hierarchies. SWEBOK identifies three types of abst
 A linear chain where each level abstracts the one below it:
 
 ```mermaid
-%%{init: {'theme':'dark'}}%%
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 graph BT
     HW["Hardware"]
     MC["Machine Code"]
@@ -62,13 +62,13 @@ graph BT
     SA -->|"abstracts"| SR
     SR -->|"abstracts"| BS
 
-    style BS fill:#2d6a4f,stroke:#40916c,color:#fff
-    style SA fill:#264653,stroke:#2a9d8f,color:#fff
-    style SR fill:#287271,stroke:#2a9d8f,color:#fff
-    style DD fill:#3a7ca5,stroke:#5aa9e6,color:#fff
-    style SC fill:#4a6fa5,stroke:#6b8cce,color:#fff
-    style MC fill:#6b5b95,stroke:#8b7bb5,color:#fff
-    style HW fill:#8b5e3c,stroke:#a87c4f,color:#fff
+    style BS fill:#1FB854,stroke:#000000,color:#000000
+    style SA fill:#19362D,stroke:#1FB854,color:#CDD3D1
+    style SR fill:#1FB8AB,stroke:#1FB854,color:#000000
+    style DD fill:#00B5FF,stroke:#000000,color:#000000
+    style SC fill:#1FB8AB,stroke:#000000,color:#000000
+    style MC fill:#1EB88E,stroke:#000000,color:#000000
+    style HW fill:#FFBE00,stroke:#000000,color:#000000
 ```
 
 Each level adds semantic meaning and suppresses implementation detail. This is the most common abstraction hierarchy in software engineering.
@@ -78,7 +78,7 @@ Each level adds semantic meaning and suppresses implementation detail. This is t
 A branching hierarchy where one abstraction at a higher level relates to multiple abstractions at a lower level:
 
 ```mermaid
-%%{init: {'theme':'dark'}}%%
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 graph TD
     S["System"]
     SA["Subsystem A"]
@@ -111,9 +111,9 @@ graph TD
     MB2 --> CB3
     MB2 --> CB4
 
-    style S fill:#2d6a4f,stroke:#40916c,color:#fff
-    style SA fill:#264653,stroke:#2a9d8f,color:#fff
-    style SB fill:#264653,stroke:#2a9d8f,color:#fff
+    style S fill:#1FB854,stroke:#000000,color:#000000
+    style SA fill:#19362D,stroke:#1FB854,color:#CDD3D1
+    style SB fill:#19362D,stroke:#1FB854,color:#CDD3D1
 ```
 
 This is the classic decomposition hierarchy. At each level, the engineer sees only the components and their interfaces, not the internal details of each component.
@@ -123,6 +123,7 @@ This is the classic decomposition hierarchy. At each level, the engineer sees on
 Multiple abstractions at the same level illuminate the same system from different perspectives:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 graph TD
     S["System Under Study"]
     S --> A["Structural View\n(class diagram)"]
@@ -181,11 +182,12 @@ David Parnas (1972) introduced the principle of **information hiding**: each mod
 **Information Hiding in Practice:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 graph LR
     A["Client Module"] -->|"interface"| B["Service Module"]
     B -->|"interface"| C["Database"]
 
-    style B fill:#2d3748,stroke:#4a5568
+    style B fill:#161212,stroke:#CAC9C9,color:#CDD3D1
 
     B -.-|"hidden"| B1["Algorithm choice"]
     B -.-|"hidden"| B2["Data structures"]
@@ -253,6 +255,7 @@ Abstraction is used in all engineering disciplines, but the forms differ:
 Software engineering operates across a wide spectrum of abstraction levels:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 graph TD
     L1["Business/Domain Level"] -->|"requirements"| L2["Requirements Level"]
     L2 -->|"specification"| L3["Architecture Level"]
@@ -261,13 +264,13 @@ graph TD
     L5 -->|"compilation"| L6["Executable Level"]
     L6 -->|"execution"| L7["Hardware Level"]
 
-    style L1 fill:#1a365d,stroke:#2a4a7f
-    style L2 fill:#1a365d,stroke:#2a4a7f
-    style L3 fill:#2d3748,stroke:#4a5568
-    style L4 fill:#2d3748,stroke:#4a5568
-    style L5 fill:#4a5568,stroke:#718096
-    style L6 fill:#4a5568,stroke:#718096
-    style L7 fill:#718096,stroke:#a0aec0
+    style L1 fill:#19362D,stroke:#1FB8AB,color:#CDD3D1
+    style L2 fill:#19362D,stroke:#1FB8AB,color:#CDD3D1
+    style L3 fill:#161212,stroke:#CAC9C9,color:#CDD3D1
+    style L4 fill:#161212,stroke:#CAC9C9,color:#CDD3D1
+    style L5 fill:#19362D,stroke:#1FB854,color:#CDD3D1
+    style L6 fill:#19362D,stroke:#1FB854,color:#CDD3D1
+    style L7 fill:#1FB8AB,stroke:#000000,color:#000000
 ```
 
 | Level | Focus | Abstraction | Key Artifacts |

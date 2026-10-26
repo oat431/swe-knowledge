@@ -148,7 +148,7 @@ $$g = \frac{G M_{\text{Earth}}}{R_{\text{Earth}}^2}$$
 
 ---
 
-## 5. Moment and Torque — Force Acting at a Distance
+## 5. Moment and Torque: Force Acting at a Distance
 
 **Moment** (or **torque**) measures the tendency of a force to rotate an object about a point or axis.
 
@@ -177,13 +177,13 @@ Two forces equal in magnitude, opposite in direction, but **not** sharing the sa
 
 | Support Type | Degrees of Freedom Restrained |
 |-------------|-------------------------------|
-| **Fixed** | No translation (2D), no rotation — reaction forces + reaction moment |
-| **Pin** | No translation — two reaction forces, free to rotate |
+| **Fixed** | No translation (2D), no rotation: reaction forces + reaction moment |
+| **Pin** | No translation: two reaction forces, free to rotate |
 | **Roller** | One reaction force perpendicular to surface |
 
 ---
 
-## 6. Work — Force Acting Over a Distance
+## 6. Work: Force Acting Over a Distance
 
 **Mechanical work** is the component of force that moves an object through a distance:
 
@@ -211,7 +211,7 @@ $$P = \frac{W}{t}$$
 
 ---
 
-## 7. Pressure and Stress — Force Acting Over an Area
+## 7. Pressure and Stress: Force Acting Over an Area
 
 ### Pressure
 
@@ -306,9 +306,9 @@ Where:
 
 | Material | Relative Stiffness |
 |----------|-------------------|
-| Rubber | Low $E$ — stretches easily |
+| Rubber | Low $E$: stretches easily |
 | Aluminum | Moderate $E$ |
-| Steel | High $E$ — very stiff |
+| Steel | High $E$: very stiff |
 
 ### Hooke's Law for Solid Materials
 
@@ -338,9 +338,9 @@ Describes how a fluid's volume changes under applied pressure, relevant for hydr
 | Power | $P = W/t$ | $t$ = time |
 | Pressure | $P = F/A$ | $A$ = area |
 | Fluid pressure | $P = \rho g h$ | $\rho$ = density, $h$ = depth |
-| Absolute pressure | $P_{\text{abs}} = P_{\text{gauge}} + P_{\text{atm}}$ | — |
+| Absolute pressure | $P_{\text{abs}} = P_{\text{gauge}} + P_{\text{atm}}$ | N/A |
 | Buoyancy | $F_B = \rho V g$ | $V$ = displaced volume |
-| Hydraulic force | $F_2 = (A_2/A_1)F_1$ | — |
+| Hydraulic force | $F_2 = (A_2/A_1)F_1$ | N/A |
 | Hooke's Law (solid) | $\sigma = E\varepsilon$ | $E$ = Young's modulus, $\varepsilon$ = strain |
 
 ---

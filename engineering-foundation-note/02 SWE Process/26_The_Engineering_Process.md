@@ -41,6 +41,7 @@ This definition explicitly demands a process: **systematic** (not ad hoc), **dis
 The engineering process common to all disciplines consists of five fundamental steps. These steps are not strictly linear: knowledge gained at any step may trigger revisiting earlier steps.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 graph LR
     S1["1. Understand the\nReal Problem"]
     S2["2. Define Selection\nCriteria"]
@@ -113,6 +114,7 @@ Before evaluating solutions, the engineer must define what "good" looks like. Se
 Quality attributes frequently conflict. The engineer must make explicit trade-offs:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 graph TD
     A["Performance"] <-->|"trade-off"| B["Security"]
     A <-->|"trade-off"| C["Maintainability"]
@@ -215,6 +217,7 @@ The final step is not merely choosing the winner: it is committing to the decisi
 **Feedback Loops:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 graph TD
     A["Selected Solution"] --> B["Implement"]
     B --> C["Deploy"]

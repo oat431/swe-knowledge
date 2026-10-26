@@ -2,7 +2,7 @@
 tags: [time, mass, motion, engineering, fundamentals, physics]
 ---
 
-# 02 — Time, Mass & Motion
+# 02: Time, Mass & Motion
 
 > **Source:** *Engineering Fundamentals: An Introduction to Engineering* by Saeed Moaveni, Chapters 8–9
 
@@ -89,7 +89,7 @@ Traffic engineering uses time-related parameters to design highways and control 
 | **Traffic flow** | q | q = 3600n / T | vehicles/hour |
 | **Traffic density** | k | k = 1000n / d | vehicles/km |
 | **Average speed** | u | u = (1/n) Σ uᵢ | km/h |
-| **Relationship** | — | q = k · u | — |
+| **Relationship** | N/A | q = k · u | N/A |
 
 - **Congested flow:** high density → low speed → eventually zero flow (bumper-to-bumper)
 - **Uncongested flow:** low density → high speed → flow decreases as speed continues to rise
@@ -201,7 +201,7 @@ Units: rad/s²
 
 | System | Unit | Equivalences |
 |---|---|---|
-| SI | kilogram (kg) | — |
+| SI | kilogram (kg) | N/A |
 | British Gravitational (BG) | slug | 1 kg = 0.0685 slugs |
 | U.S. Customary | lbm | 1 kg = 2.205 lbm, 1 slug = 32.2 lbm |
 

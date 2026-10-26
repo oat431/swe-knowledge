@@ -77,7 +77,7 @@ Conversions:
 
 ---
 
-## 13.2 Conservation of Energy — First Law of Thermodynamics
+## 13.2 Conservation of Energy: First Law of Thermodynamics
 
 > Energy is conserved. It cannot be created or destroyed; it can only change forms.
 

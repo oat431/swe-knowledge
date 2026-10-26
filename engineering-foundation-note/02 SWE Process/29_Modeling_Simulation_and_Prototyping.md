@@ -18,6 +18,7 @@ Engineers cannot always build the real thing to evaluate it. Models, simulations
 SWEBOK identifies three fundamental types of models, each representing reality at a different level of fidelity:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 graph TD
     M["Models"]
     M --> I["Iconic Models"]
@@ -148,6 +149,7 @@ Continuous simulation models systems where state variables change continuously o
 **System Dynamics Example:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 graph LR
     A["Bug Discovery Rate"] -->|"+1"| B["Open Bug Count"]
     B -->|"-1"| C["Bug Fix Rate"]
@@ -238,6 +240,7 @@ A prototype is a preliminary model of a system, built to explore, evaluate, or c
 ### Types of Prototypes
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 graph TD
     P["Prototypes"]
     P --> L["By Lifecycle"]
@@ -339,6 +342,7 @@ Parameters with high sensitivity require more careful estimation.
 A **digital twin** is a dynamic, real-time digital replica of a physical system. Unlike static models, digital twins are continuously synchronized with their physical counterpart.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 graph LR
     PS["Physical System"] -->|"sensor data"| DT["Digital Twin"]
     DT -->|"insights, predictions"| PS
@@ -381,6 +385,7 @@ Digital twins represent the convergence of modeling, simulation, and real-time m
 **Decision Framework:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 graph TD
     Q1{"Need visual\nrepresentation?"}
     Q2{"Need behavioral\nanalysis?"}

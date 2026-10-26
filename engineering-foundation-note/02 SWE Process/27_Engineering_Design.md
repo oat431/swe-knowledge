@@ -78,6 +78,7 @@ Design thinking is a human-centered approach to innovation and problem-solving t
 ### The Five Stages
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 graph LR
     E["Empathize"] --> D["Define"]
     D --> I["Ideate"]
@@ -115,6 +116,7 @@ Every design operates within constraints. Understanding and managing constraints
 ### Types of Design Constraints
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 graph TD
     C["Design Constraints"]
     C --> P["Physical"]
@@ -190,7 +192,7 @@ Real engineering problems rarely have a single objective. More often, multiple c
 The Pareto frontier represents the set of solutions where no objective can be improved without degrading another:
 
 ```mermaid
-%%{init: {'theme':'dark'}}%%
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 quadrantChart
     title Pareto Frontier: Quality vs Cost
     x-axis Low Cost --> High Cost
@@ -263,6 +265,7 @@ Concurrent engineering (also called simultaneous engineering) is the practice of
 **Sequential vs Concurrent:**
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','background':'#1B1717','mainBkg':'#19362D','titleColor':'#1FB854','fontSize':'14px','sectionBkgColor':'#161212','altSectionBkgColor':'#1B1717','taskBkgColor':'#1FB854','taskBorderColor':'#000000','taskTextColor':'#000000','taskTextDarkColor':'#000000','taskTextOutsideColor':'#CDD3D1','activeTaskBkgColor':'#1FB8AB','activeTaskBorderColor':'#000000','doneTaskBkgColor':'#19362D','doneTaskBorderColor':'#1FB854','critBkgColor':'#FF5861','critBorderColor':'#000000','gridColor':'#CAC9C9','todayLineColor':'#FFBE00'}}}%%
 gantt
     title Sequential vs Concurrent Engineering
     dateFormat X

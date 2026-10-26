@@ -9,7 +9,7 @@ source: "SWE Theory & Practice Ch 4"
 
 # 12 Requirements Engineering
 
-> *"The hardest single part of building a software system is deciding precisely what to build."* — Fred Brooks (1987)
+> *"The hardest single part of building a software system is deciding precisely what to build."* (Fred Brooks, 1987)
 
 Requirements errors are the most expensive to fix. If it costs \$1 during requirements definition, it costs \$5 during design, \$10 during coding, \$20 during unit testing, and up to **\$200 after delivery** (Boehm & Papaccio 1988). The Standish Group found that incomplete requirements (13.1%) and lack of user involvement (12.4%) are the top causes of project failure.
 

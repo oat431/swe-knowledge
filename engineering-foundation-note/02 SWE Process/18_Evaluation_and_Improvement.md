@@ -1,6 +1,6 @@
 ---
 tags: [evaluation, metrics, process-improvement, software-engineering]
-source: "SWE Theory & Practice — Pfleeger & Atlee, Ch 12–13"
+source: "SWE Theory & Practice, Pfleeger & Atlee, Ch 12–13"
 ---
 
 # Evaluation and Improvement
@@ -15,10 +15,10 @@ source: "SWE Theory & Practice — Pfleeger & Atlee, Ch 12–13"
 
 | Technique | Description | Control Level | Generalizability |
 |---|---|---|---|
-| **Feature Analysis** | Rate and rank attributes of products/tools (e.g., scoring design tools on criteria) | None — subjective ratings | Narrow — tool-specific |
-| **Survey** | Retrospective study documenting relationships and outcomes; no variable manipulation | Low — observe existing data | Moderate — organizational |
-| **Case Study** | Planned investigation comparing situations (sister project, baseline, or random selection) | Medium — some variable control | Limited — context-specific |
-| **Formal Experiment** | Rigorous, controlled investigation manipulating independent variables | High — randomization, replication | Broad — generalizable |
+| **Feature Analysis** | Rate and rank attributes of products/tools (e.g., scoring design tools on criteria) | None: subjective ratings | Narrow, tool-specific |
+| **Survey** | Retrospective study documenting relationships and outcomes; no variable manipulation | Low: observe existing data | Moderate: organizational |
+| **Case Study** | Planned investigation comparing situations (sister project, baseline, or random selection) | Medium: some variable control | Limited: context-specific |
+| **Formal Experiment** | Rigorous, controlled investigation manipulating independent variables | High: randomization, replication | Broad: generalizable |
 
 ### Preparing for an Evaluation
 

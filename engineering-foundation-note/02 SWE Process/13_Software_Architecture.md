@@ -1,6 +1,6 @@
 ---
 tags: [architecture, design, quality-attributes, software-engineering]
-source: "SWE Theory & Practice — Ch 5: Designing the Architecture"
+source: "SWE Theory & Practice, Ch 5: Designing the Architecture"
 ---
 
 # Software Architecture
@@ -14,8 +14,8 @@ Design is the creative process of figuring out **how** to implement all of the c
 | Aspect | Routine Design | Innovative Design |
 |---|---|---|
 | Approach | Reuse and adapt existing solutions | Novel solution from first principles |
-| Speed | Fast — leverages proven patterns | Slower — irregular bursts of insight |
-| Risk | Lower — track record exists | Higher — must be vigorously evaluated |
+| Speed | Fast: leverages proven patterns | Slower: irregular bursts of insight |
+| Risk | Lower: track record exists | Higher: must be vigorously evaluated |
 | Guidance | Architectural styles, patterns, conventions | Basic design principles (descriptive, not prescriptive) |
 
 ### Sources of Design Advice

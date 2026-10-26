@@ -1,6 +1,6 @@
 ---
 tags: [testing, verification, validation, software-engineering]
-source: "SWE Theory & Practice — Pfleeger & Atlee, Ch 8–9"
+source: "SWE Theory & Practice, Pfleeger & Atlee, Ch 8–9"
 ---
 
 # Testing Strategies
@@ -349,7 +349,7 @@ Tests the **nonfunctional** requirements:
 | **Recovery tests** | Response to fault, data loss, or resource loss |
 | **Maintenance tests** | Diagnostic tools and procedures function correctly |
 | **Documentation tests** | Required documents exist, are accurate and readable |
-| **Human factors tests** | Usability — displays, messages, ease of use |
+| **Human factors tests** | Usability: displays, messages, ease of use |
 
 ---
 

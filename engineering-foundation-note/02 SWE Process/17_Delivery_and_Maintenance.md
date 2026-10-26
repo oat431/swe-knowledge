@@ -1,6 +1,6 @@
 ---
 tags: [delivery, maintenance, documentation, software-engineering, training, legacy-systems, impact-analysis, rejuvenation]
-source: "SWE Theory & Practice — Ch 10 (Delivering the System) & Ch 11 (Maintaining the System)"
+source: "SWE Theory & Practice, Ch 10 (Delivering the System) & Ch 11 (Maintaining the System)"
 ---
 
 # Delivery and Maintenance
@@ -9,14 +9,14 @@ System delivery is the critical transfer from developer to user that determines 
 
 ---
 
-## Part I — Delivering the System (Ch 10)
+## Part I: Delivering the System (Ch 10)
 
 ### Users vs. Operators
 
 | Role | Focus | Analogy |
 |---|---|---|
-| **User** | Exercises primary system functions (data manipulation, analysis, communication) | Chauffeur — drives the car |
-| **Operator** | Performs support functions (backups, access control, device installation) | Mechanic — services the car |
+| **User** | Exercises primary system functions (data manipulation, analysis, communication) | Chauffeur: drives the car |
+| **Operator** | Performs support functions (backups, access control, device installation) | Mechanic: services the car |
 
 > The same person may fill both roles, but training for each is distinct.
 
@@ -84,15 +84,15 @@ System delivery is the critical transfer from developer to user that determines 
 
 ---
 
-## Part II — Maintaining the System (Ch 11)
+## Part II: Maintaining the System (Ch 11)
 
 ### Types of Systems (Lehman's Classification)
 
 | Type | Description | Change Likelihood |
 |---|---|---|
-| **S-system** | Formally specified, derivable from a complete specification (e.g., matrix operations) | Low — if world changes, it's a new problem |
-| **P-system** | Practical abstraction of the problem; approximate solution (e.g., chess program) | Medium — incremental changes as discrepancies are found |
-| **E-system** | Embedded in the real world; changes as the world changes (e.g., economic forecasting) | High — nearly constant change |
+| **S-system** | Formally specified, derivable from a complete specification (e.g., matrix operations) | Low: if world changes, it's a new problem |
+| **P-system** | Practical abstraction of the problem; approximate solution (e.g., chess program) | Medium: incremental changes as discrepancies are found |
+| **E-system** | Embedded in the real world; changes as the world changes (e.g., economic forecasting) | High: nearly constant change |
 
 > The more a system depends on the real world, the more maintenance it will need.
 

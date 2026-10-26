@@ -10,7 +10,7 @@ tags: [industry-4.0, continuous-se, iot, ai, engineering-foundations, swebok]
 
 Industry 4.0 (the fourth industrial revolution) is transforming how we build and operate systems. At its core: software. Every enabling technology (IoT, AI/ML, Big Data, cybersecurity, cloud computing) depends on software engineering. This note covers the intersection of Industry 4.0 and software engineering, and the continuous practices that make it possible.
 
-## Industry 4.0 — What It Is
+## Industry 4.0: What It Is
 
 **Industry 1.0:** Mechanization (steam, water power)
 **Industry 2.0:** Mass production (electricity, assembly lines)
@@ -124,7 +124,7 @@ Industry 4.0 (the fourth industrial revolution) is transforming how we build and
 | **Continuous Deployment** | Release on every change | Blue-green deployment, canary releases, automated rollback |
 | **Continuous Review** | Feedback at every stage | Code review automation, static analysis, monitoring |
 
-### CSSE — Continuous Systems and Software Engineering
+### CSSE: Continuous Systems and Software Engineering
 
 **Extension of CSE to systems engineering:**
 - Continuous requirements engineering (requirements evolve with the system)

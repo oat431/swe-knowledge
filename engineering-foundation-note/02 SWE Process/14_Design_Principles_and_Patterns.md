@@ -1,6 +1,6 @@
 ---
 tags: [design, oo, patterns, uml, software-engineering, swe-foundation]
-source: "SWE Theory & Practice Ch 6 — Designing the Modules"
+source: "SWE Theory & Practice Ch 6: Designing the Modules"
 ---
 
 # Design Principles and Patterns
@@ -336,7 +336,7 @@ navigation ─ ─→  Navigation
 
 ### Design Pattern Classification
 
-#### Creational Patterns — Class Instantiation
+#### Creational Patterns: Class Instantiation
 
 | Pattern | Purpose |
 |---|---|
@@ -346,7 +346,7 @@ navigation ─ ─→  Navigation
 | **Prototype** | Clone objects from prototype |
 | **Singleton** | Restrict to single instance with global access point |
 
-#### Structural Patterns — Class and Object Composition
+#### Structural Patterns: Class and Object Composition
 
 | Pattern | Purpose |
 |---|---|
@@ -358,7 +358,7 @@ navigation ─ ─→  Navigation
 | **Flyweight** | Share data/state to avoid creating many objects |
 | **Proxy** | Provide placeholder for another object to control access |
 
-#### Behavioral Patterns — Class and Object Communication
+#### Behavioral Patterns: Class and Object Communication
 
 | Pattern | Purpose |
 |---|---|

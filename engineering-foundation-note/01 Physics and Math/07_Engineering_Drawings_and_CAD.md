@@ -37,7 +37,7 @@ Six possible views: **top, bottom, front, back, left-side, right-side**. Redunda
 | Line Type | Purpose |
 |---|---|
 | **Solid (visible)** | Visible edges of planes or intersections |
-| **Dashed (hidden)** | Edges/hole limits not visible from viewing direction — material exists between observer and edge |
+| **Dashed (hidden)** | Edges/hole limits not visible from viewing direction: material exists between observer and edge |
 | **Center line** | Center of holes, cylinders, axes of symmetry |
 
 > Pay attention to the pattern differences between dashed lines and center lines.
@@ -105,9 +105,9 @@ For objects with **complex interiors** (many holes, cavities), dashed lines on o
 | Type | Description |
 |---|---|
 | **Full section** | Cutting plane passes completely through the object |
-| **Half section** | For symmetrical objects — half sectional, half exterior view; shows interior and exterior in one view |
-| **Rotated section** | Cross section rotated 90° and shown in the plane of view — for uniform cross-sections with hard-to-visualize shapes |
-| **Removed section** | Like rotated, but drawn adjacent to the view — for variable cross-sections; multiple cuts may be shown |
+| **Half section** | For symmetrical objects: half sectional, half exterior view; shows interior and exterior in one view |
+| **Rotated section** | Cross section rotated 90° and shown in the plane of view: for uniform cross-sections with hard-to-visualize shapes |
+| **Removed section** | Like rotated, but drawn adjacent to the view: for variable cross-sections; multiple cuts may be shown |
 
 ## 16.6 Civil, Electrical, and Electronic Drawings
 

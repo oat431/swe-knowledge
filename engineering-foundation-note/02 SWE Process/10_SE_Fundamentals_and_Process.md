@@ -1,6 +1,6 @@
 ---
 tags: [software-engineering, process, life-cycle, fundamentals]
-source: "SWE Theory & Practice — Pfleeger & Atlee, Ch 1–2"
+source: "SWE Theory & Practice, Pfleeger & Atlee, Ch 1–2"
 ---
 
 # Software Engineering Fundamentals and Process
@@ -64,6 +64,7 @@ Engineering applies science and mathematics to solve practical problems. Softwar
 These three layers (process, methods, tools) form the **software engineering technology stack**.
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart TB
     TOOL["Tools (IDEs, CI/CD, test frameworks)"]
     METHOD["Methods (design patterns, testing strategies, modeling)"]
@@ -138,6 +139,7 @@ Increment 3: More features → Deliver
 Each spiral iteration passes through four quadrants:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     A["1. Determine objectives,\nalternatives, constraints"] --> B["2. Evaluate alternatives;\nidentify & resolve risks"]
     B --> C["3. Develop & verify\nnext-level product"]
@@ -216,6 +218,7 @@ Agile methods prioritize **individuals and interactions** over processes and too
 The **software life cycle** encompasses all activities from initial concept through retirement:
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
 flowchart LR
     CONCEPT["Concept / Inception"] --> REQUIRE["Requirements"]
     REQUIRE --> DESIGN["Design"]
