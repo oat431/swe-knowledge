@@ -38,7 +38,7 @@ tags:
 | 15 | Solutions & Enterprise Architect | 3.5 | EA practice | Cloud SA; enterprise AI; ArchiMate | [[career-path/15_Solutions_and_Enterprise_Architect/audit|audit]] |
 | 16 | Developer Advocate & Consultant | 3.5 | Ethics; docs as a product | AI-era DevRel; consulting mechanics | [[career-path/16_Developer_Advocate_and_Technical_Consultant/audit|audit]] |
 | 17 | Independent & Founder | 3.5 | Solo-firm economics | Technical-founder journey; exits | [[career-path/17_Independent_Consulting_and_Technical_Founder/audit|audit]] |
-| 18 | Applied AI Engineer | 4 | Evals and guardrails; honest scope | Agentic systems; agent evals | [[career-path/18_Applied_AI_Engineer/audit|audit]] |
+| 18 | Applied AI Engineer | 4 | Evals and guardrails; honest scope | Agentic depth added 2026-10-27; career-map note remains | [[career-path/18_Applied_AI_Engineer/audit\|audit]] |
 | 19 | Forward Deployed Engineer | 4 | Best-researched overview; career-beyond note | Field ethics; worked case | [[career-path/19_Forward_Deployed_Engineer/audit|audit]] |
 
 Scores combine six dimensions rated in each path audit: coverage, depth, practice, progression, sources, and vault hygiene.
@@ -79,7 +79,7 @@ Scores combine six dimensions rated in each path audit: coverage, depth, practic
 | Staff / Principal / EM: leading AI adoption | 1 passing mention each, or regulation/foresight only |
 | Product Manager | AI appears only as example features |
 | Quality: testing AI features | 2 notes in passing |
-| Applied AI: agentic systems, agent evals | Thin (agent evals: 0) |
+| Applied AI: agentic systems, agent evals | Resolved 2026-10-27: `07_Agentic_Systems` module incl. trajectory evals, memory, tool protocols, computer use |
 
 **Recommendation:** an "AI thread" with one level-appropriate note per path. Each path audit names the exact note.
 
