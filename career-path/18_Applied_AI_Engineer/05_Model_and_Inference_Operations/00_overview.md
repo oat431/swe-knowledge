@@ -34,6 +34,7 @@ Senior judgment shows in:
 | 04 | [[04_Latency_Engineering]] | Engineering TTFT, streaming, parallelism, and graceful degradation |
 | 05 | [[05_Serving_Infrastructure_and_Scaling]] | Building serving stacks that scale with autoscaling, rate limits, and queues |
 | 06 | [[06_Provider_Management_and_Model_Routing]] | Routing across providers with fallbacks, A/B, and eval-gated promotion |
+| 07 | [[07_Reasoning_Models_and_Compute_Budgets]] | When extra reasoning pays off, and budgeting compute and latency |
 
 ## The Inference Request Path
 

@@ -190,6 +190,8 @@ The loop is the career-path capstone: a senior security engineer connects design
 
 ## Related
 
+- [[career-path/18_Applied_AI_Engineer/04_AI_Security_and_Guardrails/00_overview|AI Security and Guardrails]]: the applied-AI path's guardrails module; this path owns the AI/LLM threat-modeling depth it connects to
+
 - [[00_Career_Path_Overview]]
 - [[career-path/06_Software_Architect/00_overview|Software Architect]]
 - [[career-path/07_SRE_and_Platform_Engineer/00_overview|SRE and Platform Engineer]]

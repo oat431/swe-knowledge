@@ -42,6 +42,7 @@ Senior judgment shows in:
 | 04 | [[04_Tracing_and_Observability]] | Spans, cost and latency attribution, reconstructing any production behavior |
 | 05 | [[05_Online_Evaluation_and_Monitoring]] | Feedback signals, output sampling, and alerts from real traffic |
 | 06 | [[06_Regression_Gates_and_Continuous_Evaluation]] | Wiring evals into CI so no change ships unmeasured |
+| 07 | [[07_Eval_Data_and_Feedback_Flywheels]] | Golden sets, synthetic data, and turning production failures into eval cases |
 
 ## Evaluation Lifecycle Flow
 

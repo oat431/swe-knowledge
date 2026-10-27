@@ -41,6 +41,7 @@ Senior judgment shows in:
 | 04 | [[04_Prompt_Templates_and_Versioning]] | Shipping prompt changes as releases with regression gates |
 | 05 | [[05_Few_Shot_and_Chain_of_Thought_Techniques]] | Teaching by example and eliciting explicit reasoning |
 | 06 | [[06_Dynamic_Context_Assembly]] | Composing the right sources, in the right order, at the right budget |
+| 07 | [[07_AI_UX_Patterns]] | Streaming, uncertainty display, review queues, and graceful failure UX |
 
 ## Context Assembly Pipeline
 

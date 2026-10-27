@@ -47,14 +47,15 @@ Unlike earlier specializations, this path has no mature BOK. Its de facto refere
 
 | Capability | Focus | Files |
 |---|---|---|
-| [[career-path/18_Applied_AI_Engineer/01_LLM_Application_Patterns/00_overview|LLM Application Patterns]] | RAG, tool use and function calling, agents, context injection, when NOT to use a pattern | 1 overview + 6 topics |
-| [[career-path/18_Applied_AI_Engineer/02_Context_and_Prompt_Engineering/00_overview|Context and Prompt Engineering]] | Prompt design, structured outputs, context budgeting, templates, versioning | 1 overview + 6 topics |
-| [[career-path/18_Applied_AI_Engineer/03_Evaluation_and_Observability/00_overview|Evaluation and Observability]] | Offline eval suites, metrics, tracing, online monitoring, regression gates | 1 overview + 6 topics |
+| [[career-path/18_Applied_AI_Engineer/01_LLM_Application_Patterns/00_overview|LLM Application Patterns]] | RAG, tool use and function calling, agents, context injection, when NOT to use a pattern | 1 overview + 7 topics |
+| [[career-path/18_Applied_AI_Engineer/02_Context_and_Prompt_Engineering/00_overview|Context and Prompt Engineering]] | Prompt design, structured outputs, context budgeting, templates, versioning | 1 overview + 7 topics |
+| [[career-path/18_Applied_AI_Engineer/03_Evaluation_and_Observability/00_overview|Evaluation and Observability]] | Offline eval suites, metrics, tracing, online monitoring, regression gates | 1 overview + 7 topics |
 | [[career-path/18_Applied_AI_Engineer/04_AI_Security_and_Guardrails/00_overview|AI Security and Guardrails]] | Prompt injection defense, OWASP LLM Top 10, input/output guardrails, blast-radius limits | 1 overview + 6 topics |
-| [[career-path/18_Applied_AI_Engineer/05_Model_and_Inference_Operations/00_overview|Model and Inference Operations]] | Model selection, API vs self-hosted, cost/latency trade-offs, caching, batching, fallbacks | 1 overview + 6 topics |
+| [[career-path/18_Applied_AI_Engineer/05_Model_and_Inference_Operations/00_overview|Model and Inference Operations]] | Model selection, API vs self-hosted, cost/latency trade-offs, caching, batching, fallbacks | 1 overview + 7 topics |
 | [[career-path/18_Applied_AI_Engineer/06_Responsible_AI_and_Governance/00_overview|Responsible AI and Governance]] | Ethics and bias, privacy, compliance, AI ROI, adoption roadmap, governance | 1 overview + 6 topics |
+| [[career-path/18_Applied_AI_Engineer/07_Agentic_Systems/00_overview|Agentic Systems]] | Agent architectures, memory and state, tool protocols like MCP, trajectory evaluation, autonomy levels, computer use | 1 overview + 6 topics |
 
-**Total:** 6 capability areas × 7 files = 42 topic files + 1 path overview = 43 files
+**Total:** 7 capability areas, 46 topic files + 7 module overviews + 1 path overview = 54 files
 
 ## Typical Progression
 

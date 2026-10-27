@@ -33,6 +33,7 @@ Senior judgment shows in:
 | 04 | [[04_Structured_Outputs_and_Schema_Enforcement]] | Making outputs machine-verifiable and retryable |
 | 05 | [[05_Context_Injection_Patterns]] | Budgeting and composing context as an architecture decision |
 | 06 | [[06_Pattern_Selection_and_Fallback_Design]] | Choosing the cheapest reliable pattern and degrading gracefully |
+| 07 | [[07_Multimodal_and_Voice_Applications]] | Document, vision, and voice pipelines with their latency and evaluation specifics |
 
 ## Pattern Selection Flow
 
