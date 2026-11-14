@@ -8,23 +8,28 @@
 
 ## The Checklists
 
-> ⚠ Improved checklists currently exist only for API Launch, Microservice Launch, Frontend Launch, CLI Launch and Desktop Launch; the other rows still link to the original reference checklists.
+> ⚠ Improved checklists currently exist only for API Launch, Microservice Launch, Frontend Launch, CLI Launch and Desktop Launch; the other rows link to standalone or original reference checklists (original/improved pairs are listed below where they exist).
 
-| Checklist | For | Lines |
-|-----------|-----|:-----:|
-| [[Release]] | The shipping process: versioning → rollout → verify → rollback | ~45 items |
-| [[Security]] | System-wide security: threat model → compliance | ~50 items |
-| [[Database]] | The data layer: modeling, migrations, backup, performance | ~45 items |
-| [[PostgreSQL]] | PostgreSQL 18 (19 GA 2026-11-19): vacuum, PITR, pooling, replication | ~40 items |
-| [[MongoDB]] | MongoDB 9: document modeling, replica sets, sharding | ~35 items |
-| [[valkey-redis|Valkey]] | Valkey 9 / Redis 8: caching patterns, eviction, HA | ~30 items |
-| [[QA]] | The quality strategy: test pyramid → mutation → metrics | ~40 items |
-| [[AI]] | AI/LLM apps: model selection, RAG, agents, evals, guardrails | ~45 items |
-| [[API Launch]] | Any backend service before production | ~45 items |
-| [[Microservice Launch]] | Multi-service systems before production | ~35 items |
-| [[Frontend Launch]] | Any frontend app before production | ~35 items |
-| [[CLI Launch]] | Any CLI tool before shipping to users | ~30 items |
-| [[Desktop Launch]] | Any desktop app before production | ~30 items |
+| Checklist               | For                                                                  |   Lines   |
+| ----------------------- | -------------------------------------------------------------------- | :-------: |
+| [[Release]]             | The shipping process: versioning → rollout → verify → rollback       | ~45 items |
+| [[Security]]            | System-wide security: threat model → compliance                      | ~50 items |
+| [[Database]]            | The data layer: modeling, migrations, backup, performance            | ~45 items |
+| [[PostgreSQL]]          | PostgreSQL 18 (19 GA 2026-11-19): vacuum, PITR, pooling, replication | ~40 items |
+| [[MongoDB]]             | MongoDB 9: document modeling, replica sets, sharding                 | ~35 items |
+| [[valkey-redis]]        | Valkey 9 / Redis 8: caching patterns, eviction, HA                   | ~30 items |
+| [[QA]]                  | The quality strategy: test pyramid → mutation → metrics              | ~40 items |
+| [[AI]]                  | AI/LLM apps: model selection, RAG, agents, evals, guardrails         | ~45 items |
+| [[privacy]]             | Privacy & data protection (PDPA/GDPR): consent, rights, breach       | ~75 items |
+| [[data]]                | Data pipelines: contracts, quality, operations                       | ~70 items |
+| [[ops]]                 | Steady-state operations: SLOs, incidents, recovery                   | ~75 items |
+| [[bot]]                 | Bots on messaging platforms: webhooks, tokens, broadcasts            | ~70 items |
+| [[finops]]              | Cloud cost: visibility, optimization, guardrails                     | ~65 items |
+| [[API Launch]]          | Any backend service before production                                | ~45 items |
+| [[Microservice Launch]] | Multi-service systems before production                              | ~35 items |
+| [[Frontend Launch]]     | Any frontend app before production                                   | ~35 items |
+| [[CLI Launch]]          | Any CLI tool before shipping to users                                | ~30 items |
+| [[Desktop Launch]]      | Any desktop app before production                                    | ~30 items |
 
 ---
 
