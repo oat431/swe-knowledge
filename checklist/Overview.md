@@ -46,7 +46,7 @@ The original checklists in the `*-checklist/` subfolders are your **reference ma
 | `qa-checklist/qa.md` (174 lines) | [[QA]] (~40 lines) |
 | `ai-checklist/ai.md` (234 lines) | [[AI]] (~45 lines) |
 | `cli-checklist/cli.md` (141 lines) + family: `go-cli.md`, `rust-cli.md`, `node-cli.md`, `python-cli.md`, `jvm-cli.md`, `dotnet-cli.md` | [[CLI Launch]] (~65 lines) |
-| `desktop-checklist/desktop.md` (108 lines) | [[Desktop Launch]] (~67 lines) |
+| `desktop-checklist/desktop.md` (121 lines) + family: `electron.md`, `tauri.md`, `flutter-desktop.md`, `dotnet-desktop.md`, `jvm-desktop.md`, `native-desktop.md` | [[Desktop Launch]] (~67 lines) |
 
 ---
 

@@ -91,6 +91,19 @@
 
 ---
 
+## Stack Family (Framework Layers)
+
+The general contract above is toolkit-agnostic; the per-stack plumbing lives in the family files:
+
+- Electron (web-tech) → [[electron]]
+- Tauri (Rust + system webview) → [[tauri]]
+- Flutter → [[flutter-desktop]]
+- .NET (WinUI / WPF / MAUI / Avalonia) → [[dotnet-desktop]]
+- JVM (Compose Multiplatform / JavaFX) → [[jvm-desktop]]
+- Native (Qt / GTK / SwiftUI) → [[native-desktop]]
+
+---
+
 ## Quick Sanity Check Before Release
 
 - [ ] Fresh install on a clean VM per OS: launches, signs in, completes the core task
