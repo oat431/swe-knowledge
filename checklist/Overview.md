@@ -8,7 +8,7 @@
 
 ## The Checklists
 
-> ⚠ Improved checklists currently exist only for API Launch, Microservice Launch and Frontend Launch; the other rows still link to the original reference checklists.
+> ⚠ Improved checklists currently exist only for API Launch, Microservice Launch, Frontend Launch, CLI Launch and Desktop Launch; the other rows still link to the original reference checklists.
 
 | Checklist | For | Lines |
 |-----------|-----|:-----:|
@@ -23,6 +23,8 @@
 | [[API Launch]] | Any backend service before production | ~45 items |
 | [[Microservice Launch]] | Multi-service systems before production | ~35 items |
 | [[Frontend Launch]] | Any frontend app before production | ~35 items |
+| [[CLI Launch]] | Any CLI tool before shipping to users | ~30 items |
+| [[Desktop Launch]] | Any desktop app before production | ~30 items |
 
 ---
 
@@ -43,6 +45,8 @@ The original checklists in the `*-checklist/` subfolders are your **reference ma
 | `database-checklist/valkey-redis.md` (189 lines) | [[valkey-redis|Valkey]] (~30 lines) |
 | `qa-checklist/qa.md` (174 lines) | [[QA]] (~40 lines) |
 | `ai-checklist/ai.md` (234 lines) | [[AI]] (~45 lines) |
+| `cli-checklist/cli.md` (128 lines) | [[CLI Launch]] (~65 lines) |
+| `desktop-checklist/desktop.md` (108 lines) | [[Desktop Launch]] (~67 lines) |
 
 ---
 
