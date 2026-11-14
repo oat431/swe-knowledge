@@ -9,7 +9,7 @@
 ## 1. Project Setup
 
 - [ ] **Scaffold choice:** SvelteKit (`npx sv create`) for anything public/SEO/full-stack → [[sveltekit]]. Vite SPA (`npm create vite@latest -- --template svelte-ts`) for embeddable widgets and pure internal SPAs with no SEO needs.
-- [ ] **TypeScript:** `lang="ts"` in `<script>` blocks. `svelte.config.js`: `vitePlugin: { inspector: true }` for devtools.
+- [ ] **TypeScript:** `lang="ts"` in `<script>` blocks. `vite.config.ts` (SvelteKit 3: config lives here, not `svelte.config.js`): `vitePlugin: { inspector: true }` for devtools.
 - [ ] **pnpm:** fast, strict. Lockfile committed.
 - [ ] **ESLint + Prettier:** `@sveltejs/eslint-config`. `svelte-check` for type checking `.svelte` files.
 - [ ] **Svelte 5 runes mode:** `compilerOptions: { runes: true }` in config. Runes are the new reactivity model. No `$:`, no `$store`, use `$state`, `$derived`, `$effect`.
@@ -17,7 +17,7 @@
 ## 2. Architecture & Code Organization
 
 - [ ] **Feature-based folders** (`src/lib/features/users/`, `src/lib/features/orders/` with components, stores, api, and Zod schemas co-located per feature. App shell / routes stay thin) routes compose feature modules, no business logic in components.
-- [ ] **Alias discipline:** `$lib` → `src/lib` in SvelteKit (→ [[sveltekit]] §1); `@/` path alias in plain Vite. Shared code in `shared/`, features in `features/`. No deep relative imports (`../../../`) crossing feature boundaries.
+- [ ] **Alias discipline:** `#lib` → `src/lib` in SvelteKit 3 (→ [[sveltekit]] §1); `@/` path alias in plain Vite. Shared code in `shared/`, features in `features/`. No deep relative imports (`../../../`) crossing feature boundaries.
 - [ ] **Module boundaries enforced in CI:** `eslint-plugin-boundaries` or `dependency-cruiser`: `shared` → `features` → app shell. Nothing imports upward or sideways across features except through the feature's public export.
 - [ ] **Dependency rule points inward:** Pure TS domain modules (logic, types, Zod schemas) never import Svelte or SvelteKit. Components import from logic, never the reverse.
 - [ ] **Limited barrel files:** One `index.ts` per feature public boundary at most. Deep-import within a feature. Barrels hurt tree-shaking and slow down Vite HMR.
@@ -87,9 +87,9 @@
 ## 9. Styling
 
 - [ ] **Scoped by default:** `<style>` in `.svelte` files is component-scoped. Zero config. `:global()` for escaping.
-- [ ] **Tailwind CSS:** works natively. `@tailwind base/components/utilities` in `app.css`. Or UnoCSS (lighter, tree-shakable).
-- [ ] **Component library:** Melt UI (headless, accessible primitives) + shadcn-svelte (styled). Or Skeleton UI (Tailwind-native). Don't build from scratch.
-- [ ] **Dark mode:** `tailwind.config`: `darkMode: 'class'`. Toggle `dark` class on `<html>`. Or use SvelteKit's `handle` hook to read `prefers-color-scheme` → [[sveltekit]] §6.
+- [ ] **Tailwind CSS:** works natively. `@import "tailwindcss"` in `app.css` (Tailwind v4). Or UnoCSS (lighter, tree-shakable).
+- [ ] **Component library:** Bits UI (headless, accessible primitives; Melt UI is unmaintained) + shadcn-svelte (styled). Or Skeleton UI (Tailwind-native). Don't build from scratch.
+- [ ] **Dark mode:** `@custom-variant dark` (Tailwind v4). Toggle `dark` class on `<html>`. Or use SvelteKit's `handle` hook to read `prefers-color-scheme` → [[sveltekit]] §6.
 - [ ] **Design tokens:** CSS custom properties for colors, spacing, radius. Tested on both themes.
 
 ## 10. Forms

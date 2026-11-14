@@ -8,7 +8,7 @@
 
 ## 1. Project Setup
 
-- [ ] **Scaffold choice:** Meta-framework (Next.js → [[next]]) for anything public/SEO/full-stack. Vite + React Router 7 for pure SPA (internal dashboard, no SEO). Lighter, faster dev.
+- [ ] **Scaffold choice:** Meta-framework (Next.js → [[next]]) for anything public/SEO/full-stack. Vite + React Router 8 for pure SPA (internal dashboard, no SEO). Lighter, faster dev.
 - [ ] **React 19:** Compiler, `useActionState`, `useOptimistic`, `use()` available. Don't start new projects on 18 unless dependency-constrained.
 - [ ] **TypeScript strict mode:** `tsconfig.json`: `"strict": true`, plus `noUncheckedIndexedAccess`, `exactOptionalPropertyTypes`, `noUnusedLocals`, `noUnusedParameters`.
 - [ ] **Package manager:** pnpm recommended (strict, fast, disk-efficient). Lockfile committed.
@@ -67,7 +67,7 @@
 
 ## 7. Performance
 
-- [ ] **React Compiler (React 19+):** Opt-in progressively. Automatically memoizes components and hooks. Enable per-directory with eslint plugin.
+- [ ] **React Compiler (React 19+):** Opt-in progressively. Automatically memoizes components and hooks. Enabled via its build plugin, not the eslint plugin (that one only validates).
 - [ ] **Re-render hygiene:** Functional `setState` for stable callbacks; lazy `useState(() => expensive())` init; derive state during render, not in effects; `startTransition` for non-urgent updates; `useDeferredValue` to keep inputs responsive; refs for transient high-frequency values; subscribe to derived booleans, not raw objects.
 - [ ] **`memo`/`useMemo`/`useCallback` with intent** (Only for measured hot paths (or let the Compiler do it). Don't memoize simple primitives) the memo bookkeeping costs more than the re-render.
 - [ ] **Code splitting:** `React.lazy` + `<Suspense>` for heavy components below the fold (charts, editors, media players). Route-level splitting is the meta-framework's job → [[next]].
@@ -96,9 +96,9 @@
 
 ## 10. Routing & Navigation (SPA path)
 
-- [ ] **React Router 7 (framework mode):** Declarative routes, nested layouts (`<Outlet>`), typed route params. Or TanStack Router for type-safe-by-default routing.
+- [ ] **React Router 8 (framework mode):** Declarative routes, nested layouts (`<Outlet>`), typed route params. Or TanStack Router for type-safe-by-default routing.
 - [ ] **Route-level code splitting:** `lazy()` route components. Every route is its own chunk.
-- [ ] **Loaders/actions for data** (React Router 7 loaders fetch in parallel before render; actions handle mutations. Or TanStack Query per component) pick one pattern, not both.
+- [ ] **Loaders/actions for data** (React Router 8 loaders fetch in parallel before render; actions handle mutations. Or TanStack Query per component) pick one pattern, not both.
 - [ ] **Loading & error UI per route:** `HydrateFallback`, `ErrorBoundary` on routes. Not blank screens.
 - [ ] **Auth guards at the router level:** One place checks; components don't re-check.
 - [ ] **In a meta-framework, this section is the framework's job:** File-system routing, middleware, layouts → [[next]].
@@ -150,7 +150,7 @@
 
 ## 16. AI/LLM Integration (Client)
 
-- [ ] **Vercel AI SDK `useChat`:** `messages`, `input`, `isLoading`, `stop()`. Render partial markdown as tokens arrive. Abort button, regenerate and edit-message affordances. Streaming server side → [[next]].
+- [ ] **Vercel AI SDK `useChat`:** `messages`, `sendMessage`, `status`, `stop()`. Render partial markdown as tokens arrive. Abort button, regenerate and edit-message affordances. Streaming server side → [[next]].
 - [ ] **Markdown rendering:** `react-markdown` + `rehype-highlight` for code blocks. Sanitize LLM output with DOMPurify before any HTML injection. Never trust model output as HTML.
 - [ ] **Non-chat AI calls:** classify/extract/summarize endpoints go through TanStack Query mutations with loading states. Cache identical prompts (response dedup).
 - [ ] **Graceful degradation:** Error state with retry, cached fallback responses, "AI can be wrong" disclaimers where output is user-facing. Rate-limit UX on 429.

@@ -73,7 +73,7 @@
 
 ## 8. Advanced Techniques (Medium+ Tiers)
 
-- [ ] **Mutation testing:** Stryker (JS/TS/Java/C#) or mutmut (Python): mutate code, tests should fail. Kills "green but meaningless" coverage. Run on core business logic in CI or nightly.
+- [ ] **Mutation testing:** Stryker (JS/TS/.NET/Scala) or mutmut (Python): mutate code, tests should fail. Kills "green but meaningless" coverage. Run on core business logic in CI or nightly.
 - [ ] **Property-based testing:** Hypothesis (Python), fast-check (JS), QuickTheories (Java): random inputs, invariants verified. Amazing for parsers, validators, serialization.
 - [ ] **Contract testing (consumer-driven):** Pact for service-to-service contracts. Consumer expectations verified against provider before deploy. Microservice must-have → [[Microservice Launch]].
 - [ ] **Load/performance tests** (k6, Gatling, Locust: peak-traffic scenarios with SLOs asserted (p95 < X, error rate < Y). Not "how fast can it go") "does it hold under expected load" → [[Database]] §4.

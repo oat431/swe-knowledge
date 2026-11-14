@@ -9,20 +9,21 @@
 
 ## 1. Setup by Language
 
-### Java (Spring Boot 4.1 / JUnit 5)
+### Java (Spring Boot 4.1 / JUnit 6)
 
-- [ ] **Add dependencies:** `build.gradle.kts`:
+- [ ] **Add dependencies:** `build.gradle.kts` (Testcontainers 2.x: every module artifact carries the `testcontainers-` prefix and classes are relocated):
   ```kotlin
   dependencies {
-      testImplementation("org.testcontainers:testcontainers:1.20.+")
-      testImplementation("org.testcontainers:junit-jupiter:1.20.+")
+      testImplementation(platform("org.testcontainers:testcontainers-bom:2.0.+"))
+      testImplementation("org.testcontainers:testcontainers")
+      testImplementation("org.testcontainers:testcontainers-junit-jupiter")
       // Service-specific modules:
-      testImplementation("org.testcontainers:postgresql:1.20.+")
-      testImplementation("org.testcontainers:mysql:1.20.+")
-      testImplementation("org.testcontainers:kafka:1.20.+")
-      testImplementation("org.testcontainers:elasticsearch:1.20.+")
-      testImplementation("org.testcontainers:rabbitmq:1.20.+")
-      testImplementation("org.testcontainers:localstack:1.20.+")
+      testImplementation("org.testcontainers:testcontainers-postgresql")
+      testImplementation("org.testcontainers:testcontainers-mysql")
+      testImplementation("org.testcontainers:testcontainers-kafka")
+      testImplementation("org.testcontainers:testcontainers-elasticsearch")
+      testImplementation("org.testcontainers:testcontainers-rabbitmq")
+      testImplementation("org.testcontainers:testcontainers-localstack")
   }
   ```
 - [ ] **Maven equivalent:** `pom.xml`:
@@ -30,18 +31,18 @@
   <dependency>
       <groupId>org.testcontainers</groupId>
       <artifactId>testcontainers-bom</artifactId>
-      <version>1.20.4</version>
+      <version>2.0.5</version>
       <type>pom</type>
       <scope>import</scope>
   </dependency>
   ```
-- [ ] **JUnit 5 extension:** add `@Testcontainers` on the test class:
+- [ ] **JUnit Jupiter extension:** add `@Testcontainers` on the test class:
   ```java
   @Testcontainers
   @SpringBootTest
   class OrderServiceIntegrationTest {
       @Container
-      static PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>("postgres:16");
+      static PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>("postgres:18");
   }
   ```
 
@@ -56,7 +57,7 @@
   ```go
   func TestPostgresQuery(t *testing.T) {
       ctx := context.Background()
-      pg, err := postgres.Run(ctx, "postgres:16",
+      pg, err := postgres.Run(ctx, "postgres:18",
           postgres.WithDatabase("testdb"),
           postgres.WithUsername("test"),
           postgres.WithPassword("test"),
@@ -88,7 +89,7 @@
       let container: StartedPostgreSqlContainer;
 
       beforeAll(async () => {
-          container = await new PostgreSqlContainer("postgres:16")
+          container = await new PostgreSqlContainer("postgres:18")
               .withDatabase("testdb")
               .start();
       }, 30_000); // 30s timeout for container start
@@ -116,7 +117,7 @@
   from testcontainers.postgres import PostgresContainer
 
   def test_database_operations():
-      with PostgresContainer("postgres:16") as pg:
+      with PostgresContainer("postgres:18") as pg:
           url = pg.get_connection_url()
           # Connect and test
           assert run_migration(url) is True
@@ -128,7 +129,7 @@
 
   @pytest.fixture(scope="session")
   def postgres_url():
-      with PostgresContainer("postgres:16") as pg:
+      with PostgresContainer("postgres:18") as pg:
           yield pg.get_connection_url()
   ```
 
@@ -144,11 +145,11 @@
   class MyIntegrationTest {
       // Static = shared across all test methods (class-level)
       @Container
-      static PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>("postgres:16");
+      static PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>("postgres:18");
 
       // Instance = fresh per test method (test-level)
       @Container
-      GenericContainer<?> redis = new GenericContainer<>("redis:7")
+      GenericContainer<?> redis = new GenericContainer<>("redis:8")
           .withExposedPorts(6379);
   }
   ```
@@ -161,7 +162,7 @@
   @SpringBootTest
   class OrderRepositoryTest {
       @Container
-      static PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>("postgres:16");
+      static PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>("postgres:18");
 
       @DynamicPropertySource
       static void configureProperties(DynamicPropertyRegistry registry) {
@@ -178,11 +179,11 @@
   class OrderRepositoryTest {
       @Container
       @ServiceConnection  // Auto-configures spring.datasource.*
-      static PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>("postgres:16");
+      static PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>("postgres:18");
 
       @Container
       @ServiceConnection  // Auto-configures spring.data.redis.*
-      static GenericContainer<?> redis = new GenericContainer<>("redis:7")
+      static GenericContainer<?> redis = new GenericContainer<>("redis:8")
           .withExposedPorts(6379);
   }
   ```
@@ -221,7 +222,7 @@
   ```
 - [ ] **Mark containers reusable** (Java):
   ```java
-  PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>("postgres:16")
+  PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>("postgres:18")
       .withReuse(true);  // Container survives test run
   ```
 - [ ] **How reuse works:**
@@ -250,7 +251,7 @@
       static final PostgreSQLContainer<?> POSTGRES;
 
       static {
-          POSTGRES = new PostgreSQLContainer<>("postgres:16");
+          POSTGRES = new PostgreSQLContainer<>("postgres:18");
           POSTGRES.start();
       }
 
@@ -277,7 +278,7 @@
 
   func TestMain(m *testing.M) {
       ctx := context.Background()
-      c, err := postgres.Run(ctx, "postgres:16",
+      c, err := postgres.Run(ctx, "postgres:18",
           postgres.WithDatabase("testdb"),
       )
       if err != nil { panic(err) }
@@ -293,22 +294,22 @@
 
 ## 5. Parallel Execution Safety
 
-- [ ] **The problem:** parallel tests (JUnit 5 `@Execution(CONCURRENT)`, pytest-xdist, `go test -parallel`) can collide on shared containers.
+- [ ] **The problem:** parallel tests (JUnit 6 `@Execution(CONCURRENT)`, pytest-xdist, `go test -parallel`) can collide on shared containers.
 - [ ] **Strategy 1: One container per parallel worker:**
   ```java
-  // JUnit 5 parallel execution
+  // JUnit 6 parallel execution
   @Testcontainers
   @Execution(ExecutionMode.CONCURRENT)
   class ParallelTest {
       @Container
       // Instance-level = each parallel test gets its own container
-      PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>("postgres:16");
+      PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>("postgres:18");
   }
   ```
 - [ ] **Strategy 2: Shared container + database-per-test:**
   ```java
   @Container
-  static PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>("postgres:16");
+  static PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>("postgres:18");
 
   @BeforeEach
   void setup() {
@@ -329,7 +330,7 @@
   @pytest.fixture(scope="session")
   def postgres_url(worker_id):
       """Each xdist worker gets its own container."""
-      with PostgresContainer("postgres:16") as pg:
+      with PostgresContainer("postgres:18") as pg:
           yield pg.get_connection_url()
   ```
 - [ ] **Go parallel tests:** use `t.Parallel()` with unique databases:
@@ -360,9 +361,9 @@
   steps:
     - name: Pull test images
       run: |
-        docker pull postgres:16
-        docker pull redis:7
-        docker pull confluentinc/cp-kafka:7.6.0
+        docker pull postgres:18
+        docker pull redis:8
+        docker pull confluentinc/cp-kafka:8.4.0
         docker pull localstack/localstack:3
     - name: Run integration tests
       run: ./gradlew integrationTest
@@ -373,7 +374,7 @@
   static void pullImages() {
       new ImagePullPolicy() { /* custom policy */ };
       // Or use Docker CLI:
-      new GenericContainer<>("postgres:16").getDockerImageName();
+      new GenericContainer<>("postgres:18").getDockerImageName();
   }
   ```
 
@@ -385,7 +386,7 @@
     uses: docker/setup-buildx-action@v3
 
   - name: Cache Docker layers
-    uses: actions/cache@v4
+    uses: actions/cache@v6
     with:
       path: /tmp/.buildx-cache
       key: ${{ runner.os }}-buildx-${{ hashFiles('**/Dockerfile') }}
@@ -420,7 +421,7 @@
   steps:
     - run: ./gradlew integrationTest --tests "*Suite${{ matrix.shard }}*"
   ```
-- [ ] **JUnit 5 parallel configuration:** `junit-platform.properties`:
+- [ ] **JUnit 6 parallel configuration:** `junit-platform.properties`:
   ```properties
   junit.jupiter.execution.parallel.enabled=true
   junit.jupiter.execution.parallel.mode.default=concurrent
@@ -444,7 +445,7 @@
 - [ ] **Java:**
   ```java
   @Container
-  static PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>("postgres:16")
+  static PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>("postgres:18")
       .withDatabaseName("testdb")
       .withUsername("test")
       .withPassword("test")
@@ -456,7 +457,7 @@
   ```
 - [ ] **Go:**
   ```go
-  pg, err := postgres.Run(ctx, "postgres:16",
+  pg, err := postgres.Run(ctx, "postgres:18",
       postgres.WithDatabase("testdb"),
       postgres.WithInitScripts("schema.sql", "seed-data.sql"),
   )
@@ -473,7 +474,7 @@
 - [ ] **Java:**
   ```java
   @Container
-  static MySQLContainer<?> mysql = new MySQLContainer<>("mysql:8.0")
+  static MySQLContainer<?> mysql = new MySQLContainer<>("mysql:9")
       .withDatabaseName("testdb")
       .withUsername("test")
       .withPassword("test")
@@ -481,7 +482,7 @@
   ```
 - [ ] **Go:**
   ```go
-  mysqlC, err := mysql.Run(ctx, "mysql:8.0",
+  mysqlC, err := mysql.Run(ctx, "mysql:9",
       mysql.WithDatabase("testdb"),
       mysql.WithUsername("test"),
       mysql.WithPassword("test"),
@@ -493,19 +494,19 @@
 - [ ] **Java (GenericContainer):**
   ```java
   @Container
-  static GenericContainer<?> redis = new GenericContainer<>("redis:7")
+  static GenericContainer<?> redis = new GenericContainer<>("redis:8")
       .withExposedPorts(6379)
       .withCommand("redis-server", "--appendonly", "yes")
       .waitingFor(Wait.forLogMessage(".*Ready to accept connections.*", 1));
   ```
 - [ ] **Valkey** (Redis fork):
   ```java
-  GenericContainer<?> valkey = new GenericContainer<>("valkey/valkey:8")
+  GenericContainer<?> valkey = new GenericContainer<>("valkey/valkey:9")
       .withExposedPorts(6379);
   ```
 - [ ] **Go:**
   ```go
-  redisC, err := redis.Run(ctx, "redis:7",
+  redisC, err := redis.Run(ctx, "redis:8",
       redis.WithSnapshotting(10, 1),
       redis.WithLogLevel(redis.LogLevelVerbose),
   )
@@ -515,7 +516,7 @@
   ```python
   from testcontainers.redis import RedisContainer
 
-  with RedisContainer("redis:7") as redis:
+  with RedisContainer("redis:8") as redis:
       client = redis.get_client()
       client.set("key", "value")
       assert client.get("key") == b"value"
@@ -527,7 +528,7 @@
   ```java
   @Container
   static KafkaContainer kafka = new KafkaContainer(
-      DockerImageName.parse("confluentinc/cp-kafka:7.6.0")
+      DockerImageName.parse("confluentinc/cp-kafka:8.4.0")
   );
 
   @DynamicPropertySource
@@ -538,19 +539,19 @@
 - [ ] **Kraft mode** (no ZooKeeper, faster startup):
   ```java
   KafkaContainer kafka = new KafkaContainer(
-      DockerImageName.parse("confluentinc/cp-kafka:7.6.0")
+      DockerImageName.parse("confluentinc/cp-kafka:8.4.0")
   ).withKraft();  // KRaft mode - no ZooKeeper dependency
   ```
 - [ ] **Go:**
   ```go
-  kafkaC, err := kafka.Run(ctx, "confluentinc/cp-kafka:7.6.0")
+  kafkaC, err := kafka.Run(ctx, "confluentinc/cp-kafka:8.4.0")
   brokers, _ := kafkaC.Brokers(ctx)
   ```
 - [ ] **Python:**
   ```python
   from testcontainers.kafka import KafkaContainer
 
-  with KafkaContainer("confluentinc/cp-kafka:7.6.0") as kafka:
+  with KafkaContainer("confluentinc/cp-kafka:8.4.0") as kafka:
       bootstrap = kafka.get_bootstrap_server()
       # Configure producer/consumer with bootstrap
   ```
@@ -571,7 +572,7 @@
   ```java
   @Container
   static ElasticsearchContainer elasticsearch = new ElasticsearchContainer(
-      "docker.elastic.co/elasticsearch/elasticsearch:8.12.0"
+      "docker.elastic.co/elasticsearch/elasticsearch:9.5.6"
   ).withEnv("xpack.security.enabled", "false")
    .withEnv("ES_JAVA_OPTS", "-Xms512m -Xmx512m");
 
@@ -583,7 +584,7 @@
 - [ ] **Go:**
   ```go
   esC, err := elasticsearch.Run(ctx,
-      "docker.elastic.co/elasticsearch/elasticsearch:8.12.0",
+      "docker.elastic.co/elasticsearch/elasticsearch:9.5.6",
       elasticsearch.WithPassword("changeme"),
   )
   address, _ := esC.Address(ctx)
@@ -598,7 +599,7 @@
 - [ ] **Java:**
   ```java
   @Container
-  static RabbitMQContainer rabbitmq = new RabbitMQContainer("rabbitmq:3.13-management")
+  static RabbitMQContainer rabbitmq = new RabbitMQContainer("rabbitmq:4.4.0-management")
       .withQueue("orders", true, false, null)
       .withExchange("events", "topic", true);
 
@@ -688,14 +689,14 @@
 
 ### Docker Compose
 
-- [ ] **Java:** `DockerComposeContainer`:
+- [ ] **Java:** `ComposeContainer` (Compose v2; replaces the removed `DockerComposeContainer`):
   ```java
   @Container
-  static DockerComposeContainer<?> compose = new DockerComposeContainer<>(
+  static ComposeContainer compose = new ComposeContainer(
       new File("src/test/resources/docker-compose.yml")
-  ).withExposedService("postgres_1", 5432,
+  ).withExposedService("postgres-1", 5432,
       Wait.forListeningPort()
-  ).withExposedService("redis_1", 6379,
+  ).withExposedService("redis-1", 6379,
       Wait.forListeningPort()
   );
   ```
@@ -704,7 +705,7 @@
   version: "3.8"
   services:
     postgres:
-      image: postgres:16
+      image: postgres:18
       environment:
         POSTGRES_DB: testdb
         POSTGRES_USER: test
@@ -712,7 +713,7 @@
       ports:
         - "5432"
     redis:
-      image: redis:7
+      image: redis:8
       ports:
         - "6379"
     myapp:
@@ -744,7 +745,7 @@
   ```
 - [ ] **Wait for services in compose:** use `withExposedService` + wait strategy:
   ```java
-  compose.withExposedService("myapp_1", 8080,
+  compose.withExposedService("myapp-1", 8080,
       Wait.forHttp("/health").forStatusCode(200)
   );
   ```
@@ -760,7 +761,7 @@
   Network network = Network.newNetwork();
 
   @Container
-  static PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>("postgres:16")
+  static PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>("postgres:18")
       .withNetwork(network)
       .withNetworkAliases("db");
 
@@ -776,7 +777,7 @@
 - [ ] **Inter-container communication via alias:**
   ```java
   // Container A is accessible as "redis" within the network
-  GenericContainer<?> redis = new GenericContainer<>("redis:7")
+  GenericContainer<?> redis = new GenericContainer<>("redis:8")
       .withNetwork(network)
       .withNetworkAliases("redis");
 
@@ -790,7 +791,7 @@
   network, _ := testcontainers.GenericNetwork(ctx, testcontainers.GenericNetworkRequest{
       NetworkRequest: testcontainers.NetworkRequest{Name: "testnet"},
   })
-  pg, _ := postgres.Run(ctx, "postgres:16",
+  pg, _ := postgres.Run(ctx, "postgres:18",
       testcontainers.WithNetwork(network),
       testcontainers.WithNetworkAliases("db"),
   )
@@ -934,17 +935,17 @@
   class OrderServiceTest {
       @Container
       @ServiceConnection
-      static PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>("postgres:16");
+      static PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>("postgres:18");
 
       @Container
       @ServiceConnection
-      static GenericContainer<?> redis = new GenericContainer<>("redis:7")
+      static GenericContainer<?> redis = new GenericContainer<>("redis:8")
           .withExposedPorts(6379);
 
       @Container
       @ServiceConnection
       static KafkaContainer kafka = new KafkaContainer(
-          DockerImageName.parse("confluentinc/cp-kafka:7.6.0")
+          DockerImageName.parse("confluentinc/cp-kafka:8.4.0")
       );
   }
   ```
@@ -983,7 +984,7 @@
   class UserRepositoryTest {
       @Container
       @ServiceConnection
-      static PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>("postgres:16");
+      static PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>("postgres:18");
 
       @Autowired
       UserRepository repository;
@@ -1004,7 +1005,7 @@
   abstract class BaseIntegrationTest {
       @Container
       @ServiceConnection
-      static PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>("postgres:16");
+      static PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>("postgres:18");
   }
 
   class OrderTest extends BaseIntegrationTest { }  // Reuses context
@@ -1022,7 +1023,7 @@
   ```java
   @Container
   @ServiceConnection
-  static PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>("postgres:16");
+  static PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>("postgres:18");
 
   // Spring Boot auto-runs migrations on startup
   // Or manually:
@@ -1147,8 +1148,8 @@
   ```kotlin
   // build.gradle.kts
   dependencies {
-      testImplementation(platform("org.testcontainers:testcontainers-bom:1.20.4"))
-      testImplementation("org.testcontainers:postgresql")  // version from BOM
+      testImplementation(platform("org.testcontainers:testcontainers-bom:2.0.+"))
+      testImplementation("org.testcontainers:testcontainers-postgresql")  // version from BOM
   }
   ```
 
@@ -1157,7 +1158,7 @@
 ## Quick Sanity Check
 
 - [ ] `docker info` succeeds: Docker daemon is accessible
-- [ ] `docker pull postgres:16` works: network + registry access OK
+- [ ] `docker pull postgres:18` works: network + registry access OK
 - [ ] Single container test passes: `@Testcontainers` + `@Container` lifecycle works
 - [ ] Container logs show readiness message: wait strategy is correct
 - [ ] Mapped port differs from container port: no hardcoded port assumptions

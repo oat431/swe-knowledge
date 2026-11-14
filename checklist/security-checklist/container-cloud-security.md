@@ -125,7 +125,7 @@
 
 ## 5. Cloud Posture Monitoring (CSPM)
 
-- [ ] **CSPM tool running:** AWS Security Hub, GCP Security Command Center, Azure Defender for Cloud, or third-party (Wiz, Orca, Prowler). Continuous scanning for misconfigurations.
+- [ ] **CSPM tool running:** AWS Security Hub, GCP Security Command Center, Microsoft Defender for Cloud, or third-party (Wiz, Orca, Prowler). Continuous scanning for misconfigurations.
 - [ ] **CIS Benchmarks checked:** Center for Internet Security benchmarks for cloud accounts and Kubernetes clusters. CSPM tools map to CIS controls.
 - [ ] **Findings routed to owners:** CSPM findings don't sit in a dashboard. They route to the team that owns the resource, with SLAs (same as vulnerability remediation SLAs).
 - [ ] **Drift detection:** Terraform state monitored against live infrastructure. Manual changes (console clicks) create drift; CSPM catches the security impact of drift.

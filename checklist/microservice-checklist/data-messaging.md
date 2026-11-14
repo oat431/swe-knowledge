@@ -151,6 +151,6 @@ last_updated: 2026-08-06
 - [[034 CQRS & Event Sourcing]]: event sourcing and CQRS
 - [[Microservice Launch]]: system-wide launch checklist
 - RabbitMQ quorum queues: https://www.rabbitmq.com/docs/quorum-queues
-- Apache Kafka design and delivery semantics: https://kafka.apache.org/43/design/design/
+- Apache Kafka design and delivery semantics: https://kafka.apache.org/documentation/#semantics
 - AWS transactional outbox: https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/transactional-outbox.html
 - AWS saga orchestration: https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/saga-orchestration.html

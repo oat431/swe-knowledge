@@ -44,7 +44,7 @@ Before running any performance test:
 - [ ] **Verify installation:**
   ```bash
   k6 version
-  # Expected: k6 v0.50.0 (or newer)
+  # Expected: k6 v2.x (current: v2.4.0)
   ```
 
 - [ ] **Essential extensions** (optional):
@@ -1014,7 +1014,7 @@ Fail builds when performance regresses.
     k6-test:
       runs-on: ubuntu-latest
       steps:
-        - uses: actions/checkout@v4
+        - uses: actions/checkout@v7
         
         - name: Install k6
           run: |
@@ -1031,7 +1031,7 @@ Fail builds when performance regresses.
         
         - name: Upload results
           if: always()
-          uses: actions/upload-artifact@v4
+          uses: actions/upload-artifact@v7
           with:
             name: k6-results
             path: results.json

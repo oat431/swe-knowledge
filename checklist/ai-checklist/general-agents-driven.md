@@ -52,7 +52,7 @@ my-project/
 - [ ] **Reads `AGENTS.md`:** root + nested (closest wins), plus user-level `~/.codex/AGENTS.md` for machine-wide defaults.
 - [ ] **Config in `~/.codex/config.toml`:** approval mode, model profile, sandbox settings. Repo-local `.codex/` is experimental; keep team config in the repo AGENTS.md, personal config in the user TOML.
 - [ ] **Approval modes + sandbox** (`read-only` (explore), `auto` (edits need approval), `full-auto` (autonomous) sandbox only). Match to tier: full-auto only inside a container with no prod creds.
-- [ ] **Subagents via TOML, not custom commands yet:** no `.codex/commands/` support; encode procedures as AGENTS.md sections or MCP. Headless: `codex exec` for CI/scheduled runs.
+- [ ] **Procedures as skills/slash commands, subagents native:** Skills (`SKILL.md`), custom slash commands, and native subagents all ship — encode repeated workflows as skills or slash commands, dispatch isolated work to subagents. Headless: `codex exec` for CI/scheduled runs.
 - [ ] **Reasoning-effort dial:** set per task class: low for mechanical edits, high for architecture/debugging. Saves tokens on boilerplate.
 
 ```text
@@ -81,7 +81,7 @@ my-project/
 
 - [ ] **Gemini CLI reads `GEMINI.md`:** hierarchical: `~/.gemini/GEMINI.md` (machine) + root→leaf `GEMINI.md` files. `.gemini/settings.json` can set `context.fileName` to redirect at AGENTS.md instead.
 - [ ] **Skills + MCP + plan mode:** SKILL.md format compatible (write once, runs across Gemini/Cursor/Claude); MCP for external tools.
-- [ ] **⚠️ Migration note:** Gemini CLI is being sunset in favor of **Google Antigravity** (agentic IDE + `agy` CLI). New projects: target Antigravity, not Gemini CLI.
+- [ ] **⚠️ Access moved:** Free/Pro access moved to **Antigravity CLI** (`agy`) on 2026-06-18; Gemini CLI now serves Code Assist Enterprise only (and is not tuned for Gemini 4+). New projects: target Antigravity.
 - [ ] **Antigravity uses Rules:** markdown files (size-limited) for constraints, plus workflows and skills. Agent Manager runs asynchronous agents; dedicated browser subagent; harness supports custom agents, tools, lifecycle hooks, and declarative safety policies.
 
 ```text
@@ -294,5 +294,5 @@ flowchart TD
 - Anthropic: "Steering Claude Code" (2026-08) and Claude Code best practices: instruction-following dilution, deterministic gates over prompted rules, compaction preserving assumptions.
 - OpenHands: "10 Claude Code Best Practices for Agentic Coding" (2026-07): explore-plan-code-commit loop; layered verification; spotify background-agent verifier pattern (deterministic checks + LLM judge).
 - Generalized 2026-09-14 from `agents-driven.md` (2026-06-02) alongside its Claude-specific rewrite → [[claude-driven]].
-- Harness conventions researched 2026-09-14: Codex CLI (AGENTS.md + `~/.codex/config.toml`, approval modes, no custom commands), Qwen Code (AGENTS.md + QWEN.md, `settings.json`, Gemini-CLI fork), Gemini CLI (GEMINI.md hierarchical, sunset → Antigravity), Antigravity (Rules/workflows/skills, `agy` CLI), Cursor (`.cursor/rules/*.mdc`), Copilot (`.github/copilot-instructions.md`).
+- Harness conventions researched 2026-09-14: Codex CLI (AGENTS.md + `~/.codex/config.toml`, approval modes, skills + slash commands + native subagents), Qwen Code (AGENTS.md + QWEN.md, `settings.json`, Gemini-CLI fork), Gemini CLI (GEMINI.md hierarchical; free/Pro access moved to Antigravity (`agy`) 2026-06-18), Antigravity (Rules/workflows/skills, `agy` CLI), Cursor (`.cursor/rules/*.mdc`), Copilot (`.github/copilot-instructions.md`).
 - Complements: [[claude-driven]] (tool-specific steering), [[ai]] (building AI products), [[QA]] (verification strategy), [[Release]] (shipping gates), [[Security]] §12 (AI security).

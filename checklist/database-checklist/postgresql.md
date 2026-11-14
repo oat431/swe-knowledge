@@ -1,7 +1,7 @@
 # PostgreSQL Checklist
 
 > PostgreSQL companion to the general [[Database]] checklist.
-> Covers PostgreSQL 18 (current major, Nov 2025), the standard open-source relational engine.
+> Covers PostgreSQL 18 (current stable; PostgreSQL 19 GA 2026-11-19), the standard open-source relational engine.
 > Companion to [[MongoDB]] and [[Valkey]] for the other engines in the homelab.
 > Last updated: 2026-08-07
 
@@ -9,7 +9,7 @@
 
 ## 1. Setup & Configuration
 
-- [ ] **Version:** PostgreSQL 18 (or current LTS-ish major). `SELECT version();` recorded. Upgrade path known before you need it.
+- [ ] **Version:** PostgreSQL 18 (prefer 19 for new installs after GA). `SELECT version();` recorded. Upgrade path known before you need it.
 - [ ] **Config tuned:** `shared_buffers` (25% of RAM typical), `work_mem`, `effective_cache_size`, `max_connections` deliberate. Defaults are for laptops → [[Database]] §5.
 - [ ] **`hba.conf` locked down:** `pg_hba.conf`: scram-sha-256 auth, no `trust` for anything reachable, restricted source IPs.
 - [ ] **`postgresql.conf` review:** `listen_addresses` bound to the right interface, `max_wal_size`/`checkpoint_completion_target` sane, logging configured (see §8).

@@ -1,7 +1,7 @@
 # MongoDB Checklist
 
 > MongoDB companion to the general [[Database]] checklist.
-> Covers MongoDB 8.x (current major), the standard document database.
+> Covers MongoDB 9.x (current major), the standard document database.
 > Companion to [[PostgreSQL]] and [[valkey-redis|Valkey]] for the other engines in the homelab.
 > Last updated: 2026-08-07
 
@@ -9,7 +9,7 @@
 
 ## 1. Setup & Configuration
 
-- [ ] **Version:** MongoDB 8.x (current major). `db.version()` recorded. Upgrade path known.
+- [ ] **Version:** MongoDB 9.x (current major). `db.version()` recorded. Upgrade path known.
 - [ ] **Deployment type chosen** (Standalone (dev only), Replica Set (minimum for production) transactions require it), or Sharded Cluster (horizontal scale, medium+ only).
 - [ ] **Config file:** `mongod.conf` versioned: `storage.dbPath`, `net.port`, `security.authorization: enabled` (never default-open), `replication.replSetName` if replica set.
 - [ ] **`mongod` never runs as root:** Dedicated `mongodb` user, restricted dbPath permissions.
@@ -202,7 +202,7 @@ flowchart TD
 ## Sources
 
 - Complements [[Database]] (general), [[Release]] (migration gates), [[Security]] (data protection).
-- MongoDB 8 docs: https://www.mongodb.com/docs/manual/
+- MongoDB (current manual): https://www.mongodb.com/docs/manual/
 - Schema design patterns: https://www.mongodb.com/docs/manual/data-modeling/
 - Queryable Encryption: https://www.mongodb.com/docs/manual/core/queryable-encryption/
 - Change Streams: https://www.mongodb.com/docs/manual/changeStreams/

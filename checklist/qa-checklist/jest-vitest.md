@@ -9,15 +9,15 @@
 
 ## 1. Framework Selection & Setup
 
-- [ ] **Vitest for Vite projects:** If your project uses Vite (React + Vite, Vue, SvelteKit, Astro, Nuxt 3), use Vitest. It shares Vite's config, transform pipeline, and module resolution. Zero duplicate config.
+- [ ] **Vitest for Vite projects:** If your project uses Vite (React + Vite, Vue, SvelteKit, Astro, Nuxt 4), use Vitest. It shares Vite's config, transform pipeline, and module resolution. Zero duplicate config.
 - [ ] **Jest for non-Vite stacks:** Next.js (Pages Router / older App Router setups), Express, NestJS, plain Node.js. Jest with `ts-jest` or `@swc/jest` for TypeScript.
-- [ ] **Next.js 14+ with Turbopack:** Prefer Vitest. Jest requires `next/jest` config wrapper and doesn't support Turbopack transforms yet. Vitest works natively.
+- [ ] **Next.js 16+ with Turbopack:** Prefer Vitest. Jest requires `next/jest` config wrapper and doesn't support Turbopack transforms yet. Vitest works natively.
 - [ ] **Install & configure:** Vitest: `npm i -D vitest @testing-library/react @testing-library/jest-dom jsdom`. Jest: `npm i -D jest ts-jest @testing-library/react @testing-library/jest-dom`.
-- [ ] **Config file:** Vitest: `vitest.config.ts` (or inline in `vite.config.ts`). Jest: `jest.config.ts`. Both support `setupFiles`, `setupFilesAfterEach`, `globals`, `environment`.
+- [ ] **Config file:** Vitest: `vitest.config.ts` (or inline in `vite.config.ts`). Jest: `jest.config.ts`. Both support `setupFiles`, `globals`, `environment`; Jest additionally has `setupFilesAfterEnv`.
 - [ ] **TypeScript paths resolved:** `tsconfig.json` `paths` aliases (`@/`, `~/`) must be resolved in test config. Vitest: automatic via Vite config. Jest: `moduleNameMapper` required.
 - [ ] **Test environment set:** `environment: 'jsdom'` for component tests, `'node'` for backend/unit. Vitest supports per-file env via `// @vitest-environment jsdom` comment.
 - [ ] **Globals enabled:** `test: { globals: true }` (Vitest) or `@types/jest` installed (Jest). Prefer explicit imports (`import { describe, it, expect } from 'vitest'`) for clarity and IDE support.
-- [ ] **Setup files:** `setupFiles` runs before test framework loads (env vars, polyfills). `setupFilesAfterFramework` runs after (custom matchers, global mocks). Keep these separate and minimal.
+- [ ] **Setup files:** `setupFiles` runs before test framework loads (env vars, polyfills). `setupFilesAfterEnv` (Jest) runs after the test framework is installed (custom matchers, global mocks). Keep these separate and minimal.
 
 ---
 
@@ -142,7 +142,7 @@ it('loads user data on mount', async () => {
 
 ## 8. Coverage
 
-- [ ] **Coverage tool configured:** Vitest: `vitest --coverage` (uses `@vitest/coverage-v8` or `c8`). Jest: `jest --coverage` (uses Istanbul). V8 coverage is faster and more accurate.
+- [ ] **Coverage tool configured:** Vitest: `vitest --coverage` (uses `@vitest/coverage-v8`; the `c8` provider was removed in Vitest 1). Jest: `jest --coverage` (uses Istanbul). V8 coverage is faster and more accurate.
 - [ ] **Thresholds set** (`coverage.thresholds: { branches: 80, functions: 80, lines: 80, statements: 80 }`. Enforce per-PR) coverage must not decrease.
 - [ ] **Exclude non-testable code:** Config excludes: `index.ts` barrel files, type-only files, config files, generated code. `coverage.exclude` array.
 - [ ] **Branch coverage matters most:** Line coverage misses untested `else` branches. Branch coverage catches them. Set branch threshold equal to line threshold.
@@ -215,7 +215,7 @@ it.each([
 - [ ] **Browser mode:** `@vitest/browser` runs tests in real browsers (Playwright/WebDriver). More accurate than jsdom for CSS/layout-sensitive tests.
 - [ ] **Type testing:** `expectTypeOf(value).toEqualTypeOf<Expected>()` and `assertType()`. Test your types at compile time. Unique to Vitest.
 - [ ] **Benchmark tests:** `bench('name', () => {}, { iterations: 1000 })`. Performance regression testing alongside unit tests.
-- [ ] **`pool: 'threads'` / `'forks'`:** Thread-based parallelism (default, faster) vs fork-based (more isolated, better for native modules). Switch if tests have side effects.
+- [ ] **`pool: 'forks'` / `'threads'`:** Fork-based parallelism (default since Vitest 2, more isolated, better for native modules) vs thread-based. Switch if tests need raw speed over isolation.
 - [ ] **`--changed` flag:** Run tests only for files changed since last commit. Fast feedback in CI for large monorepos.
 
 ---

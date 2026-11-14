@@ -1,18 +1,18 @@
 # Spring Batch Checklist
 
-> Spring Batch 5.x-specific companion to the general [Batch Processing Checklist](batch.md).
-> Covers Spring Batch 5.2+ (Spring Boot 4.x, Java 21+, virtual threads, chunk-oriented processing).
+> Spring Batch 6.x-specific companion to the general [Batch Processing Checklist](batch.md).
+> Covers Spring Batch 6.0+ (Spring Boot 4.x, Java 17+, virtual threads, chunk-oriented processing).
 > Last updated: 2026-07-17
 
 ---
 
 ## 1. Spring Batch Version & Setup
 
-- [ ] **Spring Batch 5.2+:** Part of Spring Boot 4.x ecosystem. Java 21 minimum. Jakarta EE 10. Virtual threads auto-configured for tasklet execution.
+- [ ] **Spring Batch 6.0+:** Part of Spring Boot 4.x ecosystem. Java 17 minimum (compatible through Java 27). Jakarta EE 10. Virtual threads auto-configured for tasklet execution.
 - [ ] **Starter dependency:** `spring-boot-starter-batch`. Pulls in Spring Batch core + infrastructure. For testing: `spring-boot-starter-batch-test` (or `spring-batch-test` directly).
 - [ ] **Job Repository database** (Spring Batch requires a metadata schema (`BATCH_JOB_INSTANCE`, `BATCH_JOB_EXECUTION`, `BATCH_STEP_EXECUTION`, etc.). Auto-created with `spring.batch.jdbc.initialize-schema: always` (dev) or `never` (production) manage with Flyway/Liquibase).
 - [ ] **No in-memory job repository in production:** `MapJobRepository` is for tests only. Production must use JDBC repository for restart/resume, job history, and concurrent job prevention.
-- [ ] **`@EnableBatchProcessing` removed in Boot 4** (Spring Boot 4 auto-configures batch infrastructure. Remove `@EnableBatchProcessing`) it now DISABLES auto-config. Define `Job` and `Step` beans directly.
+- [ ] **`@EnableBatchProcessing` reworked in Batch 6** (not removed): it configures common infrastructure attributes; store-specific configuration goes through `@EnableJdbcJobRepository` / `@EnableMongoJobRepository`. With Spring Boot 4 auto-configuration you usually don't need it at all. Define `Job` and `Step` beans directly.
 - [ ] **Single job per application (recommended):** One Spring Boot app = one batch job. Simpler deployment, scaling, monitoring. Multiple jobs in one app: use `spring.batch.job.name` to select which runs.
 - [ ] **`spring.batch.job.enabled: false`:** Disable auto-run on startup if triggering externally (scheduler, API, message). Set to `true` only for cron-triggered containers.
 
@@ -356,7 +356,7 @@ class OrderSyncJobTest {
 ## 11. Observability & Monitoring
 
 - [ ] **Actuator integration:** `spring-boot-starter-actuator` exposes batch metrics. Job execution count, step execution count, active jobs, last execution status.
-- [ ] **Micrometer metrics:** Spring Batch 5 auto-publishes: `spring.batch.job.active` (gauge), `spring.batch.job` (timer), `spring.batch.step` (timer), `spring.batch.item.read`/`process`/`write` (counters). Custom metrics in listeners.
+- [ ] **Micrometer metrics:** Spring Batch auto-publishes: `spring.batch.job.active` (gauge), `spring.batch.job` (timer), `spring.batch.step` (timer), `spring.batch.item.read`/`process`/`write` (counters). Custom metrics in listeners.
 - [ ] **Custom `JobExecutionListener`:** Log job start/end, duration, read/write/skip counts. Alert on failure. Push metrics to external monitoring.
 
 ```java

@@ -3,7 +3,7 @@
 > The **Go testing** checklist, everything from `testing.T` to fuzzing, benchmarks, and coverage.
 > Go ships with a first-class testing framework in the standard library. No framework wars, just `go test`.
 > Companion to [[qa]] (general testing strategy). Fiber v3 specifics: [[fiber-v3-api]].
-> Requires Go 1.18+ for fuzzing; Go 1.22+ for Fiber v3 projects.
+> Requires a supported Go release (the two latest majors — 1.26/1.27; go1.27.4 is current). Fuzzing needs Go 1.18+ (any supported release); Fiber v3 projects need Go 1.26+.
 > Last updated: 2026-08-07
 
 ---
@@ -76,7 +76,7 @@ for _, tt := range tests {
 - [ ] **Accept interfaces, return structs:** the Go proverb. Callers depend on behavior (interface), not implementation.
 - [ ] **Interfaces defined at consumer:** not at the provider. `internal/handler/` defines the `UserRepository` interface it needs; `internal/repository/` implements it. Avoids tight coupling.
 - [ ] **Hand-written mocks first:** small interfaces (1–3 methods) are faster to mock by hand than to generate. Name them `MockXxx` in `_test.go`.
-- [ ] **`gomock` / `mockgen`:** for larger interfaces or strict call-count verification:
+- [ ] **`gomock` / `mockgen`** (`go.uber.org/mock`; the original `github.com/golang/mock` is archived): for larger interfaces or strict call-count verification:
 ```go
 //go:generate mockgen -destination=mocks/user_repo.go -package=mocks . UserRepository
 ```
@@ -253,7 +253,7 @@ func TestIntegration(t *testing.T) {
     }
     ctx := context.Background()
     req := testcontainers.ContainerRequest{
-        Image:        "postgres:16-alpine",
+        Image:        "postgres:18-alpine",
         ExposedPorts: []string{"5432/tcp"},
         Env:          map[string]string{"POSTGRES_PASSWORD": "test"},
         WaitingFor:   wait.ForLog("database system is ready to accept connections"),

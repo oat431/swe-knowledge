@@ -82,7 +82,7 @@
 ## 10. Post-Release Review
 
 - [ ] **Incident? Postmortem within 5 days:** Blameless RCA: timeline, root cause, corrective actions with owners and due dates. Track actions to completion.
-- [ ] **Release metrics recorded** (Deployment time, rollback rate, change failure rate, MTTR. These are DORA metrics) trend them over time.
+- [ ] **Release metrics recorded** (Deployment frequency, lead time, change failure rate, failed deployment recovery time. These are DORA metrics) trend them over time.
 - [ ] **Checklist feedback loop:** Anything that went wrong that a checklist item would have caught? Add it to the relevant checklist. Checklists evolve with experience.
 - [ ] **Artifacts retained:** Release artifacts, SBOMs, and logs retained per retention policy (regulatory minimum if applicable).
 
@@ -169,4 +169,4 @@ flowchart TD
 
 - Complements [[API Launch]], [[Frontend Launch]], [[Microservice Launch]]: those are the *readiness* gates, this is the *process*.
 - [[Security]]: the *product safety* checklist (this file only gates pipeline security).
-- DORA metrics: deployment frequency, lead time, change failure rate, MTTR.
+- DORA metrics: deployment frequency, lead time, change failure rate, failed deployment recovery time (formerly MTTR).

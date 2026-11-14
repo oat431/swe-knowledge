@@ -62,21 +62,7 @@
 
 ### Stryker Mutator (Java)
 
-- [ ] **Install:** Stryker also supports Java via a separate package:
-  ```bash
-  # Gradle
-  plugins {
-      id 'stryker-mutator.stryker-gradle' version '0.1.0'
-  }
-  ```
-  ```groovy
-  // build.gradle
-  stryker {
-      mutate = ['src/main/java/**/*.java']
-      testRunner = 'junit5'
-      thresholds = [high: 80, low: 60, break: 70]
-  }
-  ```
+- [ ] **No Java support:** Stryker runs on JS/TS, .NET, and Scala (stryker4s) only. For Java/JVM mutation testing use PIT (below).
 
 ### Stryker Mutator (C# / .NET)
 
@@ -107,18 +93,18 @@
 
 ### PIT (Java: Pitest)
 
-- [ ] **Maven plugin:** the standard for Java projects using JUnit 5:
+- [ ] **Maven plugin:** the standard for Java projects using JUnit 5+:
   ```xml
   <!-- pom.xml -->
   <plugin>
     <groupId>org.pitest</groupId>
     <artifactId>pitest-maven</artifactId>
-    <version>1.16.1</version>
+    <!-- pin to the current PIT release -->
     <dependencies>
       <dependency>
         <groupId>org.pitest</groupId>
         <artifactId>pitest-junit5-plugin</artifactId>
-        <version>1.2.1</version>
+        <!-- pin to the current release -->
       </dependency>
     </dependencies>
     <configuration>
@@ -147,12 +133,12 @@
   ```groovy
   // build.gradle
   plugins {
-      id 'info.solidsoft.pitest' version '1.15.0'
+      id 'info.solidsoft.pitest' version '<current>' // check the Gradle Plugin Portal for the current release
   }
   pitest {
       targetClasses = ['com.example.service.*', 'com.example.domain.*']
       targetTests = ['com.example.*']
-      pitestVersion = '1.16.1'
+      // pitestVersion: defaults to the plugin's tested PIT release; override only if needed
       threads = 4
       outputFormats = ['HTML', 'XML']
       mutationThreshold = 80
@@ -168,20 +154,19 @@
   ```bash
   pip install mutmut
   ```
-- [ ] **`pyproject.toml`** or `setup.cfg` configuration:
+- [ ] **`pyproject.toml`** (or `setup.cfg`) configuration (mutmut 3 keys):
   ```toml
   [tool.mutmut]
-  paths_to_mutate = "src/"
-  tests_dir = "tests/"
-  runner = "python -m pytest -x --timeout=30"
-  also_copy = ["conftest.py", "tests/"]
+  source_paths = [ "src/" ]
+  pytest_add_cli_args_test_selection = [ "tests/" ]
+  also_copy = [ "conftest.py", "tests/" ]
   ```
-- [ ] **Run:**
+- [ ] **Run** (mutmut 3 CLI):
   ```bash
-  mutmut run              # Run all mutations
-  mutmut results          # Show survived/killed summary
-  mutmut show 5           # Show details of mutant #5
-  mutmut junitxml         # Export JUnit XML for CI
+  mutmut run                # Run all mutations (parallel, resumable)
+  mutmut browse             # Interactive TUI: inspect/retest mutants
+  mutmut apply 5            # Write mutant #5 to disk (commit first!)
+  mutmut export-cicd-stats  # Export machine-readable stats for CI
   ```
 
 ### cosmic-ray (Python alternative)
@@ -390,8 +375,8 @@
   <threads>6</threads>
   ```
   ```ini
-  # mutmut: no built-in parallelism, use xargs or GNU parallel
-  mutmut run & mutmut run --use-coverage & wait
+  # mutmut: parallel execution is built in (mutmut 3)
+  mutmut run
   ```
 
 - [ ] **Timeout calibration:** set to 2–3× the slowest test in your suite to catch infinite loops without wasting time:
@@ -433,8 +418,8 @@
 
 - [ ] **Custom mutators:** extend when default mutators miss domain-specific bug classes:
   ```python
-  # mutmut: custom mutator via plugin
-  # In conftest.py or a separate module registered in setup.cfg
+  # mutmut: custom mutator via plugin (pattern sketch — the context API below is
+  # mutmut-2-era; mutmut 3's plugin registration/API differs, see its plugin docs)
   def mutate_bool_to_int(context):
       """Replace True/False with 1/0 to catch truthy-check bugs."""
       for node in context.ast.walk():
@@ -480,10 +465,10 @@
       runs-on: ubuntu-latest
       timeout-minutes: 120   # Hard cap to prevent runaway costs
       steps:
-        - uses: actions/checkout@v4
+        - uses: actions/checkout@v7
 
         - name: Setup Node.js
-          uses: actions/setup-node@v4
+          uses: actions/setup-node@v7
           with:
             node-version: '20'
             cache: 'npm'
@@ -500,7 +485,7 @@
             STRYKER_DASHBOARD_API_KEY: ${{ secrets.STRYKER_DASHBOARD_API_KEY }}
 
         - name: Upload mutation report
-          uses: actions/upload-artifact@v4
+          uses: actions/upload-artifact@v7
           if: always()
           with:
             name: mutation-report
@@ -509,7 +494,7 @@
 
         - name: Notify on failure
           if: failure()
-          uses: actions/github-script@v7
+          uses: actions/github-script@v9
           with:
             script: |
               github.rest.issues.create({
@@ -540,12 +525,12 @@
       runs-on: ubuntu-latest
       timeout-minutes: 30
       steps:
-        - uses: actions/checkout@v4
+        - uses: actions/checkout@v7
           with:
             fetch-depth: 0  # Full history for diff
 
         - name: Setup Node.js
-          uses: actions/setup-node@v4
+          uses: actions/setup-node@v7
           with:
             node-version: '20'
             cache: 'npm'
@@ -560,7 +545,7 @@
 
         - name: Comment PR with results
           if: always()
-          uses: actions/github-script@v7
+          uses: actions/github-script@v9
           with:
             script: |
               const fs = require('fs');
@@ -651,7 +636,7 @@
 - [ ] **CI caching:** store history file as a CI artifact:
   ```yaml
   - name: Download PIT history
-    uses: actions/cache@v4
+    uses: actions/cache@v6
     with:
       path: pit-history.bin
       key: pit-history-${{ github.ref }}
@@ -669,18 +654,18 @@
 
 ### mutmut Manual Diff Approach
 
-- [ ] **mutmut + coverage filtering:** mutmut doesn't have built-in diff mode; use coverage analysis to scope:
+- [ ] **mutmut + wildcard scoping:** mutmut doesn't have built-in diff mode; scope runs with wildcard patterns (or `only_mutate` in config):
   ```bash
   # 1. Get list of changed files
   CHANGED=$(git diff --name-only origin/main -- 'src/*.py')
 
-  # 2. Run mutmut only on changed files
+  # 2. Run mutmut only on changed files (mutmut 3 takes wildcard patterns)
   for file in $CHANGED; do
-      mutmut run --paths-to-mutate "$file"
+      mutmut run "$file"
   done
 
-  # 3. Aggregate results
-  mutmut results
+  # 3. Inspect results
+  mutmut browse
   ```
 
 ### CI Caching Strategies
@@ -688,7 +673,7 @@
 - [ ] **Cache mutant results:** store baseline results to skip already-killed mutants:
   ```yaml
   - name: Cache mutation results
-    uses: actions/cache@v4
+    uses: actions/cache@v6
     with:
       path: .mutmut-cache
       key: mutmut-${{ hashFiles('src/**') }}
@@ -705,8 +690,9 @@
   # Run coverage first
   pytest --cov=src --cov-report=term-missing --cov-fail-under=70
 
-  # Then mutation test only the covered modules
-  mutmut run --paths-to-mutate src/core/ src/services/
+  # Then mutation test only the covered modules (mutmut 3 wildcard scoping)
+  mutmut run "core*"
+  mutmut run "services*"
   ```
 - [ ] **Parallelization strategies:** the single biggest time-saver:
   ```
@@ -1030,7 +1016,7 @@
       echo "$(date -I),${SCORE}" >> mutation-trend.csv
 
   - name: Upload trend data
-    uses: actions/upload-artifact@v4
+    uses: actions/upload-artifact@v7
     with:
       name: mutation-trend
       path: mutation-trend.csv
@@ -1135,7 +1121,7 @@ flowchart TD
 
 - [[qa]]: general QA checklist, §4 Quality Metrics (test effectiveness)
 - [[pytest]]: Python testing with pytest (companion for mutmut workflows)
-- [[junit]]: Java testing with JUnit 5 (companion for PIT workflows)
+- [[junit]]: Java testing with JUnit 6 (companion for PIT workflows)
 - PIT (Pitest) documentation: https://pitest.org/
 - PIT quick start: https://pitest.org/quickstart/
 - Stryker Mutator (JS/TS): https://stryker-mutator.io/docs/stryker-js/introduction/

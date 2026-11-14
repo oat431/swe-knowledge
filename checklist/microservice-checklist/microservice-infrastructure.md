@@ -98,7 +98,7 @@ last_updated: 2026-08-06
 | Tool | Type | Best for |
 |------|------|----------|
 | Kong | Plugin-based, Lua + Go | Flexible, large plugin ecosystem |
-| Spring Cloud Gateway | Java, reactive | Spring Boot microservices |
+| Spring Cloud Gateway | Java, WebFlux (reactive) or WebMVC (servlet) variants | Spring Boot microservices |
 | NGINX + OpenResty | Lua scripting | Performance-critical, custom logic |
 | Traefik | Go, auto-discovery | K8s-native, simple config |
 | AWS API Gateway | Managed | Serverless, AWS ecosystem |
@@ -160,7 +160,7 @@ last_updated: 2026-08-06
 
 | Tool | Model | Best for |
 |------|-------|----------|
-| Istio | Sidecar (Envoy), feature-rich | Large orgs, advanced traffic management |
+| Istio | Sidecar (Envoy) or ambient mode (sidecarless, ztunnel/waypoint), feature-rich | Large orgs, advanced traffic management |
 | Linkerd | Sidecar (Rust proxy), lightweight | Simplicity, lower resource overhead |
 | Consul Connect | Sidecar (Envoy), multi-platform | HashiCorp ecosystem, hybrid cloud |
 | Cilium | eBPF-based (sidecarless) | Performance-critical, kernel-level |
@@ -213,7 +213,7 @@ last_updated: 2026-08-06
 - [ ] **Secrets management:** Secrets are injected or fetched at runtime from the selected secret store, never baked into images or committed to git; rotation and access audit are defined.
 - [ ] **TLS and certificate lifecycle:** Edge and internal transport policy, auto-renewal/rotation, expiry alerting, and failure behavior are documented.
 - [ ] **Container/workload security:** Non-root, read-only filesystem, dropped capabilities, minimal image, resource isolation, and vulnerability scanning are applied where supported by the selected platform.
-- [ ] **Supply chain security:** Image signing (cosign, Notary). Admission controller rejects unsigned images. SBOM generation. Dependency scanning.
+- [ ] **Supply chain security:** Image signing (cosign, Notation — Notary v2). Admission controller rejects unsigned images. SBOM generation. Dependency scanning.
 - [ ] **Gateway admin isolated:** Admin API on separate port/network. Not internet-facing. Credentials rotated. Access logged.
 
 ## 10. Deployment & Orchestration

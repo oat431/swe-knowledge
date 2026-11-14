@@ -1,7 +1,7 @@
 # ClickHouse Checklist
 
 > OLAP / columnar companion to the general [[Database]] checklist.
-> Covers ClickHouse 25.x (current), the standard open-source columnar analytics database.
+> Covers ClickHouse 26.x (current), the standard open-source columnar analytics database.
 > Companion to [[PostgreSQL]] (OLTP), [[MongoDB]], and [[valkey-redis|Valkey]] for the other engines in the homelab.
 > Last updated: 2026-08-07
 
@@ -9,7 +9,7 @@
 
 ## 1. Cluster Setup & Configuration
 
-- [ ] **Version:** ClickHouse 25.x (or current). `SELECT version()` recorded. Upgrade path known (rolling for minor; cluster-wide coordinated for major).
+- [ ] **Version:** ClickHouse 26.x (or current). `SELECT version()` recorded. Upgrade path known (rolling for minor; cluster-wide coordinated for major).
 - [ ] **Deployment topology decided:** Single server (small analytics), single-shard + replicated (HA), multi-shard + replicated (horizontal scale). Match the tier matrix below.
 - [ ] **ClickHouse Keeper / ZooKeeper:** Required for replication and distributed DDL. ClickHouse Keeper (C++ built-in, preferred) or external ZooKeeper. 3 nodes minimum for quorum. Without Keeper, no replication, no distributed DDL.
 - [ ] **Storage layout:** Data on NVMe/SSD (hot data), cold data on object storage (S3 disk). `storage_configuration` with multiple disks and volumes. Tiered storage: move old partitions to S3 automatically.

@@ -29,7 +29,7 @@
 
 ## State & Data
 
-- [ ] Server state cached (React Query, SWR, or framework built-in)
+- [ ] Server state cached (TanStack Query (React Query), SWR, or framework built-in)
 - [ ] Client state minimal (no duplicating server state)
 - [ ] Loading states for every async operation
 - [ ] Error boundaries for every major section (one component crash ≠ white page)

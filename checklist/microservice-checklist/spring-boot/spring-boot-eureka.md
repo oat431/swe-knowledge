@@ -1,8 +1,9 @@
 # Spring Boot Eureka: Service Discovery Checklist
 
 > Service Discovery implementation with Spring Cloud Netflix Eureka for Spring Boot 4.x microservices.
-> Covers Boot 4.0+ (Spring Framework 7, Spring Cloud 2025.x). Docker-focused for self-hosted homelabs.
+> Covers Boot 4.0+ (Spring Framework 7, Spring Cloud 2025.1.x "Oakwood"). Docker-focused for self-hosted homelabs.
 > Read the concept-level [Microservice Infrastructure Checklist](microservice-infrastructure.md) (Part 1) first for patterns and decisions.
+> Positioning: Eureka is the only still-maintained Netflix OSS component in Spring Cloud. Kubernetes-native discovery or Consul are the mainstream choices today — Eureka fits Spring-Boot-only, non-K8s setups like this homelab.
 > Last updated: 2026-06-11
 
 ---

@@ -1,17 +1,17 @@
 # Spring Boot API Gateway Checklist
 
 > Spring Cloud Gateway-specific companion to the general [API Gateway Checklist](api-gateway.md).
-> Covers Boot 4.0+ (Spring Framework 7, Spring Cloud 2025.x, Security 7 reactive, modular starters).
+> Covers Boot 4.0+ (Spring Framework 7, Spring Cloud 2025.1.x "Oakwood", Security 7 reactive, modular starters).
 > Last updated: 2026-06-11
 
 ---
 
 ## 1. Project Setup & Dependencies
 
-- [ ] **Spring Boot version** (Boot 4.x + Spring Cloud 2025.x release train. Check [compatibility matrix](https://spring.io/projects/spring-cloud)) Boot 4 requires Spring Cloud 2025.x+.
-- [ ] **Gateway starter** (`spring-cloud-starter-gateway`. Reactive (WebFlux/Netty) stack only. Do NOT add `spring-boot-starter-webmvc`) it conflicts. `spring-boot-starter-webflux` only.
+- [ ] **Spring Boot version** (Boot 4.x + Spring Cloud **2025.1.x "Oakwood"** release train — the Boot 4 train, from SR 2025.1.2. `2025.0.x "Northfields"` is Boot 3.5-only and EOL; `2026.0.x` is RC-only. Check [compatibility matrix](https://spring.io/projects/spring-cloud)) pin the Oakwood train explicitly.
+- [ ] **Gateway starter** (`spring-cloud-starter-gateway-server-webflux` (formerly `spring-cloud-starter-gateway`). Reactive (WebFlux/Netty) stack. Servlet variant exists too: `spring-cloud-starter-gateway-server-webmvc` — pick ONE stack) they conflict. With the WebFlux starter do NOT add `spring-boot-starter-webmvc`; `spring-boot-starter-webflux` only.
 - [ ] **Modular starter awareness:** Boot 4 modularization applies. Security on gateway: `spring-boot-starter-security` (reactive auto-config). Redis: `spring-boot-starter-data-redis-reactive`. Actuator: `spring-boot-starter-actuator`. Jackson 3: package is `tools.jackson`.
-- [ ] **No embedded Tomcat for gateway:** Gateway runs on Netty (reactive). Servlet-based starters don't belong here.
+- [ ] **No embedded Tomcat for the WebFlux gateway:** The `-server-webflux` variant runs on Netty (reactive). Servlet-based starters don't belong there. (The `-server-webmvc` variant is the servlet option — pick one stack.)
 - [ ] **BOM:** Spring Cloud BOM in dependency management.
 - [ ] **JSON serialization:** Jackson 3 is default. Custom Jackson code: update imports to `tools.jackson`. Gateway error responses, route config processing all go through Jackson.
 
@@ -62,7 +62,7 @@ spring:
 
 ## 4. Authentication at the Gateway (Security 7 Reactive)
 
-- [ ] **Spring Security with WebFlux** (`spring-boot-starter-security` (reactive variant auto-configured). `SecurityWebFilterChain` bean, not `SecurityFilterChain`. `ServerHttpSecurity` config. `authorizeHttpRequests()` removed) use the lambda DSL.
+- [ ] **Spring Security with WebFlux** (`spring-boot-starter-security` (reactive variant auto-configured). `SecurityWebFilterChain` bean, not `SecurityFilterChain`. `ServerHttpSecurity` config. `authorizeHttpRequests()` is servlet-only — on reactive `ServerHttpSecurity` use `authorizeExchange(exchanges -> exchanges.pathMatchers(...).permitAll().anyExchange().authenticated())`) use the lambda DSL.
 - [ ] **CSRF (enabled by default for APIs**) Spring Security 7 enables CSRF for ALL endpoints. Gateway APIs must explicitly disable if stateless: `.csrf(ServerHttpSecurity.CsrfSpec::disable)`. Or configure `CsrfWebFilter` for cookie-based scenarios.
 - [ ] **JWT validation at edge:** `spring-boot-starter-security-oauth2-resource-server` (reactive, renamed in Boot 4). `spring.security.oauth2.resourceserver.jwt.issuer-uri`. Gateway validates JWT → forwards claims as headers (`X-User-Id`, `X-User-Roles`) to downstream services.
 - [ ] **Header passthrough:** After JWT validation: extract claims → add headers → strip `Authorization` header. Downstream services trust headers from gateway only (mTLS or internal network).
@@ -163,9 +163,9 @@ spring:
 
 ## Common Gotchas (Updated for Boot 4)
 
-- ❌ **Mixing Web MVC and WebFlux:** Adding `spring-boot-starter-webmvc` alongside Gateway = `IllegalStateException`. Gateway is reactive-only.
+- ❌ **Mixing Web MVC and WebFlux:** Adding `spring-boot-starter-webmvc` alongside the WebFlux gateway starter = `IllegalStateException`. Pick one stack: `spring-cloud-starter-gateway-server-webflux` (reactive) or `-server-webmvc` (servlet).
 - ❌ **CSRF blocking all API calls:** Spring Security 7 enables CSRF for APIs by default. Stateless APIs return 403 until `.csrf().disable()` is added.
-- ❌ **`authorizeRequests()` removed:** Security 7 fully removes `authorizeRequests()`. Use the lambda DSL: `.authorizeHttpRequests(auth -> auth.pathMatchers(...).permitAll())`.
+- ❌ **`authorizeHttpRequests()` is servlet-only:** On reactive `ServerHttpSecurity` it won't compile — use `authorizeExchange(exchanges -> exchanges.pathMatchers(...).permitAll().anyExchange().authenticated())`. (On servlet `HttpSecurity` the lambda DSL is `.authorizeHttpRequests(auth -> ...)`; the old `authorizeRequests()` is fully removed in Security 7.)
 - ❌ **Blocking in filters:** `Thread.sleep()` or blocking JDBC calls in a GatewayFilter = reactor thread blocked. All gateway filters must be non-blocking. Use `.flatMap()`, `.then()`, reactive Redis, reactive HTTP clients.
 - ❌ **`@EnableEurekaClient`:** Not needed. Auto-configured. Adding it manually can break service registration.
 - ❌ **`lb://` without LoadBalancer:** `lb://user-service` requires `spring-cloud-starter-loadbalancer`. Without it: `UnknownHostException`.

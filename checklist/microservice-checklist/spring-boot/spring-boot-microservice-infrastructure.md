@@ -1,7 +1,7 @@
 # Spring Boot Microservice Infrastructure: Integration Overview
 
 > How Service Discovery, Load Balancing, and Open Authentication wire together in a Spring Boot 4.x homelab.
-> Boot 4.0+ (Spring Framework 7, Spring Cloud 2025.x, Security 7).
+> Boot 4.0+ (Spring Framework 7, Spring Cloud 2025.1.x "Oakwood", Security 7).
 > Last updated: 2026-06-12
 
 ---
@@ -48,7 +48,7 @@ version: "3.9"
 services:
   # ═══ INFRASTRUCTURE ═══
   postgres:
-    image: postgres:17
+    image: postgres:18
     container_name: postgres
     environment:
       POSTGRES_USER: admin
@@ -75,7 +75,7 @@ services:
 
   # ── Open Authentication ──
   keycloak:
-    image: keycloak/keycloak:27.0
+    image: keycloak/keycloak:26.8
     container_name: keycloak
     environment:
       KC_DB: postgres
@@ -136,7 +136,7 @@ services:
   # ═══ EDGE ═══
   # ── Load Balancing ──
   traefik:
-    image: traefik:v3.4
+    image: traefik:v3.7
     container_name: traefik
     ports:
       - "80:80"

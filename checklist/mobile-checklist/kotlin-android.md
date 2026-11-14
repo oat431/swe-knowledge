@@ -13,10 +13,10 @@
 
 ```toml
 [versions]
-kotlin = "2.1.0"
-compose-bom = "2026.01.00"
-hilt = "2.52"
-room = "2.7.0"
+kotlin = "2.4.21"
+compose-bom = "2026.09.00"
+hilt = "2.60"
+room = "2.8"
 
 [libraries]
 compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "compose-bom" }
@@ -26,7 +26,7 @@ hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
-ksp = { id = "com.google.devtools.ksp", version = "2.1.0-1.0.29" }
+ksp = { id = "com.google.devtools.ksp", version = "<kotlin>-<ksp>" } # KSP releases are published as <kotlin-version>-<ksp-version>; use the release matching your Kotlin pin
 ```
 
 - [ ] **Gradle Convention Plugins:** Reuse build logic across modules via `build-logic/` module. Define common Android config, Compose config, Hilt config as precompiled script plugins. No copy-pasting `build.gradle.kts` across 20 modules.
@@ -265,7 +265,7 @@ interface ItemDao {
 ```
 
 - [ ] **DataStore:** Preferences DataStore for key-value settings (replaces SharedPreferences). Proto DataStore for typed structured data. Both are coroutine-based and safe from UI thread.
-- [ ] **EncryptedSharedPreferences:** AndroidX Security Crypto for sensitive key-value storage (tokens, credentials). Backed by Android Keystore system.
+- [ ] **Secure key-value storage:** Sensitive key-value data (tokens, credentials) via Preferences DataStore + Android Keystore. `security-crypto` (EncryptedSharedPreferences) is deprecated — all APIs.
 - [ ] **Offline-first repository:** Room is source of truth. Retrofit syncs with server. Show cached data immediately, refresh in background:
 
 ```kotlin
@@ -336,16 +336,7 @@ if (BuildConfig.DEBUG) {
 
 ## 10. Security
 
-- [ ] **EncryptedSharedPreferences:** Tokens, API keys, user secrets. Never plain SharedPreferences for sensitive data. Backed by Android Keystore:
-
-```kotlin
-val prefs = EncryptedSharedPreferences.create(
-    context, "secure_prefs",
-    MasterKey.Builder(context).setKeyScheme(MasterKey.KeyScheme.AES256_GCM).build(),
-    EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
-    EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM,
-)
-```
+- [ ] **Secure key-value storage:** Tokens, API keys, user secrets. Never plain SharedPreferences for sensitive data. `security-crypto` (EncryptedSharedPreferences/MasterKey) is deprecated (all APIs) — use Preferences DataStore and encrypt sensitive values with an Android Keystore-backed key.
 
 - [ ] **Network security config:** Certificate pinning in `res/xml/network_security_config.xml`. Pin public key hash (survives cert rotation). Backup pins required:
 
@@ -409,7 +400,7 @@ when (windowSizeClass.widthSizeClass) {
 }
 ```
 
-- [ ] **Predictive back gesture (Android 14+):** Opt-in with `android:enableOnBackInvokedCallback="true"` in manifest. Compose Navigation handles automatically. Shows preview of previous screen during swipe.
+- [ ] **Predictive back gesture:** On by default when targeting API 36 (the `android:enableOnBackInvokedCallback="true"` opt-in flag only applies to older target SDKs). Compose Navigation handles automatically. Shows preview of previous screen during swipe.
 - [ ] **Edge-to-edge (Android 15+):** `enableEdgeToEdge()` in Activity. Handle system bar insets in Compose with `WindowInsets.systemBars`, `Modifier.windowInsetsPadding()`. No content behind nav bar.
 
 ---
@@ -419,7 +410,7 @@ when (windowSizeClass.widthSizeClass) {
 - [ ] `allWarningsAsErrors = true` in Kotlin compiler options
 - [ ] App runs on minimum supported API level without crash
 - [ ] KSP used (not KAPT) for all annotation processors
-- [ ] `EncryptedSharedPreferences` for tokens, not plain `SharedPreferences`
+- [ ] Tokens in Preferences DataStore + Android Keystore (not plain `SharedPreferences`; `security-crypto`/EncryptedSharedPreferences is deprecated)
 - [ ] R8 + obfuscation enabled for release builds. `mapping.txt` uploaded to Crashlytics.
 - [ ] Baseline Profiles generated and included in AAB
 - [ ] `LazyColumn` with `key()` for all dynamic lists
@@ -444,7 +435,7 @@ when (windowSizeClass.widthSizeClass) {
 | **Network** | Retrofit + OkHttp | Ktor Client (multiplatform) |
 | **Serialization** | Kotlin Serialization (`kotlinx.serialization`) | Moshi (reflection-free) |
 | **Storage (SQL)** | Room | SQLDelight (multiplatform) |
-| **Storage (KV)** | DataStore (Preferences/Proto) | EncryptedSharedPreferences |
+| **Storage (KV)** | DataStore (Preferences/Proto) + Android Keystore | `security-crypto` (deprecated — avoid) |
 | **Image** | Coil 3 (Compose-native) | Glide (legacy, still maintained) |
 | **Testing (Unit)** | JUnit 5 + MockK + Turbine | Kotest |
 | **Testing (UI)** | Compose UI Test | Espresso (legacy views) |

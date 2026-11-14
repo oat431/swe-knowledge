@@ -4,7 +4,7 @@
 > Complements [[Release]] (process safety) and the domain gates: [[API Launch]], [[Frontend Launch]], [[Microservice Launch]].
 > Framework-agnostic: APIs, web, mobile, batch, infra, the principles are the same.
 > Items marked `→ [[Release]]` are gates shared with the release process (kept as 1-line checks here; the process owns the details).
-> Last updated: 2026-08-07 (audited; aligned with OWASP API Security Top 10 2023 + OWASP LLM Top 10 2025)
+> Last updated: 2026-11-14 (audited; aligned with OWASP API Security Top 10 2023 + OWASP Top 10 for LLM Applications 2026)
 
 ---
 
@@ -74,7 +74,7 @@
 - [ ] **Registry trust:** Only approved registries (GHCR/ECR/Artifactory). No random packages from unvetted sources. If private registry: scan on push.
 - [ ] **Dependency confusion prevented:** Internal package names scoped or reserved on public registries; packages resolved from the intended registry only. Attackers squat public names that exist privately → [[02 Dependency & Supply Chain]].
 - [ ] **Dependency changes reviewed:** Lockfile diffs reviewed like code: new transitive deps checked for typosquatting (name tricks, recent publish date, low downloads, lookalike authors). Supply-chain attacks ride in on innocent-looking bumps.
-- [ ] **IaC security scanning:** Terraform/CloudFormation/Kubernetes manifests scanned (Checkov, tfsec, KICS). Misconfigurations (public buckets, permissive IAM, privileged containers) caught before deploy.
+- [ ] **IaC security scanning:** Terraform/CloudFormation/Kubernetes manifests scanned (Checkov, Trivy (formerly tfsec), KICS). Misconfigurations (public buckets, permissive IAM, privileged containers) caught before deploy.
 - [ ] **Vulnerability remediation SLAs:** Time-bound fix targets: Critical ≤ 7 days, High ≤ 30 days, Medium ≤ 90 days, Low by backlog priority. SLAs documented, tracked, and reported. Exceptions require risk acceptance sign-off.
 
 ## 6. TLS & Transport Security
@@ -148,19 +148,19 @@
 - [ ] **Breach notification obligations mapped:** Regulatory reporting deadlines and formats for your applicable frameworks, cross-referenced with the operational plan in §10.
 
 ## 12. AI/LLM Security
-> **Deep dive:** [[llm-security]]: OWASP LLM Top 10 (2025) implementation, guardrails, agent identity, vector isolation, token limits.
+> **Deep dive:** [[llm-security]]: OWASP LLM Top 10 (2026) implementation, guardrails, agent identity, vector isolation, token limits.
 
-> Aligned with OWASP Top 10 for LLM Applications (2025). Apply per architecture: chat-only, RAG, or agentic (tool-calling) systems each weight different risks.
+> Aligned with OWASP Top 10 for LLM Applications (2026) — the 2025 edition is superseded and its IDs renumbered. Apply per architecture: chat-only, RAG, or agentic (tool-calling) systems each weight different risks.
 
 - [ ] **Prompt injection defended (direct + indirect)** (Direct: untrusted user input must not override system instructions. Indirect: retrieved content (web pages, docs, email, tool output) can carry injected instructions) treat every context source as hostile. Never grant the model tools/actions a malicious prompt could trigger → LLM01.
-- [ ] **System prompt protected:** No secrets, credentials, or sensitive business logic in system prompts (extractable by questioning). Separate system instructions from user-influenced context. Monitor outputs for prompt regurgitation → LLM07.
+- [ ] **System prompt protected:** No secrets, credentials, or sensitive business logic in system prompts (extractable by questioning). Separate system instructions from user-influenced context. Monitor outputs for prompt regurgitation → LLM08.
 - [ ] **No secrets or PII to the model:** Internal context, API keys, or PII never sent to LLM providers unless explicitly required and sanctioned. Provider prompt logging may capture them; scrub inputs at the boundary → LLM02.
-- [ ] **Output sanitization:** Model output treated as untrusted: sanitize before rendering (XSS), validate before executing (tool calls, code, SQL), never `eval`. Apply the same validation rules as any other untrusted input → LLM05.
-- [ ] **RAG/vector isolation:** Tenant isolation at namespace/index level in vector stores (not just metadata filters). Retrieval is least-privilege: only data the user is authorized to see enters the context. Audit retrieval operations; watch for embedding poisoning → LLM08.
-- [ ] **Excessive agency prevented:** Agents get per-agent identity (not shared service accounts), a tool allowlist, and scoped, revocable delegation (user `act` claims). Consequential actions (refunds, deletes, sends) require human approval or hard policy checks → LLM06.
-- [ ] **Model & dataset supply chain vetted:** AI Bill of Materials (models, datasets, tools, agents) with provenance. No untrusted model/pickle loading; fine-tuning only on vetted data with lineage. External agents/MCP servers treated as untrusted → LLM03/LLM04.
-- [ ] **Unbounded consumption bounded:** Token and request rate limits per user/agent/application, cost quotas with alerting, loop detection for runaway agents. Token cost is an economic DoS surface → LLM10.
-- [ ] **Hallucination mitigation:** Model outputs verified against authoritative sources when used for decisions, code generation, or user-facing content. Never trust unverified model output for security-critical paths → LLM09.
+- [ ] **Output sanitization:** Model output treated as untrusted: sanitize before rendering (XSS), validate before executing (tool calls, code, SQL), never `eval`. Apply the same validation rules as any other untrusted input → LLM10.
+- [ ] **RAG/vector isolation:** Tenant isolation at namespace/index level in vector stores (not just metadata filters). Retrieval is least-privilege: only data the user is authorized to see enters the context. Audit retrieval operations; watch for embedding poisoning → LLM09.
+- [ ] **Excessive agency prevented:** Agents get per-agent identity (not shared service accounts), a tool allowlist, and scoped, revocable delegation (user `act` claims). Consequential actions (refunds, deletes, sends) require human approval or hard policy checks → LLM03.
+- [ ] **Model & dataset supply chain vetted:** AI Bill of Materials (models, datasets, tools, agents) with provenance. No untrusted model/pickle loading; fine-tuning only on vetted data with lineage. External agents/MCP servers treated as untrusted → LLM04/LLM05.
+- [ ] **Unbounded consumption bounded:** Token and request rate limits per user/agent/application, cost quotas with alerting, loop detection for runaway agents. Token cost is an economic DoS surface → LLM06.
+- [ ] **Hallucination mitigation:** Model outputs verified against authoritative sources when used for decisions, code generation, or user-facing content. Never trust unverified model output for security-critical paths → LLM07.
 - [ ] **Vendor assessment:** LLM provider: data retention policy, where data is processed, training opt-out. Signed DPA if regulated.
 
 ## 13. Infrastructure & Cloud Security
@@ -296,7 +296,7 @@ flowchart TD
 
 - Complements [[Release]] (process gates: SBOM, signing, SAST/SCA, secret scan; 1-line checks here, details there).
 - Domain gates: [[API Launch]], [[Frontend Launch]], [[Microservice Launch]]: their Security sections are the per-domain view; this is the system-wide view.
-- Deep references: OWASP Top 10, OWASP ASVS, OWASP API Security Top 10 (2023), OWASP Top 10 for LLM Applications (2025), STRIDE threat modeling, KEV catalog.
+- Deep references: OWASP Top 10 (2025), OWASP ASVS (5.0), OWASP API Security Top 10 (2023), OWASP Top 10 for LLM Applications (2026), STRIDE, KEV.
 - **Technique deep dives** (companion files in this folder):
   - [[threat-modeling]]: STRIDE, attack trees, PASTA, LINDDUN, risk rating
   - [[secrets-management]]: Vault/KMS, gitleaks, rotation, .env patterns
@@ -306,4 +306,4 @@ flowchart TD
   - [[container-cloud-security]]: Docker, Kubernetes, cloud IAM, CSPM
   - [[penetration-testing]]: scoping, methodology, report handling
   - [[incident-response]]: IR plan, severity matrix, tabletop, postmortem
-  - [[llm-security]]: OWASP LLM Top 10 (2025), guardrails, agent identity
+  - [[llm-security]]: OWASP LLM Top 10 (2026), guardrails, agent identity

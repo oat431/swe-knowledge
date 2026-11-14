@@ -168,4 +168,4 @@
 
 - Master checklist: [[security]] §10.
 - Deep references: [[04 Monitoring & Incident Response]], [[Incident-Response-Plan]], [[Digital-Forensics-Report]] templates.
-- Standards: NIST SP 800-61 (Computer Security Incident Handling Guide), SANS Incident Handler's Handbook, MITRE ATT&CK.
+- Standards: NIST SP 800-61 Rev. 3 (Incident Response Recommendations and Considerations for Cybersecurity Risk Management: A CSF 2.0 Community Profile, Apr 2025), SANS Incident Handler's Handbook, MITRE ATT&CK.

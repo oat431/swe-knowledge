@@ -29,7 +29,7 @@
 | OpenAI text-embedding-3-large | 3072 | Highest | Medium | Fast | High-recall RAG |
 | BGE-m3 (open) | 1024 | High | Free | Medium | Multilingual, self-hosted |
 | all-MiniLM-L6-v2 (open) | 384 | Medium | Free | Very Fast | Prototypes, semantic cache |
-| Cohere embed-v3 | 1024 | High | Low | Fast | Multilingual, rerank-compatible |
+| Cohere embed-v5.0 | 256–2048 | High | Low (pro/fast tiers) | Fast | Multilingual text+image, rerank-compatible |
 
 - [ ] **MTEB benchmark checked** ([MTEB leaderboard](https://huggingface.co/spaces/mteb/leaderboard) ranks embedding models on retrieval, classification, clustering tasks. Don't guess) check the scores for your task and language (Thai embeddings exist but score lower than English).
 - [ ] **Embedding model versioned and pinned:** Like an LLM version. Changing the embedding model means **every vector in the index is invalid** and must be re-computed. Pin the version, plan the migration (see §6).
@@ -72,7 +72,7 @@ Using cosine vectors with L2 distance (or vice versa) gives subtly wrong results
 - [ ] **Metadata filtering performance understood:** Pre-filtering (filter first, then search) vs post-filtering (search, then filter results). Pre-filtering is precise but can be slow if the filter is selective. Post-filtering is fast but can return too few results if the filter removes most candidates. Qdrant and Milvus support efficient pre-filtering; pgvector's approach varies.
 - [ ] **Hybrid search (vector + keyword):** Pure vector search misses exact matches (product codes "SKU-12345", names "Jon", IDs). Hybrid: run BM25 keyword search + vector search, merge results with **Reciprocal Rank Fusion (RRF)**. RRF formula: `score = Σ 1/(k + rank)` where k≈60. Implementations: Qdrant hybrid, pgvector + tsvector, Weaviate hybrid.
 - [ ] **Re-ranking for quality** (Retrieve top-K (e.g. top-50) with fast vector search, then re-rank with a cross-encoder model (Cohere Rerank, BGE-reranker). Cross-encoders are slower but more accurate) they read both query and document together, not just compare vectors. Big quality win for RAG.
-- [ ] **Multi-vector / dense-sparse hybrid:** Some engines (Milvus 2.4+, Qdrant) support storing both dense and sparse vectors (like SPLADE) in the same collection. Sparse vectors handle keyword matching natively, dense handles semantic. Best of both worlds.
+- [ ] **Multi-vector / dense-sparse hybrid:** Some engines (Milvus, Qdrant) support storing both dense and sparse vectors (like SPLADE) in the same collection. Sparse vectors handle keyword matching natively, dense handles semantic. Best of both worlds.
 
 ## 5. Operations & Reliability
 

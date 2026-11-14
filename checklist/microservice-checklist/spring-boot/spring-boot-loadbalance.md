@@ -1,7 +1,7 @@
 # Spring Boot Load Balancing Checklist
 
 > Edge Load Balancing with nginx or Traefik v3 + Internal Load Balancing with Spring Cloud LoadBalancer for Spring Boot 4.x microservices.
-> Covers Boot 4.0+ (Spring Framework 7, Spring Cloud 2025.x). Docker-focused for self-hosted homelabs.
+> Covers Boot 4.0+ (Spring Framework 7, Spring Cloud 2025.1.x "Oakwood"). Docker-focused for self-hosted homelabs.
 > Choose your edge LB, both are production-grade. nginx is simpler if you already run it; traefik adds Docker auto-discovery.
 > Read the concept-level [Microservice Infrastructure Checklist](microservice-infrastructure.md) (Part 2) first for algorithms and patterns.
 > Last updated: 2026-06-12
@@ -63,7 +63,7 @@ Internet ──→ nginx/Traefik ──→ Gateway ──→ Service A
 
 ```yaml
 traefik:
-  image: traefik:v3.4
+  image: traefik:v3.7
   container_name: traefik
   restart: unless-stopped
   ports:
@@ -374,7 +374,7 @@ If nginx isn't installed on the host, run it as a container:
 
 ```yaml
 nginx:
-  image: nginx:1.27
+  image: nginx:1.30
   container_name: nginx
   restart: unless-stopped
   ports:

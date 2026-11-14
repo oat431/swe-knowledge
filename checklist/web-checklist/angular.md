@@ -37,7 +37,7 @@
 - [ ] **`input()` / `output()`:** replace `@Input()` and `@Output()`. `name = input<string>()`. `submit = output<FormData>()`. Type-safe.
 - [ ] **`model()`:** two-way binding without `@Input` + `@Output` boilerplate. `value = model(0)`. `[(value)]` in parent.
 - [ ] **`linkedSignal()`:** signal that resets when source changes. Good for dependent form state.
-- [ ] **`resource()` (experimental):** declarative async data loading with signals. Wraps HTTP calls with loading/error states. Only replace RxJS for simple fetch scenarios where stream cancellation and retry aren't needed.
+- [ ] **`resource()` (stable in Angular 22):** declarative async data loading with signals. Wraps HTTP calls with loading/error states. Only replace RxJS for simple fetch scenarios where stream cancellation and retry aren't needed.
 
 ---
 
@@ -78,7 +78,7 @@
 - [ ] **`withComponentInputBinding()`:** route params → component inputs. `@Input() id!: string` auto-bound from `:id`. Enable in `provideRouter`.
 - [ ] **Route resolvers:** `resolve: { user: () => inject(UserService).getUser() }`. Data fetched before navigation. Component receives resolved data via `input()`.
 - [ ] **`RouterLink`:** ```<a [routerLink]="['/user', user().id]">```. Active link: `routerLinkActive="active"`.
-- [ ] **`ViewTransition`:** `withViewTransitions()` in router. Smooth page transitions with CSS `::view-transition-old/new`. Chrome-only (2024+) but progressively enhanced.
+- [ ] **`ViewTransition`:** `withViewTransitions()` in router. Smooth page transitions with CSS `::view-transition-old/new`. Supported in Chrome/Edge, Safari 18+, and Firefox 144+; progressively enhanced.
 
 ---
 
@@ -126,7 +126,7 @@
 ## 11. HTTP & API
 
 - [ ] **`provideHttpClient(withInterceptors([authInterceptor]))`:** functional interceptors. `(req: HttpRequest<unknown>, next: HttpHandlerFn) => ...`.
-- [ ] **`httpResource()` (experimental):** signal-based HTTP. `users = httpResource<User[]>('/api/users')`. Auto-tracks deps, refetch on signal change, loading/error states.
+- [ ] **`httpResource()` (stable in Angular 22):** signal-based HTTP. `users = httpResource<User[]>('/api/users')`. Auto-tracks deps, refetch on signal change, loading/error states.
 - [ ] **Environment config:** `environment.ts` / `environment.prod.ts`. `provideAppInitializer(() => configService.load())`.
 - [ ] **Error interceptor:** catch HTTP errors globally. Show toast, redirect to login on 401.
 
@@ -160,10 +160,10 @@
 
 ## 14. Testing
 
-- [ ] **Jasmine / Karma:** default. `ng test`. Or Jest via `@angular-builders/jest` (faster, parallel).
+- [ ] **Vitest:** default unit test runner (`ng test`, Angular 21+). Karma/Jasmine is legacy — migrate existing suites. Jest via `@angular-builders/jest` still works.
 - [ ] **Component tests:** `TestBed.configureTestingModule({ imports: [MyComponent] }).compileComponents()`. `fixture.componentInstance`, `fixture.detectChanges()`.
 - [ ] **`fakeAsync` / `tick`:** control time in tests. `fakeAsync(() => { service.getData(); tick(1000); expect(component.data()).toBeDefined(); })`. Stable time = deterministic flaky tests eliminated.
-- [ ] **Service tests** (`TestBed.inject()` + `HttpClientTestingModule`. `httpTestingController.expectOne('/api/users').flush(mockUsers)`. Each test explicitly expects its requests) no orphaned calls.
+- [ ] **Service tests** (`TestBed.inject()` + `provideHttpClient()` + `provideHttpClientTesting()`. `httpTestingController.expectOne('/api/users').flush(mockUsers)`. Each test explicitly expects its requests) no orphaned calls.
 - [ ] **Playwright:** E2E for critical flows. Angular supports it well. `page.waitForSelector('app-user-list')`.
 - [ ] **Accessibility tests:** `@axe-core/playwright` in E2E. Jasmine-axe in unit tests for component-level a11y audits.
 
@@ -204,7 +204,7 @@
 
 - [ ] **HTTP streaming:** `HttpClient` with `responseType: 'text'` + `reportProgress` or fetch-based `ReadableStream` parsing for SSE. Or `@microsoft/fetch-event-source` for robust event-stream handling.
 - [ ] **Never expose provider keys:** Everything in Angular ships to the browser. LLM calls go through your backend (or Angular SSR server routes). Keys stay server-side.
-- [ ] **Signal-based AI state:** Chat messages as `signal<Message[]>()`, `computed()` for derived UI state, `httpResource()` (experimental) for AI endpoint calls. `effect()` for side effects like scroll-to-bottom.
+- [ ] **Signal-based AI state:** Chat messages as `signal<Message[]>()`, `computed()` for derived UI state, `httpResource()` (stable in Angular 22) for AI endpoint calls. `effect()` for side effects like scroll-to-bottom.
 - [ ] **Streaming UX:** Append tokens to the last message signal as they arrive. Typing indicator, stop button (`AbortController` / unsubscribe), regenerate + edit affordances.
 - [ ] **Markdown rendering:** `ngx-markdown` with sanitization enabled, or `marked` + DOMPurify. Never `bypassSecurityTrustHtml` on model output.
 - [ ] **Non-chat AI calls:** RxJS `switchMap` for debounced AI calls, or TanStack Query Angular with `injectQuery`. Cache identical prompts.

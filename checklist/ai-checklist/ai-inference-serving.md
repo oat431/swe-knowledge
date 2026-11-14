@@ -19,7 +19,7 @@
 - [ ] **Break-even cost calculated:** API cost vs GPU rental cost:
   - API: $X per 1M tokens. Monthly cost = (tokens/month) × X.
   - Self-host: GPU rental ($/hr) × 24 × 30 + ops time. Monthly cost = GPU + your time.
-  - Rule of thumb: self-hosting a 7B model on 1× A10g (~$0.75/hr spot) breaks even vs GPT-4o at ~5–10M tokens/month. A 70B model on 2× A100 breaks even at 50M+ tokens/month.
+  - Rule of thumb: self-hosting a 7B model on 1× A10g (~$0.75/hr spot) breaks even vs frontier-API pricing at ~5–10M tokens/month. A 70B model on 2× A100 breaks even at 50M+ tokens/month.
 - [ ] **Ops capacity honest:** Self-hosting means you own: GPU provisioning, monitoring, incident response, model updates, security patches. If your team has no GPU ops experience, use managed (Together AI, Anyscale, RunPod serverless) before self-managing raw instances.
 - [ ] **Fallback to API:** Even when self-hosting, have an API fallback for: traffic spikes (GPU overloaded), model updates (your model is rebuilding), or quality regression (API model is better for this query).
 
@@ -48,7 +48,7 @@
 
 - [ ] **Quality benchmarked post-quantization:** Quantization degrades quality. Run your golden eval set (→ [[AI]] §5) on both the full-precision and quantized models. If the quantized model drops below your quality threshold, use a higher precision or a smaller model at full precision. Never assume "Q4 is fine."
 - [ ] **Safetensors over pickle:** When downloading models from HuggingFace, prefer `.safetensors` over `.bin`/`.pkl`. Pickle files can contain arbitrary Python code (malicious model files are a real supply-chain attack). Safetensors can only store tensors → [[Security]].
-- [ ] **Thai language support checked:** Not all models handle Thai well. Check: model tokenizer covers Thai script (not just Latin), benchmark scores on Thai tasks (if available), test with Thai prompts before committing. Qwen models and Llama 3 have reasonable Thai support. Models trained only on English/Latin will produce gibberish on Thai.
+- [ ] **Thai language support checked:** Not all models handle Thai well. Check: model tokenizer covers Thai script (not just Latin), benchmark scores on Thai tasks (if available), test with Thai prompts before committing. Qwen models and Llama 4 have reasonable Thai support. Models trained only on English/Latin will produce gibberish on Thai.
 
 ## 3. Serving Engine Selection
 
@@ -62,6 +62,7 @@
 | **Triton** | Multi-model, mixed workloads | Model repository, multi-framework (PyTorch, ONNX, TensorRT) | Docker, K8s |
 | **llama.cpp** | CPU-only, edge, embedded | C++ server, minimal dependencies, GGUF | Binary |
 | **SGLang** | Complex structured generation, agents | RadixAttention (prefix caching), structured outputs | Docker |
+| **TensorRT-LLM** | NVIDIA GPU max throughput | Optimized NVIDIA kernels, FP8/INT4 quantization | Docker (NVIDIA) |
 
 - [ ] **vLLM for production throughput:** vLLM's PagedAttention manages the KV cache like virtual memory, allowing high batch sizes without OOM. Continuous batching means new requests join an ongoing batch without waiting. This is why vLLM gets 5–10x the throughput of naive serving. Use vLLM unless you have a specific reason not to.
 - [ ] **OpenAI-compatible API** (vLLM, TGI, Ollama, and SGLang all expose an OpenAI-compatible `/v1/chat/completions` endpoint. Your application code can switch between OpenAI API and self-hosted by changing the `base_url`. This is the biggest portability win) build against the OpenAI API spec, swap backends freely.

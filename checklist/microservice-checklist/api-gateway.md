@@ -201,7 +201,7 @@ last_updated: 2026-08-06
 - Circuit breaker via Resilience4j
 - Rate limiting with `RequestRateLimiter` + Redis
 - Service discovery with Eureka or Consul
-- Reactive (WebFlux): make sure your filters are non-blocking
+- Variant-specific: `spring-cloud-starter-gateway-server-webflux` (reactive — filters must be non-blocking) or `spring-cloud-starter-gateway-server-webmvc` (servlet). Pick one stack
 
 ### Kong
 - Declarative config (`kong.yml`) or Admin API

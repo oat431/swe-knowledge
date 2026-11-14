@@ -47,7 +47,7 @@
   ```yaml
   # .github/workflows/trivy.yml
   - name: Trivy FS Scan
-    uses: aquasecurity/trivy-action@master
+    uses: aquasecurity/trivy-action@v0.36.0
     with:
       scan-type: fs
       scan-ref: .
@@ -108,7 +108,7 @@
     ghcr.io/myorg/myapp:v1.2.3
   ```
 - [ ] **Signature verified at deploy:** The deployment pipeline verifies the signature before pulling the image. An unsigned or tampered image is rejected.
-- [ ] **Provenance attestation (SLSA):** Beyond signing the image, attest *how it was built*: which repo, which commit, which CI workflow, which builder. SLSA Level 2+ requires provenance.
+- [ ] **Provenance attestation (SLSA):** Beyond signing the image, attest *how it was built*: which repo, which commit, which CI workflow, which builder. SLSA Build Level 2+ (spec v1.2) requires signed provenance.
 - [ ] **Signing key protected:** If using key-based signing (not keyless), the key is in KMS/HSM, never in CI environment variables.
 
 ---
@@ -124,7 +124,7 @@
 
 ## 6. IaC Security Scanning
 
-- [ ] **IaC scanner in CI:** Checkov, tfsec, or KICS on Terraform/CloudFormation/Kubernetes manifests:
+- [ ] **IaC scanner in CI:** Checkov, Trivy (formerly tfsec), or KICS on Terraform/CloudFormation/Kubernetes manifests:
   ```bash
   # Checkov
   checkov -d terraform/ --framework terraform
@@ -176,7 +176,7 @@
 - [ ] Lockfiles committed; base images pinned by digest
 - [ ] SBOM (syft) generated for every container image and stored with the artifact
 - [ ] Container images signed (cosign), signatures verified at deploy
-- [ ] IaC scanner (Checkov/tfsec/KICS) runs in CI on Terraform/K8s manifests
+- [ ] IaC scanner (Checkov/Trivy/KICS) runs in CI on Terraform/K8s manifests
 - [ ] Remediation SLAs documented (Critical ≤ 7d, High ≤ 30d)
 - [ ] KEV catalog checked; exploited vulns treated as immediate
 - [ ] Exceptions documented with owner, compensating control, expiry
@@ -187,5 +187,5 @@
 
 - Master checklist: [[security]] §5.
 - Deep reference: [[02 Dependency & Supply Chain]].
-- Tools: Dependabot, Renovate, Trivy, syft, Grype, cosign, Snyk, Checkov, tfsec, KICS.
+- Tools: Dependabot, Renovate, Trivy, syft, Grype, cosign, Snyk, Checkov, KICS.
 - Standards: SLSA (Supply-chain Levels for Software Artifacts), NTIA SBOM minimum elements, CISA KEV catalog.

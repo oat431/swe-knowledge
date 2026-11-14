@@ -9,7 +9,7 @@
 ## 1. Infrastructure as Code
 
 - [ ] **IaC tool chosen:** Terraform (ecosystem, multi-cloud), Pulumi (real programming languages), CDK (AWS-native), OpenTofu (open-source Terraform fork). Pick one, commit to it. No ClickOps in production.
-- [ ] **Remote state** (State file in shared storage (S3 + DynamoDB, GCS, Azure Blob, Terraform Cloud). Never local state for team projects. State contains secrets) encrypt at rest, restrict access.
+- [ ] **Remote state** (State file in shared storage (S3 + DynamoDB, GCS, Azure Blob, HCP Terraform — formerly Terraform Cloud). Never local state for team projects. State contains secrets) encrypt at rest, restrict access.
 - [ ] **State locking:** Prevent concurrent modifications. DynamoDB lock table (AWS), GCS native locking, or backend-native locking. Two `terraform apply` at the same time = corrupted state.
 - [ ] **Modules for reusability:** DRY infrastructure. Reusable modules for common patterns (VPC, EKS cluster, RDS instance). Version-pinned modules (`source = "git::...?ref=v1.2.0"`). Internal module registry for the org.
 - [ ] **Environments from same code:** dev/staging/prod use the same modules, different variables. Workspaces, directory structure (`envs/dev/`, `envs/prod/`), or Terragrunt. Drift between environments = incidents waiting to happen.
@@ -17,7 +17,7 @@
 - [ ] **PR-based infra changes:** Infrastructure changes go through code review like application code. PR → plan output as comment → approval → merge → apply. Atlantis, Spacelift, Env0, or CI pipeline.
 - [ ] **Drift detection** (Scheduled `plan` to detect out-of-band changes. Alert on drift. Someone `kubectl edit`'d or clicked in the console) now your state is a lie. Reconcile or import.
 - [ ] **Blast radius control:** Small, focused state files. Don't put VPC + RDS + EKS + IAM in one state. One blast = everything. Split by layer (network, compute, data) or by service boundary.
-- [ ] **Policy as code:** OPA/Rego, Sentinel, Checkov, tfsec. Enforce guardrails: no public S3 buckets, no overly permissive security groups, encryption required. Block non-compliant plans in CI.
+- [ ] **Policy as code:** OPA/Rego, Sentinel, Checkov, Trivy (formerly tfsec). Enforce guardrails: no public S3 buckets, no overly permissive security groups, encryption required. Block non-compliant plans in CI.
 - [ ] **Import existing resources:** `terraform import` or `pulumi import` for brownfield. Don't recreate what already exists. Document imported resources. Validate state matches reality after import.
 - [ ] **Cost estimation in PR:** Infracost or similar in CI. Show cost impact of infra changes before merge. "This PR adds $450/month." No surprise bills from merged PRs.
 - [ ] **Tagging in IaC** (Default tags applied to all resources via provider default_tags or module inputs. Environment, team, service, managed-by. Never rely on humans remembering to tag) enforce at the code level.
@@ -92,7 +92,7 @@
 - [ ] **Service accounts:** Dedicated identity per service. Not shared `admin` accounts. Not developer personal credentials in production. Workload identity (GKE), IRSA (EKS), or pod identity (AKS) for K8s. No key files on disk.
 - [ ] **Role-based access:** IAM roles/policies, not inline permissions. Predefined roles for common patterns. Custom roles only when predefined are too broad. Group/team-level assignment, not per-user. Document role definitions.
 - [ ] **No long-lived credentials:** No static access keys where possible. Use OIDC federation (CI/CD → cloud), instance profiles, workload identity. If you must have keys: rotate programmatically, alert on age > 90 days, disable unused keys.
-- [ ] **Federated identity (SSO):** SAML/OIDC integration with corporate identity provider (Okta, Azure AD, Google Workspace). Single source of truth for user lifecycle. Offboarded employee = access revoked everywhere within minutes, not days.
+- [ ] **Federated identity (SSO):** SAML/OIDC integration with corporate identity provider (Okta, Microsoft Entra ID — formerly Azure AD, Google Workspace). Single source of truth for user lifecycle. Offboarded employee = access revoked everywhere within minutes, not days.
 - [ ] **Audit trail:** CloudTrail (AWS), Cloud Audit Logs (GCP), Activity Log (Azure). Who did what, when, from where. Retained for compliance period (1-7 years). Alert on sensitive actions (IAM changes, security group modifications, root account login).
 - [ ] **Break-glass procedures:** Emergency access for outages when normal access is down. Documented, audited, time-limited. Sealed credentials in physical safe or MFA-protected vault. Post-incident review of all break-glass usage. Test annually.
 - [ ] **MFA everywhere:** Enforce MFA for all human access to cloud consoles, VPN, and production systems. Hardware keys (YubiKey) for admin accounts. TOTP minimum for all users. No exceptions for "convenience."
@@ -106,7 +106,7 @@
 - [ ] **Log aggregation:** Loki, ELK/OpenSearch, CloudWatch Logs, Datadog Logs. Centralized, searchable, retained per compliance. Structured JSON logs from applications. Log levels meaningful and consistent (ERROR = page someone, WARN = investigate soon, INFO = context for debugging).
 - [ ] **Distributed tracing:** Jaeger, Tempo, X-Ray, Datadog APM. OpenTelemetry instrumentation (vendor-neutral). Trace requests across service boundaries. Correlate traces with logs and metrics via trace ID. Sampling strategy for high-traffic services.
 - [ ] **Dashboards as code:** Grafana dashboards in git (JSON/Jsonnet/Grafonnet). Terraform-provisioned. Not hand-built in production UI that nobody can reproduce. Dashboard changes go through PR review. Standard template per service type.
-- [ ] **Alert routing:** PagerDuty, OpsGenie, or Grafana OnCall. Severity-based routing: P1 (outage) → phone call + Slack + auto-incident. P2 (degraded) → Slack + email. P3 (needs attention) → ticket. Escalation policies: if not ack'd in 5 min → escalate.
+- [ ] **Alert routing:** PagerDuty, Grafana IRM, or Jira Service Management (Grafana OnCall OSS was archived 2026-03-24; Opsgenie is retired after 2027-04-05). Severity-based routing: P1 (outage) → phone call + Slack + auto-incident. P2 (degraded) → Slack + email. P3 (needs attention) → ticket. Escalation policies: if not ack'd in 5 min → escalate.
 - [ ] **SLO-based alerting:** Alert on error budget burn rate, not raw thresholds. "Burning 10x budget in 1h window" → page now. "Burning 2x budget in 6h window" → ticket. More signal, less noise than "CPU > 80% for 5 min." Define SLIs that reflect user experience.
 - [ ] **On-call rotation:** Defined schedule, fair rotation, handoff process with context. On-call engineer has access to runbooks, architecture docs, escalation paths. Compensated (time-off or pay). Not the same person every night. Follow-the-sun for global teams.
 - [ ] **Alert hygiene** (Every alert is actionable) if it fires and nobody needs to do anything, delete it or downgrade to dashboard. Alert fatigue kills response time. Review alerts quarterly: delete noisy ones, tune thresholds, add missing ones.
@@ -136,7 +136,7 @@
 - [ ] **Audit logging:** All administrative actions logged immutably. All data access logged for sensitive systems. Tamper-proof storage (S3 Object Lock, CloudWatch Logs with resource policy). Retained per compliance requirements (typically 1-7 years).
 - [ ] **Penetration testing:** Annual minimum. After major architecture changes. External firm, not just internal vulnerability scans. Findings tracked to resolution with deadlines. Retest after fix to verify remediation.
 - [ ] **Runtime security:** Falco, Sysdig, or cloud-native (GuardDuty, Security Command Center). Detect anomalous behavior: unexpected network connections, privilege escalation, file system modifications. Alert and respond in real-time.
-- [ ] **Supply chain security:** Sign container images (Cosign/Notary). Verify signatures before deployment (admission controller). SBOM generation for every image. Pin base images by digest, not tag. Know what's in your containers.
+- [ ] **Supply chain security:** Sign container images (Cosign or Notation — Notary v2). Verify signatures before deployment (admission controller). SBOM generation for every image. Pin base images by digest, not tag. Know what's in your containers.
 
 ## 11. Cost Management
 
@@ -241,6 +241,6 @@
 | | Kubecost / OpenCost | K8s-specific cost allocation per namespace/workload/label |
 | | AWS Cost Explorer / GCP Billing | Native cost analysis and recommendations, no extra tooling |
 | **Policy/Security** | OPA / Gatekeeper | Policy-as-code for K8s admission control |
-| | Checkov / tfsec | Static analysis for Terraform/CloudFormation security misconfigs |
+| | Checkov / Trivy (formerly tfsec) | Static analysis for Terraform/CloudFormation security misconfigs |
 | | Trivy | Container + IaC + filesystem vulnerability scanning, fast, free |
 | | Falco | Runtime security monitoring for containers and K8s |

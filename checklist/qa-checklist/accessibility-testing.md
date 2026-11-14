@@ -375,9 +375,9 @@
       runs-on: ubuntu-latest
       timeout-minutes: 15
       steps:
-        - uses: actions/checkout@v4
+        - uses: actions/checkout@v7
 
-        - uses: actions/setup-node@v4
+        - uses: actions/setup-node@v7
           with:
             node-version: 20
             cache: npm
@@ -400,7 +400,7 @@
 
         - name: Upload report
           if: always()
-          uses: actions/upload-artifact@v4
+          uses: actions/upload-artifact@v7
           with:
             name: playwright-a11y-report
             path: playwright-report/
@@ -531,8 +531,8 @@
         matrix:
           page: ['/', '/about', '/pricing', '/dashboard', '/settings']
       steps:
-        - uses: actions/checkout@v4
-        - uses: actions/setup-node@v4
+        - uses: actions/checkout@v7
+        - uses: actions/setup-node@v7
           with:
             node-version: 20
         - run: npm ci
@@ -575,7 +575,7 @@
 - [ ] **jest config:** `jest.config.ts`:
   ```typescript
   export default {
-    setupFilesAfterSetup: ['<rootDir>/jest.setup.ts'],
+    setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
     testEnvironment: 'jsdom',
   };
   ```

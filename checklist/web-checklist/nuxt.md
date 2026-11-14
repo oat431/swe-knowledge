@@ -1,6 +1,6 @@
 # Nuxt Checklist (Meta-Framework Layer)
 
-> Nuxt 3, rendering modes, file-based routing, Nitro server routes, SEO, hybrid caching, build & deploy.
+> Nuxt 4, rendering modes, file-based routing, Nitro server routes, SEO, hybrid caching, build & deploy.
 > Library layer: [[vue]] (Composition API, components, Pinia, forms, testing, a11y); tick that first, then this.
 > General companion: [[web]] · Launch gate: [[Frontend Launch]]
 > Last updated: 2026-09-14 (split from vue-js.md; library concerns here/vue, Nuxt concerns in nuxt)
@@ -11,7 +11,7 @@
 
 ## 1. Project Setup (Nuxt-Specific)
 
-- [ ] **`nuxi init` + Nuxt 3.x/4:** TypeScript by default. Dev with `nuxt dev`, typecheck with `nuxt typecheck` (`vue-tsc` under the hood → [[vue]] §1).
+- [ ] **`nuxi init` + Nuxt 4:** TypeScript by default. Dev with `nuxt dev`, typecheck with `nuxt typecheck` (`vue-tsc` under the hood → [[vue]] §1).
 - [ ] **Nuxt modules:** `@nuxt/image`, `@nuxt/fonts`, `@nuxt/scripts`, `nuxt-security`. Don't DIY. Each module audited for bundle cost before adding.
 - [ ] **Nuxt layers (`extends`):** Share config/components/modules across apps without copy-paste. `composables/` = logic, `components/` = UI, `server/` = API; server code never imports from the app side.
 - [ ] **Directory boundaries** (Feature code stays in feature folders (→ [[vue]] §2); `pages/` stay thin) they compose feature components, they don't contain business logic.
@@ -98,7 +98,7 @@
 
 ## 10. AI/LLM Integration (Server Side)
 
-- [ ] **Streaming server route:** `server/api/chat.ts` with Vercel AI SDK `streamText` + `toDataStreamResponse()`; client `useChat` from `@ai-sdk/vue` → [[vue]] §18. Or SSE via `createEventStream` (§3).
+- [ ] **Streaming server route:** `server/api/chat.ts` with Vercel AI SDK `streamText` + `toUIMessageStreamResponse()`; client `useChat` from `@ai-sdk/vue` → [[vue]] §18. Or SSE via `createEventStream` (§3).
 - [ ] **Provider keys server-only:** Keys in non-public `runtimeConfig` (e.g. `NUXT_OPENAI_API_KEY` → `runtimeConfig.openaiKey`). Never `NUXT_PUBLIC_*` (→ [[vue]] §18). System prompts composed server-side, never in client bundles.
 - [ ] **Rate-limit AI endpoints:** Per-user limits on AI server routes (`nuxt-security` rate limiter or handler-level); 429 UX on the client → [[vue]] §18.
 - [ ] **Context & cost control:** Token budgets per request, conversation trimming server-side, cache identical prompts where safe.
@@ -148,7 +148,7 @@
 
 ## Sources
 
-- Nuxt 3 Docs: https://nuxt.com/
+- Nuxt 4 Docs: https://nuxt.com/
 - Library layer: [[vue]] · General companion: [[web]] · Launch gate: [[Frontend Launch]]
 - Split 2026-09-14 from `vue-js.md`: Nuxt-specific concerns here, Vue library concerns in [[vue]].
 - Absorbs the former `vue-js.md` §15 "Nuxt 3 (SSR / Full-Stack)" plus SEO & Metadata (§7) and the Nitro/SSE items from §5.

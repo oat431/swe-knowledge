@@ -26,7 +26,7 @@
 | Python | **bandit** | Python-native, simple, CI-friendly |
 | Go | **gosec** | Go-native, simple |
 | Java | **SpotBugs + Find Security Bugs** | Bytecode analysis |
-| .NET | **Security Code Scan** | .NET-native |
+| .NET | **.NET SDK security analyzers (Microsoft.CodeAnalysis.NetAnalyzers)** | .NET-native, ships with the SDK (Security Code Scan dormant since 2022); add Semgrep/CodeQL as cross-cutting layer |
 | Enterprise / multi-lang | **SonarQube / Snyk Code / Checkmarx** | Commercial, dashboarded, compliance reporting |
 
 - [ ] **Tool matches the stack:** Don't force bandit on a Go project. Pick the native tool first, Semgrep/CodeQL as a cross-cutting layer.
@@ -74,16 +74,15 @@
   jobs:
     semgrep:
       runs-on: ubuntu-latest
+      container:
+        image: semgrep/semgrep
       steps:
         - uses: actions/checkout@v4
-        - uses: returntocorp/semgrep-action@v1
-          with:
-            config: auto
-            generateSarif: true
-          env:
-            SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_APP_TOKEN }}
+        - run: semgrep ci
+      env:
+        SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_APP_TOKEN }}
   ```
-- [ ] **SARIF uploaded to GitHub code scanning:** Findings appear inline in PRs. Only *new* findings (vs baseline) are highlighted.
+- [ ] **Findings surfaced on PRs:** With `SEMGREP_APP_TOKEN`, `semgrep ci` comments findings on PRs. For GitHub code scanning, add `--sarif` output + `github/codeql-action/upload-sarif`. Only *new* findings (vs baseline) are highlighted.
 
 ### Suppressing False Positives
 

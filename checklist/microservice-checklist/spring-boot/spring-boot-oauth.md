@@ -1,7 +1,7 @@
 # Spring Boot OAuth: Open Authentication Checklist
 
 > OAuth2 / OpenID Connect with Keycloak + Spring Security for Spring Boot 4.x microservices.
-> Covers Boot 4.0+ (Spring Framework 7, Security 7, modular OAuth2 starters). Docker-focused for self-hosted homelabs.
+> Covers Boot 4.0+ (Spring Framework 7, Security 7, modular OAuth2 starters; Gateway pieces on Spring Cloud 2025.1.x "Oakwood"). Docker-focused for self-hosted homelabs.
 > Read the concept-level [Microservice Infrastructure Checklist](microservice-infrastructure.md) (Part 3) first for grant types, patterns, and build vs adopt decisions.
 > Last updated: 2026-06-11
 
@@ -41,7 +41,7 @@ Browser ──→ Traefik ──→ Spring Cloud Gateway ──→ Service A (Re
 
 ```yaml
 keycloak:
-  image: keycloak/keycloak:27.0        # Check for latest stable
+  image: keycloak/keycloak:26.8        # Check for latest stable (no 27.x exists)
   container_name: keycloak
   restart: unless-stopped
   environment:
@@ -201,7 +201,7 @@ public class GatewaySecurityConfig {
             .csrf(ServerHttpSecurity.CsrfSpec::disable)
 
             // Route-level access control
-            .authorizeHttpRequests(auth -> auth
+            .authorizeExchange(exchanges -> exchanges
                 // Public endpoints
                 .pathMatchers("/actuator/health/**").permitAll()
                 .pathMatchers("/login/**", "/oauth2/**").permitAll()
@@ -224,7 +224,7 @@ public class GatewaySecurityConfig {
 ```
 
 - [ ] **Dual role:** Gateway is both OAuth2 Client (redirects users to login) AND Resource Server (validates JWT on API requests). Both configured in the same filter chain.
-- [ ] **`authorizeHttpRequests` (NOT `authorizeRequests`):** Security 7 removed the old method. Only the lambda DSL works: `.authorizeHttpRequests(auth -> auth.pathMatchers(...))`.
+- [ ] **`authorizeExchange` on reactive chains:** `authorizeHttpRequests()` is servlet-only. On this reactive `ServerHttpSecurity` chain use `.authorizeExchange(exchanges -> exchanges.pathMatchers(...).anyExchange().authenticated())`. (On servlet `HttpSecurity` it's `.authorizeHttpRequests(auth -> ...)`; the old `authorizeRequests()` is removed in Security 7.)
 
 ### 3.4 JWT Claim Propagation
 
@@ -453,7 +453,7 @@ public class ServiceToServiceConfig {
 - ❌ **Access token lifespan too long:** 30+ minute tokens can't be revoked without introspection. 5–15 minutes with refresh rotation is standard.
 - ❌ **Leaking `Authorization` header to downstream:** Gateway must strip it. A compromised downstream service could harvest valid tokens.
 - ❌ **CSRF blocking API calls (Security 7):** Security 7 enables CSRF for ALL endpoints. Stateless JWT APIs get 403 until `.csrf().disable()`.
-- ❌ **`authorizeRequests()` (Security 7):** Removed. Only `.authorizeHttpRequests(auth -> ...)` lambda DSL works.
+- ❌ **`authorizeRequests()` (Security 7):** Removed. Lambda DSL only: `.authorizeHttpRequests(auth -> ...)` on servlet `HttpSecurity`, `.authorizeExchange(exchanges -> ...)` on reactive `ServerHttpSecurity` — `authorizeHttpRequests()` won't compile on reactive.
 - ❌ **Wrong `issuer-uri`:** Must match exactly what's in the JWT's `iss` claim (`https://auth.panomete.com/realms/homelab`). Missing trailing slash or wrong realm name = 401 on every request.
 - ❌ **No client secret rotation:** Secrets should rotate. If a secret leaks, rotating it revokes the old one. Keycloak supports this natively.
 - ❌ **Keycloak DB not backed up:** That PostgreSQL database IS your user store. No backup = lost all users on DB failure.

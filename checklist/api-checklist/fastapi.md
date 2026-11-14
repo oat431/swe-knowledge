@@ -1,14 +1,14 @@
 # FastAPI Checklist
 
 > Python + FastAPI companion to the general [API checklist](api.md).
-> Covers FastAPI 0.141+, Pydantic v2, SQLAlchemy 2.0+, uv package management.
+> Covers FastAPI 0.162+, Pydantic v2, SQLAlchemy 2.1+, uv package management.
 > Last updated: 2026-09-14; synced with the general API checklist: RFC 9457 error format, OpenAPI 3.1 + spec-quality/contract CI, rate-limit headers, HTTP caching semantics, X-Request-ID propagation, mutation testing.
 
 ---
 
 ## 1. Project Setup
 
-- [ ] **Python version:** 3.10+ required, 3.12+ recommended. Pin in `.python-version` or `pyproject.toml`.
+- [ ] **Python version:** 3.11+ required (current FastAPI floor), 3.14+ recommended. Pin in `.python-version` or `pyproject.toml`.
 - [ ] **uv package manager:** `uv init myproject` to create project. 10-100x faster than pip, replaces pip + pip-tools + virtualenv.
 - [ ] **Install FastAPI:** `uv add "fastapi[standard]"` (includes uvicorn, pydantic, and extras).
 - [ ] **Core dependencies:**
@@ -18,8 +18,8 @@
   uv add asyncpg                      # Async PostgreSQL driver
   uv add alembic                      # Database migrations
   uv add pydantic-settings            # Type-safe configuration
-  uv add python-jose[cryptography]    # JWT encoding/decoding
-  uv add "passlib[bcrypt]"            # Password hashing
+  uv add "pyjwt[crypto]"              # JWT encoding/decoding
+  uv add "pwdlib[bcrypt]"             # Password hashing
   uv add httpx                        # Async HTTP client (testing + external calls)
   ```
 - [ ] **Dev dependencies:**
@@ -102,7 +102,7 @@ project/
 ```
 - [ ] **Tags:** group endpoints for OpenAPI docs. One tag per feature.
 - [ ] **Custom title/description:** `FastAPI(title="My API", version="1.0.0", description="...")`.
-- [ ] **OpenAPI 3.1 generated natively** (FastAPI emits an OpenAPI 3.1 spec (JSON Schema 2020-12) from your Pydantic v2 models and route signatures) no generator step, no hand-written spec file. Keep Pydantic schemas as the single source of truth and set `response_model` on every route so the spec stays honest.
+- [ ] **OpenAPI 3.1 generated natively** (FastAPI emits an OpenAPI 3.1 spec (JSON Schema 2020-12) from your Pydantic v2 models and route signatures) no generator step, no hand-written spec file. Keep Pydantic schemas as the single source of truth and set `response_model` on every route so the spec stays honest. OpenAPI 3.2 is current (Sept 2025), but FastAPI still emits 3.1 — switch when the generator emits 3.2.
 - [ ] **Spec quality + contract change detection in CI** (`spectral` with a house ruleset lints the generated `openapi.json` on every PR. Breaking-change detection gates the pipeline: `oasdiff`/`openapi-diff` fails the build when a change removes fields, changes types, or narrows responses) the REST equivalent of `buf breaking` for gRPC. Breaking changes require a new version, never a silent edit.
 
 ---
@@ -201,11 +201,11 @@ project/
 
 ---
 
-## 7. Database (SQLAlchemy 2.0 + asyncpg)
+## 7. Database (SQLAlchemy 2.1 + asyncpg)
 
 - [ ] **Async engine:** `create_async_engine(settings.database_url, echo=settings.debug)`.
 - [ ] **Async session factory:** `async_sessionmaker(engine, class_=AsyncSession, expire_on_commit=False)`.
-- [ ] **SQLAlchemy 2.0 declarative models:** `Mapped[]` type annotations:
+- [ ] **SQLAlchemy 2.1 declarative models:** `Mapped[]` type annotations:
   ```python
   class User(Base):
       __tablename__ = "users"
@@ -227,9 +227,9 @@ project/
 ## 8. Authentication (JWT + OAuth2)
 
 - [ ] **OAuth2PasswordBearer:** `oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")`.
-- [ ] **JWT creation:** python-jose with RS256 (asymmetric) for production, HS256 for development:
+- [ ] **JWT creation:** PyJWT with RS256 (asymmetric) for production, HS256 for development:
   ```python
-  from jose import jwt
+  import jwt  # PyJWT
   
   def create_access_token(data: dict, expires_delta: timedelta) -> str:
       to_encode = data.copy()
@@ -246,10 +246,10 @@ project/
           payload = jwt.decode(token, PUBLIC_KEY, algorithms=["RS256"])
           user_id = payload.get("sub")
           # fetch user from DB
-      except JWTError:
+      except jwt.PyJWTError:
           raise HTTPException(status_code=401)
   ```
-- [ ] **Password hashing:** passlib with bcrypt: `pwd_context.hash(password)` / `pwd_context.verify(password, hashed)`.
+- [ ] **Password hashing:** `pwdlib[bcrypt]` (current FastAPI docs' choice; passlib is unmaintained since 2020): `password_hash.hash(password)` / `password_hash.verify(password, hashed)`.
 ```
 - [ ] **Role-based access:** `Depends(require_role("admin"))` as a dependency factory.
 ```
@@ -498,13 +498,13 @@ project/
 
 - [ ] **Dockerfile:** multi-stage build with uv:
   ```dockerfile
-  FROM python:3.12-slim AS builder
+  FROM python:3.14-slim AS builder
   COPY --from=ghcr.io/astral-sh/uv:latest /uv /usr/local/bin/uv
   WORKDIR /app
   COPY pyproject.toml uv.lock ./
   RUN uv sync --frozen --no-dev
   
-  FROM python:3.12-slim
+  FROM python:3.14-slim
   WORKDIR /app
   COPY --from=builder /app/.venv /app/.venv
   COPY ./app ./app
@@ -696,7 +696,7 @@ flowchart TD
 | 4 | Pydantic v2 Models (Request/Response Schemas) | 🟡 basic types | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ + strict |
 | 5 | Dependency Injection | 🟡 basic | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 6 | Configuration (pydantic-settings) | 🟡 .env | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ + vault |
-| 7 | Database (SQLAlchemy 2.0 + asyncpg) | 🟡 SQLite OK | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ + audit |
+| 7 | Database (SQLAlchemy 2.1 + asyncpg) | 🟡 SQLite OK | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ + audit |
 | 8 | Authentication (JWT + OAuth2) | ❌ | 🟡 basic JWT | ✅ | ✅ | ✅ | ✅ | ✅ + rotation |
 | 9 | Middleware & Security | 🟡 CORS | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ + WAF |
 | 10 | Error Handling | ❌ | 🟡 basic | ✅ | ✅ | ✅ | ✅ | ✅ + formal |
@@ -717,5 +717,5 @@ flowchart TD
 
 - FastAPI docs: https://fastapi.tiangolo.com/
 - Pydantic v2 docs: https://docs.pydantic.dev/latest/
-- SQLAlchemy 2.0: https://docs.sqlalchemy.org/en/20/
+- SQLAlchemy 2.1: https://docs.sqlalchemy.org/en/21/
 - `[[api]]`: general API checklist (tick first)

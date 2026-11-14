@@ -16,7 +16,7 @@
 - [ ] **Linting & formatting:** `dart analyze` + `dart format` (Flutter), ESLint + Prettier (RN), ktlint/detekt (Kotlin), SwiftLint (Swift). Pre-commit hooks. CI blocks on lint failures.
 - [ ] **Environment configuration:** Dev, staging, production configs separated. Flavors (Android) / Schemes (iOS) / `--dart-define` (Flutter). No hard-coded URLs or keys per environment.
 - [ ] **Dependency management strategy:** Pin exact versions for production deps. Renovate/Dependabot for automated updates. Audit native transitive dependencies (CocoaPods subspecs, Gradle transitive deps). Know what's in your binary.
-- [ ] **Dev tooling:** Hot reload/restart configured. Flipper/DevTools for debugging. Network inspector. Layout inspector. Performance overlay available in debug builds. New developer productive in < 30 minutes.
+- [ ] **Dev tooling:** Hot reload/restart configured. RN DevTools for debugging (Flipper is out of the React Native workflow — RN 0.239.0 was the last release with Flipper support). Network inspector. Layout inspector. Performance overlay available in debug builds. New developer productive in < 30 minutes.
 
 ## 2. Navigation & Routing
 
@@ -50,7 +50,7 @@
 - [ ] **Global app state:** Zustand/Jotai (RN), Riverpod/Bloc/Provider (Flutter), StateFlow/ViewModel (Kotlin), `@Observable` (SwiftUI). Single source of truth for cross-screen state.
 - [ ] **Server state:** TanStack Query (RN), Riverpod AsyncValue (Flutter), repository pattern with Flow (Kotlin). Separate from UI state. Cache, refetch, invalidate.
 - [ ] **Offline state:** Queue mutations when offline. Replay when connectivity returns. UI reflects pending state ("Saving..." indicator). Conflict resolution strategy defined.
-- [ ] **State persistence across app kills:** Critical state survives process death. SharedPreferences/UserDefaults for simple data. SQLite/Hive for complex state. Don't lose user's draft.
+- [ ] **State persistence across app kills:** Critical state survives process death. SharedPreferences/UserDefaults for simple data. SQLite (or your platform's local DB) for complex state. Don't lose user's draft.
 - [ ] **Hydration:** Restore persisted state on app launch without flash of empty state. Show cached data immediately, refresh in background.
 - [ ] **State scoping** (State lives as close to where it's used as possible. Screen-level state dies with the screen. App-level state survives navigation. Don't put everything in global state) most state is local.
 
@@ -69,7 +69,7 @@
 ## 6. Offline & Storage
 
 - [ ] **Local database:** SQLite/Drift (Flutter), WatermelonDB/Realm (RN), Room (Kotlin), SwiftData/CoreData (Swift). For structured relational data. Not SharedPreferences for lists.
-- [ ] **Secure storage:** iOS Keychain, Android Keystore/EncryptedSharedPreferences. For tokens, credentials, sensitive user data. Never plain-text storage for secrets.
+- [ ] **Secure storage:** iOS Keychain, Android Keystore (via Preferences DataStore + Keystore keys; `security-crypto`/EncryptedSharedPreferences is deprecated). For tokens, credentials, sensitive user data. Never plain-text storage for secrets.
 - [ ] **File system management:** App documents directory vs cache directory. Know the difference: documents are backed up, cache is purgeable by OS. Store user files in documents, generated data in cache.
 - [ ] **Cache size limits** (Set max cache size. LRU eviction for images and network cache. Monitor storage usage. iOS can purge cache directory at any time) don't store important data there.
 - [ ] **Data migration between app versions:** Schema versioning for local DB. Migration scripts run on app update. Test upgrade from oldest supported version. Never lose user data on update.
@@ -149,7 +149,7 @@
 - [ ] **CI/CD pipeline:** Lint → test → build → distribute. Fastlane (iOS + Android automation), Codemagic (Flutter-focused), Bitrise, GitHub Actions, or platform-specific. Automated, not manual builds.
 - [ ] **Code signing** (iOS: certificates + provisioning profiles (match/fastlane managed). Android: keystore (secure, backed up, never lost) losing keystore = new app listing). Signing in CI, not on dev machines.
 - [ ] **Versioning strategy:** Semver for marketing version (1.2.3). Auto-incrementing build number. Never reuse build numbers. `major.minor.patch` + build: `1.2.3 (456)`.
-- [ ] **Beta distribution:** TestFlight (iOS, up to 10k testers), Firebase App Distribution (both platforms), App Center. Internal testing → closed beta → open beta → production.
+- [ ] **Beta distribution:** TestFlight (iOS, up to 10k testers), Firebase App Distribution (both platforms). Internal testing → closed beta → open beta → production.
 - [ ] **Staged rollouts:** Google Play: percentage rollout (1% → 10% → 50% → 100%). iOS: phased release (7 days automatic). Monitor crash rate at each stage. Halt on regression.
 - [ ] **Multiple build flavors:** Development (debug, verbose logging, mock server), Staging (release build, staging API), Production (release, production API, no debug tools). Separate app IDs so all can be installed simultaneously.
 - [ ] **Reproducible builds:** Same commit → same output. Pin all dependency versions. Lock native dependency versions (Podfile.lock, gradle lockfile). No ambient state affecting builds.
@@ -158,13 +158,13 @@
 
 ## 14. App Store Submission
 
-- [ ] **Screenshots per device size:** iPhone 6.7", 6.5", 5.5" (required). iPad 12.9", 11" (if supporting iPad). Android: phone + 7" tablet + 10" tablet. Localized screenshots if multi-language.
+- [ ] **Screenshots per display family:** Apple now uses display-family specs, not model sizes: Dynamic Island large display (1260x2736, 1290x2796, or 1320x2868) required; Face ID large display accepted as fallback; 5.5" is legacy/optional; iPhone Duo (foldable) screenshots required from Apr 2027. iPad 12.9", 11" (if supporting iPad). Android: phone + 7" tablet + 10" tablet. Localized screenshots if multi-language.
 - [ ] **App description & keywords** (Clear value proposition in first line. Keywords researched (App Store only) Google Play uses description text). A/B test listing if possible.
 - [ ] **Privacy policy:** Required by both stores. URL accessible, not just in-app. Covers: data collected, usage, sharing, retention, deletion. GDPR/CCPA compliance if applicable.
 - [ ] **Data safety / App Privacy labels** (Google Play: Data Safety section. iOS: App Privacy "nutrition labels." Declare every data type collected, used, shared. Audit third-party SDKs) they collect data too.
-- [ ] **Review guidelines compliance:** Apple is strict: no hidden features, no misleading metadata, no private API usage, proper permission request strings. Google: target API level requirements, Families policy if applicable. Read guidelines before submission.
+- [ ] **Review guidelines compliance:** Apple is strict: no hidden features, no misleading metadata, no private API usage, proper permission request strings. Google: target API rules (new apps and updates must target Android 16 / API 36 from Aug 31, 2026; existing apps need API 35+ to stay available), Families policy if applicable. Read guidelines before submission.
 - [ ] **Age rating:** Accurate content rating questionnaire. Under-rating = rejection. Over-rating = reduced visibility. If user-generated content: higher rating required.
-- [ ] **In-app purchases (if applicable):** StoreKit 2 (iOS), Google Play Billing Library v6+ (Android). Server-side receipt validation. Restore purchases flow. Subscription management (upgrade, downgrade, cancel). Handle edge cases: family sharing, promo codes, grace period.
+- [ ] **In-app purchases (if applicable):** StoreKit 2 (iOS), Google Play Billing Library 8+ (Android; current 9.x — Google Play requires 8+ for all new apps and updates since Aug 31, 2026). Server-side receipt validation. Restore purchases flow. Subscription management (upgrade, downgrade, cancel). Handle edge cases: family sharing, promo codes, grace period.
 - [ ] **Permission usage descriptions:** iOS: every permission needs a human-readable description string (camera, location, photos, etc.). Explain WHY, not WHAT. "To scan QR codes for quick login" not "This app needs camera access." Missing or vague = rejection.
 - [ ] **Export compliance:** iOS asks about encryption usage. If using HTTPS only (standard), you can mark "No" for export compliance. Custom encryption = additional compliance steps. Get this wrong and your app sits in "waiting for compliance" limbo.
 
@@ -177,7 +177,7 @@
 - [ ] **Remote config / feature flags:** Toggle features without app update. Firebase Remote Config, LaunchDarkly, Unleash. Gradual rollout of new features. Kill switch for broken features.
 - [ ] **A/B testing:** Test onboarding flows, UI variations, feature rollouts. Firebase A/B Testing, Statsig, or custom. Measure impact on key metrics before full rollout.
 - [ ] **User feedback channel** (In-app feedback (shake to report, feedback button). App store review prompts (timed right) after positive experience, not on first launch). Respond to reviews.
-- [ ] **OTA updates (if applicable)** (CodePush (RN), Shorebird (Flutter) for JS/Dart bundle updates without store review. Not for native code changes. Use cautiously) rollback capability essential.
+- [ ] **OTA updates (if applicable)** (Self-hosted CodePush (RN; `microsoft/code-push-server` — the hosted service was retired 2025-03-31), Shorebird (Flutter) for JS/Dart bundle updates without store review. Not for native code changes. Use cautiously) rollback capability essential.
 - [ ] **App size monitoring:** Track download and install size per release. Alert on unexpected growth. Users uninstall large apps when storage is low. Google Play and App Store show size prominently.
 - [ ] **ANR / hang monitoring:** Android Application Not Responding (ANR) rate tracked. iOS hang detection (main thread blocked > 250ms). Alert on regression. Target: < 0.5% ANR rate (Google Play vitals threshold).
 - [ ] **Store rating management:** In-app review prompt (StoreKit `requestReview`, Google In-App Review API) shown after positive moments. Never nag. Track average rating trend. Respond to negative reviews within 24h.
@@ -210,7 +210,7 @@
 - **Navigation:** GoRouter (declarative, deep linking), auto_route (code generation)
 - **State:** Riverpod (recommended), Bloc (enterprise), Provider (simple apps)
 - **Networking:** Dio + Retrofit (code gen) or http package
-- **Local DB:** Drift (SQLite, type-safe), Hive (NoSQL, fast), Isar
+- **Local DB:** Drift (SQLite, type-safe), hive_ce (NoSQL; original Hive/Isar unmaintained since 2023)
 - **Testing:** flutter_test (unit + widget), integration_test, Patrol (E2E), golden tests
 - **CI/CD:** Codemagic (Flutter-optimized), Fastlane, GitHub Actions
 
@@ -220,7 +220,7 @@
 - **Networking:** Axios, fetch + TanStack Query for caching
 - **Local DB:** WatermelonDB (SQLite, sync), MMKV (fast key-value), Realm
 - **Testing:** Jest + React Native Testing Library, Detox (E2E), Maestro
-- **CI/CD:** EAS Build (Expo), Fastlane, App Center, GitHub Actions
+- **CI/CD:** EAS Build (Expo), Fastlane, GitHub Actions
 
 ### Kotlin (Jetpack Compose)
 - **Navigation:** Navigation Compose (official), Voyager (multiplatform)
@@ -246,5 +246,5 @@
 - **Push:** Firebase Cloud Messaging (both platforms)
 - **Feature Flags:** Firebase Remote Config (free), LaunchDarkly, Unleash
 - **CI/CD:** Fastlane (universal mobile automation), Codemagic, Bitrise
-- **OTA Updates:** Shorebird (Flutter), CodePush (RN): skip store review for non-native changes
+- **OTA Updates:** Shorebird (Flutter), self-hosted CodePush (`microsoft/code-push-server`; hosted service retired) (RN): skip store review for non-native changes
 - **Design:** Figma → code workflows, design tokens for consistent cross-platform UI

@@ -1,7 +1,7 @@
 # Elasticsearch / OpenSearch Checklist
 
 > Search & analytics companion to the general [[Database]] checklist.
-> Covers Elasticsearch 8.x / OpenSearch 2.x, the standard inverted-index search and log analytics engines.
+> Covers Elasticsearch 9.x / OpenSearch 3.x, the standard inverted-index search and log analytics engines.
 > Lucene-based: the principles are identical for both; differences noted where they exist.
 > Companion to [[PostgreSQL]], [[MongoDB]], and [[valkey-redis|Valkey]] for the other engines in the homelab.
 > Last updated: 2026-08-07
@@ -10,7 +10,7 @@
 
 ## 1. Cluster Setup & Node Configuration
 
-- [ ] **Version:** Elasticsearch 8.x (or OpenSearch 2.x). `GET /` or `bin/elasticsearch --version` recorded. Upgrade path known (rolling upgrade for minor, full-cluster restart for major).
+- [ ] **Version:** Elasticsearch 9.x (or OpenSearch 3.x). `GET /` or `bin/elasticsearch --version` recorded. Upgrade path known (rolling upgrade for minor, full-cluster restart for major).
 - [ ] **Node roles assigned** (Dedicated roles: `master` (cluster state), `data` (index storage), `ingest` (preprocessing pipeline), `coordinating` (query fan-out + reduction). No all-roles-on-every-node in production) dedicated masters prevent cluster instability under load.
 - [ ] **Master node quorum** (Odd number of dedicated master-eligible nodes (3 minimum for HA). Majority quorum prevents split-brain. Never 2 masters) you can't form a majority.
 - [ ] **Heap sized correctly:** JVM heap = 50% of available RAM, capped at ~31 GB (compressed oops threshold). Remaining RAM for the Lucene filesystem cache (OS page cache is critical for search performance). Monitor GC pauses.
@@ -63,7 +63,7 @@
 
 ## 7. Security & Access Control
 
-- [ ] **Security enabled (not disabled):** Elasticsearch 8.x enables security by default. OpenSearch: `plugins.security.ssl.transport.*` configured. Never run with `xpack.security.enabled: false` in production → [[Security]] §8.
+- [ ] **Security enabled (not disabled):** Elasticsearch 8.x+ enables security by default. OpenSearch: `plugins.security.ssl.transport.*` configured. Never run with `xpack.security.enabled: false` in production → [[Security]] §8.
 - [ ] **TLS everywhere** (Transport layer (node-to-node) and HTTP layer (client-to-node). `xpack.security.transport.ssl.enabled: true` + `xpack.security.http.ssl.enabled: true`. Self-signed certs only in dev) use a real CA for production.
 - [ ] **Role-based access control (RBAC):** Roles with index privileges (`read`, `write`, `create_index`, `manage`), scoped by index pattern (`logs-*`, not `*`). App users get least privilege. No `superuser` for applications.
 - [ ] **API keys over basic auth:** `POST /_security/api_key` for service-to-service auth. Time-limited, scoped to roles, revocable. Basic auth (`username:password` in header) is legacy.
@@ -162,7 +162,7 @@ flowchart TD
 ## Sources
 
 - Complements [[Database]] (general), [[Security]] (access control), [[../infra-checklist/infra|Infrastructure]] (hosting).
-- Elasticsearch docs: https://www.elastic.co/guide/en/elasticsearch/reference/current/
+- Elasticsearch docs: https://www.elastic.co/docs/reference/elasticsearch
 - OpenSearch docs: https://opensearch.org/docs/latest/
 - Lucene: https://lucene.apache.org/core/
-- ILM: https://www.elastic.co/guide/en/elasticsearch/reference/current/index-lifecycle-management.html
+- ILM: https://www.elastic.co/docs/manage-data/lifecycle/index-lifecycle-management

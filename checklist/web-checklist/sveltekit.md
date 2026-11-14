@@ -13,7 +13,7 @@
 
 - [ ] **Scaffold:** `npx sv create`. SvelteKit is to Svelte what Next.js is to React: use it for everything except embeddable widgets and pure internal SPAs (Vite path → [[svelte]] §1).
 - [ ] **Adapter choice** (`adapter-auto` (detects environment), `adapter-node` (self-hosted Node), `adapter-vercel` / `adapter-cloudflare` / `adapter-netlify` (serverless/edge), `adapter-static` (fully static or SPA). Decide early) server features (form actions, `+server.ts`, SSR) require a non-static adapter or full prerendering.
-- [ ] **`$lib` alias:** `$lib` → `src/lib`. Shared code in `$lib/shared`, features in `$lib/features` (→ [[svelte]] §2). No deep relative imports (`../../../`) crossing feature boundaries.
+- [ ] **`#lib` alias (SvelteKit 3):** `#lib` → `src/lib`. Shared code in `#lib/shared`, features in `#lib/features` (→ [[svelte]] §2). No deep relative imports (`../../../`) crossing feature boundaries.
 - [ ] **`$env` static vs dynamic** (`$env/static/*` is inlined at build time; `$env/dynamic/*` is read at runtime. `PUBLIC_`-prefixed vars ship to the browser by design) never a secret. Private modules (`$env/static/private`, `$env/dynamic/private`) are server-only and fail the build if imported into client code.
 
 ## 2. Rendering Modes
@@ -98,7 +98,7 @@
 
 ## 11. AI/LLM Integration (Server Side)
 
-- [ ] **Streaming server routes:** Vercel AI SDK: `streamText` + `toDataStreamResponse()` in a `+server.ts` route. Client `useChat` from `@ai-sdk/svelte` parses the stream → [[svelte]] §16.
+- [ ] **Streaming server routes:** Vercel AI SDK: `streamText` + `toUIMessageStreamResponse()` in a `+server.ts` route. Client `useChat` from `@ai-sdk/svelte` parses the stream → [[svelte]] §16.
 - [ ] **Never expose provider keys:** `$env/static/public` ships to the browser. LLM keys live in `$env/static/private` / `$env/dynamic/private` only, accessed in `+server.ts` or `+page.server.ts`.
 - [ ] **Context & prompt management:** System prompts composed server-side, never in client bundles.
 - [ ] **Rate-limit AI endpoints:** Per-user limits on the streaming route (in `handle()` or the route itself); 429 UX on the client → [[svelte]] §16.

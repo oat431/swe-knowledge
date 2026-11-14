@@ -2,7 +2,7 @@
 
 > Go-specific companion to the general [Batch Processing Checklist](batch.md).
 > Idiomatic Go patterns; stdlib, goroutines, channels, context. No heavy framework needed.
-> Go 1.22+. Last updated: 2026-07-17
+> Go 1.26+. Last updated: 2026-11-14
 
 ---
 
@@ -22,7 +22,7 @@ internal/
 └── worker/                   ← Worker pool, concurrency primitives
 ```
 
-- [ ] **Go 1.22+:** Rangefunc, enhanced routing patterns, `slices`/`maps` stdlib. `go.mod` + `go.sum` committed.
+- [ ] **Go 1.26+:** Range-over-func (stable 1.23), `net/http` routing patterns (1.22), `slices`/`maps` stdlib (1.21). `go.mod` + `go.sum` committed.
 - [ ] **`cmd/` per job:** One binary per batch job. `cmd/order-sync/`, `cmd/report-gen/`. Each is independently deployable.
 - [ ] **`internal/` for private packages:** Compiler-enforced encapsulation. Shared logic in `internal/shared/` or `pkg/` if truly reusable across repos.
 - [ ] **Linter:** `golangci-lint` with strict config. Batch-critical linters: `errcheck` (never ignore errors), `bodyclose` (HTTP client leaks), `sqlclosecheck` (DB row leaks), `contextcheck`.
@@ -449,7 +449,7 @@ func TestProcessOrder(t *testing.T) {
 - [ ] **Minimal container:** Multi-stage build. Final image: `scratch` or `gcr.io/distroless/static`. Static binary. ~5-15MB image.
 
 ```dockerfile
-FROM golang:1.22-alpine AS build
+FROM golang:1.27-alpine AS build
 WORKDIR /src
 COPY go.mod go.sum ./
 RUN go mod download

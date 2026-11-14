@@ -12,11 +12,11 @@
 
 - [ ] **Use case defined before model:** What does the feature *do*: classification, extraction, chat, summarization, codegen, embedding, tool use? Each has different model families and cost profiles.
 - [ ] **Model choice deliberate:** Frontier API (GPT/Claude/Gemini) vs open-weights self-hosted (Llama/Qwen/Mistral via Ollama/vLLM) vs small local (Phi, Gemma). Trade-off: quality × cost × latency × data residency × privacy.
-- [ ] **Model version pinned** (`gpt-4o-2024-08-06`-style pins, not floating `latest`. Model updates change behavior silently) pin, test, upgrade deliberately.
+- [ ] **Model version pinned** (`model-YYYY-MM-DD`-style pins, not floating `latest`. Model updates change behavior silently) pin, test, upgrade deliberately.
 - [ ] **Fallback model defined:** Primary provider down → fallback provider/model with degraded but working UX. Circuit breaker + retry like any external dependency → [[API Launch]] resilience.
 - [ ] **Serverless/edge considered for latency:** Streaming + provider edge regions. Cold start and token TTFB (time-to-first-token) measured.
 - [ ] **Tokenizer matched to model** (Token budget calculated with the *actual model's tokenizer*, not approximations. `tiktoken` (OpenAI), `transformers.AutoTokenizer` (HuggingFace). Different tokenizers count differently) a 4096-token budget in one tokenizer may be 5200 in another. Wrong tokenizer = silent context overflow.
-- [ ] **Multi-modal considered** (Vision/audio inputs (GPT-4o vision, Claude vision): image token costs calculated (not free) a high-res image can cost 1000+ tokens), content moderation for images, latency budget for multi-modal processing.
+- [ ] **Multi-modal considered** (Vision/audio inputs (current multimodal frontier APIs and open-weights VLMs): image token costs calculated (not free) a high-res image can cost 1000+ tokens), content moderation for images, latency budget for multi-modal processing.
 
 ## 2. Prompting & Context Engineering
 
@@ -54,6 +54,7 @@
 
 - [ ] **Agent design justified** (Single-shot prompt with tools vs multi-step agent loop. Agents add latency, cost, and failure modes) use them only when the task genuinely needs iterative reasoning.
 - [ ] **Tool definitions strict:** Every tool: name, description, JSON schema, *when to use* guidance. Vague tool descriptions = wrong tool calls.
+- [ ] **MCP for external tool surfaces:** Shared tools (DB introspection, issue tracker, internal APIs) exposed via MCP servers — the cross-provider standard — with scoped tool permissions per server. Inventory what's connected; remove unused servers.
 - [ ] **Tool calls sandboxed:** Tools that execute actions (DB writes, API calls, code exec) validated and permissioned. Never give the model unfettered tools → [[Security]] §12.
 - [ ] **Max iterations bounded:** Loop limit (e.g. 5-10 steps), total token budget, timeout. Runaway agent loops are a real production incident class.
 - [ ] **Human-in-the-loop for consequential actions:** Confirm before irreversible effects (payments, deletions, sends). Agent autonomy grows with trust, not by default.
@@ -137,7 +138,7 @@
 - [ ] **Fine-tuning justified over alternatives**; tried: (1) better prompting, (2) few-shot examples, (3) RAG, (4) structured output; *before* fine-tuning? Fine-tune when: quality ceiling hit with prompting/RAG, cost reduction (small fine-tuned model ≥ large generic model), latency reduction (local small model), or domain-specific style/tone. Fine-tuning is expensive and adds lifecycle complexity; don't do it if prompt engineering solves the problem.
 - [ ] **Training data curated and quality-checked:** 500–10,000 high-quality examples > 100,000 mediocre ones. Deduplicated, balanced across classes/topics, edge cases included. Data quality is the #1 determinant of fine-tuning success. Profile the dataset before training: label distribution, length distribution, diversity.
 - [ ] **Method chosen: LoRA/QLoRA vs full fine-tune:** LoRA/QLoRA (parameter-efficient): train adapters on top of frozen base model. Cheap, fast, swappable, lower overfitting risk. Full fine-tune: update all weights. Expensive, higher capacity, higher overfitting + catastrophic forgetting risk. Start with LoRA; full fine-tune only when LoRA quality is insufficient.
-- [ ] **Base model chosen deliberately** (Open-weights base (Llama 3, Qwen 2.5, Mistral)) check license (commercial use allowed?), context window, language support (Thai?), and benchmark scores on relevant tasks. The base model's strengths/weaknesses transfer to the fine-tuned model.
+- [ ] **Base model chosen deliberately** (Open-weights base (Llama 4, Qwen 3.x, Mistral — re-check the current shortlist)) check license (commercial use allowed?), context window, language support (Thai?), and benchmark scores on relevant tasks. The base model's strengths/weaknesses transfer to the fine-tuned model.
 - [ ] **Overfitting and catastrophic forgetting checked** (Evaluate on a held-out test set (not the training set). Compare fine-tuned vs base on *general* tasks (not just the target task)) did the model forget how to do general reasoning? Trade-off: target-task improvement vs general-capability degradation. Document the acceptable degradation threshold.
 - [ ] **Evaluation comparison: base vs fine-tuned:** Run the same golden set (§5) against both. Fine-tuned must win on the target metric *and* not regress on general quality. Statistical significance (not "it feels better"). If the fine-tuned model doesn't measurably beat the base, don't deploy it.
 - [ ] **Fine-tuned model lifecycle:** Versioned in the model registry (§9). Base model version pinned (a fine-tuned model is meaningless without its base reference). Re-training trigger defined: when input drift degrades quality below threshold, when the base model gets a major update, or on a schedule (quarterly).

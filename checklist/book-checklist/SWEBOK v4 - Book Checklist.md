@@ -76,7 +76,7 @@ tags:
 | 1 | Software Engineering: A Practitioner's Approach, 9th Ed. (2019) | Roger Pressman & Bruce Maxim | 880 | 🔴 Core | ⬜ |
 | 2 | Software Modeling and Design (2011) | Hassan Gomaa | 576 | 🔴 Core | ⬜ |
 | 3 | Domain-Driven Design (2003) | Eric Evans | 560 | 🟡 Supplementary | ⬜ |
-| 4 | Formal Methods: Practice and Experience (2009) | Jim Woodcock et al. | 350 | 🟢 Deep Dive | ⬜ |
+| 4 | Formal Methods: Practice and Experience (2009) | Jim Woodcock et al. | survey paper (ACM Comput. Surv. 41(4)) — not a book; consider Software Abstractions (Daniel Jackson, 2006) instead | 🟢 Deep Dive | ⬜ |
 
 ---
 
@@ -167,7 +167,7 @@ tags:
 
 | # | Book | Author(s) | Pages | Priority | Status |
 |---|------|-----------|:-----:|:--------:|:------:|
-| 1 | CMMI: Guidelines for Process Integration and Product Improvement, 3rd Ed. (2020) | Chrissis, Konrad & Shrum | 688 | 🔴 Core | ⬜ |
+| 1 | CMMI: Guidelines for Process Integration and Product Improvement, 3rd Ed. (2020; covers CMMI v1.3 — model since moved on: ISACA, V3.0, current line CMMI AIM) | Chrissis, Konrad & Shrum | 688 | 🔴 Core | ⬜ |
 | 2 | The Rational Unified Process: An Introduction, 3rd Ed. (2003) | Philippe Kruchten | 352 | 🟡 Supplementary | ⬜ |
 | 3 | Introduction to ISO/IEC 29110 (various) | Various (ISO) | varies | 🟡 Supplementary | ⬜ |
 | 4 | Process Improvement and Organizational Learning (2014) | Thomas McGibbon | 320 | 🟢 Deep Dive | ⬜ |
@@ -192,13 +192,15 @@ tags:
 
 | Category | Total Books | Already Done |
 |----------|:-----------:|:------------:|
-| ❌ Missing (6 KAs) | 23 | 0 |
-| ⚠️ Partial (6 KAs) | 24 | 2 |
-| **Total** | **47** | **2** |
+| ❌ Missing (6 KAs) | 27 | 0 |
+| ⚠️ Partial (6 KAs) | 26 | 2 |
+| **Total** | **53** | **2** |
+
+> 53 rows, 52 unique books — *The Economics of Software Quality* is listed under both KA 15 and KA 12.
 
 ### Top 15: Start Here
 
-If starting from scratch, grab these **one per gap:**
+If starting from scratch, grab these — one pick per gap (06, 08 and 11 get two):
 
 | # | KA | Book | Pages | Priority |
 |---|-----|------|:-----:|:--------:|

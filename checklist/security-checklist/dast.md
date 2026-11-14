@@ -24,7 +24,7 @@
 | **Burp Suite Community** | Intercepting proxy + manual | Manual exploration, ad-hoc testing | Free |
 | **Burp Suite Professional** | DAST + manual + extensions | Professional pentest, crawl-and-scan | Paid |
 | **Nuclei** | Template-based scanner | Fast, targeted checks for known patterns | Free |
-| **Salt/Noname/42Crunch** | API-specific DAST | API security testing (API1–API10) | Paid |
+| **Salt Security / Akamai API Security (formerly Noname) / 42Crunch** | API-specific DAST | API security testing (API1–API10) | Paid |
 
 - [ ] **Start with ZAP:** Free, CI-friendly, covers the OWASP Top 10. Sufficient for most small-to-medium teams.
 - [ ] **Add Nuclei for targeted checks:** Template-based, fast, good for checking known CVEs/misconfigurations across the attack surface.
@@ -74,7 +74,7 @@
       steps:
         - uses: actions/checkout@v4
         - name: ZAP Baseline Scan
-          uses: zaproxy/action-baseline@v0.13.0
+          uses: zaproxy/action-baseline@v0.15.0
           with:
             target: https://staging.example.com
             cmd_options: '-a -j'  # Active rules + AJAX spider

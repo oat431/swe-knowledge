@@ -60,7 +60,7 @@
 | **External firm** | Unbiased, experienced, brings fresh perspectives, compliance-accepted | Cost ($15K–$50K+), scheduling lead time |
 | **Internal team** | Deep system knowledge, cheaper, faster turnaround | Blind spots (test what they built), bias |
 | **Bug bounty** | Continuous, crowd-sourced, pay-for-results | Noise (low-quality reports), needs triage capacity, no guaranteed coverage |
-| **CrowdStrike/F-Secure/etc.** | Structured, automated pentest platforms | May lack depth of a human-driven test |
+| **CrowdStrike/WithSecure (formerly F-Secure)/etc.** | Structured, automated pentest platforms | May lack depth of a human-driven test |
 
 - [ ] **External for launch / annual:** An unbiased external tester is the gold standard. Required for compliance (SOC 2, PCI-DSS).
 - [ ] **Internal for iterative checks:** Between external pentests, the internal team runs targeted checks on new features.

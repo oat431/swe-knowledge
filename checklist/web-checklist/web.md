@@ -83,7 +83,7 @@
 ## 8. Styling & Design
 
 - [ ] **Utility-first CSS:** Tailwind CSS (framework-agnostic), UnoCSS (faster, flexible), or vanilla CSS with utility classes. Consistent spacing, typography, colors, without naming 500 classes.
-- [ ] **Component primitives:** Don't build your own modal, dropdown, tooltip, or combobox. Use headless, accessible components: Radix (React), Headless UI (React/Vue), Melt UI (Svelte), Floating UI for positioning. Copy-paste styled versions (shadcn/ui pattern) over npm dependency.
+- [ ] **Component primitives:** Don't build your own modal, dropdown, tooltip, or combobox. Use headless, accessible components: Radix (React), Headless UI (React/Vue), Bits UI (Svelte; Melt UI is unmaintained), Floating UI for positioning. Copy-paste styled versions (shadcn/ui pattern) over npm dependency.
 - [ ] **Design tokens:** CSS custom properties for colors, spacing, radius, shadows, typography. Single source of truth. Dark mode via `prefers-color-scheme` or class toggle.
 - [ ] **Responsive design:** Mobile-first breakpoints. Test at actual device widths (375px, 414px, 768px, 1024px, 1440px). `min-width` media queries, not `max-width`.
 - [ ] **Layout primitives:** `<Container>`, `<Stack>`, `<Grid>`, `<Flex>` wrapper components. Consistent max-widths, gutters, alignment. Not ad-hoc margins on every element.
@@ -266,7 +266,7 @@ flowchart LR
 > ⚠️ SSR is not free: per-request server compute, a running Node process (or serverless functions), and cache-invalidation complexity. Choose it deliberately (web.md §3), not by default.
 
 ### React: [[react]] + [[next]]
-- **Meta-frameworks:** Next.js (App Router → [[next]]), Remix, React Router 7 (framework mode)
+- **Meta-frameworks:** Next.js (App Router → [[next]]), React Router 8 (framework mode, successor to Remix)
 - **State:** TanStack Query + Zustand
 - **Forms:** React Hook Form + Zod
 - **Styling:** Tailwind + shadcn/ui + Radix
@@ -283,7 +283,7 @@ flowchart LR
 - **Meta-frameworks:** SvelteKit (filesystem router, SSR/SSG/SPA → [[sveltekit]])
 - **State:** TanStack Query (Svelte adapter) + Svelte stores (built-in)
 - **Forms:** Felte + Zod, Superforms (SvelteKit server actions)
-- **Styling:** Tailwind + Melt UI + shadcn-svelte
+- **Styling:** Tailwind + Bits UI + shadcn-svelte
 - **Testing:** Vitest + Svelte Testing Library + Playwright
 
 ### Angular: [[angular]] (single file, SSR built in)
@@ -291,7 +291,7 @@ flowchart LR
 - **State:** TanStack Query (Angular adapter) + Signals (built-in) + NgRx (if complex)
 - **Forms:** Angular Reactive Forms + Zod
 - **Styling:** Tailwind + Angular CDK (headless primitives)
-- **Testing:** Jasmine/Karma (default) or Jest/Vitest + Testing Library + Playwright
+- **Testing:** Vitest (default `ng test`) + Testing Library + Playwright (Karma/Jasmine is legacy)
 
 ### Solid / Qwik / Astro
 - **Solid:** TanStack Query (Solid adapter) + signals (built-in). Vite-based.

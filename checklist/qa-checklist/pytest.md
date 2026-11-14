@@ -1,7 +1,7 @@
 # Pytest Checklist
 
 > Comprehensive Python testing with pytest. Covers fixtures, parametrize, markers, plugins, coverage, and patterns.
-> Companion to the general [QA checklist](qa.md). For Python 3.10+ projects including AI/ML workloads.
+> Companion to the general [QA checklist](qa.md). For Python 3.11+ projects including AI/ML workloads.
 > Last updated: 2026-08-07
 
 ---
@@ -14,7 +14,7 @@
   uv add --dev pytest-cov          # Coverage reporting
   uv add --dev pytest-xdist        # Parallel test execution
   uv add --dev pytest-mock         # Mocking via mocker fixture
-  uv add --dev pytest-asyncio      # Async test support (asyncio, trio)
+  uv add --dev pytest-asyncio      # Async test support (asyncio; trio via anyio)
   uv add --dev pytest-randomly     # Randomize test order (catch hidden dependencies)
   uv add --dev pytest-timeout      # Kill tests that hang
   ```
@@ -533,7 +533,7 @@
   - name: Run tests with coverage
     run: pytest --cov=src --cov-report=xml
   - name: Upload to Codecov
-    uses: codecov/codecov-action@v4
+    uses: codecov/codecov-action@v7
     with:
       file: ./coverage.xml
   ```
@@ -681,7 +681,7 @@
 
   @pytest.fixture(scope="session")
   def postgres_url():
-      with PostgresContainer("postgres:16") as pg:
+      with PostgresContainer("postgres:18") as pg:
           yield pg.get_connection_url()
   ```
 - [ ] **Freezegun for time-dependent tests:**

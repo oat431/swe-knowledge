@@ -2,7 +2,7 @@
 
 > NestJS-specific companion to the general [Batch Processing Checklist](batch.md).
 > TypeScript + NestJS standalone mode, BullMQ for queues, @nestjs/schedule for cron.
-> NestJS 10+, Node 20+. Last updated: 2026-07-17
+> NestJS 12+, Node 22+ (LTS; Node 20 EOL 2026-04-30). Last updated: 2026-11-14
 
 ---
 
@@ -703,14 +703,14 @@ export default registerAs('batch', () => {
 - [ ] **Dockerfile per entry point:** Same image, different CMD. Or separate images if resource profiles differ.
 
 ```dockerfile
-FROM node:20-alpine AS build
+FROM node:24-alpine AS build
 WORKDIR /app
 COPY package.json pnpm-lock.yaml ./
 RUN corepack enable && pnpm install --frozen-lockfile
 COPY . .
 RUN pnpm build
 
-FROM node:20-alpine
+FROM node:24-alpine
 WORKDIR /app
 COPY --from=build /app/dist ./dist
 COPY --from=build /app/node_modules ./node_modules

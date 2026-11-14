@@ -139,7 +139,7 @@ src/
 
 ## 13. Swagger / OpenAPI
 
-- [ ] **`@nestjs/swagger`** (`SwaggerModule.createDocument(app, config)`. `SwaggerModule.setup('api/docs', app, document)`. Target OpenAPI 3.1 (JSON Schema 2020-12)) supported since `@nestjs/swagger` v11 (`DocumentBuilder.setOpenAPIVersion('3.1.0')`).
+- [ ] **`@nestjs/swagger`** (`SwaggerModule.createDocument(app, config)`. `SwaggerModule.setup('api/docs', app, document)`. Target OpenAPI 3.1 (JSON Schema 2020-12)) supported since `@nestjs/swagger` v11 (`DocumentBuilder.setOpenAPIVersion('3.1.0')`). OpenAPI 3.2 is current (Sept 2025), but `@nestjs/swagger` still emits 3.1 — switch when the generator emits 3.2.
 - [ ] **`@ApiProperty()` on DTOs:** type, example, description, required/optional. This IS your API documentation.
 - [ ] **`@ApiBearerAuth()`:** marks endpoints needing JWT. Global via `addBearerAuth()` in swagger config.
 - [ ] **`@ApiTags('Users')` on controllers:** groups endpoints in Swagger UI.
@@ -165,7 +165,7 @@ src/
 > 🤖 **NestJS service calling an LLM** (OpenAI, Anthropic, local models, RAG pipelines): ✅ mandatory.
 > 🧱 **Pure CRUD NestJS API with no AI features:** ❌ skip this section.
 
-- [ ] **Library choice** (`openai` (official SDK, TypeScript-native), `@langchain/community` + `langchain` for orchestration/chains, `@xenova/transformers` for local inference, or `@ai-sdk/core` (Vercel AI SDK) for streaming UI patterns. Pick one) don't mix.
+- [ ] **Library choice** (`openai` (official SDK, TypeScript-native), `@langchain/community` + `langchain` for orchestration/chains, `@huggingface/transformers` for local inference, or `@ai-sdk/core` (Vercel AI SDK) for streaming UI patterns. Pick one) don't mix.
 - [ ] **LLM service as `@Injectable()` provider:** Wrap LLM calls in a dedicated service (e.g., `AiService`). Inject via DI so it's mockable in tests. Never call the SDK directly from controllers.
 - [ ] **Prompt injection prevention:** Never concatenate `req.body` into system prompts. Use template literals with explicit delimiter boundaries. Sanitize user input before it reaches any prompt template. If using function calling / tool use: validate every argument server-side before executing the tool.
 - [ ] **Output validation & sanitization:** LLM output is non-deterministic. Use OpenAI's `response_format: { type: 'json_object' }` or structured output with Zod schemas. Validate parsed output before returning to the client. Sanitize before rendering (XSS).
@@ -175,7 +175,7 @@ src/
 - [ ] **RAG pipeline:** `@nestjs/terminus` health check on vector DB (pgvector, Qdrant, Pinecone). Ground responses in retrieved documents. Cite sources. Log retrieval context alongside generated output for debugging.
 - [ ] **Content safety:** Use OpenAI Moderation API or custom filters before sending user input to the model. Redact PII from prompts. Screen output for toxicity/harmful content before returning.
 - [ ] **LLM-specific observability:** Log via NestJS `Logger`: model, prompt template version, token counts (in/out), latency, cost per call. Trace the full chain: request → retrieval → prompt assembly → model call → validation → response. A/B test prompt versions.
-- [ ] **PII in prompts:** Know what sensitive data leaves your infrastructure. Strip PII before sending to third-party LLMs. Use `@nestjs/config` for data processing agreement metadata. Consider `@xenova/transformers` for on-prem inference on sensitive workloads.
+- [ ] **PII in prompts:** Know what sensitive data leaves your infrastructure. Strip PII before sending to third-party LLMs. Use `@nestjs/config` for data processing agreement metadata. Consider `@huggingface/transformers` (formerly `@xenova/transformers`) for on-prem inference on sensitive workloads.
 
 ---
 

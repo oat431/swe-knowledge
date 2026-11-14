@@ -233,7 +233,7 @@ class ApiResult<T> with _$ApiResult<T> {
 - [ ] **Drift:** Type-safe SQLite with reactive queries. For structured relational data. Supports migrations, DAOs, complex queries.
 - [ ] **SharedPreferences:** Simple key-value (settings, flags). Not for sensitive data.
 - [ ] **flutter_secure_storage:** Tokens, credentials. Uses Keychain (iOS) / Keystore (Android) under the hood.
-- [ ] **Hive / Isar:** Fast NoSQL local storage for caching, non-relational data.
+- [ ] **Hive / Isar (unmaintained since 2023):** Don't start new code on them (violates the §13 audit rule). Prefer `hive_ce` (maintained Hive fork) or `drift` for local storage/caching.
 - [ ] **Cache strategy:** Cache API responses locally. Show cached data immediately, refresh in background (stale-while-revalidate). Riverpod's `keepAlive` + `ref.invalidate()` pattern.
 - [ ] **Data migration:** Drift schema versioning with `MigrationStrategy`. Test upgrades from oldest supported version. Never lose user data.
 
@@ -293,7 +293,7 @@ blocTest<AuthBloc, AuthState>(
 );
 ```
 
-- [ ] **Golden tests:** `golden_toolkit` for visual regression (screenshot comparison). Catch unintended UI changes.
+- [ ] **Golden tests:** `flutter_test`'s built-in `matchesGoldenFile` for visual regression (screenshot comparison). `golden_toolkit` is unmaintained (since 2023) — don't use it for new suites. Catch unintended UI changes.
 - [ ] **Integration tests:** `integration_test` package for full app flows on emulator/device.
 - [ ] **E2E on real devices:** Patrol (native interactions, permissions, notifications) or Maestro (YAML-based, cross-platform).
 - [ ] **CI:** Unit + widget tests on every PR. Integration tests nightly. Golden tests on merge to main.
@@ -316,6 +316,7 @@ blocTest<AuthBloc, AuthState>(
 - [ ] **Image caching:** `cached_network_image`. Resize server-side. Use `Image.asset` for bundled images with correct resolution (`@2x`, `@3x`).
 - [ ] **Reduce app size** (`--split-debug-info=build/symbols`, `--obfuscate`, tree-shake unused Material icons (`--no-tree-shake-icons` is the opposite) avoid it), deferred imports for large features.
 - [ ] **Isolates for heavy computation:** `Isolate.run()` or `compute()` for JSON parsing, image processing, crypto. Don't block the UI thread. 16ms frame budget.
+- [ ] **Impeller:** Default renderer since Flutter 3.27 (iOS and Android 29+), and the only engine on iOS. Skia-era shader-jank workarounds (shader warm-up, SkSL bundles) don't apply.
 
 ## 11. Security
 
@@ -323,7 +324,7 @@ blocTest<AuthBloc, AuthState>(
 - [ ] **Certificate pinning:** Dio + custom `SecurityContext` or `dio_http2_adapter`. Pin public key hash, not certificate (easier rotation).
 - [ ] **Obfuscation:** `--obfuscate --split-debug-info=build/symbols` on release builds. Makes reverse engineering harder.
 - [ ] **No secrets in Dart code:** API keys via `--dart-define=API_KEY=xxx` injected at build time. Access: `const String.fromEnvironment('API_KEY')`. Never committed to source.
-- [ ] **Root/jailbreak detection:** `flutter_jailbreak_detection` for banking/fintech apps. Decide policy: warn, degrade, or block.
+- [ ] **Root/jailbreak detection:** `flutter_jailbreak_detection` (unmaintained since 2023 — prefer a maintained fork or platform channels) for banking/fintech apps. Decide policy: warn, degrade, or block.
 - [ ] **ProGuard/R8:** Enabled for Android release builds. Shrink, obfuscate, optimize. Configure `proguard-rules.pro` for keep rules (Firebase, reflection-based libs).
 
 ## 12. Build & Release
@@ -374,8 +375,8 @@ blocTest<AuthBloc, AuthState>(
 | **Network** | `dio` + `retrofit` | `http` (simple cases) |
 | **Models** | `freezed` + `json_serializable` | `json_annotation` only |
 | **Storage (SQL)** | `drift` | `sqflite` |
-| **Storage (KV)** | `shared_preferences`, `flutter_secure_storage` | `hive` |
-| **Testing** | `mocktail`, `bloc_test`, `golden_toolkit` | `mockito` |
+| **Storage (KV)** | `shared_preferences`, `flutter_secure_storage` | `hive_ce` (maintained Hive fork) |
+| **Testing** | `mocktail`, `bloc_test` (+ `matchesGoldenFile`) | `mockito` |
 | **E2E** | `patrol` | `maestro`, `integration_test` |
 | **UI** | `responsive_framework`, `cached_network_image` | `flutter_screenutil` |
 | **Platform** | `permission_handler`, `firebase_messaging` | `app_links`, `local_auth` |

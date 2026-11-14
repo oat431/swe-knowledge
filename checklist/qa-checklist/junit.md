@@ -1,6 +1,6 @@
-# JUnit 5 Testing Checklist
+# JUnit 6 Testing Checklist
 
-> The **Java/JVM testing framework** checklist; JUnit Jupiter (JUnit 5) patterns, lifecycle, assertions, and ecosystem integration.
+> The **Java/JVM testing framework** checklist; JUnit Jupiter (JUnit 6) patterns, lifecycle, assertions, and ecosystem integration.
 > Horizontal: applies to any Java/Kotlin project, Spring Boot, Micronaut, Quarkus, plain JVM.
 > Complements [[QA]] (test strategy, pyramid, shift-left), [[Release]] (CI test gates), and the domain checklists' testing sections.
 > Stack note: Panomete Platform runs Spring Boot 4.1; §6 (Spring Boot Test) and §4 (TestContainers) are critical path.
@@ -65,13 +65,13 @@
 
 ## 4. TestContainers Integration
 
-- [ ] **TestContainers dependency configured:** `org.testcontainers:testcontainers`, `org.testcontainers:junit-jupiter`, and the module for your database (`org.testcontainers:postgresql`). Version managed via BOM.
+- [ ] **TestContainers dependency configured** (Testcontainers 2.x: module artifacts carry the `testcontainers-` prefix): `org.testcontainers:testcontainers`, `org.testcontainers:testcontainers-junit-jupiter`, and the module for your database (`org.testcontainers:testcontainers-postgresql`). Version managed via the 2.x BOM.
 - [ ] **@Testcontainers + @Container on the class:** `@Testcontainers` on the test class, `@Container` on the `static` container field. Container lifecycle managed by JUnit extension.
 - [ ] **Containers started once, shared across tests** (`static final` container with `@BeforeAll` startup. Avoid per-test container restart) 30-second container starts kill suite speed.
 - [ ] **Dynamic datasource configuration:** `@DynamicPropertySource` (Spring) or `@Testcontainers` JUnit integration to inject container host/port into application config. No hardcoded ports.
-- [ ] **PostgreSQL / MySQL container for DB tests:** Real database engine, not H2. Schema compatibility, constraint behavior, and SQL dialect match production. `PostgreSQLContainer<>("postgres:16")`.
+- [ ] **PostgreSQL / MySQL container for DB tests:** Real database engine, not H2. Schema compatibility, constraint behavior, and SQL dialect match production. `PostgreSQLContainer<>("postgres:18")`.
 - [ ] **Redis / Kafka / RabbitMQ containers for middleware:** `GenericContainer` or module-specific containers for integration tests that touch message brokers or caches.
-- [ ] **Docker Compose integration:** `@Testcontainers` with `DockerComposeContainer` for multi-service setups. Matches docker-compose.yml used in dev/staging environments.
+- [ ] **Docker Compose integration:** `@Testcontainers` with `ComposeContainer` (Testcontainers 2.x; replaces the removed `DockerComposeContainer`) for multi-service setups. Matches docker-compose.yml used in dev/staging environments.
 - [ ] **Container reuse across test classes:** `testcontainers.reuse.enable=true` in `.testcontainers.properties` + `.withReuse(true)` on containers. Containers persist between test class runs during development (CI always cleans up).
 - [ ] **Wait strategies configured:** `.waitingFor(Wait.forHttp("/health").forPort(8080))` to ensure containers are ready before tests run. No arbitrary `Thread.sleep()`.
 - [ ] **Init scripts for schema seeding:** `.withInitScript("schema.sql")` or `.withCopyFileToContainer()` for pre-populating containers with schema and seed data.
@@ -100,14 +100,13 @@
 - [ ] **@SpringBootTest(webEnvironment = RANDOM_PORT):** Starts embedded server on random port for HTTP-level integration tests. `TestRestTemplate` or `WebTestClient` for requests.
 - [ ] **@SpringBootTest(webEnvironment = DEFINED_PORT) avoided:** Hardcoded ports conflict in parallel execution. Always RANDOM_PORT unless testing port-specific configuration.
 - [ ] **@ActiveProfiles for test configuration:** `@ActiveProfiles("test")` loads `application-test.yml`. Test-specific DB URLs, feature flags, reduced logging. Never use default profile in tests.
-- [ ] **@TestPropertySource for overrides:** `@TestPropertySource(properties = {"spring.datasource.url=jdbc:tc:postgresql:16:///testdb"})` for inline config overrides.
+- [ ] **@TestPropertySource for overrides:** `@TestPropertySource(properties = {"spring.datasource.url=jdbc:tc:postgresql:18:///testdb"})` for inline config overrides.
 - [ ] **@DirtiesContext used sparingly** (`@DirtiesContext(classMode = AFTER_CLASS)` when a test modifies the ApplicationContext. Context reload is expensive) minimize use.
-- [ ] **@MockBean for replacing Spring beans:** `@MockBean PaymentGateway gateway;` replaces the real bean in the context with a Mockito mock. Used for external service isolation in integration tests.
-- [ ] **@SpyBean for partial bean mocking:** `@SpyBean AuditService audit;` wraps the real bean, allowing selective stubbing while preserving real behavior for other methods.
+- [ ] **@MockitoBean / @MockitoSpyBean for Spring bean mocking:** `@MockitoBean PaymentGateway gateway;` replaces the real bean in the context with a Mockito mock; `@MockitoSpyBean AuditService audit;` wraps the real bean for selective stubbing. Used for external service isolation in integration tests. (The old `@MockBean`/`@SpyBean` were removed in Spring Boot 4.)
 
 ### 6.2 Slice Testing
 
-- [ ] **@WebMvcTest for controller layer** (Loads only the web layer (controllers, @ControllerAdvice, filters). No service/repository beans) use `@MockBean` for dependencies. Fast, focused.
+- [ ] **@WebMvcTest for controller layer** (Loads only the web layer (controllers, @ControllerAdvice, filters). No service/repository beans) use `@MockitoBean` for dependencies. Fast, focused.
 - [ ] **@DataJpaTest for repository layer:** Loads only JPA repositories, entities, and an embedded/test DB. Auto-configures `TestEntityManager`. `@AutoConfigureTestDatabase(replace = NONE)` to use TestContainers instead of H2.
 - [ ] **@JsonTest for JSON serialization:** Loads only Jackson configuration. Tests `@JsonFormat`, custom serializers/deserializers, and DTO mapping without the full context.
 - [ ] **@RestClientTest for REST clients:** Tests `RestClient`/`RestTemplate` configuration with `MockRestServiceServer`. Validates request building, headers, error handling.
@@ -148,7 +147,7 @@
 
 ## 9. Advanced Patterns
 
-- [ ] **Custom JUnit 5 extensions:** `@ExtendWith` for cross-cutting test concerns: timing, logging, database reset, API rate limiting. Extensions compose better than base classes.
+- [ ] **Custom JUnit 6 extensions:** `@ExtendWith` for cross-cutting test concerns: timing, logging, database reset, API rate limiting. Extensions compose better than base classes.
 - [ ] **@RegisterExtension for programmatic extensions:** `@RegisterExtension static MyExtension ext = new MyExtension();` when the extension needs constructor configuration.
 - [ ] **Test fixtures / builders** (`UserBuilder.aUser().withName("John").withEmail("john@test.com").build()`) fluent builders for test data. Eliminates constructor sprawl and makes intent clear.
 - [ ] **ArchUnit for architecture tests:** `@ArchTest` rules that enforce package dependencies, naming conventions, annotation usage. `noClasses().that().resideInAPackage("..service..").should().accessClassesThat().resideInAPackage("..controller..")`.
@@ -183,7 +182,7 @@
 - [ ] Assertions use AssertJ or JUnit Jupiter (no mixing, no Hamcrest in new code)
 - [ ] Integration tests use TestContainers, not H2
 - [ ] Spring tests use slice annotations (`@WebMvcTest`, `@DataJpaTest`) where possible
-- [ ] `@MockBean` / `@SpyBean` only in integration tests, `@Mock` in unit tests
+- [ ] `@MockitoBean` / `@MockitoSpyBean` only in integration tests, `@Mock` in unit tests
 - [ ] JaCoCo coverage ≥ 80% on business logic packages
 - [ ] No `Thread.sleep()`: use Awaitility or wait strategies
 - [ ] Parameterized tests replace duplicated test methods
@@ -247,7 +246,7 @@ flowchart TD
 | 3 | Parameterized Tests | ❌ | 🟡 @ValueSource | ✅ + @CsvSource | ✅ + @EnumSource | ✅ + @MethodSource | ✅ + @ArgumentsSource | ✅ + exhaustive |
 | 4 | TestContainers | ❌ | 🟡 single DB | ✅ + middleware | ✅ + compose | ✅ + reuse | ✅ + CI-integrated | ✅ + prod-parity |
 | 5 | Mockito | 🟡 basic mock | 🟡 + verify | ✅ + strict stubs | ✅ + captor | ✅ + Answer | ✅ + custom ext | ✅ + formal |
-| 6 | Spring Boot Test | ❌ | 🟡 @SpringBootTest | ✅ + slice tests | ✅ + @MockBean | ✅ + @WebMvcTest full | ✅ + profiles | ✅ + audit trail |
+| 6 | Spring Boot Test | ❌ | 🟡 @SpringBootTest | ✅ + slice tests | ✅ + @MockitoBean | ✅ + @WebMvcTest full | ✅ + profiles | ✅ + audit trail |
 | 7 | Coverage (JaCoCo) | ❌ | ❌ | 🟡 basic report | ✅ 80% threshold | ✅ + diff coverage | ✅ + SonarQube | ✅ + regulatory |
 | 8 | Parallel Execution | ❌ | ❌ | ❌ | 🟡 classes parallel | ✅ + @ResourceLock | ✅ + CI sharding | ✅ + deterministic |
 | 9 | Advanced Patterns | ❌ | ❌ | 🟡 builders | 🟡 + ArchUnit | ✅ + Awaitility + PIT | ✅ + @TestFactory | ✅ + formal V&V |
@@ -258,7 +257,7 @@ flowchart TD
 ## Sources
 
 - Complements [[qa]] (test strategy & pyramid), [[Release]] (CI test gates), [[Security]] (SAST/DAST).
-- JUnit 5 User Guide: https://junit.org/junit5/docs/current/user-guide/
+- JUnit 6 User Guide: https://junit.org/junit5/docs/current/user-guide/ (the URL redirects to the 6.x docs)
 - Spring Boot Testing: https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#features.testing
 - TestContainers: https://www.testcontainers.org/
 - AssertJ: https://assertj.github.io/doc/

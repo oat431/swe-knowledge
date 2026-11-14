@@ -41,7 +41,7 @@
 - [ ] **Named volumes:** `volumes: data:/var/lib/service`. Not bind mounts to random directories. Organized, predictable, easy to backup.
 - [ ] **Restart policy:** `restart: unless-stopped` for all services. Survives reboots. Only manually stopped services stay down.
 - [ ] **Resource limits:** `mem_limit` and `cpus` in compose. One misbehaving container shouldn't OOM-kill everything else.
-- [ ] **Container updates:** Watchtower (auto-update, risky but convenient) or manual `docker compose pull && docker compose up -d`. Pin image tags for critical services (not `:latest`).
+- [ ] **Container updates:** Manual `docker compose pull && docker compose up -d`, or update notifications via diun / What's Up Docker (Watchtower is archived and unmaintained). Pin image tags for critical services (not `:latest`).
 - [ ] **Docker network isolation:** Create custom networks per stack. Services only communicate with what they need. Default bridge network = everything can talk to everything.
 - [ ] **Portainer (optional):** Web UI for Docker management. Useful for quick overview, logs, container restarts. Not a replacement for compose files.
 
@@ -60,7 +60,7 @@
 - [ ] **System metrics:** Prometheus + Node Exporter (CPU, RAM, disk, network, temperature). Or Netdata for zero-config instant monitoring.
 - [ ] **Container metrics:** cAdvisor for per-container resource usage. Know which service is eating your RAM.
 - [ ] **Dashboards:** Grafana for visualization. Pre-built dashboards for Node Exporter, Docker, Traefik. Accessible at `grafana.home.lab`.
-- [ ] **Log aggregation:** Loki + Promtail (lightweight, Grafana-native) or Dozzle (simple Docker log viewer). Centralized logs = don't SSH into each container to debug.
+- [ ] **Log aggregation:** Loki + Grafana Alloy (lightweight, Grafana-native; Promtail reached EOL 2026-03-02 — migrate with Grafana's Promtail→Alloy converter) or Dozzle (simple Docker log viewer). Centralized logs = don't SSH into each container to debug.
 - [ ] **Uptime monitoring:** Uptime Kuma (self-hosted). Monitors all your services. Alerts via Telegram/Discord/email when something goes down.
 - [ ] **Alerting:** Grafana alerts or Uptime Kuma notifications. Service down → notification within 1 minute. Disk > 80% → warning. Temperature spike → alert.
 - [ ] **Health checks in compose:** `healthcheck` directive in docker-compose. Docker marks unhealthy containers. Integrates with monitoring.
@@ -189,7 +189,7 @@ flowchart TB
         TS["Tailscale\nMesh VPN"]
     end
 
-    subgraph Server["🖥️ Ubuntu 24.04 LTS - panomete\ni7-7700HQ · 36GB RAM · NVMe"]
+    subgraph Server["🖥️ Ubuntu 24.04 LTS (supported to 2029; 26.04 LTS is current) - panomete\ni7-7700HQ · 36GB RAM · NVMe"]
         direction TB
 
         subgraph Edge["Edge Layer"]

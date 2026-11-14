@@ -1,13 +1,13 @@
 # Fiber v3 API Checklist
 
 > Go + Fiber v3 specific companion to [[api]]. Tick the general checklist first, then this one for Fiber-specific concerns.
-> Fiber v3 requires Go 1.22+. Last updated: 2026-09-14; synced with [[api]] 2026-09-14 additions (RFC 9457 error format, rate-limit headers, HTTP caching semantics, OpenAPI 3.1 + spec CI, X-Request-ID propagation, mutation testing).
+> Fiber v3 requires Go 1.26+. Last updated: 2026-09-14; synced with [[api]] 2026-09-14 additions (RFC 9457 error format, rate-limit headers, HTTP caching semantics, OpenAPI 3.1 + spec CI, X-Request-ID propagation, mutation testing).
 
 ---
 
 ## 1. Project Setup
 
-- [ ] **Go 1.22+:** Fiber v3 minimum. `go mod init github.com/you/project`
+- [ ] **Go 1.26+:** Fiber v3 minimum. `go mod init github.com/you/project`
 - [ ] **Module path:** lowercase, no underscores, follows `domain.com/user/repo` convention
 - [ ] **`go.sum` committed:** reproducible builds
 - [ ] **Linter:** `golangci-lint` with `.golangci.yml`. At minimum: `errcheck`, `gosimple`, `govet`, `ineffassign`, `staticcheck`, `unused`
@@ -166,7 +166,7 @@ RequestID → Logger → Recover → Helmet → CORS → Compress → RateLimite
 
 ## 13. OpenAPI / Swagger
 
-- [ ] **swaggo/swag** (`go install github.com/swaggo/swag/cmd/swag@latest`. Annotations on handlers: `@Summary`, `@Param`, `@Success`, `@Failure`, `@Router`. Target **OpenAPI 3.1** (JSON Schema 2020-12)) generate with `swag init --v3.1`.
+- [ ] **swaggo/swag** (OpenAPI 3 output ships only in swag v2 (pre-release): `go install github.com/swaggo/swag/v2/cmd/swag@latest`; stable swag v1 emits Swagger 2.0 and has no `--v3.1` flag. Annotations on handlers: `@Summary`, `@Param`, `@Success`, `@Failure`, `@Router`. Target **OpenAPI 3.1** (JSON Schema 2020-12)) generate per the swag v2 docs.
 - [ ] **swag init:** `swag init -g cmd/server/main.go -o docs/`. Generates `docs/` (commit it).
 - [ ] **gofiber/swagger:** `fiber/middleware/swagger`. `app.Get("/swagger/*", swagger.HandlerDefault)`. Serves Swagger UI from generated `docs/`.
 - [ ] **`@Security ApiKeyAuth`:** marks endpoints needing JWT. `@SecurityDefinitions` in main.go for global auth scheme.
@@ -175,7 +175,7 @@ RequestID → Logger → Recover → Helmet → CORS → Compress → RateLimite
 
 ## 14. Build & Deploy
 
-- [ ] **Multi-stage Dockerfile:** `golang:1.22-alpine` build, `scratch` or `alpine:3.20` runtime. `CGO_ENABLED=0` for static binary.
+- [ ] **Multi-stage Dockerfile:** `golang:1.27-alpine` build, `scratch` or `alpine:3.20` runtime. `CGO_ENABLED=0` for static binary.
 - [ ] **Binary size:** `-ldflags="-s -w"` strips debug info. `upx` if you need smaller.
 - [ ] **`GOOS` / `GOARCH`:** cross-compile: `GOOS=linux GOARCH=amd64 go build`. CI matrix for target platforms.
 - [ ] **Health check endpoint:** Docker/K8s probes hit `/health`. Return 200 only when app is ready.

@@ -2,7 +2,7 @@
 
 > The **Cypress-specific** checklist, a deep dive into the Cypress framework for end-to-end and component testing.
 > Companion to the general [[qa]] checklist (§4 E2E Testing). Compare with [[playwright]] when choosing a framework.
-> Covers Cypress 13+, Component Testing, Cypress Cloud, and cypress-image-snapshot.
+> Covers Cypress 16, Component Testing, Cypress Cloud, and cypress-image-snapshot.
 > Last updated: 2026-08-07
 
 ---
@@ -234,7 +234,7 @@
 
 ## 6. Authentication & Session Management
 
-- [ ] **`cy.session()` for login caching:** Cache authenticated state across tests (Cypress 12+):
+- [ ] **`cy.session()` for login caching:** Cache authenticated state across tests:
   ```js
   Cypress.Commands.add('login', (email, password) => {
     cy.session([email, password], () => {
@@ -301,7 +301,7 @@
     matrix:
       containers: [1, 2, 3, 4]
   steps:
-    - uses: cypress-io/github-action@v6
+    - uses: cypress-io/github-action@v7
       with:
         record: true
         parallel: true
@@ -367,7 +367,7 @@
 ## 9. CI Integration
 
 - [ ] **Headless run:** `npx cypress run` (no GUI). Default browser: Electron. Specify: `--browser chrome` or `--browser firefox`.
-- [ ] **Official GitHub Action:** `cypress-io/github-action@v6`:
+- [ ] **Official GitHub Action:** `cypress-io/github-action@v7`:
   ```yaml
   name: E2E Tests
   on: [push]
@@ -375,8 +375,8 @@
     cypress-run:
       runs-on: ubuntu-latest
       steps:
-        - uses: actions/checkout@v4
-        - uses: cypress-io/github-action@v6
+        - uses: actions/checkout@v7
+        - uses: cypress-io/github-action@v7
           with:
             start: npm run dev
             wait-on: 'http://localhost:3000'
@@ -394,16 +394,16 @@
   ```
 - [ ] **Docker image:** Use `cypress/browsers` or `cypress/included` images for consistent CI environments:
   ```yaml
-  container: cypress/browsers:node-20.9.0-chrome-118.0.5993.88-1-ff-118.0.2-edge-118.0.2088.46-1
+  container: cypress/browsers:node-26.13.1-chrome-157.0.8103.50-1-ff-160.0-edge-157.0.4341.46-1
   ```
 - [ ] **Artifacts on failure:** Upload screenshots and videos:
   ```yaml
-  - uses: actions/upload-artifact@v4
+  - uses: actions/upload-artifact@v7
     if: failure()
     with:
       name: cypress-screenshots
       path: cypress/screenshots
-  - uses: actions/upload-artifact@v4
+  - uses: actions/upload-artifact@v7
     if: failure()
     with:
       name: cypress-videos
@@ -494,7 +494,7 @@
   cy.on('window:alert', cy.stub().as('alert'));
   // Later: cy.get('@alert').should('have.been.calledWith', 'Saved!');
   ```
-- [ ] **File upload:** `cy.get('input[type=file]').selectFile('cypress/fixtures/image.png')` (Cypress 9.3+).
+- [ ] **File upload:** `cy.get('input[type=file]').selectFile('cypress/fixtures/image.png')`.
 - [ ] **iframes:** Use `cypress-iframe` plugin or `cy.get('iframe').its('0.contentDocument.body')`:
   ```js
   cy.get('iframe').its('0.contentDocument').should('exist')
@@ -565,13 +565,14 @@
 - [ ] **Don't over-stub:** Stubbing everything makes tests pass even when the real app is broken. Reserve stubs for external dependencies and error simulations. Run a smoke suite against real APIs.
 - [ ] **Flaky test quarantine:** When a test flakes, don't just add retries. Investigate root cause (race condition? shared state? animation?). Cypress Cloud's Flake Detection helps identify patterns.
 - [ ] **Cypress single-tab limitation:** Cannot test multi-tab flows or OAuth popups that open new tabs. Use `cy.origin()` for cross-origin within the same tab, or stub `window.open`.
-- [ ] **Version pinning:** Pin Cypress version in `package.json` (not `^13.x`). Major versions can break plugins and custom commands.
+- [ ] **Version pinning:** Pin Cypress version in `package.json` (not `^16.x`). Major versions can break plugins and custom commands.
 
 ---
 
 ## 14. When to Choose Cypress vs Playwright
 
 > Both are excellent. This is not "better/worse"; it's "right tool for this context."
+> **Scope note:** for brand-new E2E suites, Playwright-first is the common default today (first-class multi-browser, free sharding). Pick Cypress deliberately — component testing, existing investment, or team fit.
 
 | Factor | Cypress | Playwright |
 |---|---|---|

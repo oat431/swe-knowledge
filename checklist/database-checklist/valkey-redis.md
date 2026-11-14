@@ -2,7 +2,7 @@
 
 > Valkey companion to the general [[Database]] checklist.
 > Covers Valkey 9.x (the Redis fork, current major), the standard in-memory cache / data store.
-> Redis-compatible: every item applies to Redis 7.x too (protocol-identical, config mostly identical).
+> Redis-compatible: every item applies to Redis 8.x too (protocol-identical, config mostly identical; Redis has been AGPL-3.0 since 8.0, while Valkey stays BSD-3).
 > Companion to [[PostgreSQL]] and [[MongoDB]] for the other engines in the homelab.
 > Last updated: 2026-08-07
 
@@ -10,7 +10,7 @@
 
 ## 1. Setup & Configuration
 
-- [ ] **Version:** Valkey 9.x (or Redis 7.x for managed/legacy). `INFO server` recorded.
+- [ ] **Version:** Valkey 9.x (or Redis 8.x for managed/legacy). `INFO server` recorded.
 - [ ] **Memory policy chosen:** `maxmemory` set (never unlimited), `maxmemory-policy` deliberate:
   - `allkeys-lru` / `allkeys-lfu`: general-purpose cache
   - `volatile-lru` / `volatile-lfu`: only expire-able keys evicted (data safety)
@@ -18,7 +18,7 @@
 - [ ] **Persistence decision made:** For pure cache: RDB snapshots optional, AOF off (rebuild from source). For data safety: AOF `everysec` (balanced) or `appendfsync always` (slow, durable). Document which keys can be lost.
 - [ ] **`bind` + `protected-mode`:** Bound to private interface, `protected-mode yes`, never exposed to the internet. Default-open Valkey = instant cryptojacking.
 - [ ] **Container/Docker notes:** Volume for data (`/data`), `--requirepass` or ACL from env/vault, healthcheck `redis-cli ping` → [[Infrastructure]].
-- [ ] **Valkey-specific features enabled:** I/O threading (`io-threads`, `io-threads-do-reads` for high-throughput), async `DEL`/`UNLINK` (non-blocking key deletion, prevents latency spikes on big keys). These are Valkey/Redis 6.0+ improvements over the legacy single-thread model.
+- [ ] **Valkey-specific features enabled:** I/O threading (`io-threads`, `io-threads-do-reads` for high-throughput), async `DEL`/`UNLINK` (non-blocking key deletion, prevents latency spikes on big keys). These are improvements over the legacy single-thread model.
 
 ## 2. Data Modeling & Memory
 
@@ -35,7 +35,7 @@
 - [ ] **Hot keys identified:** A single key serving most traffic (celebrity user, popular product)? Local cache layer or replica reads.
 - [ ] **`MEMORY USAGE` audited:** Per-key memory audit for capacity planning. `MEMORY USAGE key` gives precise bytes. Identify top-N keys by memory for optimization.
 - [ ] **`OBJECT ENCODING` understood:** Internal representation matters: `embstr`/`raw` (strings), `listpack`/`hashtable` (hashes), `intset`/`listpack` (sets). Small structures use compact encodings (saves memory); growth triggers conversion. Know the thresholds (`hash-max-listpack-entries`, `set-max-intset-entries`).
-- [ ] **`activedefrag` enabled** (`activedefrag yes` for online memory defragmentation (Valkey 6.0+). Reduces fragmentation without restart. Monitor `mem_fragmentation_ratio`) > 1.5 means significant waste.
+- [ ] **`activedefrag` enabled** (`activedefrag yes` for online memory defragmentation (available since Redis 4.0). Reduces fragmentation without restart. Monitor `mem_fragmentation_ratio`) > 1.5 means significant waste.
 
 ## 3. Caching Patterns (Correct Usage)
 

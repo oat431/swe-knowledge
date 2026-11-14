@@ -1,7 +1,7 @@
 # Cassandra / ScyllaDB Checklist
 
 > Wide-column / distributed NoSQL companion to the general [[Database]] checklist.
-> Covers Cassandra 5.x / ScyllaDB 6.x, the standard eventually-consistent, partitioned wide-column stores.
+> Covers Cassandra 5.x / ScyllaDB 2026.x, the standard eventually-consistent, partitioned wide-column stores.
 > ScyllaDB is a C++ rewrite of Cassandra: protocol-compatible (CQL), shard-per-core architecture, 5–10x throughput. Cassandra knowledge transfers directly.
 > Companion to [[PostgreSQL]], [[MongoDB]], and [[valkey-redis|Valkey]] for the other engines in the homelab.
 > Last updated: 2026-08-07
@@ -10,7 +10,7 @@
 
 ## 1. Cluster Setup & Topology
 
-- [ ] **Version:** Cassandra 5.x (or ScyllaDB 6.x). `nodetool version` or `cqlsh -e "SELECT release_version FROM system.local;"` recorded. Upgrade path known (rolling, no downtime within a major).
+- [ ] **Version:** Cassandra 5.x (or ScyllaDB 2026.x). `nodetool version` or `cqlsh -e "SELECT release_version FROM system.local;"` recorded. Upgrade path known (rolling, no downtime within a major).
 - [ ] **Replication factor ≥ 3:** `RF=3` minimum for production. Survives one node failure with quorum reads/writes. `RF=1` = no redundancy (data lost on node loss). `RF=2` = single-failure survival but no quorum math (one dead → can't reach quorum). Odd RF + N+2 nodes is the rule: RF=3, 4+ nodes.
 - [ ] **NetworkTopologyStrategy (NTS) for production:** `CREATE KEYSPACE ... WITH replication = {'class': 'NetworkTopologyStrategy', 'datacenter1': 3, 'datacenter2': 3};`. Never `SimpleStrategy` in production (it ignores topology). NTS replicates per-datacenter, enabling multi-DC deployment and failover. Each DC's RF is independent.
 - [ ] **Snitch matches deployment:** Snitch tells Cassandra how nodes are grouped into racks/DCs:
@@ -83,7 +83,7 @@
   - `nodetool netstats`: streaming, repair progress
   - `nodetool describecluster`: schema versions, partitioner
 - [ ] **ScyllaDB `iostat` / `seastar` metrics** (ScyllaDB exposes per-shard metrics via REST API (`/metrics`) and Prometheus. Monitor: reactor utilization per shard, SMI (Scylla Monitoring Infrastructure). ScyllaDB needs dedicated I/O) don't co-locate with other I/O-heavy services.
-- [ ] **JVM tuning (Cassandra only)**; heap 8–16 GB (don't go higher; lucene-like off-heap is where data lives). GC: G1GC (Cassandra 4+) or CMS. Monitor GC pauses. ScyllaDB has no JVM; it's C++, no GC tuning needed.
+- [ ] **JVM tuning (Cassandra only)**; heap 8–16 GB (don't go higher; lucene-like off-heap is where data lives). GC: G1GC only (CMS was removed in JDK 14 — not a choice on modern JDKs). Monitor GC pauses. ScyllaDB has no JVM; it's C++, no GC tuning needed.
 - [ ] **Connection pooling (driver):** Driver maintains connection pool to each node. `core_connections_per_host`, `max_connections_per_host`, `max_requests_per_connection` tuned. ScyllaDB: more connections per shard (ShardAwareDriver). Default driver settings are often too low for production throughput.
 
 ## 7. Backup & Recovery
@@ -102,7 +102,7 @@
 - [ ] **TLS for client + internode** (Client-to-node: `client_encryption_options`. Node-to-node: `server_encryption_options`. Both required) gossip and internode traffic carry data. `internode_encryption: all` (not `none` or `dc`).
 - [ ] **Network isolation:** Cassandra ports: 7000 (internode), 7001 (internode TLS), 9042 (CQL native), 9142 (CQL TLS). All firewalled except to application subnet. Admin ports (7199 JMX) never exposed.
 - [ ] **JMX secured:** JMX (7199) is a remote code execution vector if unauthenticated. `COM_ORG_CASSANDRA_AUTH_JMXRALEVEN` or credential-based JMX auth. Never expose JMX to an untrusted network.
-- [ ] **Audit logging (Cassandra 5.x+):** `audit_logging` for regulated tiers. Logs DML, DDL, auth events. Filter by user, category, probability.
+- [ ] **Audit logging:** `audit_logging` for regulated tiers. Logs DML, DDL, auth events. Filter by user, category, probability.
 - [ ] **ScyllaDB: enterprise security** (ScyllaDB Enterprise adds LDAP, Kerberos, encryption at rest (Transparent Encryption). Community edition has TLS + auth but not at-rest encryption) use volume-level encryption.
 
 ## 9. Observability & Monitoring

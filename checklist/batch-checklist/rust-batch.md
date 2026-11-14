@@ -19,16 +19,16 @@ serde = { version = "1", features = ["derive"] }
 serde_json = "1"
 tracing = "0.1"
 tracing-subscriber = { version = "0.3", features = ["json", "env-filter"] }
-config = "0.14"                    # config loading
+config = "0.15"                    # config loading
 chrono = { version = "0.4", features = ["serde"] }
 uuid = { version = "1", features = ["v7", "serde"] }
-tokio-graceful-shutdown = "0.15"   # signal handling
+tokio-graceful-shutdown = "0.20"   # signal handling
 thiserror = "2"                    # error enums
 anyhow = "1"                       # error propagation in main
 
 [dev-dependencies]
 tokio-test = "0.4"
-testcontainers = "0.23"
+testcontainers = "0.28"
 ```
 
 - [ ] **Clippy strict:** `cargo clippy -- -D warnings -W clippy::pedantic`. CI gate. No dead code, no unused imports, no implicit conversions.
@@ -736,17 +736,20 @@ async fn process_chunk(chunk_num: usize, items: Vec<OrderInput>) -> Result<Batch
 
 ```rust
 use prometheus::{IntCounter, IntCounterVec, Histogram, register_int_counter_vec, register_histogram};
+use std::sync::LazyLock;
 
-lazy_static::lazy_static! {
-    static ref ITEMS_PROCESSED: IntCounterVec = register_int_counter_vec!(
+static ITEMS_PROCESSED: LazyLock<IntCounterVec> = LazyLock::new(|| {
+    register_int_counter_vec!(
         "batch_items_total", "Items processed", &["job", "outcome"]
-    ).unwrap();
+    ).unwrap()
+});
 
-    static ref CHUNK_DURATION: Histogram = register_histogram!(
+static CHUNK_DURATION: LazyLock<Histogram> = LazyLock::new(|| {
+    register_histogram!(
         "batch_chunk_duration_seconds", "Chunk processing duration",
         vec![0.1, 0.5, 1.0, 2.0, 5.0, 10.0, 30.0, 60.0]
-    ).unwrap();
-}
+    ).unwrap()
+});
 ```
 
 - [ ] **OpenTelemetry:** `opentelemetry` + `tracing-opentelemetry`. Export traces to Jaeger/Tempo. Spans propagate to downstream HTTP calls via `reqwest-tracing`.
@@ -837,7 +840,7 @@ async fn test_full_job_run() {
 - [ ] **Minimal container:** Static binary. No runtime dependencies. `FROM scratch` or `distroless`.
 
 ```dockerfile
-FROM rust:1.80-alpine AS build
+FROM rust:1.100-alpine AS build
 WORKDIR /src
 RUN apk add --no-cache musl-dev
 COPY Cargo.toml Cargo.lock ./
@@ -924,4 +927,4 @@ codegen-units = 1   # better optimization, slower compile
 | **Time** | `chrono` | DateTime, timezone-aware |
 | **UUID** | `uuid` | v4 random, v7 time-ordered |
 | **Testing** | `testcontainers` | Real DB in tests |
-| **Orchestration** | Temporal (via gRPC) | No native Rust SDK yet ;  use Go/TS SDK or gRPC |
+| **Orchestration** | Temporal (`temporalio-sdk`) | Native Rust SDK (1.x); gRPC client also available |

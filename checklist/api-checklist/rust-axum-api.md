@@ -21,7 +21,7 @@ tracing = "0.1"
 tracing-subscriber = { version = "0.3", features = ["json", "env-filter"] }
 ```
 - [ ] **Clippy:** `cargo clippy -- -D warnings`. Strict linting. CI gate.
-- [ ] **`rustfmt`:** `rustfmt.toml` at project root. `edition = "2021"`, `max_width = 120`.
+- [ ] **`rustfmt`:** `rustfmt.toml` at project root. `edition = "2024"`, `max_width = 120`.
 - [ ] **`cargo-watch`:** `cargo install cargo-watch`. `cargo watch -x run` for dev hot-reload.
 - [ ] **`.cargo/config.toml`:** `[build] rustflags = ["-D", "warnings"]`. No warnings in CI.
 
@@ -88,7 +88,7 @@ src/
 - [ ] **`(StatusCode, Json<T>)`:** explicit status + body. `(StatusCode::CREATED, Json(user))`.
 - [ ] **Error responses:** custom `AppError` enum. `impl IntoResponse for AppError`. Maps variants to status codes.
 - [ ] **Pagination wrapper:** `Json(PaginatedResponse { data, total, page, total_pages })`.
-- [ ] **OpenAPI 3.1 spec (utoipa)** (generated from code, not hand-written. `#[derive(OpenApi)]` + `utoipa-swagger-ui` mounted on a debug-only router. Target OpenAPI 3.1 (JSON Schema 2020-12)) current utoipa versions support it.
+- [ ] **OpenAPI 3.1 spec (utoipa)** (generated from code, not hand-written. `#[derive(OpenApi)]` + `utoipa-swagger-ui` mounted on a debug-only router. Target OpenAPI 3.1 (JSON Schema 2020-12)) current utoipa versions support it. OpenAPI 3.2 is current (Sept 2025), but utoipa still emits 3.1 — switch when the generator emits 3.2.
 - [ ] **Spec quality + contract change detection in CI** (`spectral` with a house ruleset lints the spec on every PR. Breaking-change detection gates the pipeline: `oasdiff`/`openapi-diff` fails the build when a change removes fields, changes types, or narrows responses) the REST equivalent of `buf breaking` for gRPC. Breaking changes require a new version, never a silent edit.
 
 ---

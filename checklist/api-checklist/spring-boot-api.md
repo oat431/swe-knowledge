@@ -1,14 +1,14 @@
 # Spring Boot API Checklist
 
 > Spring Boot 4.x-specific companion to the general [Backend Checklist](api.md).
-> Covers Boot 4.0+ (Spring Framework 7, Java 21+, modular starters, Security 7, Jackson 3).
+> Covers Boot 4.0+ (Spring Framework 7, Java 17+, modular starters, Security 7, Jackson 3).
 > Last updated: 2026-09-14 (RFC 9457 ProblemDetail, OpenAPI 3.1 + breaking-change CI gate, rate-limit headers, HTTP caching, request-ID propagation, transactional outbox, PIT mutation testing; AI/LLM & Data Privacy sections promoted to numbered 15/16 to match the matrix)
 
 ---
 
 ## 1. Spring Boot Version & Bootstrapping
 
-- [ ] **Spring Boot 4.x:** Built on Spring Framework 7. Boot 3.x is now legacy. Java 21 minimum (LTS), Java 25 for latest features. Virtual threads auto-configured.
+- [ ] **Spring Boot 4.x:** Built on Spring Framework 7. Boot 3.x is now legacy (3.5/Framework 6.2 EOL June 2026). Java 17 minimum; Java 21+ needed for virtual threads (auto-configured); Java 25 LTS for latest features.
 - [ ] **Modular starters (new naming**) Boot 4 fully modularized. Key renames: `spring-boot-starter-web` → `spring-boot-starter-webmvc`. OAuth2 starters now prefixed `spring-boot-starter-security-oauth2-*`. Every tech has a companion test starter (`spring-boot-starter-*-test`).
 - [ ] **Use `spring-boot-properties-migrator` on upgrade:** Add `spring-boot-properties-migrator` as `runtime` dependency during migration. It prints diagnostics and temporarily migrates deprecated properties. Remove after migration.
 - [ ] **Starters, not manual deps** (`spring-boot-starter-webmvc` (or `-webflux`), `spring-boot-starter-data-jpa`, `spring-boot-starter-security`. Flyway and Liquibase now require their own starters: `spring-boot-starter-flyway` or `spring-boot-starter-liquibase`. Skip version tags) Boot manages them.
@@ -48,7 +48,7 @@ com.example.app/
 ## 3. REST API (Spring Web MVC)
 
 - [ ] **`@RestController` + `@RequestMapping`:** Not `@Controller` + `@ResponseBody` on every method. Prefix routes: `@RequestMapping("/api/v1/users")`.
-- [ ] **API versioning (Boot 4 built-in**) Spring Boot 4 adds first-class API versioning support. `@ApiVersion` annotation on controllers. Declare supported versions; gateway/routing picks up automatically.
+- [ ] **API versioning (Boot 4 built-in**) Spring Boot 4 adds first-class API versioning support. Declare supported versions on mappings (`@RequestMapping(version = ...)`); configure with `spring.mvc.apiversion.*` properties. Gateway/routing picks up automatically.
 - [ ] **HTTP Service Clients (Boot 4 built-in**) `@HttpExchange` for declarative HTTP clients. Replaces manual `RestTemplate`/`WebClient` wiring. Interfaces annotated with `@HttpExchange("/api/v1/users")`. Auto-implemented at runtime.
 - [ ] **`@RestControllerAdvice` for global error handling:** Centralized `@ExceptionHandler`. Map exceptions → consistent error response. `MethodArgumentNotValidException` → 400. `AccessDeniedException` → 403. `EntityNotFoundException` → 404. Generic `Exception` → 500 (log stack trace, don't leak to client).
 - [ ] **Consistent error format (RFC 9457 ProblemDetail)**; Spring's `org.springframework.http.ProblemDetail` (supported since Spring 6) renders `application/problem+json`; RFC 9457, which obsoletes RFC 7807. Return it from `@ExceptionHandler` methods in your `@RestControllerAdvice`; set `spring.mvc.problemdetails.enabled=true` so framework exceptions follow the same envelope. Give each error a stable `type` URI + `title` that survive message edits, and attach machine-readable codes via custom properties (`problem.setProperty("code", "VALIDATION_ERROR")`). Never leak stack traces into the body.
@@ -57,8 +57,8 @@ com.example.app/
 - [ ] **Jackson 3 (package relocated**) Boot 4 prefers Jackson 3. Package moved: `com.fasterxml.jackson` → `tools.jackson`. Custom serializers/deserializers need import updates. Jackson 2 still works during transition but will be removed.
 - [ ] **`@JsonView` or dedicated DTOs:** Don't serialize entities with lazy-loaded collections (N+1 in Jackson). DTOs or `@JsonIgnoreProperties` on bidirectional relationships. `@JsonIgnore` on password fields.
 - [ ] **Pagination:** `Pageable` parameter. `Page<T>` return type. Set `spring.data.web.pageable.default-page-size` and `max-page-size` in config.
-- [ ] **OpenAPI 3.1 spec** (`springdoc-openapi-starter-webmvc-ui` (springdoc v3 targets Boot 4 / Spring Framework 7 and supports OpenAPI 3.1 / JSON Schema 2020-12) enable 3.1 output rather than hand-writing the spec). Generated from code, not hand-written. Annotations on controllers (`@Operation`, `@ApiResponse`). API doc at `/v3/api-docs`, Swagger UI at `/swagger-ui.html`.
-- [ ] **Spec quality + contract change detection in CI** (`spectral` with a house ruleset lints the generated spec on every PR. Breaking-change detection gates the pipeline: `oasdiff`/`openapi-diff` fails the build when a change removes fields, changes types, or narrows responses) the REST equivalent of `buf breaking` for gRPC. Breaking changes require a new API version (`@ApiVersion`), never a silent edit.
+- [ ] **OpenAPI 3.1 spec** (`springdoc-openapi-starter-webmvc-ui` (springdoc v3 targets Boot 4 / Spring Framework 7 and supports OpenAPI 3.1 / JSON Schema 2020-12) enable 3.1 output rather than hand-writing the spec). Generated from code, not hand-written. Annotations on controllers (`@Operation`, `@ApiResponse`). API doc at `/v3/api-docs`, Swagger UI at `/swagger-ui.html`. OpenAPI 3.2 is current (Sept 2025), but springdoc still emits 3.1 — switch when the generator emits 3.2.
+- [ ] **Spec quality + contract change detection in CI** (`spectral` with a house ruleset lints the generated spec on every PR. Breaking-change detection gates the pipeline: `oasdiff`/`openapi-diff` fails the build when a change removes fields, changes types, or narrows responses) the REST equivalent of `buf breaking` for gRPC. Breaking changes require a new API version (a new `@RequestMapping(version = ...)`), never a silent edit.
 
 - [ ] **Rate-limit headers:** Return `RateLimit-Limit` / `RateLimit-Remaining` / `RateLimit-Reset` (+ `RateLimit-Policy`) on responses so clients can self-throttle; include them on 429 responses at minimum. Enforce limits with Bucket4j (token bucket) or Resilience4j `RateLimiter`, and emit the headers from a `OncePerRequestFilter`/`HandlerInterceptor` or a shared `ResponseEntity` advice so every throttled endpoint behaves the same. Document them in the OpenAPI spec.
 - [ ] **HTTP caching semantics:** `Cache-Control` with `s-maxage` and `stale-while-revalidate` on cacheable GETs; `Vary` on content-negotiated responses. Use Spring's `CacheControl` builder (`ResponseEntity.ok().cacheControl(CacheControl.maxAge(Duration.ofMinutes(10)).cachePublic().staleWhileRevalidate(Duration.ofHours(1)))`) or `WebContentInterceptor` for path-based defaults across controllers. Let the CDN/HTTP cache absorb traffic before your controller code runs.
@@ -71,11 +71,11 @@ com.example.app/
 - [ ] **Method-level validation:** `@Validated` on service class + `@Valid` on method params. Validates service inputs even when called internally. Requires `MethodValidationPostProcessor`.
 - [ ] **Validation messages in i18n:** `@NotBlank(message = "{user.name.notBlank}")`. `messages.properties` / `messages_th.properties`. Don't hardcode English strings in annotations.
 
-## 5. Spring Data JPA (Hibernate 7.1)
+## 5. Spring Data JPA (Hibernate 7.x)
 
 - [ ] **Repository interfaces:** `extends JpaRepository<Entity, Long>`. Custom queries: `@Query`, method naming convention (`findByEmailAndStatus`), or `Specification<T>` for dynamic queries.
-- [ ] **Build-time query validation:** Spring Data 2025.1 processes repository query methods at build time by default. Malformed queries that were runtime errors in Boot 3 are now compile-time errors. Faster startup, better GraalVM native image compatibility.
-- [ ] **Hibernate 7.1:** `ReentrantLock` replaces `synchronized` blocks = much better virtual thread throughput. ~12% lower SessionFactory bootstrap memory.
+- [ ] **Build-time query validation:** Spring Data 2026.0 (Boot 4.1 line) processes repository query methods at build time by default. Malformed queries that were runtime errors in Boot 3 are now compile-time errors. Faster startup, better GraalVM native image compatibility.
+- [ ] **Hibernate 7.x:** `ReentrantLock` (since 7.1) replaces `synchronized` blocks = much better virtual thread throughput. ~12% lower SessionFactory bootstrap memory.
 - [ ] **`@Entity` best practices:** No-arg constructor (required). `equals()` and `hashCode()` on business key, not all fields. `@Version` for optimistic locking. `@CreatedDate` / `@LastModifiedDate` with `@EntityListeners(AuditingEntityListener.class)` + `@EnableJpaAuditing`.
 - [ ] **`@Transactional` where it matters:** On service layer, not repository. `readOnly = true` on read-only methods (Hibernate flush optimization). Boot already rolls back on RuntimeException.
 - [ ] **N+1 prevention:** `@EntityGraph` for eager loading. `JOIN FETCH` in `@Query` for fine-grained control. `spring.jpa.properties.hibernate.default_batch_fetch_size` to batch lazy loads.
@@ -194,7 +194,7 @@ void shouldOpenCircuitOnRepeatedFailure() {
 
 - [ ] **`@EnableAsync`:** On `@Configuration` class. `TaskExecutor` bean.
 - [ ] **`@Async`** (On service methods. Return `void`, `CompletableFuture<T>`, or `ListenableFuture<T>`. `CompletableFuture` preferred) composable, cancellable.
-- [ ] **Virtual threads (auto-configured**) Boot 4 on Java 21+ auto-configures virtual threads. `spring.threads.virtual.enabled` defaults to `true`. No thread pool tuning needed. Hibernate 7.1's `ReentrantLock` switch makes virtual threads significantly faster under database load.
+- [ ] **Virtual threads (auto-configured**) Boot 4 on Java 21+ auto-configures virtual threads. `spring.threads.virtual.enabled` defaults to `true`. No thread pool tuning needed. Hibernate 7.x's `ReentrantLock` switch (since 7.1) makes virtual threads significantly faster under database load.
 - [ ] **Transactional outbox pattern** (Never publish to Kafka/RabbitMQ and commit to the DB in two separate steps (one will fail, data diverges). Write the event to an `outbox` table in the same `@Transactional` method as the business write; a separate relay publishes from the outbox to the broker) exactly-once publishing from a transactional context. Options: Debezium CDC (reads the outbox table from the WAL) or a simple `@Scheduled` polling relay for smaller scale. Spring Modulith's event publication registry (`@ApplicationModuleEvent` + `EventPublicationRegistry`) provides the same outbox guarantee in-process.
 - [ ] **Thread pool for non-virtual:** If disabling virtual threads: `ThreadPoolTaskExecutor` with `corePoolSize`, `maxPoolSize`, `queueCapacity`. Rejection policy: `CallerRunsPolicy`.
 
@@ -366,7 +366,7 @@ flowchart TD
 | 2 | Project Structure (Package-by-Feature, not by-Layer) | ❌ | 🟡 package-by-layer OK | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 3 | REST API (Spring Web MVC) | 🟡 basic | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ + formal |
 | 4 | Validation | ❌ | 🟡 basic | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 5 | Spring Data JPA (Hibernate 7.1) | 🟡 H2 OK | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ + audit |
+| 5 | Spring Data JPA (Hibernate 7.x) | 🟡 H2 OK | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ + audit |
 | 6 | Spring Security 7 | ❌ | 🟡 basic JWT | ✅ | ✅ | ✅ | ✅ | ✅ + rotation |
 | 7 | Circuit Breaker & Service Resilience | ❌ | ❌ | 🟡 if ext APIs | 🟡 if ext APIs | ✅ | ✅ | ✅ + chaos |
 | 8 | Caching | ❌ | ❌ | 🟡 if needed | ✅ if used | ✅ | ✅ | ✅ + invalidation |

@@ -16,7 +16,7 @@
 - [ ] **Service Control Policies (SCPs)** (Org-wide restrictions: deny leaving organization, deny disabling CloudTrail, deny public S3, deny unused regions, deny root account usage. SCPs are your safety net) they override IAM allows.
 - [ ] **Billing alerts & budgets:** AWS Budgets per account and per service. Alert at 80% and 100% of monthly target. Anomaly detection enabled. Budget actions (auto-stop) for non-prod. No bill surprises.
 - [ ] **Root account lockdown:** Hardware MFA (YubiKey), no access keys, no daily use. Break-glass only. Root email is a distribution list, not a person. Store MFA device securely (safe/vault). (Pillar: Security)
-- [ ] **IAM Identity Center (SSO):** Single sign-on for all human access. Federate with your IdP (Okta, Google Workspace, Azure AD). No IAM users with passwords. No console-created credentials. MFA enforced.
+- [ ] **IAM Identity Center (SSO):** Single sign-on for all human access. Federate with your IdP (Okta, Google Workspace, Microsoft Entra ID — formerly Azure AD). No IAM users with passwords. No console-created credentials. MFA enforced.
 - [ ] **Naming & tagging conventions:** Enforced tags: `Environment`, `Team`, `Service`, `CostCenter`. Account naming: `company-env-purpose` (e.g., `acme-prod-workload`). Tag policies in Organizations. Deny untagged resource creation via SCP.
 - [ ] **Account contacts:** Security, billing, and operations contacts configured per account. AWS uses these for security notifications. Not having them = missing critical alerts.
 
@@ -88,7 +88,7 @@
 
 - [ ] **CloudWatch Metrics & Dashboards:** Standard metrics (CPU, memory, request count) + custom business metrics (orders/min, signups). One dashboard per service. Automated dashboards via CDK/Terraform, not manually clicked. (Pillar: Operational Excellence)
 - [ ] **CloudWatch Logs:** Structured JSON logging from all services. Retention policies set (14-30 days hot, archive to S3 for long-term). Metric filters for error patterns. Log Insights for ad-hoc queries. Never infinite retention
-- [ ] **CloudWatch Alarms:** Error rate > threshold, latency p99 > SLA, 5xx count spike, unhealthy host count > 0, queue depth growing. Alarm → SNS → PagerDuty/Slack/OpsGenie. Composite alarms to reduce noise.
+- [ ] **CloudWatch Alarms:** Error rate > threshold, latency p99 > SLA, 5xx count spike, unhealthy host count > 0, queue depth growing. Alarm → SNS → PagerDuty/Slack/Opsgenie (Opsgenie reaches end of support 2027-04-05 — use Jira Service Management for Atlassian stacks). Composite alarms to reduce noise.
 - [ ] **Distributed tracing:** X-Ray or OpenTelemetry (ADOT Collector) for request tracing across microservices. Identify bottlenecks, map service dependencies, debug latency. Service map visualization. Sample rate appropriate for volume.
 - [ ] **CloudTrail:** Enabled in all regions, all accounts. Management events always. Data events for S3/Lambda on sensitive resources. Ship to central log-archive account. S3 Object Lock (immutable). (Pillar: Security)
 - [ ] **AWS Health + EventBridge:** Subscribe to AWS service health events relevant to your stack. Automate responses (trigger failover, notify team). Know about AWS issues before your customers report them.
@@ -116,7 +116,7 @@
 - [ ] **Chaos engineering:** AWS Fault Injection Service (FIS): terminate tasks, stress CPU, inject latency, fail AZ. Verify auto-recovery and alarm triggers. Run during business hours with team watching. Build confidence iteratively. (Pillar: Reliability)
 - [ ] **Test restores quarterly:** RDS point-in-time restore to a test instance. S3 versioned object recovery. Full DR failover drill. If you haven't tested it, assume it doesn't work. Document results.
 - [ ] **ECS service auto-recovery:** Desired count maintained automatically. Health check failures trigger task replacement. Deployment circuit breaker enabled (stop deploying broken images after N failures). Minimum healthy percent = 100%.
-- [ ] **Dependency failure isolation:** Circuit breakers in application code (or App Mesh). Timeouts on all external calls. Retry with exponential backoff + jitter. Graceful degradation when dependencies are down.
+- [ ] **Dependency failure isolation:** Circuit breakers in application code (or a service mesh: ECS Service Connect on ECS, Istio/Linkerd/Cilium on EKS — AWS App Mesh was discontinued 2026-09-30). Timeouts on all external calls. Retry with exponential backoff + jitter. Graceful degradation when dependencies are down.
 
 ## 11. Cost Optimization
 
@@ -200,7 +200,7 @@
 | Caching / sessions | **ElastiCache** (Redis/Valkey) |
 | Connection pooling (Lambda) | **RDS Proxy** |
 | Full-text search | **OpenSearch Service** |
-| Time-series data | **Timestream** |
+| Time-series data | **Timestream for InfluxDB** (Timestream for LiveAnalytics is end-of-support) |
 
 ### Storage
 

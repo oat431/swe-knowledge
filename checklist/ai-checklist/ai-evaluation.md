@@ -44,7 +44,7 @@
 | **Named Entity Extraction** | Entity-level F1, Exact match | Correct entity spans + labels | Partial match (wrong boundary) scored as 0 |
 | **Summarization** | ROUGE-N, BLEU | N-gram overlap with reference | Weak proxy ;  doesn't measure meaning/quality |
 | **Translation** | BLEU, chrF, COMET | N-gram / embedding similarity | BLEU correlates poorly with human judgment |
-| **Code generation** | pass@k, HumanEval | Functional correctness (does it run + pass tests?) | Only covers tasks with testable outputs |
+| **Code generation** | pass@k, SWE-bench Verified | Functional correctness (does it run + pass tests?) | Only covers tasks with testable outputs |
 | **RAG retrieval** | Recall@k, Precision@k, MRR | Are the right documents retrieved? | Doesn't measure generation quality |
 | **RAG end-to-end** | Faithfulness, Answer Relevance (RAGAS) | Is the answer grounded in retrieved docs? Does it answer the question? | Requires reference answers or LLM-judge |
 | **Open-ended generation** | LLM-as-judge, human rating | Quality, helpfulness, correctness | Judge bias, cost |
@@ -58,10 +58,10 @@
 
 > When there's no objective right answer (open-ended generation, summarization quality, helpfulness), use an LLM to judge. This is the standard approach in modern AI evaluation.
 
-- [ ] **Judge model chosen** (Use a strong model as judge (GPT-4, Claude 3.5 Sonnet). The judge should be stronger than the model being judged) a weak judge can't evaluate a strong model. Never use the same model to judge itself (self-preference bias).
+- [ ] **Judge model chosen** (Use a strong model as judge (a current frontier-tier model at time of writing — e.g. the latest Claude Opus/Sonnet 5.x or GPT-5.x+ flagship). The judge should be stronger than the model being judged) a weak judge can't evaluate a strong model. Never use the same model to judge itself (self-preference bias).
 - [ ] **Judge prompt validated:** The judge prompt is itself a prompt that needs testing. Validate: run the judge on 50 examples where you know the correct ranking (from human labels). If judge-human agreement < 80%, the judge prompt needs revision. The judge prompt is the #1 factor in judge quality.
 - [ ] **Known biases mitigated:** LLM judges have documented biases:
-  - **Self-preference:** Judges prefer outputs from their own model family (GPT-4 prefers GPT-4 outputs)
+  - **Self-preference:** Judges prefer outputs from their own model family (e.g. a judge scoring its own family's outputs higher)
   - **Length bias:** Judges prefer longer outputs, even when shorter is better
   - **Position bias:** In pairwise comparison, judges prefer the first option presented
   - Mitigation: use a different model family as judge, normalize for length, randomize option order
@@ -75,15 +75,16 @@
 
 | Benchmark | Task | What it tests |
 |---|---|---|
-| **MMLU** | Multiple-choice | General knowledge across 57 subjects |
-| **MMLU-Pro** | Multiple-choice | Harder version of MMLU |
-| **HumanEval / MBPP** | Code generation | Python coding problems with unit tests |
-| **GSM8K / MATH** | Math reasoning | Grade-school / competition math |
+| **SWE-bench Verified** | Agentic coding | Resolve real GitHub issues with tests (current code-gen screen) |
+| **AIME / MATH** | Math reasoning | Competition math (GSM8K is saturated — AIME is the live floor) |
 | **GPQA** | Graduate-level Q&A | PhD-level science reasoning |
-| **MT-Bench / AlpacaEval** | Open-ended generation | Multi-turn conversation quality (LLM-judged) |
+| **ARC-AGI-2 / Humanity's Last Exam** | Abstract reasoning / frontier knowledge | Currently unsaturated frontier screens |
+| **Terminal-Bench / τ-bench** | Agentic tool use | Real terminal tasks / tool-calling workflows in realistic domains |
+| **LMArena** | Open-ended generation | Human-preference pairwise arena (successor to MT-Bench/AlpacaEval) |
+| **MMLU** | Multiple-choice | General knowledge — **saturated legacy screen**, little signal left |
 | **MTEB** | Embedding models | Retrieval, clustering, classification for embeddings |
 
-- [ ] **Benchmark relevance validated:** MMLU scores don't predict RAG quality. HumanEval doesn't predict Thai-language ability. Choose benchmarks relevant to your task. A model that tops MMLU may be bad at your specific use case. Always validate with your own golden set after benchmark screening.
+- [ ] **Benchmark relevance validated:** MMLU scores don't predict RAG quality. SWE-bench doesn't predict Thai-language ability. Choose benchmarks relevant to your task. A model that tops MMLU may be bad at your specific use case. Always validate with your own golden set after benchmark screening.
 - [ ] **Benchmark contamination checked:** Some models are trained on benchmark data (the test leaked into training). Scores are inflated. Check: does the model regurgitate the benchmark answer verbatim? If so, the score is meaningless. Use newer/private benchmarks (GPQA Diamond, your own golden set) to detect contamination.
 - [ ] **Don't overfit to benchmarks:** Optimizing for a benchmark can hurt real-world performance (Goodhart's Law). Benchmarks are a screening tool, not the goal. The goal is performance on *your* task for *your* users.
 
@@ -196,4 +197,4 @@ flowchart TD
 - LLM-as-judge paper: https://arxiv.org/abs/2306.05685
 - EleutherAI eval harness: https://github.com/EleutherAI/lm-evaluation-harness
 - W&B Weave (eval tracking): https://wandb.ai/site/weave
-- Inspect AI (UK AISI eval framework): https://inspect.ai-safety-institute.org.uk/
+- Inspect AI (UK AI Security Institute eval framework): https://inspect.aisi.org.uk/

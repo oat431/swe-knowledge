@@ -33,7 +33,7 @@
   # .pre-commit-config.yaml
   repos:
     - repo: https://github.com/gitleaks/gitleaks
-      rev: v8.21.2
+      rev: v8.30.1
       hooks:
         - id: gitleaks
   ```
@@ -103,7 +103,7 @@
 - [ ] **Historical scan done:** `gitleaks detect --source . --report-path leak.json` on the full repo history. Past leaks don't self-heal.
 - [ ] **Scan Docker images:** `trivy fs --scanners secrets ./` on the built image. Secrets baked into layers survive even if removed from the final layer.
 - images.
-- [ ] **Scan IaC:** Checkov, tfsec, KICS on Terraform/CloudFormation. Secrets in `terraform.tfvars` are a classic leak.
+- [ ] **Scan IaC:** Checkov, Trivy (formerly tfsec), KICS on Terraform/CloudFormation. Secrets in `terraform.tfvars` are a classic leak.
 
 ---
 

@@ -1,7 +1,7 @@
 # Vue Checklist (Library Layer)
 
 > Vue 3 the UI library; composition API, components, reactivity, Pinia, forms, testing, SPA routing. Framework-agnostic to the meta-framework.
-> Meta-framework layer: [[nuxt]] (Nuxt 3) · General companion: [[web]] · Launch gate: [[Frontend Launch]]
+> Meta-framework layer: [[nuxt]] (Nuxt 4) · General companion: [[web]] · Launch gate: [[Frontend Launch]]
 > Last updated: 2026-09-14 (split from vue-js.md; library concerns here/vue, Nuxt concerns in nuxt)
 
 ---
@@ -67,11 +67,11 @@
 - [ ] **Cleanup in `onUnmounted` / `onScopeDispose`:** Close the socket, remove listeners, call `AbortController.abort()`. Composables register teardown with `onScopeDispose` so cleanup works in any effect scope, not just components. No zombie connections after route changes.
 - [ ] **Scale awareness** (WS doesn't scale on serverless (Vercel/Netlify functions)) use SSE, Pusher/Ably, or a dedicated WS server. Per-connection server cost; pub/sub fan-out via Valkey/Redis; fallback to polling when proxies block WS.
 
-## 8. Routing (Vue Router 4: SPA Path)
+## 8. Routing (Vue Router: SPA Path)
 
 - [ ] **`createRouter` with `createWebHistory`:** HTML5 history mode. No hash unless legacy support needed.
 - [ ] **Route meta:** `meta: { requiresAuth: true, title: 'Dashboard' }`. Navigation guards check `route.meta`.
-- [ ] **`beforeEach` guard:** auth check, redirect to login. `router.beforeEach((to, from, next) => { ... })`.
+- [ ] **`beforeEach` guard:** auth check, redirect to login. `router.beforeEach((to, from) => { ... })` returning a route location or `false` (the `next` callback is deprecated).
 - [ ] **Lazy-loaded routes:** `component: () => import('./views/Heavy.vue')`. Automatic code splitting.
 - [ ] **Nested routes:** `children: [...]` with `<router-view>` in parent. Persistent layouts.
 - [ ] **Scroll behavior:** `scrollBehavior(to, from, savedPosition)`. Restore scroll on back navigation.
@@ -236,7 +236,7 @@ flowchart TD
 | 5 | State Management (Pinia) | 🟡 | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 6 | Data Fetching & Server State | 🟡 fetch basics | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 7 | Real-Time & Live Data | ❌ | 🟡 if used | 🟡 if used | ✅ if used | ✅ + scale | ✅ + load testing | ✅ + HA/failover |
-| 8 | Routing (Vue Router 4 SPA) | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 8 | Routing (Vue Router SPA) | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 9 | Styling | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ + design system |
 | 10 | Performance | ❌ | 🟡 basic CWV | ✅ | ✅ + budgets | ✅ + profiling | ✅ + SLO | ✅ + capacity |
 | 11 | Forms | 🟡 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ + audit trail |

@@ -12,7 +12,7 @@
 ## 1. Project Setup (Next-Specific)
 
 - [ ] **App Router:** Default for new projects. Pages Router only if migrating legacy or team refusal. Don't mix the two for new routes.
-- [ ] **Next 15+ / React 19:** Async `params`/`searchParams`, `useActionState`, Turbopack dev. Don't start on 14 unless dependency-constrained.
+- [ ] **Next 16 / React 19:** Async `params`/`searchParams`, `useActionState`, Turbopack (stable). Don't start on 15 unless dependency-constrained.
 - [ ] **Runtime decision per route:** Node.js runtime (default, full API) vs Edge runtime (middleware, geo-latency-sensitive routes, limited APIs). Don't default everything to Edge.
 - [ ] **`server-only` / `client-only` package guards:** Import `server-only` in modules that must never reach the client bundle. Build fails loudly on violation.
 
@@ -42,7 +42,7 @@
 - [ ] **Error UI per route:** `error.tsx` near `page.tsx`. Automatic Error Boundary. `reset()` function to retry.
 - [ ] **Not found per route:** `not-found.tsx` for route-specific 404 content.
 - [ ] **Dynamic routes with typed params:** `/user/[id]` → typed `params.id` (awaited in Next 15). No stringly-typed route params.
-- [ ] **Middleware:** `middleware.ts` for auth guards, redirects, locale detection. Runs on Edge runtime (limited APIs). Keep it fast; heavy authz belongs in layouts/Server Actions.
+- [ ] **`proxy.ts` (formerly `middleware.ts`):** auth guards, redirects, locale detection. Runs on the Node.js runtime in Next 16+. Keep it fast; heavy authz belongs in layouts/Server Actions.
 
 ## 5. SEO & Metadata
 
@@ -62,7 +62,7 @@
 - [ ] **Font optimization:** `next/font` with `subset` and `display: 'swap'`. Self-host fonts, don't fetch from Google Fonts. Hoist static I/O (fonts, logos) to module level.
 - [ ] **Script optimization:** `next/script` with `afterInteractive`/`lazyOnload` for third-party analytics. Never a blocking `<script>` in the document head.
 - [ ] **Component-level code splitting:** `next/dynamic(() => import('./HeavyChart'), { loading: () => <Skeleton /> })` for heavy components below the fold.
-- [ ] **Server-side caching:** `React.cache()` for per-request dedup of repeated fetches. LRU cache (or Valkey/Redis) for cross-request caching of stable data. `unstable_cache`/`cacheTag` for Data Cache control.
+- [ ] **Server-side caching:** `React.cache()` for per-request dedup of repeated fetches. LRU cache (or Valkey/Redis) for cross-request caching of stable data. `'use cache'` / Cache Components (Next 16) for Data Cache control; `unstable_cache` only for non-fetch data persisting across deployments.
 - [ ] **Minimize RSC → client serialization:** Pass only the fields the client needs, not whole ORM objects. Serialized props must be serializable (no functions/Dates-as-objects surprises). No duplicate data across props.
 - [ ] **No module-level mutable request state:** Leaks across requests in RSC/SSR. Per-request context only.
 - [ ] **Parallelize server fetches:** Component composition streams in parallel; where data is co-fetched, `Promise.all`. Nested per-item fetches chained inside `Promise.all`.
@@ -74,7 +74,7 @@
 - [ ] **Headers:** `next.config.ts` `headers()`: CSP (report-only first), `X-Content-Type-Options: nosniff`, `Referrer-Policy`, `Permissions-Policy`, HSTS. No `X-Powered-By` (`poweredByHeader: false`).
 - [ ] **Server Actions hardened:** `serverActions.allowedOrigins` if cross-origin; body size limit; rate-limit mutation-heavy actions.
 - [ ] **Auth cookies:** HTTP-only, Secure, SameSite. Session read in Server Components/middleware, never shipped to client state → [[react]] §13.
-- [ ] **Middleware is not the only gate:** Edge middleware can be bypassed for some routes; defense in depth: layout-level + Server Action-level auth checks too.
+- [ ] **Middleware is not the only gate:** The `proxy` layer can be bypassed for some routes; defense in depth: layout-level + Server Action-level auth checks too.
 
 ## 8. Build & Deploy
 
@@ -89,7 +89,7 @@
 
 ## 9. AI/LLM Integration (Server Side)
 
-- [ ] **Vercel AI SDK:** `streamText` + `toDataStreamResponse()` in Route Handlers; `useChat` on the client → [[react]] §16.
+- [ ] **Vercel AI SDK:** `streamText` + `toUIMessageStreamResponse()` in Route Handlers; `useChat` on the client → [[react]] §16.
 - [ ] **RSC streaming:** AI SDK v4+ streams into Server Components (`toUIMessageStream`). `<Suspense>` boundaries with streaming content. Don't fall back to polling.
 - [ ] **Never expose provider keys:** No `NEXT_PUBLIC_OPENAI_API_KEY`. All LLM calls in Server Actions/Route Handlers with server-only env vars.
 - [ ] **Context & prompt management:** System prompts composed server-side, never in client bundles.

@@ -1,6 +1,6 @@
 # ASP.NET Core API Checklist
 
-> ASP.NET Core 10 (.NET 10 LTS) companion to the general [API checklist](api.md).
+> ASP.NET Core 10 (.NET 10 LTS; .NET 11 LTS GA Nov 2026) companion to the general [API checklist](api.md).
 > Covers Minimal APIs, Entity Framework Core 10, C# 14, and the standard production stack.
 > Last updated: 2026-09-14; RFC 9457 ProblemDetails, OpenAPI 3.1 + spec linting/breaking-change CI gate, rate-limit headers, HTTP caching semantics, X-Request-ID propagation, mutation testing (synced from parent api.md).
 
@@ -145,7 +145,7 @@ tests/
 - [ ] **Claims-based auth:** `policy.RequireClaim("department", "engineering")`.
 - [ ] **Resource-based auth:** `IAuthorizationService.AuthorizeAsync(user, resource, policy)` for per-resource checks.
 - [ ] **Duende IdentityServer:** For full OAuth2/OIDC server. Commercial license for production.
-- [ ] **Azure AD / Entra ID:** `Microsoft.Identity.Web` package. `AddMicrosoftIdentityWebApp()` for user auth, `AddMicrosoftIdentityWebApi()` for API protection.
+- [ ] **Microsoft Entra ID (formerly Azure AD):** `Microsoft.Identity.Web` package. `AddMicrosoftIdentityWebApp()` for user auth, `AddMicrosoftIdentityWebApi()` for API protection.
 
 ---
 
@@ -232,7 +232,7 @@ tests/
 - [ ] **Query string versioning:** `?api-version=1.0`. Configure with `QueryStringApiVersionReader`.
 - [ ] **Header versioning:** `api-version: 1.0`. Configure with `HeaderApiVersionReader("api-version")`.
 - [ ] **Deprecation:** `[ApiVersion("1.0", Deprecated = true)]`. Sunset date in response headers.
-- [ ] **OpenAPI integration:** `Microsoft.AspNetCore.OpenApi` (`builder.Services.AddOpenApi()`) generates the spec natively in .NET 10, targeting OpenAPI 3.1 (JSON Schema 2020-12) out of the box. Swashbuckle or NSwag for Swagger UI/advanced codegen needs. `builder.Services.AddOpenApi().AddApiVersioning()`. Separate docs per version.
+- [ ] **OpenAPI integration:** `Microsoft.AspNetCore.OpenApi` (`builder.Services.AddOpenApi()`) generates the spec natively in .NET 10, targeting OpenAPI 3.1 (JSON Schema 2020-12) out of the box. OpenAPI 3.2 is current (Sept 2025), but the built-in generator still emits 3.1 — switch when it emits 3.2. Swashbuckle or NSwag for Swagger UI/advanced codegen needs. `builder.Services.AddOpenApi().AddApiVersioning()`. Separate docs per version.
 - [ ] **Spec quality + contract change detection in CI** (`Spectral` with a house ruleset lints the generated OpenAPI spec on every PR. Breaking-change detection gates the pipeline: `oasdiff`/`openapi-diff` fails the build when a change removes fields, changes types, or narrows responses) the REST equivalent of `buf breaking` for gRPC. Breaking changes require a new version, never a silent edit.
 
 ---
