@@ -111,6 +111,19 @@
 
 ---
 
+## Stack Family (Framework Layers)
+
+The general contract above is language-agnostic; the per-stack plumbing lives in the family files:
+
+- Go (Cobra) → [[go-cli]]
+- Rust (clap) → [[rust-cli]]
+- Node.js/TypeScript (commander / yargs / oclif) → [[node-cli]]
+- Python (Typer / Click) → [[python-cli]]
+- JVM (picocli / Spring Shell) → [[jvm-cli]]
+- .NET (System.CommandLine / Spectre.Console) → [[dotnet-cli]]
+
+---
+
 ## Quick Sanity Check Before Release
 
 - [ ] `tool --help`, `tool --version`, and `tool <bad-flag>` all behave sensibly (the last: non-zero exit + usage hint on stderr)

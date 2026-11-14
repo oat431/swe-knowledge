@@ -45,7 +45,7 @@ The original checklists in the `*-checklist/` subfolders are your **reference ma
 | `database-checklist/valkey-redis.md` (189 lines) | [[valkey-redis|Valkey]] (~30 lines) |
 | `qa-checklist/qa.md` (174 lines) | [[QA]] (~40 lines) |
 | `ai-checklist/ai.md` (234 lines) | [[AI]] (~45 lines) |
-| `cli-checklist/cli.md` (128 lines) | [[CLI Launch]] (~65 lines) |
+| `cli-checklist/cli.md` (141 lines) + family: `go-cli.md`, `rust-cli.md`, `node-cli.md`, `python-cli.md`, `jvm-cli.md`, `dotnet-cli.md` | [[CLI Launch]] (~65 lines) |
 | `desktop-checklist/desktop.md` (108 lines) | [[Desktop Launch]] (~67 lines) |
 
 ---
