@@ -106,7 +106,14 @@ A **spanning tree** of a graph $G$ is a subgraph that includes all vertices of $
 ## Graph Algorithm Selection Flow
 
 ```mermaid
-%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
+%%{init: {"theme":"base","themeVariables":{
+  "darkMode":true,"background":"#1B1717","fontFamily":"Sarabun, sans-serif","fontSize":"16px",
+  "primaryColor":"#19362D","primaryTextColor":"#CDD3D1","primaryBorderColor":"#8C8F8E",
+  "secondaryColor":"#161212","secondaryTextColor":"#CAC9C9","secondaryBorderColor":"#8C8F8E",
+  "tertiaryColor":"#110D0D","tertiaryTextColor":"#CAC9C9","tertiaryBorderColor":"#8C8F8E",
+  "mainBkg":"#19362D","nodeBorder":"#8C8F8E","lineColor":"#8C8F8E","textColor":"#CAC9C9",
+  "clusterBkg":"#161212","clusterBorder":"#3A3434","edgeLabelBackground":"#1B1717",
+  "noteBkgColor":"#161212","noteTextColor":"#CAC9C9","noteBorderColor":"#8C8F8E"}}}%%
 flowchart TD
     START["What graph problem\nare you solving?"] --> Q1["Finding shortest path?"]
     Q1 -->|Yes| Q2["Edge weights?"]
@@ -126,13 +133,8 @@ flowchart TD
     Q4 -->|Single source| DIJ
     Q4 -->|All pairs| FW["Floyd-Warshall\nO&#40;V^3&#41;\nDynamic programming"]
 
-    style START fill:#1FB854,stroke:#000000,color:#000000
-    style BFS fill:#00B5FF,stroke:#000000,color:#000000
-    style DFS fill:#00B5FF,stroke:#000000,color:#000000
-    style DIJ fill:#FFBE00,stroke:#000000,color:#000000
-    style BF fill:#FFBE00,stroke:#000000,color:#000000
-    style FW fill:#1FB8AB,stroke:#000000,color:#000000
-    style TREE fill:#19362D,stroke:#000000,color:#CDD3D1
+    classDef hero fill:#19362D,stroke:#1FB854,stroke-width:2px,color:#CDD3D1
+    class START hero
 ```
 
 ### Graph Traversal Comparison
