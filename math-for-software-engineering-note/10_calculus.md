@@ -116,16 +116,23 @@ Functions that "transcend" algebra: cannot be expressed as finite polynomials:
 ## Calculus in Software Engineering: Decision Map
 
 ```mermaid
-%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
+%%{init: {"theme":"base","look":"classic","themeVariables":{
+  "darkMode":true,"background":"#1B1717","fontFamily":"Sarabun, sans-serif","fontSize":"16px",
+  "primaryColor":"#19362D","primaryTextColor":"#CDD3D1","primaryBorderColor":"#8C8F8E",
+  "secondaryColor":"#161212","secondaryTextColor":"#CAC9C9","secondaryBorderColor":"#8C8F8E",
+  "tertiaryColor":"#110D0D","tertiaryTextColor":"#CAC9C9","tertiaryBorderColor":"#8C8F8E",
+  "mainBkg":"#19362D","nodeBorder":"#8C8F8E","lineColor":"#8C8F8E","textColor":"#CAC9C9",
+  "clusterBkg":"#161212","clusterBorder":"#3A3434","edgeLabelBackground":"#1B1717",
+  "noteBkgColor":"#161212","noteTextColor":"#CAC9C9","noteBorderColor":"#8C8F8E"}}}%%
 flowchart TD
     START["SE Problem involving\ncontinuous change"] --> Q1["Rate of change?"]
-    Q1 -->|Yes| DERIV["Derivatives\nf'&#40;x&#41; = instantaneous rate"]
+    Q1 -->|Yes| DERIV["Derivatives\nf'#40;x#41; = instantaneous rate"]
     Q1 -->|No| Q2["Accumulated total?"]
 
     Q2 -->|Yes| INTEG["Integrals\nAccumulate over an interval"]
     Q2 -->|No| Q3["Optimizing something?"]
 
-    Q3 -->|Yes| OPT["Find critical points:\nf'&#40;x&#41; = 0\nThen check f''&#40;x&#41;"]
+    Q3 -->|Yes| OPT["Find critical points:\nf'#40;x#41; = 0\nThen check f''#40;x#41;"]
     Q3 -->|No| Q4["Modeling growth or decay?"]
 
     Q4 -->|Yes| DIFFEQ["Differential equations\nModel how quantities change"]
@@ -136,12 +143,8 @@ flowchart TD
     OPT -.->|SE Applications| O_APP["Hyperparameter tuning\nCost minimization\nResource allocation"]
     DIFFEQ -.->|SE Applications| DE_APP["Population models\nQueueing theory\nPhysics simulation"]
 
-    style START fill:#1FB854,stroke:#000000,color:#000000
-    style DERIV fill:#00B5FF,stroke:#000000,color:#000000
-    style INTEG fill:#FFBE00,stroke:#000000,color:#000000
-    style OPT fill:#1FB8AB,stroke:#000000,color:#000000
-    style DIFFEQ fill:#FF5861,stroke:#000000,color:#000000
-    style APPROX fill:#19362D,stroke:#000000,color:#CDD3D1
+    classDef hero fill:#19362D,stroke:#1FB854,stroke-width:2px,color:#CDD3D1
+    class START hero
 ```
 
 ---

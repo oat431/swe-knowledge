@@ -102,7 +102,14 @@ This is the grammar for arithmetic expressions; it captures operator precedence 
 Given the CFG above, the string `3 + 4 * 2` parses as follows. Notice how the tree structure encodes precedence: `*` binds tighter because it's deeper in the tree.
 
 ```mermaid
-%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
+%%{init: {"theme":"base","look":"classic","themeVariables":{
+  "darkMode":true,"background":"#1B1717","fontFamily":"Sarabun, sans-serif","fontSize":"16px",
+  "primaryColor":"#19362D","primaryTextColor":"#CDD3D1","primaryBorderColor":"#8C8F8E",
+  "secondaryColor":"#161212","secondaryTextColor":"#CAC9C9","secondaryBorderColor":"#8C8F8E",
+  "tertiaryColor":"#110D0D","tertiaryTextColor":"#CAC9C9","tertiaryBorderColor":"#8C8F8E",
+  "mainBkg":"#19362D","nodeBorder":"#8C8F8E","lineColor":"#8C8F8E","textColor":"#CAC9C9",
+  "clusterBkg":"#161212","clusterBorder":"#3A3434","edgeLabelBackground":"#1B1717",
+  "noteBkgColor":"#161212","noteTextColor":"#CAC9C9","noteBorderColor":"#8C8F8E"}}}%%
 flowchart TD
     EXPR1["&lt;expression&gt;"] --> TERM1["&lt;term&gt;"]
     EXPR1 --> PLUS["+"]
@@ -121,19 +128,8 @@ flowchart TD
 
     FACTOR2 --> N3["2"]
 
-    style EXPR1 fill:#00B5FF,stroke:#000000,color:#000000
-    style EXPR2 fill:#00B5FF,stroke:#000000,color:#000000
-    style TERM1 fill:#1FB854,stroke:#000000,color:#000000
-    style TERM2 fill:#1FB854,stroke:#000000,color:#000000
-    style TERM3 fill:#1FB854,stroke:#000000,color:#000000
-    style FACTOR1 fill:#FFBE00,stroke:#000000,color:#000000
-    style FACTOR2 fill:#FFBE00,stroke:#000000,color:#000000
-    style FACTOR3 fill:#FFBE00,stroke:#000000,color:#000000
-    style N1 fill:#19362D,stroke:#000000,color:#CDD3D1
-    style N2 fill:#19362D,stroke:#000000,color:#CDD3D1
-    style N3 fill:#19362D,stroke:#000000,color:#CDD3D1
-    style PLUS fill:#19362D,stroke:#000000,color:#CDD3D1
-    style STAR fill:#19362D,stroke:#000000,color:#CDD3D1
+    classDef hero fill:#19362D,stroke:#1FB854,stroke-width:2px,color:#CDD3D1
+    class TERM2 hero
 ```
 
 **Reading the tree:**
@@ -161,7 +157,14 @@ Parser generators handle ambiguity through precedence declarations or grammar re
 ### The Chomsky Hierarchy Decision Flow
 
 ```mermaid
-%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
+%%{init: {"theme":"base","look":"classic","themeVariables":{
+  "darkMode":true,"background":"#1B1717","fontFamily":"Sarabun, sans-serif","fontSize":"16px",
+  "primaryColor":"#19362D","primaryTextColor":"#CDD3D1","primaryBorderColor":"#8C8F8E",
+  "secondaryColor":"#161212","secondaryTextColor":"#CAC9C9","secondaryBorderColor":"#8C8F8E",
+  "tertiaryColor":"#110D0D","tertiaryTextColor":"#CAC9C9","tertiaryBorderColor":"#8C8F8E",
+  "mainBkg":"#19362D","nodeBorder":"#8C8F8E","lineColor":"#8C8F8E","textColor":"#CAC9C9",
+  "clusterBkg":"#161212","clusterBorder":"#3A3434","edgeLabelBackground":"#1B1717",
+  "noteBkgColor":"#161212","noteTextColor":"#CAC9C9","noteBorderColor":"#8C8F8E"}}}%%
 flowchart TD
     START["What language feature\ndo you need to describe?"] --> Q1["Need nesting or recursion?\ne.g. balanced parentheses"]
     Q1 -->|No| REGEX["Type 3: Regular\nUse regex or FSM"]
@@ -175,11 +178,8 @@ flowchart TD
     CFG -.->|Examples| CFG_EX["Programming language syntax\nJSON, XML parsers\nSQL grammar"]
     CSG -.->|Examples| CSG_EX["Type checking\nsemantic analysis\nnatural language"]
 
-    style START fill:#1FB854,stroke:#000000,color:#000000
-    style REGEX fill:#00B5FF,stroke:#000000,color:#000000
-    style CFG fill:#FFBE00,stroke:#000000,color:#000000
-    style CSG fill:#1FB8AB,stroke:#000000,color:#000000
-    style UNR fill:#FF5861,stroke:#000000,color:#000000
+    classDef hero fill:#19362D,stroke:#1FB854,stroke-width:2px,color:#CDD3D1
+    class START hero
 ```
 
 ---

@@ -77,14 +77,21 @@ Simple, but already demonstrates: finite states, deterministic transitions, cycl
 ## FSM Design and Application Flow
 
 ```mermaid
-%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
+%%{init: {"theme":"base","look":"classic","themeVariables":{
+  "darkMode":true,"background":"#1B1717","fontFamily":"Sarabun, sans-serif","fontSize":"16px",
+  "primaryColor":"#19362D","primaryTextColor":"#CDD3D1","primaryBorderColor":"#8C8F8E",
+  "secondaryColor":"#161212","secondaryTextColor":"#CAC9C9","secondaryBorderColor":"#8C8F8E",
+  "tertiaryColor":"#110D0D","tertiaryTextColor":"#CAC9C9","tertiaryBorderColor":"#8C8F8E",
+  "mainBkg":"#19362D","nodeBorder":"#8C8F8E","lineColor":"#8C8F8E","textColor":"#CAC9C9",
+  "clusterBkg":"#161212","clusterBorder":"#3A3434","edgeLabelBackground":"#1B1717",
+  "noteBkgColor":"#161212","noteTextColor":"#CAC9C9","noteBorderColor":"#8C8F8E"}}}%%
 flowchart TD
     START["You need to model\nsequential behavior"] --> Q1["Finite number of states?"]
     Q1 -->|No| TM["Not an FSM\nNeed a Turing Machine\nor infinite-state model"]
     Q1 -->|Yes| Q2["Output depends on input only?"]
 
-    Q2 -->|Yes - output = f&#40;input&#41;| MEALY["Mealy Machine\nOutput on transitions\nReacts faster to input"]
-    Q2 -->|No - output = f&#40;state&#41;| MOORE["Moore Machine\nOutput on states\nCleaner state separation"]
+    Q2 -->|Yes - output = f#40;input#41;| MEALY["Mealy Machine\nOutput on transitions\nReacts faster to input"]
+    Q2 -->|No - output = f#40;state#41;| MOORE["Moore Machine\nOutput on states\nCleaner state separation"]
 
     MEALY --> DESIGN["Design Steps:\n1 Define states\n2 Define alphabet\n3 Define transitions\n4 Mark start and accept states"]
     MOORE --> DESIGN
@@ -96,12 +103,8 @@ flowchart TD
     IMPL -.->|Examples| EX1["Lexer tokenizer\nProtocol state machine\nUI workflow engine"]
     CONVERT -.->|Examples| EX2["Regex engine\nPattern matching\nInput validation"]
 
-    style START fill:#1FB854,stroke:#000000,color:#000000
-    style MEALY fill:#00B5FF,stroke:#000000,color:#000000
-    style MOORE fill:#FFBE00,stroke:#000000,color:#000000
-    style DESIGN fill:#19362D,stroke:#000000,color:#CDD3D1
-    style IMPL fill:#1FB8AB,stroke:#000000,color:#000000
-    style CONVERT fill:#1FB8AB,stroke:#000000,color:#000000
+    classDef hero fill:#19362D,stroke:#1FB854,stroke-width:2px,color:#CDD3D1
+    class START hero
 ```
 
 ### Moore vs Mealy Comparison

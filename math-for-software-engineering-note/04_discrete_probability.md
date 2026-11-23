@@ -139,20 +139,26 @@ $$P(\text{spam} \mid \text{"FREE"}) = \frac{0.80 \times 0.30}{0.275} = \frac{0.2
 ### Bayes' Theorem Decision Flow
 
 ```mermaid
-%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
+%%{init: {"theme":"base","look":"classic","themeVariables":{
+  "darkMode":true,"background":"#1B1717","fontFamily":"Sarabun, sans-serif","fontSize":"16px",
+  "primaryColor":"#19362D","primaryTextColor":"#CDD3D1","primaryBorderColor":"#8C8F8E",
+  "secondaryColor":"#161212","secondaryTextColor":"#CAC9C9","secondaryBorderColor":"#8C8F8E",
+  "tertiaryColor":"#110D0D","tertiaryTextColor":"#CAC9C9","tertiaryBorderColor":"#8C8F8E",
+  "mainBkg":"#19362D","nodeBorder":"#8C8F8E","lineColor":"#8C8F8E","textColor":"#CAC9C9",
+  "clusterBkg":"#161212","clusterBorder":"#3A3434","edgeLabelBackground":"#1B1717",
+  "noteBkgColor":"#161212","noteTextColor":"#CAC9C9","noteBorderColor":"#8C8F8E"}}}%%
 flowchart TD
-    START["You observe evidence B"] --> Q1["Do you know P&#40;B&#124;A&#41; directly?"]
-    Q1 -->|Yes| APPLY["Apply Bayes':\nP&#40;A&#124;B&#41; = P&#40;B&#124;A&#41; P&#40;A&#41; / P&#40;B&#41;"]
-    Q1 -->|No| Q2["Can you decompose P&#40;B&#41;?"]
-    Q2 -->|Yes| TOTAL["Use Law of Total Probability:\nP&#40;B&#41; = sum P&#40;B&#124;A_i&#41; P&#40;A_i&#41;"]
-    Q2 -->|No| MEASURE["Measure P&#40;B&#41; from data"]
+    START["You observe evidence B"] --> Q1["Do you know P#40;B#124;A#41; directly?"]
+    Q1 -->|Yes| APPLY["Apply Bayes':\nP#40;A#124;B#41; = P#40;B#124;A#41; P#40;A#41; / P#40;B#41;"]
+    Q1 -->|No| Q2["Can you decompose P#40;B#41;?"]
+    Q2 -->|Yes| TOTAL["Use Law of Total Probability:\nP#40;B#41; = sum P#40;B#124;A_i#41; P#40;A_i#41;"]
+    Q2 -->|No| MEASURE["Measure P#40;B#41; from data"]
     TOTAL --> APPLY
     MEASURE --> APPLY
     APPLY --> INTERPRET["Interpret posterior:\nHow likely is A given B?"]
 
-    style START fill:#1FB854,stroke:#000000,color:#000000
-    style APPLY fill:#00B5FF,stroke:#000000,color:#000000
-    style INTERPRET fill:#FFBE00,stroke:#000000,color:#000000
+    classDef hero fill:#19362D,stroke:#1FB854,stroke-width:2px,color:#CDD3D1
+    class START hero
 ```
 
 ---

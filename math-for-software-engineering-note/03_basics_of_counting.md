@@ -133,17 +133,22 @@ Compare $f(n)$ with $n^{\log_b a}$:
 ### Master Theorem Decision Flow
 
 ```mermaid
-%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
+%%{init: {"theme":"base","look":"classic","themeVariables":{
+  "darkMode":true,"background":"#1B1717","fontFamily":"Sarabun, sans-serif","fontSize":"16px",
+  "primaryColor":"#19362D","primaryTextColor":"#CDD3D1","primaryBorderColor":"#8C8F8E",
+  "secondaryColor":"#161212","secondaryTextColor":"#CAC9C9","secondaryBorderColor":"#8C8F8E",
+  "tertiaryColor":"#110D0D","tertiaryTextColor":"#CAC9C9","tertiaryBorderColor":"#8C8F8E",
+  "mainBkg":"#19362D","nodeBorder":"#8C8F8E","lineColor":"#8C8F8E","textColor":"#CAC9C9",
+  "clusterBkg":"#161212","clusterBorder":"#3A3434","edgeLabelBackground":"#1B1717",
+  "noteBkgColor":"#161212","noteTextColor":"#CAC9C9","noteBorderColor":"#8C8F8E"}}}%%
 flowchart TD
-    START["Recurrence: T&#40;n&#41; = aT&#40;n/b&#41; + f&#40;n&#41;"] --> COMP["Compare f&#40;n&#41; with n^&#40;log_b a&#41;"]
-    COMP -->|f&#40;n&#41; smaller| C1["Case 1\nT&#40;n&#41; = Theta&#40;n^log_b a&#41;\nRecursive work dominates"]
-    COMP -->|Same growth| C2["Case 2\nT&#40;n&#41; = Theta&#40;n^log_b a log n&#41;\nBalanced work"]
-    COMP -->|f&#40;n&#41; larger| C3["Case 3\nT&#40;n&#41; = Theta&#40;f&#40;n&#41;&#41;\nDivide/combine dominates"]
+    START["Recurrence: T#40;n#41; = aT#40;n/b#41; + f#40;n#41;"] --> COMP["Compare f#40;n#41; with n^#40;log_b a#41;"]
+    COMP -->|f#40;n#41; smaller| C1["Case 1\nT#40;n#41; = Theta#40;n^log_b a#41;\nRecursive work dominates"]
+    COMP -->|Same growth| C2["Case 2\nT#40;n#41; = Theta#40;n^log_b a log n#41;\nBalanced work"]
+    COMP -->|f#40;n#41; larger| C3["Case 3\nT#40;n#41; = Theta#40;f#40;n#41;#41;\nDivide/combine dominates"]
 
-    style START fill:#1FB854,stroke:#000000,color:#000000
-    style C1 fill:#00B5FF,stroke:#000000,color:#000000
-    style C2 fill:#FFBE00,stroke:#000000,color:#000000
-    style C3 fill:#1FB8AB,stroke:#000000,color:#000000
+    classDef hero fill:#19362D,stroke:#1FB854,stroke-width:2px,color:#CDD3D1
+    class START hero
 ```
 
 ---

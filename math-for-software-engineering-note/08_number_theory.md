@@ -149,7 +149,14 @@ In practice this is done with fast modular exponentiation (repeated squaring). T
 ### RSA Process Flow
 
 ```mermaid
-%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
+%%{init: {"theme":"base","look":"classic","themeVariables":{
+  "darkMode":true,"background":"#1B1717","fontFamily":"Sarabun, sans-serif","fontSize":"16px",
+  "primaryColor":"#19362D","primaryTextColor":"#CDD3D1","primaryBorderColor":"#8C8F8E",
+  "secondaryColor":"#161212","secondaryTextColor":"#CAC9C9","secondaryBorderColor":"#8C8F8E",
+  "tertiaryColor":"#110D0D","tertiaryTextColor":"#CAC9C9","tertiaryBorderColor":"#8C8F8E",
+  "mainBkg":"#19362D","nodeBorder":"#8C8F8E","lineColor":"#8C8F8E","textColor":"#CAC9C9",
+  "clusterBkg":"#161212","clusterBorder":"#3A3434","edgeLabelBackground":"#1B1717",
+  "noteBkgColor":"#161212","noteTextColor":"#CAC9C9","noteBorderColor":"#8C8F8E"}}}%%
 flowchart TD
     BOB["Bob: message m = 9"] --> ENC["Encrypt: c = m^e mod n\nc = 9^7 mod 143 = 48"]
     ENC --> WIRE["Ciphertext c = 48\nsent over insecure channel"]
@@ -159,17 +166,15 @@ flowchart TD
 
     subgraph ALICE_KEYS["Alice's Keys"]
         GEN["p = 11, q = 13\nn = 143, phi = 120"]
-        GEN --> PUB["Public: &#40;143, 7&#41;"]
-        GEN --> PRI["Private: &#40;143, 103&#41;"]
+        GEN --> PUB["Public: #40;143, 7#41;"]
+        GEN --> PRI["Private: #40;143, 103#41;"]
     end
 
     PUB -.-> ENC
     PRI -.-> DEC
 
-    style ALICE_KEYS fill:#19362D,stroke:#00B5FF,color:#CDD3D1
-    style ENC fill:#1FB854,stroke:#000000,color:#000000
-    style DEC fill:#1FB854,stroke:#000000,color:#000000
-    style WIRE fill:#FFBE00,stroke:#000000,color:#000000
+    classDef hero fill:#19362D,stroke:#1FB854,stroke-width:2px,color:#CDD3D1
+    class ENC hero
 ```
 
 ### Modular Exponentiation Algorithm

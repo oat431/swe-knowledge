@@ -132,7 +132,14 @@ Every recursive function you write has an implicit structural induction proof fo
 ### Proof Technique Selection for Code
 
 ```mermaid
-%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
+%%{init: {"theme":"base","look":"classic","themeVariables":{
+  "darkMode":true,"background":"#1B1717","fontFamily":"Sarabun, sans-serif","fontSize":"16px",
+  "primaryColor":"#19362D","primaryTextColor":"#CDD3D1","primaryBorderColor":"#8C8F8E",
+  "secondaryColor":"#161212","secondaryTextColor":"#CAC9C9","secondaryBorderColor":"#8C8F8E",
+  "tertiaryColor":"#110D0D","tertiaryTextColor":"#CAC9C9","tertiaryBorderColor":"#8C8F8E",
+  "mainBkg":"#19362D","nodeBorder":"#8C8F8E","lineColor":"#8C8F8E","textColor":"#CAC9C9",
+  "clusterBkg":"#161212","clusterBorder":"#3A3434","edgeLabelBackground":"#1B1717",
+  "noteBkgColor":"#161212","noteTextColor":"#CAC9C9","noteBorderColor":"#8C8F8E"}}}%%
 flowchart TD
     START["What are you trying to prove?"] --> Q1["About a data structure?\ntree, list, expression"]
     Q1 -->|Yes| STRUCT["Structural Induction\nFollow the recursive definition"]
@@ -146,11 +153,8 @@ flowchart TD
     INDUC -.->|Examples| EX2["Sum formula\nLoop invariant\nRecursive termination"]
     DIRECT -.->|Examples| EX3["Sort is correct\nHash collision bound\nGreedy choice property"]
 
-    style START fill:#1FB854,stroke:#000000,color:#000000
-    style STRUCT fill:#00B5FF,stroke:#000000,color:#000000
-    style INDUC fill:#FFBE00,stroke:#000000,color:#000000
-    style DIRECT fill:#1FB8AB,stroke:#000000,color:#000000
-    style CONTRA fill:#FF5861,stroke:#000000,color:#000000
+    classDef hero fill:#19362D,stroke:#1FB854,stroke-width:2px,color:#CDD3D1
+    class START hero
 ```
 
 ---

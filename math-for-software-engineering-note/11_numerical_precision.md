@@ -149,20 +149,23 @@ Bisection is slower (linear convergence) but **guaranteed** to converge if $f$ i
 ### Convergence Comparison
 
 ```mermaid
-%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
+%%{init: {"theme":"base","look":"classic","themeVariables":{
+  "darkMode":true,"background":"#1B1717","fontFamily":"Sarabun, sans-serif","fontSize":"16px",
+  "primaryColor":"#19362D","primaryTextColor":"#CDD3D1","primaryBorderColor":"#8C8F8E",
+  "secondaryColor":"#161212","secondaryTextColor":"#CAC9C9","secondaryBorderColor":"#8C8F8E",
+  "tertiaryColor":"#110D0D","tertiaryTextColor":"#CAC9C9","tertiaryBorderColor":"#8C8F8E",
+  "mainBkg":"#19362D","nodeBorder":"#8C8F8E","lineColor":"#8C8F8E","textColor":"#CAC9C9",
+  "clusterBkg":"#161212","clusterBorder":"#3A3434","edgeLabelBackground":"#1B1717",
+  "noteBkgColor":"#161212","noteTextColor":"#CAC9C9","noteBorderColor":"#8C8F8E"}}}%%
 flowchart LR
-    NEWTON["Newton's Method\nx_n+1 = x_n - f&#40;x_n&#41;/f'&#40;x_n&#41;"] --> FAST["Quadratic convergence\nDoubles correct digits per step"]
-    NEWTON --> RISK["Risk: diverges if\nguess is poor or f'&#40;x&#41; = 0"]
+    NEWTON["Newton's Method\nx_n+1 = x_n - f#40;x_n#41;/f'#40;x_n#41;"] --> FAST["Quadratic convergence\nDoubles correct digits per step"]
+    NEWTON --> RISK["Risk: diverges if\nguess is poor or f'#40;x#41; = 0"]
 
     BISECT["Bisection Method\nHalve interval each step"] --> SAFE["Guaranteed convergence\nif f is continuous"]
     BISECT --> SLOW["Linear convergence\nOne bit per step"]
 
-    style NEWTON fill:#1FB854,stroke:#000000,color:#000000
-    style BISECT fill:#00B5FF,stroke:#000000,color:#000000
-    style FAST fill:#19362D,stroke:#1FB854,color:#CDD3D1
-    style RISK fill:#FF5861,stroke:#000000,color:#000000
-    style SAFE fill:#19362D,stroke:#00B5FF,color:#CDD3D1
-    style SLOW fill:#19362D,stroke:#FFBE00,color:#CDD3D1
+    classDef hero fill:#19362D,stroke:#1FB854,stroke-width:2px,color:#CDD3D1
+    class NEWTON hero
 ```
 
 ---

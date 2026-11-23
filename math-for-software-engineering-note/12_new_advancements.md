@@ -115,7 +115,14 @@ This is why bioinformatics is fundamentally a **software engineering challenge**
 ## How Math Foundations Connect to New Advancements
 
 ```mermaid
-%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
+%%{init: {"theme":"base","look":"classic","themeVariables":{
+  "darkMode":true,"background":"#1B1717","fontFamily":"Sarabun, sans-serif","fontSize":"16px",
+  "primaryColor":"#19362D","primaryTextColor":"#CDD3D1","primaryBorderColor":"#8C8F8E",
+  "secondaryColor":"#161212","secondaryTextColor":"#CAC9C9","secondaryBorderColor":"#8C8F8E",
+  "tertiaryColor":"#110D0D","tertiaryTextColor":"#CAC9C9","tertiaryBorderColor":"#8C8F8E",
+  "mainBkg":"#19362D","nodeBorder":"#8C8F8E","lineColor":"#8C8F8E","textColor":"#CAC9C9",
+  "clusterBkg":"#161212","clusterBorder":"#3A3434","edgeLabelBackground":"#1B1717",
+  "noteBkgColor":"#161212","noteTextColor":"#CAC9C9","noteBorderColor":"#8C8F8E"}}}%%
 flowchart TD
     subgraph CORE["Core Math Foundations"]
         LOGIC["00 Basic Logic"]
@@ -153,25 +160,8 @@ flowchart TD
     FSM --> ASSEM
     LOGIC --> NN
 
-    style CORE fill:#161212,stroke:#00B5FF,color:#CDD3D1
-    style NEURO fill:#161212,stroke:#1FB854,color:#CDD3D1
-    style GENO fill:#161212,stroke:#1FB8AB,color:#CDD3D1
-    style LOGIC fill:#19362D,stroke:#000000,color:#CDD3D1
-    style SETS fill:#19362D,stroke:#000000,color:#CDD3D1
-    style COUNT fill:#19362D,stroke:#000000,color:#CDD3D1
-    style PROB fill:#19362D,stroke:#000000,color:#CDD3D1
-    style GRAPH fill:#19362D,stroke:#000000,color:#CDD3D1
-    style FSM fill:#19362D,stroke:#000000,color:#CDD3D1
-    style GRAM fill:#19362D,stroke:#000000,color:#CDD3D1
-    style NUM fill:#19362D,stroke:#000000,color:#CDD3D1
-    style CALC fill:#19362D,stroke:#000000,color:#CDD3D1
-    style NN fill:#19362D,stroke:#1FB854,color:#CDD3D1
-    style CODE fill:#19362D,stroke:#1FB854,color:#CDD3D1
-    style BIO fill:#19362D,stroke:#1FB854,color:#CDD3D1
-    style ALIGN fill:#19362D,stroke:#1FB8AB,color:#CDD3D1
-    style ASSEM fill:#19362D,stroke:#1FB8AB,color:#CDD3D1
-    style VAR fill:#19362D,stroke:#1FB8AB,color:#CDD3D1
-    style PHYLO fill:#19362D,stroke:#1FB8AB,color:#CDD3D1
+    classDef hero fill:#19362D,stroke:#1FB854,stroke-width:2px,color:#CDD3D1
+    class NN hero
 ```
 
 ### Key Insight

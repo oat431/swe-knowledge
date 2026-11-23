@@ -106,7 +106,7 @@ A **spanning tree** of a graph $G$ is a subgraph that includes all vertices of $
 ## Graph Algorithm Selection Flow
 
 ```mermaid
-%%{init: {"theme":"base","themeVariables":{
+%%{init: {"theme":"base","look":"classic","themeVariables":{
   "darkMode":true,"background":"#1B1717","fontFamily":"Sarabun, sans-serif","fontSize":"16px",
   "primaryColor":"#19362D","primaryTextColor":"#CDD3D1","primaryBorderColor":"#8C8F8E",
   "secondaryColor":"#161212","secondaryTextColor":"#CAC9C9","secondaryBorderColor":"#8C8F8E",
@@ -120,18 +120,18 @@ flowchart TD
     Q1 -->|No| Q3["Need full traversal?"]
     Q1 -->|No - connectivity| Q4["All-pairs or single-source?"]
 
-    Q2 -->|"Unweighted or all = 1"| BFS["BFS\nO&#40;V + E&#41;\nQueue-based, level by level"]
-    Q2 -->|"Non-negative weights"| DIJ["Dijkstra\nO&#40;&#40;V+E&#41; log V&#41;\nPriority queue, greedy"]
-    Q2 -->|"Negative weights"| BF["Bellman-Ford\nO&#40;VE&#41;\nDetects negative cycles"]
+    Q2 -->|"Unweighted or all = 1"| BFS["BFS\nO#40;V + E#41;\nQueue-based, level by level"]
+    Q2 -->|"Non-negative weights"| DIJ["Dijkstra\nO#40;#40;V+E#41; log V#41;\nPriority queue, greedy"]
+    Q2 -->|"Negative weights"| BF["Bellman-Ford\nO#40;VE#41;\nDetects negative cycles"]
 
     Q3 -->|Yes| Q5["Layer by layer\nor depth first?"]
     Q3 -->|No - structure| TREE["Tree algorithms\nDFS for properties\nBFS for level-order"]
 
     Q5 -->|"Explore broadly\nFind shortest in unweighted"| BFS
-    Q5 -->|"Explore deeply\nBacktracking, maze solving"| DFS["DFS\nO&#40;V + E&#41;\nStack or recursion"]
+    Q5 -->|"Explore deeply\nBacktracking, maze solving"| DFS["DFS\nO#40;V + E#41;\nStack or recursion"]
 
     Q4 -->|Single source| DIJ
-    Q4 -->|All pairs| FW["Floyd-Warshall\nO&#40;V^3&#41;\nDynamic programming"]
+    Q4 -->|All pairs| FW["Floyd-Warshall\nO#40;V^3#41;\nDynamic programming"]
 
     classDef hero fill:#19362D,stroke:#1FB854,stroke-width:2px,color:#CDD3D1
     class START hero

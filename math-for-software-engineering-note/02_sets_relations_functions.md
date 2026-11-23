@@ -109,19 +109,26 @@ On a graph, a curve represents a function iff any vertical line intersects it at
 ## Function Types Decision Flow
 
 ```mermaid
-%%{init: {'theme':'base','themeVariables':{'primaryColor':'#19362D','primaryTextColor':'#CDD3D1','primaryBorderColor':'#1FB854','lineColor':'#1FB854','background':'#1B1717','mainBkg':'#19362D','clusterBkg':'#161212','edgeLabelBackground':'#161212','titleColor':'#1FB854','fontSize':'14px'}}}%%
+%%{init: {"theme":"base","look":"classic","themeVariables":{
+  "darkMode":true,"background":"#1B1717","fontFamily":"Sarabun, sans-serif","fontSize":"16px",
+  "primaryColor":"#19362D","primaryTextColor":"#CDD3D1","primaryBorderColor":"#8C8F8E",
+  "secondaryColor":"#161212","secondaryTextColor":"#CAC9C9","secondaryBorderColor":"#8C8F8E",
+  "tertiaryColor":"#110D0D","tertiaryTextColor":"#CAC9C9","tertiaryBorderColor":"#8C8F8E",
+  "mainBkg":"#19362D","nodeBorder":"#8C8F8E","lineColor":"#8C8F8E","textColor":"#CAC9C9",
+  "clusterBkg":"#161212","clusterBorder":"#3A3434","edgeLabelBackground":"#1B1717",
+  "noteBkgColor":"#161212","noteTextColor":"#CAC9C9","noteBorderColor":"#8C8F8E"}}}%%
 flowchart TD
     START["Function f: A → B"] --> Q1["Every element in A\nhas exactly one image?"]
     Q1 -->|Yes| FUNC["Valid Function ✓"]
-    Q1 -->|No| NOT["Not a function\n&#40;multi-valued or undefined&#41;"]
+    Q1 -->|No| NOT["Not a function\n#40;multi-valued or undefined#41;"]
 
     FUNC --> Q2["Every b in B is hit\nby some a in A?"]
-    Q2 -->|Yes| SURJ["Surjective &#40;onto&#41;\nRange = Codomain"]
+    Q2 -->|Yes| SURJ["Surjective #40;onto#41;\nRange = Codomain"]
     Q2 -->|No| NOTSURJ["Not surjective\nSome b in B is never reached"]
 
     FUNC --> Q3["No two elements in A\nmap to the same b?"]
-    Q3 -->|Yes| INJ["Injective &#40;one-to-one&#41;\nDistinct inputs → distinct outputs"]
-    Q3 -->|No| NOTINJ["Not injective\nCollision: f&#40;a1&#41; = f&#40;a2&#41;"]
+    Q3 -->|Yes| INJ["Injective #40;one-to-one#41;\nDistinct inputs → distinct outputs"]
+    Q3 -->|No| NOTINJ["Not injective\nCollision: f#40;a1#41; = f#40;a2#41;"]
 
     INJ --> Q4["Also surjective?"]
     Q4 -->|Yes| BIJ["Bijective\nHas an inverse function"]
@@ -135,11 +142,8 @@ flowchart TD
     INJ -.->|Examples| EX2["Unique ID assignment\nPrimary key mapping"]
     SURJ -.->|Examples| EX3["Load balancer covers\nall backend servers"]
 
-    style START fill:#1FB854,stroke:#000000,color:#000000
-    style FUNC fill:#19362D,stroke:#000000,color:#CDD3D1
-    style SURJ fill:#00B5FF,stroke:#000000,color:#000000
-    style INJ fill:#FFBE00,stroke:#000000,color:#000000
-    style BIJ fill:#1FB8AB,stroke:#000000,color:#000000
+    classDef hero fill:#19362D,stroke:#1FB854,stroke-width:2px,color:#CDD3D1
+    class START hero
 ```
 
 ---
